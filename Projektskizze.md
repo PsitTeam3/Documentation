@@ -1,0 +1,37 @@
+# Projektskizze #
+## Ausgangslage ##
+Der Tourismus ist schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. Die nach wie vor vorherrschenden Sprachbarrieren sind aber auch bei geführten Reisetouren ein Problem. Denn der Reiseführer spricht die Sprache der Reisegruppe meist schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen häufig nicht versteht. Viele Reisende sind zudem lieber autonom unterwegs, wenn einem eine Besichtigung nicht zusagt, kann man so rasch zur Nächsten.
+
+## Idee ##
+Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
+Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und wie lange die Tour etwa dauert. Während der Tour stellt sie auch Informationen über die Sehenswürdigkeiten bereit.
+
+Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das erfassen von Touren ist dabei Kostenpflichtig. Dem Endanwender wird aber die Benützung der Software kostenlos zur Verfügung gestellt.
+
+## Kundennutzen ##
+Die Software bringt folgende Nutzen für Reisende:
+* Der Reisende kann aus einem grossen Angebot von Touren diejenigen auswählen, welche am besten seine Bedürfnisse decken.
+* Filterkriterien helfen dem Benützer beim Finden von Touren
+* Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
+* Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
+* Dank Social-Media Integration kann der Benützer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
+
+Als Kunden für unsere Software zählen aber nicht nur die Reisenden. Auch die Anwender welche Touren für die Software verfassen sind als  Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das verfassen und bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
+* Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
+* Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
+
+## Stand der Technik / Konkurrenzanalyse ##
+Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den Fokus auf digital geführte Reisetouren, so wie wir es umsetzen werden. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte. Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann.
+
+## Hauptablauf ##
+Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
+* Der Kunde startet die TravelBuddy-App, welche er vorgängig bereits heruntergeladen und installiert hat.
+* Er sucht nach digital-geführten Reisetouren an seinem Standort.
+* Er wählt die Reisetour aus welche ihm am besten gfällt und speichert diese.
+* Er schaut sich die Möglichkeiten an, wie er an den Startpunkt der Route gelangt.
+* Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
+* Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, wann er abgeholt werden möchte.
+* Der Kunde wird vom Uber-Taxi abgeholt und befindet sich nun am Startpunkt
+* Die Bezahlung des Taxis erfolgt automatisch, falls der Kunde sich registriert hat und eine Kreditkarte hinterlegt hat.
+
+## Weitere Anforderungen ##
