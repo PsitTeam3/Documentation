@@ -6,15 +6,15 @@ Der Tourismus ist schöner Zeitvertrieb und bringt viel Freude und Einblicke in 
 Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
 Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und wie lange die Tour etwa dauert. Während der Tour stellt sie auch Informationen über die Sehenswürdigkeiten bereit.
 
-Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das erfassen von Touren ist dabei Kostenpflichtig. Dem Endanwender wird aber die Benützung der Software kostenlos zur Verfügung gestellt.
+Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das erfassen von Touren ist dabei kostenpflichtig. Dem Endanwender wird aber die Benutzung der Software kostenlos zur Verfügung gestellt.
 
 ## Kundennutzen ##
 Die Software bringt folgende Nutzen für Reisende:
 * Der Reisende kann aus einem grossen Angebot von Touren diejenigen auswählen, welche am besten seine Bedürfnisse decken.
-* Filterkriterien helfen dem Benützer beim Finden von Touren
+* Filterkriterien helfen dem Benutzer beim Finden von Touren
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
-* Dank Social-Media Integration kann der Benützer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
+* Dank Social-Media Integration rann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
 
 Als Kunden für unsere Software zählen aber nicht nur die Reisenden. Auch die Anwender welche Touren für die Software verfassen sind als  Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das verfassen und bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
