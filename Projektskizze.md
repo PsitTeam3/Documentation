@@ -16,7 +16,7 @@ Die Software bringt folgende Nutzen für Reisende:
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
 * Dank Social-Media Integration rann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
 
-Als Kunden für unsere Software zählen aber nicht nur die Reisenden. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
+Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
 * Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
 
@@ -28,10 +28,10 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Der Kunde startet die TravelBuddy-App, welche er vorgängig bereits heruntergeladen und installiert hat.
 * Er sucht nach digital-geführten Reisetouren an seinem Standort.
 * Er wählt die Reisetour aus, welche ihm am besten gefällt und speichert diese.
-* Er schaut sich auf der App die Möglichkeiten an, wie er an den Startpunkt der Route gelangt.
+* Er betrachtet die Möglichkeiten, um an den Startpunkt der Route zu gelangen.
 * Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
-* Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, wann er abgeholt werden möchte.
-* Der Kunde wird am gewählten Zeitpunkt vom Uber-Taxi abgeholt und an den Startpunkt gefahren. Die Bezahlung des Taxis wird automatisch abgewickelt.
+* Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, an der er abgeholt werden möchte.
+* Der Kunde wird zum gewählten Zeitpunkt vom Uber-Taxi abgeholt und an den Startpunkt gefahren. Die Bezahlung des Taxis wird automatisch abgewickelt.
 * Die App erkennt das sich der Kunde am Startpunkt der Tour befindet und stellt ihm detaillierte Informationen über die erste Sehenswürdigkeit bereit:
   * Eine kurze Beschreibung über die Sehenswürdigkeit.
   * Eine Beschreibung, falls nötig, wie der Kunde nun definitiv ans Ziel gelangt. Z.b. "Um auf den Kirchturm zu gelangen betreten sie die Kirche durch den Sekundäreingang auf der linken Seite. Im innern der Kirche befindet sich der Turmaufgang gleich rechterhand".
@@ -47,12 +47,4 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Die App zeigt dem Kunden an, wie er wieder in sein Hotel zurück kommt.
 * Der Kunde wählt wieder die Uber-Taxi Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
   
-=======
-* Er betrachtet die Möglichkeiten, um an den Startpunkt der Route zu gelangen.
-* Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
-* Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, wann er abgeholt werden möchte.
-* Der Kunde wird vom Uber-Taxi abgeholt und befindet sich nun am Startpunkt.
-* Die Bezahlung des Taxis erfolgt automatisch, falls der Kunde sich registriert hat und eine Kreditkarte hinterlegt hat.
-
->>>>>>> Fix some types and rephrase some sentenences
 ## Weitere Anforderungen ##
