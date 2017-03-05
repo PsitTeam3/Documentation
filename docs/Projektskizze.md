@@ -6,6 +6,17 @@ author:
   - Josef Erben
   - Raffaele Bof
   - Nicolas Loth
+
+documentclass: article
+fontfamily: roboto
+fontfamilyoptions: sfdefault
+lang: de
+toc: 1
+colorlinks: 1
+graphics: 1
+geometry: 1
+#linkcolor: "\{RGB\}\{74,144,226}"
+#urlcolor: "[RGB]{74,144,226}"
 ---
 
 # Ausgangslage
