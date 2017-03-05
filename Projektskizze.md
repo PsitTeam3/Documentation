@@ -1,6 +1,6 @@
 # Projektskizze #
 ## Ausgangslage ##
-Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. Die nach wie vor vorherrschenden Sprachbarrieren sind aber auch bei geführten Reisetouren ein Problem. Denn der Reiseführer spricht die Sprache der Reisegruppe meist schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen häufig nicht versteht. Viele Reisende sind zudem lieber autonom unterwegs, wenn einem eine Besichtigung nicht zusagt, kann man so rasch zur Nächsten.
+Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern existieren aber immer noch Sprachbarrieren. Dies merkt man auch bei geführten Reisetouren. Häufig spricht der Reiseführer die Sprache der Reisegruppe schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen schlecht versteht. Viele Reisende sind zudem lieber autonom als mit einem Reiseführer auf einer Besichtigungstour unterwegs. Dadurch fühlt man sich freier und kann selbst entscheiden, wie lange man an einem Ort verweilen möchte. Mit Uber bietet sich auch eine flexible und kostengünstige Möglichkeit an, von einem Besichtigungspunkt zum Nächsten zu gelangen. 
 
 ## Idee ##
 Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
@@ -14,7 +14,8 @@ Die Software bringt folgende Nutzen für Reisende:
 * Filterkriterien helfen dem Benutzer beim Finden von Touren.
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
-* Dank Social-Media Integration kann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
+* Dank Social Media Integration kann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen.
+* Die Integration von Uber bietet dem Kunden Komfort und Sicherheit. Per Knopfdruck wird innerhalb der TravelBuddy-App ein Uber-Taxi angefordert und diesem auch automatisch das Ziel bekannt gegeben. In einem Land mit hoher Kriminalitätsrate ist der Transport mit einem Uber-Taxi sicherer, als mit einem zufällig auf der Strasse angehaltenen Taxis.
 
 Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
@@ -51,7 +52,7 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Das GUI Design muss einfach aber modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
 * Der Datenverbrauch soll möglichst klein sein, so dass die App auch gut nutzbar über ein langsames Mobilfunknetz ist, oder der Kunde wenig Datenvolumen im ausländischen Mobilfunknetz verfügbar hat.
-* Integration verschiedener Social-Media-Kanälen.
+* Integration verschiedener Social Media Kanälen.
 * Es sollen Voucher für die Reisenden erfasst werden können.
 * Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu wählt er zu einem Zeitpunkt wo er online ist, dass er eine bestimmte Tour offline verfügbar machen möchte. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
 * Beim Erfassen können die Touren kategorisiert werden (Architektur, Kultur, Sport, rollstuhlgängig, körperlich anspruchsvoll).
