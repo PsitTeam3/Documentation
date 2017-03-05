@@ -6,7 +6,7 @@ Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke
 Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
 Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit. Für die Wegbeschreibung wird eine Karte eingeblendet, mit welcher sich der Kunde orientieren kann und den Weg von Sehenswürdigkeit zu Sehenswürdigkeit ablaufen kann. An jedem Aufenthaltspunkt der Tour soll der Kunde ein Photo von einem bestimmten Objekt schiessen. Dieses Photo dient der App der Verifikation, dass der Kunde sich auch tatsächlich an dem vorgegebenen Besichtigungspunkt befindet. Wenn er die Tour vollständig abgelaufen hat und die App dies durch die gemachten Photos erkennt, wird ihm eine Zusammenfassungen der Tour angezeigt. Diese kann er nach Bedarf auf seinem Facebook-Profil teilen. 
 
-Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das erfassen von Touren ist dabei kostenpflichtig. Dem Endanwender wird aber die Benutzung der Software kostenlos zur Verfügung gestellt.
+Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das Erfassen von Touren ist dabei kostenpflichtig. Dem Endanwender wird aber die Benutzung der Software kostenlos zur Verfügung gestellt.
 
 ## Kundennutzen ##
 Die Software bringt folgende Nutzen für Reisende:
@@ -14,7 +14,7 @@ Die Software bringt folgende Nutzen für Reisende:
 * Filterkriterien helfen dem Benutzer beim Finden von Touren.
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
-* Dank Social Media Integration kann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen.
+* Dank Social Media Integration kann der Benutzer eine gemachte Tour inkl. seiner Photos mit seinen Freunden teilen.
 * Die Integration von Uber bietet dem Kunden Komfort und Sicherheit. Per Knopfdruck wird innerhalb der TravelBuddy-App ein Uber-Taxi angefordert und diesem auch automatisch das Ziel bekannt gegeben. In einem Land mit hoher Kriminalitätsrate ist der Transport mit einem Uber-Taxi sicherer, als mit einem zufällig auf der Strasse angehaltenen Taxis.
 
 Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
@@ -22,7 +22,9 @@ Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwend
 * Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
 
 ## Stand der Technik / Konkurrenzanalyse ##
-Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte. Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann.
+Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte.
+https://play.google.com/store/apps/details?id=com.tc.android.travelguide&hl=de
+Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist). (https://developer.uber.com/products/ride-requests). Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Photos.
 
 ## Hauptablauf ##
 Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
