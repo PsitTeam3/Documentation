@@ -103,21 +103,21 @@ Die Grobbplanung sieht die Erstellung einer ersten lauffähigen und nutzbaren Ve
 2. Smartphone GPS koordinaten zu ungenau.
 
 ## Grober Projektplan
-Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Zeitraum von 14 Wochen in einwöchigen Iterationen gemäss folgendem Projektplan Umgesetzt.
+Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Zeitraum von 14 Wochen in einwöchigen Iterationen gemäss folgendem Projektplan umgesetzt.
 
 | **Phase**          | **Iteration**    | **Start/Dauer [Wo]**   | **Ziele**                        |
 | :----------------  |:---------------: | :--------------------: | :------------------------------- |
 | **Inception**      | 1                | 1/2                    | Projektskizze erstellt<br /> Entwicklungsumgebung vorbereiten<br /> alle Use-Cases für erste Produktivversion definiert<br /> UI Skizze erstellt<br /> Design Guide für CI erstellt<br /> Architektur skizziert   |
 | **Milestone**      | **M1**           | **Ende Woche 2**       | **Anforderung an erste Produktivversion definiert**   |
 | **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 dettailierter formuliert<br /> Entwurf des Domänenmodelles   |
-|                    | 3                | 5/2                    | Uses-Cases 4-6 dettailierter formuliert<br /> Domänenmodell Fertig gestellt<br />Architektur umgesetzt   |
+|                    | 3                | 5/2                    | Uses-Cases 4-6 dettailierter formuliert<br /> Domänenmodell fertig gestellt<br />Architektur umgesetzt   |
 | **Milestone**      | **M2**           | **Ende Woche 6**       | **Anforderung an erste Produktivversion verifiziert**   |
-| **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet<br /> UI prototyp implementiert   |
+| **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet<br /> UI Prototyp implementiert   |
 |                    | 5                | 9/2                    | Use-Case 3 und 5 realisiert und getestet<br /> UI aktualisiert   |
 |                    | 6                | 11/2                   | Use-Case 4 realisiert und getestet<br /> UI aktualisiert   |
 |                    | 7                | 13/2                   | Use-Case 6 realisiert und getestet<br /> UI fertig gestellt   |
-| **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App Fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
+| **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
 
 # Wirtschaftlichkeit
 Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
-Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistichs ist.
+Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistisch ist.
