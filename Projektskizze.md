@@ -61,3 +61,52 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Audiounterstützung für Besichtigungstouren.
 * Die App kann sprachgesteuert werden.
 * Alle nichtfunktionalen Anforderungen gemäss ISO Norm 25010.
+
+## Ressourcen ##
+ Für die entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen. 
+ Das Wissen über die Entwicklung von Mobile Apps muss angeeignet werden.
+ Das Team wird in zwei Gruppen aufgeteilt. Ein Backendteam bestehend aus 2 Personen sowie ein Frontendteam mit 3 Personen. Sollte eine der Gruppen in verzug kommen, bspw. durch Krankheitsausfälle, können innerhalb der Gruppen Personenressourcen geteilt oder getauscht werden.
+ Der Gesamtaufwand wird auf 75 Manntage geschätzt.
+
+ 
+## Risiken ##
+ Da die Anwendung auf die verwendung von Live-Kartenmaterial angewiesen ist, und dieses sehr Datenintensiv sein kann, ist eine Offline verfügbarkeit der Karten wichtig, da sonst hohe gebühren für den Endnutzer fällig werden können.
+ Daneben muss das Wissen im Bereich der Entwicklung von Mobil-Apps zuerst angeeignet werden.
+ Ausserdem muss der Schutz der durch die Benutzer hochgeladenen Fotografien gewährleistet sein.
+ 
+## Grobplanung ##
+ Die Grobbplanung sieht die Erstellung einer ersten Lauffähigen und nutzbaren Version vor. Die entwicklungszeit wird auf 14 Wochen geschätzt. Die Entwicklung erfolgt iterativ und anwendungsfallorientiert gemäss dem Unified Process (UP). Als Iterationsdauer ist 1 Woche vorgesehen. In einer ersten Analyse wurden folgende Use-Cases und Risiken identifiziert.
+
+### Use-Cases ###
+1. User wählt Tour aus und startet die Tour
+2. User läuft Tour ab
+3. User macht Foto an Punkt mit bestimmter GPS-Koordinate
+4. User bekommt ok, dass er an diesem Punkt war
+5. User besucht nächste Punkte bis Tour zu Ende
+6. User sieht Statistiken
+
+### Risiken ###
+1. Keine KartenAPI verfügbar
+2. Smartphone GPS koordinaten zu ungenau.
+
+### Grober Projektplan ###
+Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Zeitraum von 14 Wochen in einwöchigen Iterationen gemäss folgendem Projektplan Umgesetzt.
+ 
+| **Phase**          | **Iteration**    | **Start/Dauer [Wo]**   | **Ziele**                        |
+| :----------------  |:---------------: | :--------------------: | :------------------------------- |
+| **Inception**      | 1                | 1/2                    | Projektskizze erstellt<br /> Entwicklungsumgebung vorbereiten<br /> alle Use-Cases für erste Produktivversion definiert<br /> UI Skizze erstellt<br /> Design Guide für CI erstellt<br /> Architektur skizziert   |
+| **Milestone**      | **M1**           | **Ende Woche 2**       | **Anforderung an erste Produktivversion definiert**   |
+| **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 dettailierter formuliert<br /> Entwurf des Domänenmodelles   |
+|                    | 3                | 5/2                    | Uses-Cases 4-6 dettailierter formuliert<br /> Domänenmodell Fertig gestellt<br />Architektur umgesetzt   |
+| **Milestone**      | **M2**           | **Ende Woche 6**       | **Anforderung an erste Produktivversion verifiziert**   |
+| **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet<br /> UI prototyp implementiert   |
+|                    | 5                | 9/2                    | Use-Case 3 und 5 realisiert und getestet<br /> UI aktualisiert   |
+|                    | 6                | 11/2                   | Use-Case 4 realisiert und getestet<br /> UI aktualisiert   |
+|                    | 7                | 13/2                   | Use-Case 6 realisiert und getestet<br /> UI fertig gestellt   |
+| **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App Fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
+
+## Wirtschaftlichkeit ##
+ Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
+ Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistichs ist.
+
+ 
