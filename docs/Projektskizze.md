@@ -44,11 +44,8 @@ Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwend
 * Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
 
 # Stand der Technik / Konkurrenzanalyse
-Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte [1].
-Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist) [2]. Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Photos.
-
-[1] Thomas Cook Travelguide in Goggle Play [Online]. URL: https://play.google.com/store/apps/details?id=com.tc.android.travelguide&hl=de [Stand: 4.3.2017]
-[2] Uber Integration für Apps [Online]: URL: https://developer.uber.com/products/ride-requests [Stand: 4.3.2017].
+Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte \cite{TomasCookApp}.
+Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist) \cite{UberApi}. Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Photos. 
 
 # Hauptablauf
 Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
@@ -88,7 +85,7 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Alle nichtfunktionalen Anforderungen gemäss ISO Norm 25010.
 
 # Ressourcen
-Für die entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen.
+Für die Entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen.
 Das Wissen über die Entwicklung von Mobile Apps muss angeeignet werden.
 Das Team wird in zwei Gruppen aufgeteilt. Ein Backendteam bestehend aus 2 Personen sowie ein Frontendteam mit 3 Personen. Sollte eine der Gruppen in verzug kommen, bspw. durch Krankheitsausfälle, können innerhalb der Gruppen Personenressourcen geteilt oder getauscht werden.
 Der Gesamtaufwand wird auf 75 Manntage geschätzt.
@@ -132,3 +129,14 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 # Wirtschaftlichkeit
 Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
 Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistisch ist.
+
+\begin{thebibliography}{9}
+\bibitem{TomasCookApp}
+Thomas Cook Travelguide in Goggle Play [Online].
+
+URL: https://play.google.com/store/apps/details?id=com.tc.android.travelguide\&hl=de [Stand: 4.3.2017].
+\bibitem{UberApi}
+Uber Integration für Apps [Online].
+
+URL: https://developer.uber.com/products/ride-requests [Stand: 4.3.2017].
+\end{thebibliography}
