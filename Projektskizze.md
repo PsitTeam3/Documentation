@@ -14,7 +14,7 @@ Die Software bringt folgende Nutzen für Reisende:
 * Filterkriterien helfen dem Benutzer beim Finden von Touren.
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
-* Dank Social-Media Integration rann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
+* Dank Social-Media Integration kann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
 
 Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
@@ -54,3 +54,7 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Integration verschiedener Social-Media-Kanälen.
 * Es sollen Voucher für die Reisenden erfasst werden können.
 * Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu wählt er zu einem Zeitpunkt wo er online ist, dass er eine bestimmte Tour offline verfügbar machen möchte. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
+* Beim Erfassen können die Touren kategorisiert werden (Architektur, Kultur, Sport, rollstuhlgängig, körperlich anspruchsvoll).
+* Audiounterstützung für Besichtigungstouren.
+* Die App kann sprachgesteuert werden.
+* Alle nichtfunktionalen Anforderungen gemäss ISO Norm 25010.
