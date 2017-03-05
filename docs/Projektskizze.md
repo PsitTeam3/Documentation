@@ -1,15 +1,25 @@
-# Projektskizze #
-## Ausgangslage ##
-Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern existieren aber immer noch Sprachbarrieren. Dies merkt man auch bei geführten Reisetouren. Häufig spricht der Reiseführer die Sprache der Reisegruppe schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen schlecht versteht. Viele Reisende sind zudem lieber autonom als mit einem Reiseführer auf einer Besichtigungstour unterwegs. Dadurch fühlt man sich freier und kann selbst entscheiden, wie lange man an einem Ort verweilen möchte. Mit Uber bietet sich auch eine flexible und kostengünstige Möglichkeit an, von einem Besichtigungspunkt zum Nächsten zu gelangen. 
+---
+title: Projektskizze
+author:
+  - Andreas Saurer
+  - Benjamin Schneidinger
+  - Josef Erben
+  - Raffaele Bof
+  - Nicolas Loth
+---
 
-## Idee ##
+# Ausgangslage
+Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern existieren aber immer noch Sprachbarrieren. Dies merkt man auch bei geführten Reisetouren. Häufig spricht der Reiseführer die Sprache der Reisegruppe schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen schlecht versteht. Viele Reisende sind zudem lieber autonom als mit einem Reiseführer auf einer Besichtigungstour unterwegs. Dadurch fühlt man sich freier und kann selbst entscheiden, wie lange man an einem Ort verweilen möchte. Mit Uber bietet sich auch eine flexible und kostengünstige Möglichkeit an, von einem Besichtigungspunkt zum Nächsten zu gelangen.
+
+# Idee
 Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
-Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit. Für die Wegbeschreibung wird eine Karte eingeblendet, mit welcher sich der Kunde orientieren kann und den Weg von Sehenswürdigkeit zu Sehenswürdigkeit ablaufen kann. An jedem Aufenthaltspunkt der Tour soll der Kunde ein Photo von einem bestimmten Objekt schiessen. Dieses Photo dient der App der Verifikation, dass der Kunde sich auch tatsächlich an dem vorgegebenen Besichtigungspunkt befindet. Wenn er die Tour vollständig abgelaufen hat und die App dies durch die gemachten Photos erkennt, wird ihm eine Zusammenfassungen der Tour angezeigt. Diese kann er nach Bedarf auf seinem Facebook-Profil teilen. 
+Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit. Für die Wegbeschreibung wird eine Karte eingeblendet, mit welcher sich der Kunde orientieren kann und den Weg von Sehenswürdigkeit zu Sehenswürdigkeit ablaufen kann. An jedem Aufenthaltspunkt der Tour soll der Kunde ein Photo von einem bestimmten Objekt schiessen. Dieses Photo dient der App der Verifikation, dass der Kunde sich auch tatsächlich an dem vorgegebenen Besichtigungspunkt befindet. Wenn er die Tour vollständig abgelaufen hat und die App dies durch die gemachten Photos erkennt, wird ihm eine Zusammenfassungen der Tour angezeigt. Diese kann er nach Bedarf auf seinem Facebook-Profil teilen.
 
 Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das Erfassen von Touren ist dabei kostenpflichtig. Dem Endanwender wird aber die Benutzung der Software kostenlos zur Verfügung gestellt.
 
-## Kundennutzen ##
+# Kundennutzen
 Die Software bringt folgende Nutzen für Reisende:
+
 * Der Reisende kann aus einem grossen Angebot von Touren diejenigen auswählen, welche am besten seine Bedürfnisse decken.
 * Filterkriterien helfen dem Benutzer beim Finden von Touren.
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
@@ -18,16 +28,18 @@ Die Software bringt folgende Nutzen für Reisende:
 * Die Integration von Uber bietet dem Kunden Komfort und Sicherheit. Per Knopfdruck wird innerhalb der TravelBuddy-App ein Uber-Taxi angefordert und diesem auch automatisch das Ziel bekannt gegeben. In einem Land mit hoher Kriminalitätsrate ist der Transport mit einem Uber-Taxi sicherer, als mit einem zufällig auf der Strasse angehaltenen Taxis.
 
 Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
+
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
 * Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
 
-## Stand der Technik / Konkurrenzanalyse ##
+# Stand der Technik / Konkurrenzanalyse
 Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte.
 https://play.google.com/store/apps/details?id=com.tc.android.travelguide&hl=de
 Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist). (https://developer.uber.com/products/ride-requests). Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Photos.
 
-## Hauptablauf ##
+# Hauptablauf
 Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
+
 * Der Kunde startet die TravelBuddy-App, welche er vorgängig bereits heruntergeladen und installiert hat.
 * Er sucht nach digital-geführten Reisetouren an seinem Standort.
 * Er wählt die Reisetour aus, welche ihm am besten gefällt und speichert diese.
@@ -49,8 +61,8 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Die App fügt die Tour-Zusammenfassung auf seinem Account hinzu.
 * Die App zeigt dem Kunden an, wie er wieder in sein Hotel zurück kommt.
 * Der Kunde wählt wieder die Uber-Taxi Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
-  
-## Weitere Anforderungen ##
+
+# Weitere Anforderungen
 * Das GUI Design muss einfach aber modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
 * Der Datenverbrauch soll möglichst klein sein, so dass die App auch gut nutzbar über ein langsames Mobilfunknetz ist, oder der Kunde wenig Datenvolumen im ausländischen Mobilfunknetz verfügbar hat.
@@ -62,22 +74,22 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Die App kann sprachgesteuert werden.
 * Alle nichtfunktionalen Anforderungen gemäss ISO Norm 25010.
 
-## Ressourcen ##
- Für die entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen. 
- Das Wissen über die Entwicklung von Mobile Apps muss angeeignet werden.
- Das Team wird in zwei Gruppen aufgeteilt. Ein Backendteam bestehend aus 2 Personen sowie ein Frontendteam mit 3 Personen. Sollte eine der Gruppen in verzug kommen, bspw. durch Krankheitsausfälle, können innerhalb der Gruppen Personenressourcen geteilt oder getauscht werden.
- Der Gesamtaufwand wird auf 75 Manntage geschätzt.
+# Ressourcen
+Für die entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen.
+Das Wissen über die Entwicklung von Mobile Apps muss angeeignet werden.
+Das Team wird in zwei Gruppen aufgeteilt. Ein Backendteam bestehend aus 2 Personen sowie ein Frontendteam mit 3 Personen. Sollte eine der Gruppen in verzug kommen, bspw. durch Krankheitsausfälle, können innerhalb der Gruppen Personenressourcen geteilt oder getauscht werden.
+Der Gesamtaufwand wird auf 75 Manntage geschätzt.
 
- 
-## Risiken ##
- Da die Anwendung auf die verwendung von Live-Kartenmaterial angewiesen ist, und dieses sehr Datenintensiv sein kann, ist eine Offline verfügbarkeit der Karten wichtig, da sonst hohe gebühren für den Endnutzer fällig werden können.
- Daneben muss das Wissen im Bereich der Entwicklung von Mobil-Apps zuerst angeeignet werden.
- Ausserdem muss der Schutz der durch die Benutzer hochgeladenen Fotografien gewährleistet sein.
- 
-## Grobplanung ##
- Die Grobbplanung sieht die Erstellung einer ersten Lauffähigen und nutzbaren Version vor. Die entwicklungszeit wird auf 14 Wochen geschätzt. Die Entwicklung erfolgt iterativ und anwendungsfallorientiert gemäss dem Unified Process (UP). Als Iterationsdauer ist 1 Woche vorgesehen. In einer ersten Analyse wurden folgende Use-Cases und Risiken identifiziert.
 
-### Use-Cases ###
+# Risiken
+Da die Anwendung auf die verwendung von Live-Kartenmaterial angewiesen ist, und dieses sehr Datenintensiv sein kann, ist eine Offline verfügbarkeit der Karten wichtig, da sonst hohe gebühren für den Endnutzer fällig werden können.
+Daneben muss das Wissen im Bereich der Entwicklung von Mobil-Apps zuerst angeeignet werden.
+Ausserdem muss der Schutz der durch die Benutzer hochgeladenen Fotografien gewährleistet sein.
+
+# Grobplanung
+Die Grobbplanung sieht die Erstellung einer ersten Lauffähigen und nutzbaren Version vor. Die entwicklungszeit wird auf 14 Wochen geschätzt. Die Entwicklung erfolgt iterativ und anwendungsfallorientiert gemäss dem Unified Process (UP). Als Iterationsdauer ist 1 Woche vorgesehen. In einer ersten Analyse wurden folgende Use-Cases und Risiken identifiziert.
+
+## Use-Cases
 1. User wählt Tour aus und startet die Tour
 2. User läuft Tour ab
 3. User macht Foto an Punkt mit bestimmter GPS-Koordinate
@@ -85,13 +97,13 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 5. User besucht nächste Punkte bis Tour zu Ende
 6. User sieht Statistiken
 
-### Risiken ###
+## Risiken
 1. Keine KartenAPI verfügbar
 2. Smartphone GPS koordinaten zu ungenau.
 
-### Grober Projektplan ###
+## Grober Projektplan
 Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Zeitraum von 14 Wochen in einwöchigen Iterationen gemäss folgendem Projektplan Umgesetzt.
- 
+
 | **Phase**          | **Iteration**    | **Start/Dauer [Wo]**   | **Ziele**                        |
 | :----------------  |:---------------: | :--------------------: | :------------------------------- |
 | **Inception**      | 1                | 1/2                    | Projektskizze erstellt<br /> Entwicklungsumgebung vorbereiten<br /> alle Use-Cases für erste Produktivversion definiert<br /> UI Skizze erstellt<br /> Design Guide für CI erstellt<br /> Architektur skizziert   |
@@ -105,8 +117,6 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 |                    | 7                | 13/2                   | Use-Case 6 realisiert und getestet<br /> UI fertig gestellt   |
 | **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App Fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
 
-## Wirtschaftlichkeit ##
- Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
- Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistichs ist.
-
- 
+# Wirtschaftlichkeit
+Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
+Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistichs ist.
