@@ -48,3 +48,9 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Der Kunde wählt wieder die Uber-Taxi Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
   
 ## Weitere Anforderungen ##
+* Das GUI Design muss einfach aber modern sein.
+* Die Bedienung der App ist einfach und intuitiv.
+* Der Datenverbrauch soll möglichst klein sein, so dass die App auch gut nutzbar über ein langsames Mobilfunknetz ist, oder der Kunde wenig Datenvolumen im ausländischen Mobilfunknetz verfügbar hat.
+* Integration verschiedener Social-Media-Kanälen.
+* Es sollen Voucher für die Reisenden erfasst werden können.
+* Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu wählt er zu einem Zeitpunkt wo er online ist, dass er eine bestimmte Tour offline verfügbar machen möchte. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
