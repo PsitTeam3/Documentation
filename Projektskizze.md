@@ -11,17 +11,17 @@ Die Touren werden von anderen Firmen, wie z.B. Reisebüros erfasst. Dafür soll 
 ## Kundennutzen ##
 Die Software bringt folgende Nutzen für Reisende:
 * Der Reisende kann aus einem grossen Angebot von Touren diejenigen auswählen, welche am besten seine Bedürfnisse decken.
-* Filterkriterien helfen dem Benutzer beim Finden von Touren
+* Filterkriterien helfen dem Benutzer beim Finden von Touren.
 * Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
 * Die Tour wird dem Reisenden in seiner gewünschten Sprache angezeigt.
 * Dank Social-Media Integration rann der Benutzer eine gemachte Tour inkl. den geknipsten Photos mit seinen Freunden teilen
 
-Als Kunden für unsere Software zählen aber nicht nur die Reisenden. Auch die Anwender welche Touren für die Software verfassen sind als  Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das verfassen und bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
-* Sie sparen Kosten da die aufwändige Organisation von Reisetouren im Ausland entfällt.
+Als Kunden für unsere Software zählen aber nicht nur die Reisenden. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
+* Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
 * Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
 
 ## Stand der Technik / Konkurrenzanalyse ##
-Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den Fokus auf digital-geführte Reisetouren, so wie wir es umsetzen werden. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte. Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei welcher der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann.
+Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte. Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann.
 
 ## Hauptablauf ##
 Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
@@ -47,4 +47,12 @@ Hauptanwendungsfall ist der Kunde, welcher im Urlaub ist und eine Besichtigungst
 * Die App zeigt dem Kunden an, wie er wieder in sein Hotel zurück kommt.
 * Der Kunde wählt wieder die Uber-Taxi Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
   
+=======
+* Er betrachtet die Möglichkeiten, um an den Startpunkt der Route zu gelangen.
+* Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
+* Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, wann er abgeholt werden möchte.
+* Der Kunde wird vom Uber-Taxi abgeholt und befindet sich nun am Startpunkt.
+* Die Bezahlung des Taxis erfolgt automatisch, falls der Kunde sich registriert hat und eine Kreditkarte hinterlegt hat.
+
+>>>>>>> Fix some types and rephrase some sentenences
 ## Weitere Anforderungen ##
