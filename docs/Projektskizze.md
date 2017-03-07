@@ -46,18 +46,16 @@ Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter 
 Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist) \cite{UberApi}. Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Photos gespeichert.
 
 # Hauptablauf
-Der ausführliche Hauptanwendungsfall der Grundidee  ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
+Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour in seiner aktuellen Stadt machen möchte:
 
 * Der Kunde startet die TravelBuddy-App, welche er vorgängig bereits heruntergeladen und installiert hat.
 * Er sucht nach digital-geführten Reisetouren an seinem Standort.
 * Er wählt die Reisetour aus, welche ihm am besten gefällt und speichert diese.
-* Er betrachtet die Möglichkeiten, um an den Startpunkt der Route zu gelangen.
+* Er betrachtet die Möglichkeiten um an den Startpunkt der Route zu gelangen.
 * Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
 * Der Kunde wählt die Option Uber-Taxi aus und gibt den genauen Abholort, sowie das Datum und die Uhrzeit an, an der er abgeholt werden möchte.
 * Der Kunde wird zum gewählten Zeitpunkt vom Uber-Taxi abgeholt und an den Startpunkt gefahren. Die Bezahlung des Taxis wird automatisch abgewickelt.
-* Die App erkennt das sich der Kunde am Startpunkt der Tour befindet und stellt ihm detaillierte Informationen über die erste Sehenswürdigkeit bereit:
-  * Eine kurze Beschreibung über die Sehenswürdigkeit.
-  * Eine Beschreibung, falls nötig, wie der Kunde nun definitiv ans Ziel gelangt. Z.b. "Um auf den Kirchturm zu gelangen betreten sie die Kirche durch den Sekundäreingang auf der linken Seite. Im innern der Kirche befindet sich der Turmaufgang gleich rechterhand".
+* Die App erkennt das sich der Kunde am Startpunkt der Tour befindet. Sie stellt eine Wegbeschreibung um ans Ziel-Objekt zu gelangen, sowie detaillierte Informationen über die erste Sehenswürdigkeit bereit.
 * Die App fordert den Kunden auf, eine bestimmtes Objekt an dem Standort zu photographieren.
 * Nachdem der Kunde den Standort fertig besichtigt hat, wählt er in der App, dass er zum nächsten Standort weiter möchte.
 * Die App zeigt nun wieder die Optionen an, wie der Kunde an den nächsten Besichtigungspunkt gelangen kann (Uber-Taxi, öffentliche Verkehrsmittel, Fussmarsch).
@@ -93,7 +91,7 @@ Der Gesamtaufwand wird auf 75 Manntage geschätzt.
 # Risiken
 1. Da die Anwendung auf die Verwendung von Live-Kartenmaterial angewiesen ist, und dies sehr Datenintensiv sein kann, ist eine offline Verfügbarkeit der Karten wichtig, da sonst hohe Gebühren für den Endnutzer fällig werden können.
 2. Das Wissen im Bereich der Entwicklung von Mobil-Apps muss zuerst angeeignet werden.
-3. Der Schutz der durch die Benutzer hochgeladenen Photos gewährleistet sein.
+3. Der Schutz der durch die Benutzer hochgeladenen Photos muss gewährleistet sein.
 4. Mehrere Schnittstellen und unterschiedliche Technologien bedeuten eine erhöhte Projektkomplexität.
 5. Keine öffentliche und verwendbare Karten-API verfügbar.
 6. Smartphone GPS Koordinaten sind zu ungenau.
@@ -127,7 +125,7 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 
 # Wirtschaftlichkeit
 Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
-Durch die Flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistisch ist.
+Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistisch ist.
 Ideen für weitere Einnahmequellen wurden evaluiert und können zu einem späteren Zeitpunkt ausgearbeitet und implementiert werden. 
 
 \addcontentsline{toc}{section}{Literatur}
