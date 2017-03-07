@@ -71,41 +71,41 @@ Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Ur
 Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab. 
 
 # Weitere Anforderungen
-* Das GUI Design muss einfach und modern sein.
+* Das UI Design ist schlicht und modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
-* Der Datenverbrauch soll möglichst klein sein, so dass die App auch gut nutzbar über ein langsames Mobilfunknetz ist, oder der Kunde wenig Datenvolumen im ausländischen Mobilfunknetz verfügbar hat.
-* Integration verschiedener Social Media Kanälen.
+* Der Datenverbrauch ist möglichst klein, damit die App auch über ein langsames Mobilfunknetz gut nutzbar bleibt und sich der Datenverbrauch des Users in Grenzen hält. 
+* Integration verschiedener Social Media.
 * Es sollen Voucher für die Reisenden erfasst werden können.
-* Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu wählt er zu einem Zeitpunkt an dem er online ist, dass er eine bestimmte Tour offline verfügbar machen möchte. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
+* Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu kann der Kunde z.B. vor dem Abflug, wenn die Internetanbindung gesichert ist, eine Tour offline verfügbar machen. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
 * Beim Erfassen können die Touren kategorisiert werden (Architektur, Kultur, Sport, rollstuhlgängig, körperlich anspruchsvoll).
 * Audiounterstützung für Besichtigungstouren.
 * Die App kann sprachgesteuert werden.
 * Alle nichtfunktionalen Anforderungen gemäss ISO Norm 25010.
 
 # Ressourcen
-Für die Entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objekt-Orientierten Programmierung verfügen.
-Das Wissen über die Entwicklung von Mobile Apps muss angeeignet werden.
-Das Team wird in zwei Gruppen aufgeteilt. Ein Backendteam bestehend aus 2 Personen sowie ein Frontendteam mit 3 Personen. Sollte eine der Gruppen in verzug kommen, bspw. durch Krankheitsausfälle, können innerhalb der Gruppen Personenressourcen geteilt oder getauscht werden.
+Für die Entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objektorientierten Programmierung verfügen.
+Das Wissen über die Entwicklung von Mobile Apps muss jedoch angeeignet werden.
+Das Team wird in zwei Gruppen aufgeteilt: Ein Backend-Team bestehend aus zwei Personen sowie ein Frontend-Team mit drei Personen. Durch Vermeidung von Wissensanhäufung können die Personenressourcen in Notfällen neu verteilt werden. Somit haben wir im Team noch Spielraum bei Ausfällen z.B. durch Krankheit. 
 Der Gesamtaufwand wird auf 75 Manntage geschätzt.
 
 # Risiken
-1. Da die Anwendung auf die Verwendung von Live-Kartenmaterial angewiesen ist, und dies sehr Datenintensiv sein kann, ist eine offline Verfügbarkeit der Karten wichtig, da sonst hohe Gebühren für den Endnutzer fällig werden können.
+1. Da die Anwendung auf die Verwendung von Kartenmaterial angewiesen ist und dies sehr Datenintensiv sein kann, ist eine offline Verfügbarkeit der Karten wichtig. Ansonsten drohen die Gebühren für den Endnutzer im Ausland hoch auszufallen..
 2. Das Wissen im Bereich der Entwicklung von Mobil-Apps muss zuerst angeeignet werden.
-3. Der Schutz der durch die Benutzer hochgeladenen Photos muss gewährleistet sein.
+3. Der Schutz der durch die Benutzer hochgeladenen Fotos muss gewährleistet sein.
 4. Mehrere Schnittstellen und unterschiedliche Technologien bedeuten eine erhöhte Projektkomplexität.
-5. Keine öffentliche und verwendbare Karten-API verfügbar.
-6. Smartphone GPS Koordinaten sind zu ungenau.
+5. Keine öffentlichen Karten-API verfügbar.
+6. Smartphone GPS Koordinaten sind oft ungenau oder nicht zuverlässlich.
 
 # Grobplanung
 Die Grobbplanung sieht die Erstellung einer ersten lauffähigen und nutzbaren Version vor. Die Entwicklungszeit wird auf 14 Wochen geschätzt. Die Entwicklung erfolgt iterativ und anwendungsfallorientiert gemäss dem Unified Process (UP). Als Iterationsdauer ist 1 Woche vorgesehen. In einer ersten Analyse wurden folgende Use-Cases und Risiken identifiziert.
 
 ## Use-Cases
-1. User wählt Tour aus und startet die Tour
-2. User läuft Tour ab
-3. User macht Photo am Besichtigungspunkt mit bestimmter GPS-Koordinate
-4. User bekommt Bestätigung, dass er an diesem Punkt war
-5. User besucht nächste Punkte bis Tour zu Ende
-6. User sieht Statistiken
+1. User wählt Tour aus und startet die Tour.
+2. User läuft Route ab und sieht seine aktuellen Standort auf einer Karte.
+3. User macht Foto am Besichtigungspunkt.
+4. User bekommt Bestätigung für das Abarbeiten des Punktes, die Route zum nächsten Punkt wird angezeigt.
+5. User besucht nächste Punkte bis Tour zu Ende.
+6. User sieht Statistik der Tour.
 
 ## Grober Projektplan
 Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Zeitraum von 14 Wochen in einwöchigen Iterationen gemäss folgendem Projektplan umgesetzt.
@@ -114,8 +114,8 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 | :----------------  |:---------------: | :--------------------: | :------------------------------- |
 | **Inception**      | 1                | 1/2                    | Projektskizze erstellt<br /> Entwicklungsumgebung vorbereiten<br /> alle Use-Cases für erste Produktivversion definiert<br /> UI Skizze erstellt<br /> Design Guide für CI erstellt<br /> Architektur skizziert   |
 | **Milestone**      | **M1**           | **Ende Woche 2**       | **Anforderung an erste Produktivversion definiert**   |
-| **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 dettailierter formuliert<br /> Entwurf des Domänenmodelles   |
-|                    | 3                | 5/2                    | Uses-Cases 4-6 dettailierter formuliert<br /> Domänenmodell fertig gestellt<br />Architektur umgesetzt   |
+| **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 detaillierter formuliert<br /> Entwurf des Domänenmodelles   |
+|                    | 3                | 5/2                    | Uses-Cases 4-6 detaillierter formuliert<br /> Domänenmodell fertig gestellt<br />Architektur umgesetzt   |
 | **Milestone**      | **M2**           | **Ende Woche 6**       | **Anforderung an erste Produktivversion verifiziert**   |
 | **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet<br /> UI Prototyp implementiert   |
 |                    | 5                | 9/2                    | Use-Case 3 und 5 realisiert und getestet<br /> UI aktualisiert   |
@@ -124,8 +124,8 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 | **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
 
 # Wirtschaftlichkeit
-Der geschätzte Aufwand beträgt 600 Mann Stunden, was etwa 3 ½ Mann Monaten entspricht, die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein return of investment nach 24 Monaten.
-Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel, wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände, anziehen wodurch das Ziel von 10 Kunden realistisch ist.
+Der geschätzte Aufwand beträgt 600 Mannstunden, was etwa 3 ½ Mannmonaten entspricht. Die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein _return on investment_ nach 24 Monaten.
+Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände  anziehen, wodurch das Ziel von 10 Kunden realistisch ist.
 Ideen für weitere Einnahmequellen wurden evaluiert und können zu einem späteren Zeitpunkt ausgearbeitet und implementiert werden. 
 
 \addcontentsline{toc}{section}{Literatur}
