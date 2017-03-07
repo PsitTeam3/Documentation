@@ -1,5 +1,6 @@
 ---
 title: Projektskizze
+date: 07.03.2017
 author:
   - Andreas Saurer
   - Benjamin Schneidinger
@@ -18,13 +19,13 @@ geometry: 1
 ---
 
 # Ausgangslage
-Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern existieren aber immer noch Sprachbarrieren. Dies merkt man auch bei geführten Reisetouren. Häufig spricht der Reiseführer die Sprache der Reisegruppe schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen schlecht versteht. 
+Der Tourismus ist ein schöner Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern existieren aber immer noch Sprachbarrieren. Dies merkt man auch bei geführten Reisetouren. Häufig spricht der Reiseführer die Sprache der Reisegruppe schlecht oder hat einen starken Akzent, so dass man seine Erläuterungen schlecht versteht.
 
 Viele Reisende sind zudem lieber autonom als mit einem Reiseführer auf einer Besichtigungstour unterwegs. Dadurch fühlt man sich freier und kann selbst entscheiden, wie lange man an einem Ort verweilen möchte. Mit Uber bietet sich auch eine flexible und kostengünstige Möglichkeit an, von einem Besichtigungspunkt zum Nächsten zu gelangen.
 
 # Idee
 Wir entwickeln eine Software mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
-Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit. 
+Als Reisender kann man mit der Software für seine Reise-Destinationen eine Liste von Touren zusammen stellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit.
 
 Für die Wegbeschreibung wird eine Karte eingeblendet, mit welcher sich der Kunde orientieren kann und den Weg von Sehenswürdigkeit zu Sehenswürdigkeit ablaufen kann. An jedem Aufenthaltspunkt der Tour soll der Kunde ein Foto von einem bestimmten Objekt schiessen. Dieses Photo dient der App der Verifikation, dass der Kunde sich auch tatsächlich an dem vorgegebenen Besichtigungspunkt befindet. Wenn er die Tour vollständig abgelaufen hat und die App dies durch die gemachten Photos erkennt, wird ihm eine Zusammenfassungen der Tour angezeigt. Diese kann er nach Bedarf auf seinem Facebook-Profil teilen.
 
@@ -40,6 +41,7 @@ Die Software bringt folgende Nutzen für Reisende:
 * Dank Social Media Integration kann der Benutzer eine gemachte Tour inkl. seiner Fotos mit seinen Freunden teilen.
 * Die Integration von Uber bietet dem Kunden Komfort und Sicherheit. Per Knopfdruck wird innerhalb der TravelBuddy-App ein Uber-Taxi angefordert und diesem auch automatisch das Ziel bekannt gegeben. In einem Land mit hoher Kriminalitätsrate ist der Transport mit einem Uber-Taxi sicherer, als mit einem zufällig auf der Strasse angehaltenen Taxis.
 
+\newpage
 Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
 
 * Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
@@ -48,7 +50,7 @@ Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwend
 # Stand der Technik / Konkurrenzanalyse
 Es gibt bereits andere Travelguide Apps, wie z.B. die von dem Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas Cook Travelguide App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte \cite{TomasCookApp}.
 
-Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden. 
+Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App bei denen der Anwender komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden.
 
 Uber stellt dazu ein API zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne das die Uber-App selbst auf dem Gerät installiert ist) \cite{UberApi}. Auch die Social Media Integration ist in anderen Apps nicht gegeben. Wir wollen es dem Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie seine Fotos gespeichert.
 
@@ -75,13 +77,13 @@ Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Ur
 * Die App zeigt dem Kunden an, wie er wieder in sein Hotel zurück kommt.
 * Der Kunde wählt wieder die Uber-Taxi Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
 
-Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab. 
+Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab.
 
 # Weitere Anforderungen
 * Das
 UI Design ist schlicht und modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
-* Der Datenverbrauch ist möglichst klein, damit die App auch über ein langsames Mobilfunknetz gut nutzbar bleibt und sich der Datenverbrauch des Users in Grenzen hält. 
+* Der Datenverbrauch ist möglichst klein, damit die App auch über ein langsames Mobilfunknetz gut nutzbar bleibt und sich der Datenverbrauch des Users in Grenzen hält.
 * Integration verschiedener Social Media.
 * Es sollen Voucher für die Reisenden erfasst werden können.
 * Der Kunde soll die Möglichkeit haben, Touren offline durchzuführen. Dazu kann der Kunde z.B. vor dem Abflug, wenn die Internetanbindung gesichert ist, eine Tour offline verfügbar machen. In diesem Fall entfällt aber die Möglichkeit, dass der Kunde unterwegs Uber-Taxis anfordern kann.
@@ -93,7 +95,7 @@ UI Design ist schlicht und modern sein.
 # Ressourcen
 Für die Entwicklung der Anwendung werden 5 Personen benötigt. Alle müssen Erfahrung im Bereich der Objektorientierten Programmierung verfügen.
 Das Wissen über die Entwicklung von Mobile Apps muss jedoch angeeignet werden.
-Das Team wird in zwei Gruppen aufgeteilt: Ein Backend-Team bestehend aus zwei Personen sowie ein Frontend-Team mit drei Personen. Durch Vermeidung von Wissensanhäufung können die Personenressourcen in Notfällen neu verteilt werden. Somit haben wir im Team noch Spielraum bei Ausfällen z.B. durch Krankheit. 
+Das Team wird in zwei Gruppen aufgeteilt: Ein Backend-Team bestehend aus zwei Personen sowie ein Frontend-Team mit drei Personen. Durch Vermeidung von Wissensanhäufung können die Personenressourcen in Notfällen neu verteilt werden. Somit haben wir im Team noch Spielraum bei Ausfällen z.B. durch Krankheit.
 Der Gesamtaufwand wird auf 75 Manntage geschätzt.
 
 # Risiken
@@ -104,6 +106,7 @@ Der Gesamtaufwand wird auf 75 Manntage geschätzt.
 5. Keine öffentlichen Karten-API verfügbar.
 6. Smartphone GPS Koordinaten sind oft ungenau oder nicht zuverlässlich.
 
+\newpage
 # Grobplanung
 Die Grobbplanung sieht die Erstellung einer ersten lauffähigen und nutzbaren Version vor. Die Entwicklungszeit wird auf 14 Wochen geschätzt. Die Entwicklung erfolgt iterativ und anwendungsfallorientiert gemäss dem Unified Process (UP). Als Iterationsdauer ist 1 Woche vorgesehen. In einer ersten Analyse wurden folgende Use-Cases und Risiken identifiziert.
 
@@ -134,7 +137,7 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 # Wirtschaftlichkeit
 Der geschätzte Aufwand beträgt 600 Mannstunden, was etwa 3 ½ Mannmonaten entspricht. Die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein _return on investment_ nach 24 Monaten.
 
-Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände  anziehen, wodurch das Ziel von 10 Kunden realistisch ist. Ideen für weitere Einnahmequellen wurden evaluiert und können zu einem späteren Zeitpunkt ausgearbeitet und implementiert werden. 
+Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände  anziehen, wodurch das Ziel von 10 Kunden realistisch ist. Ideen für weitere Einnahmequellen wurden evaluiert und können zu einem späteren Zeitpunkt ausgearbeitet und implementiert werden.
 
 \addcontentsline{toc}{section}{Literatur}
 \begin{thebibliography}{9}
