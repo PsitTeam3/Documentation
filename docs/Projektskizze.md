@@ -71,7 +71,8 @@ Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Ur
 Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab. 
 
 # Weitere Anforderungen
-* Das UI Design ist schlicht und modern sein.
+* Das
+UI Design ist schlicht und modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
 * Der Datenverbrauch ist möglichst klein, damit die App auch über ein langsames Mobilfunknetz gut nutzbar bleibt und sich der Datenverbrauch des Users in Grenzen hält. 
 * Integration verschiedener Social Media.
@@ -112,16 +113,16 @@ Der Aufwand für das Projekt wird auf 600 Mannstunden geschätzt und in einem Ze
 
 | **Phase**          | **Iteration**    | **Start/Dauer [Wo]**   | **Ziele**                        |
 | :----------------  |:---------------: | :--------------------: | :------------------------------- |
-| **Inception**      | 1                | 1/2                    | Projektskizze erstellt<br /> Entwicklungsumgebung vorbereiten<br /> alle Use-Cases für erste Produktivversion definiert<br /> UI Skizze erstellt<br /> Design Guide für CI erstellt<br /> Architektur skizziert   |
+| **Inception**      | 1                | 1/2                    | Projektskizze erstellt, Entwicklungsumgebung vorbereiten, alle Use-Cases für erste Produktivversion definiert, UI Skizze erstellt, Design Guide für CI erstellt, Architektur skizziert   |
 | **Milestone**      | **M1**           | **Ende Woche 2**       | **Anforderung an erste Produktivversion definiert**   |
-| **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 detaillierter formuliert<br /> Entwurf des Domänenmodelles   |
-|                    | 3                | 5/2                    | Uses-Cases 4-6 detaillierter formuliert<br /> Domänenmodell fertig gestellt<br />Architektur umgesetzt   |
+| **Elaboration**    | 2                | 3/2                    | Uses-Cases 1-3 detaillierter formuliert, Entwurf des Domänenmodelles   |
+|                    | 3                | 5/2                    | Uses-Cases 4-6 detaillierter formuliert, Domänenmodell fertig gestellt,Architektur umgesetzt   |
 | **Milestone**      | **M2**           | **Ende Woche 6**       | **Anforderung an erste Produktivversion verifiziert**   |
-| **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet<br /> UI Prototyp implementiert   |
-|                    | 5                | 9/2                    | Use-Case 3 und 5 realisiert und getestet<br /> UI aktualisiert   |
-|                    | 6                | 11/2                   | Use-Case 4 realisiert und getestet<br /> UI aktualisiert   |
-|                    | 7                | 13/2                   | Use-Case 6 realisiert und getestet<br /> UI fertig gestellt   |
-| **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App fertiggestellt<br /> Systemtests durchgeführt<br /> Dokumentation fertiggestellt   |       
+| **Construction**   | 4                | 7/2                    | Use-Case 1 und 2 realisiert und getestet, UI Prototyp implementiert   |
+|                    | 5                | 9/2                    | Use-Case 3 und 5 realisiert und getestet, UI aktualisiert   |
+|                    | 6                | 11/2                   | Use-Case 4 realisiert und getestet, UI aktualisiert   |
+|                    | 7                | 13/2                   | Use-Case 6 realisiert und getestet, UI fertig gestellt   |
+| **Milestone**      | **M3**           | **Ende Wo 14**         | Erste Produktivversion der App fertiggestellt, Systemtests durchgeführt, Dokumentation fertiggestellt   |       
 
 # Wirtschaftlichkeit
 Der geschätzte Aufwand beträgt 600 Mannstunden, was etwa 3 ½ Mannmonaten entspricht. Die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein _return on investment_ nach 24 Monaten.
