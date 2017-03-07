@@ -80,8 +80,7 @@ Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Ur
 Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab.
 
 # Weitere Anforderungen
-* Das
-UI Design ist schlicht und modern sein.
+* Das UI Design soll schlicht und modern sein.
 * Die Bedienung der App ist einfach und intuitiv.
 * Der Datenverbrauch ist möglichst klein, damit die App auch über ein langsames Mobilfunknetz gut nutzbar bleibt und sich der Datenverbrauch des Users in Grenzen hält.
 * Integration verschiedener Social Media.
