@@ -15,16 +15,16 @@ geometry: 1
 ---
 
 # UC 1: User wählt Tour aus und startet die Tour (fully dressed)
-## Vorspann
-## Name
-## Ebene
-## Primär-Akteur
-## Stakeholder
+## Primärer Akteur
+## Stakeholders und Interessen
 ## Vorbedingungen
 ## Erfolgsgarantie
 ## Standardablauf
 ## Erweiterungen
-## Nachspann
+## Spezielle Anforderungen
+## Technologie und Datenvariationsliste
+## Auftrittshäufigkeit
+## Offene Punkte
 
 # UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (casual)
 ## Name
