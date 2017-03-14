@@ -16,18 +16,45 @@ geometry: 1
 
 # UC 1: User wählt Tour aus und startet die Tour (fully dressed)
 ## Primärer Akteur
+Benutzer
+
 ## Stakeholders und Interessen
+- Benutzer: Will mit einfachen Schritten eine passende Tour finden und starten
+- Premium Tour Anbieter: Will seine Tour prominent plaziert haben um öfters ausgewählt zu werden
+
 ## Vorbedingungen
+- Benutzer ist angemeldet
+- Touren sind auf Server erfasst
+
 ## Erfolgsgarantie
+Benutzer findete eine ansprechende Tour und kann diese starten
+
 ## Standardablauf
+1. Benutzer öffnet app
+2. Benutzer klickt auf neue Tour starten
+3. App zeigt Auswahl von Touren
+4. Benutzer öffnet Filter
+5. Benutzer setzt Filter um gewünschte Tour zu finden
+6. Benutzer klickt auf Tour
+7. Tour wird gestartet
+8. Der Benutzer begibt sich zum Startpunkt der Tour
+
 ## Erweiterungen
+3.
+  a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren
+6.
+  a. App zeigt Detailvorschau an
+  b. Benutzer klickt auf Tour starten oder schliessen
+8.
+  a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
+
 ## Spezielle Anforderungen
-## Technologie und Datenvariationsliste
+- Filtern der Touren muss flüssig reagieren, Resultate werden sofort angezeigt
+
 ## Auftrittshäufigkeit
-## Offene Punkte
+Einmal pro Tour
 
 # UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (casual)
-## Name
 ## Standardablauf
 ## Erweiterungen
 
