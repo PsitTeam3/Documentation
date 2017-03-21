@@ -56,9 +56,20 @@ Einmal pro Tour
 
 # UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (casual)
 ## Standardablauf
+Der Benutzer läuft zum angezeigten Punkt auf der Karte. Auf der Karte ist jeweils der
+Standort des Benutzers und des Ziels ersichtlich.
+
 ## Erweiterungen
+Dem Benutzer werden visuell Anweisungen zum optimalen erreichen des Zielortes angezeigt.
+Während dem Ablaufen der Route kann der Benutzer auf Angebote von Partnern in der Nähe
+aufmerksam gemacht werden.
 
 # UC 3: User macht Foto am Besichtigungspunkt (brief)
+An einem Zielpunkt / Besichtigungspunkt angelangt, wird der Benutzer aufgefordert, ein Foto
+von einem vorgegebenen Objekt zu erstellen. Die App entscheidet danach ob die Informationen
+des Fotos mit denjenigen im System gespeicherten übereinstimmen. Stimmt das Resultat, wird
+der nächste Besichtigungspunkt angezeigt. Falls er falsch ist wird der Benutzer erneut
+aufgefordert das vorgegebene Objekt zu fotografieren.
 
 # Anwendungsfalldiagramm
 # System Sequenz Diagramm
