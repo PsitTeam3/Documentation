@@ -72,7 +72,7 @@ der nächste Besichtigungspunkt angezeigt. Falls er falsch ist wird der Benutzer
 aufgefordert das vorgegebene Objekt zu fotografieren.
 
 # Anwendungsfalldiagramm
-![bla](docs/diagrams/UC_Diagram_1-3.png)
+![Anwendungsfalldiagramm](docs/diagrams/UC_Diagram_1-3.png)
 
 # System Sequenz Diagramm
 # Domänenmodell
