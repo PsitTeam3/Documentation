@@ -62,27 +62,21 @@ Das Foto wurde erfolgreich vom Server validiert, die angezeigte Route ist die op
 1a. Die App verwirft das Foto: das Fotosubjekt wird nicht als Zwischenziel erkannt 
 2a. Der User fotografiert das Zwischenziel erneut
 1.  Die App akzeptiert das Foto: es handelt sich um das Zwischenziel.
-...
 
 ### Ablauf b
-...
 2b. Der User will die Tour abbrechen und sich spontan in einem Hotel einquartieren: Er beendet die App.
 
 ### Ablauf c
-...
 3c. Die App zeigt den aktuellen Standort annähernd an. Dem User ist ersichtlich, dass es sich hierbei nur um eine Annäherung handelt.
 4c. Die App berechnet die optimale Route zum nächsten Zwischenziel vom ungefähren Standort aus.
 5c. Der User akezptiert die Route und läuft dieser entlang.
 6c. Die App erhält Positiondaten aus mehreren Quellen, die durch die neue Position verfügbar werden.
 7c. Die App korrigiert die aktuelle Position und die Route.
-...
 
 ### Ablauf d
-...
 5d. Der User akzeptiert die Route nicht, da er einen besseren Weg kennt.
 6d. Der User kommt von der Route ab, der er seinen eigenen Weg geht.
 7d. Die App berechnet in Echtzeit die optimale Route der aktuellen Position zum Zwischenziel.
-...
 
 ## Spezielle Anforderungen
 * der User muss Informationen auch bei hellem Sonnenschein (z.B. in Wüstenstaat) erhalten
@@ -97,8 +91,6 @@ Das Foto wurde erfolgreich vom Server validiert, die angezeigte Route ist die op
 ## Offene Punkte
 * Welche Quellen können mit welcher Genaugkeit zur Ortung des Users angezapft werden?
 * In welchem Intervall wird die Position bestimmt? Wie verhält sich der Stromverbrauch in deren Abhängigkeit?
-* 
-
 
 # Anwendungsfalldiagramm
 # System Sequenz Diagramm
