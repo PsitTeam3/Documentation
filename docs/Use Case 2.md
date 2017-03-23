@@ -14,30 +14,32 @@ graphics: 1
 geometry: 1
 ---
 
-| Anwendungsfall                                                                                        | Art des Artefakts |
-|-------------------------------------------------------------------------------------------------------|-------------------|
-| User bekommt Bestätigung für das Abarbeiten des Punktes, die Route zum nächsten Punkt wird angezeigt. | brief             |
-| User macht Foto am Besichtigungspunkt                                                                 | casual            |
-| User läuft Route ab und sieht seine aktuellen Standort auf einer Karte.                               | fully dressed     |
+| Anwendungsfall                                                                                             | Art des Artefakts |
+|------------------------------------------------------------------------------------------------------------|-------------------|
+| Benutzer bekommt Bestätigung für das Erreichen eines Punktes, die Route zum nächsten Punkt wird angezeigt. | brief             |
+| Benutzer macht Foto am Besichtigungspunkt                                                                  | casual            |
+| Benutzer läuft Route ab und sieht seine aktuellen Standort auf einer Karte.                                | fully dressed     |
 
-# UC 1: User bekommt Bestätigung beim Abarbeiten der Route, der nächste Punkt wird angezeigt (fully dressed)
-## Vorspann
-## Name
-## Ebene
-## Primär-Akteur
-## Stakeholder
+# UC 1: Benutzer läuft Route ab und sieht seine aktuellen Standort auf einer Karte (fully dressed)
+## Primärer Akteur
+- Benutzer
+
+## Stakeholders und Interessen
 ## Vorbedingungen
 ## Erfolgsgarantie
 ## Standardablauf
 ## Erweiterungen
-## Nachspann
+## Spezielle Anforderungen
+## Technologie und Datenvariationsliste
+## Auftrittshäufigkeit
+## Offene Punkte
 
-# UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (casual)
+# UC 2: Benutzer macht Foto am Besichtigungspunkt (casual)
 ## Name
 ## Standardablauf
 ## Erweiterungen
 
-# UC 3: User macht Foto am Besichtigungspunkt (brief)
+# UC 3: Benutzer bekommt Bestätigung für das Erreichen eines Punktes, die Route zum nächsten Punkt wird angezeigt (brief)
 
 # Anwendungsfalldiagramm
 # System Sequenz Diagramm
