@@ -71,8 +71,7 @@ aufgefordert das vorgegebene Objekt zu fotografieren.
 # Anwendungsfalldiagramm
 ![Anwendungsfalldiagramm](docs/diagrams/UC_Diagram_1-3.png)
 
-# System Sequenz Diagramm
-![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
+# Systemsequenz Diagramm
+![Systemsequenzdiagramm](docs/diagrams/Sequence_Diagram_2-4.png)
 
 # Domänenmodell
-adf
