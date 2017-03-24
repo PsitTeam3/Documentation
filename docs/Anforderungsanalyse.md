@@ -25,7 +25,9 @@ numbersections: 1
 
 | **Datum**         | **Version** | **Änderung**                                         |
 | ----------------  | ----------- | ---------------------------------------------------- |
+| 24.03.2017        | 0.0.1       | Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden |
 | 21.03.2017        | 0.0.0       | Dokument erstellt                                    |
+\newpage
 
 # Projektmanagement
 TODO by Raffaele
@@ -127,8 +129,7 @@ TODO by Beni
 REVIEW by Nick
 
 # Systemsequenzdiagram
-TODO by Andi
-REVIEW by Josef
+![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
 
 # Glossar
 TODO by Raffaele
