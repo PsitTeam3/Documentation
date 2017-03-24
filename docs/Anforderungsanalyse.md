@@ -18,6 +18,7 @@ toc: 1
 colorlinks: 1
 graphics: 1
 geometry: 1
+numbersections: 1
 ---
 
 # Versionenlog
@@ -29,24 +30,31 @@ geometry: 1
 # Projektmanagement
 TODO by Raffaele
 REVIEW by Andi
+
 # Anwendungsfälle
 TODO by Andi
 REVIEW by Josef
+
 # Anwendungsfalldiagramm
 TODO by Beni
 REVIEW by Josef
+
 # Domänenmodell
 TODO by Nick
 REVIEW by Raffaele
+
 # Eine erste Architektur
 TODO by Nick
 REVIEW by Josef
+
 # Zusätzliche Spezifikationen
 TODO by Beni
 REVIEW by Nick
+
 # Systemsequenzdiagram
 TODO by Andi
 REVIEW by Josef
+
 # Glossar
 TODO by Raffaele
 REVIEW by Beni
