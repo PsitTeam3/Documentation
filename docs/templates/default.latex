@@ -239,7 +239,18 @@ $if(institute)$
 \providecommand{\institute}[1]{}
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}
 $endif$
-\date{$date$}
+$if(klass)$
+  $if(group)$
+    \date{\parbox{\linewidth}{\centering%
+      $klass$ \hspace*{3cm} $group$\endgraf\bigskip
+      $date$\endgraf
+    }}
+  $else$
+    \date{$date$}
+  $endif$
+$else$
+  \date{$date$}
+$endif$
 
 \begin{document}
 $if(title)$

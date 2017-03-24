@@ -1,5 +1,7 @@
 ---
 title: Anforderungsanalyse
+klass: IT15TA ZH
+group: Gruppe 3
 date: 28.03.2017
 author:
   - Andreas Saurer
