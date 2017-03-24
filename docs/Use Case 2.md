@@ -93,6 +93,10 @@ Das Foto wurde erfolgreich vom Server validiert, die angezeigte Route ist die op
 * In welchem Intervall wird die Position bestimmt? Wie verhält sich der Stromverbrauch in deren Abhängigkeit?
 
 # Anwendungsfalldiagramm
+
+![Anwendungsfalldiagramm](docs/diagrams/UC_Diagram_2-4.png)
+
 # System Sequenz Diagramm
-# Systemverträge für die Systemoperationen
+![Systemsequenzdiagramm](docs/diagrams/Sequence_Diagram_2-4.png)
+
 # Domänenmodell
