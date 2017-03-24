@@ -13,16 +13,16 @@ colorlinks: 1
 graphics: 1
 geometry: 1
 ---
-#UC 6: Anzeigen der Statistik (fully dressed)
-##Primärer Akteur:
+# UC 6: Anzeigen der Statistik (fully dressed)
+## Primärer Akteur:
 Reisende
-##Stakeholders und Interessen:
+## Stakeholders und Interessen:
  - Reisende: wollen eine Übersicht ihrer Tour sehen
-##Vorbedingungen:
+## Vorbedingungen:
  - Reisender hat Tour beendet
-##Erfolgsgarantie:
+## Erfolgsgarantie:
  - Reisende sieht eine anschauliche Übersicht ihrer Tour
-##Standardablauf:
+## Standardablauf:
  1. Reisender hat seine personalisierte Tour beendet
  2. Reisender sieht die Statistik über seine Tour
  3. Reisender kann auf der Tour gemachte Fotos anschauen
@@ -30,7 +30,7 @@ Reisende
  5. Reisender bewertet die Tour
  6. Reisender sieht vorschläge für weitere Touren.
  7. Reisender wählt nächste Tour aus oder beendet.
-##Alternativszenarien:
+## Alternativszenarien:
  I. Reisende bricht Tour vorzeitig ab
     1. Reisende bricht laufende Tour ab
     2. System fragt, ob die Tour abgebrochen, oder pausiert werden soll
@@ -46,18 +46,18 @@ Reisende
     2. System fragt, ob die Tour abgebrochen, oder pausiert werden soll
     3. Reisender wählt pausieren
     4. Reisender wird Statistik über bisherigen Fortschritt angezeigt
-##Spezielle Anforderungen
+## Spezielle Anforderungen
  - Nicht abrufbare Daten (z.B. Schrittzähler) sollen nicht angezeigt werden.
  - Nicht vollständige Daten müssen entsprechend Hochgerechnet werden.
  - Daten sollen vor Anzeige kontrolliert werden
  - Daten sollen anschaulich und verständlich angezeigt werden.
  - Eine Graphische übersicht der Tour soll angezeigt werden.
-##Auftrittshäufigkeit
+## Auftrittshäufigkeit
  - Einmal pro Tour
-#UC 5: Besuchen des nächsten Punktes bis zum Ende der Tour (Brief)
+# UC 5: Besuchen des nächsten Punktes bis zum Ende der Tour (Brief)
 Der Reisende besuchten alle verbleibenden Punkte und bestätig das erreichen jedes einzelnen Punktes mit einem Foto. Sind alle Punkte erledigt erhält der Reisende eine Erfolgsmeldung.
-#UC 4: Bestätigen des Abarbeiten eines Punktes und anzeigen des nächsten Punktes (Casual)
-##Erfolgsszenario
+# UC 4: Bestätigen des Abarbeiten eines Punktes und anzeigen des nächsten Punktes (Casual)
+## Erfolgsszenario
 Der Reisende erhält eine Bestätigung der App dass die Fotographie am richtigen Punkt gemacht wurde. Hierzu prüft der Server die mit dem Foto gespeicherten Metadaten (Koordinaten, Himmelsrichtung). Der aktuell markierte Punkt wird als «erledigt» markiert, und der nächste Punkt wird auf der Karte angezeigt.
-##Erfolgszenario mit Fallback
+## Erfolgszenario mit Fallback
 Die Reisende verfügt über keine aktive Verbindung mit dem Internet, Sie erhält eine Meldung, dass das Foto an den Server übermittelt wird, sobald sich ihr Gerät wieder über eine aktive Internet Verbindung verfügt. Der aktuell markierte Punkt wird als «erledigt» markiert, und der nächste Punkt wird auf der Karte angezeigt.
