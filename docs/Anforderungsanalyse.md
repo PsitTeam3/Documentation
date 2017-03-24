@@ -70,30 +70,31 @@ Benutzer findete eine ansprechende Tour und kann diese starten
 Einmal pro Tour
 
 ## UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (Priorität 2)
-## Erfolgszenario
+### Erfolgszenario
 Der Tourist befindet sich im Freien zwischen zwei Punkten auf einer Route, also einer Teilstrecke der Tour. Die App zeigt dem Benutzer seine aktuelle Position mit einem Marker (z.B. Punkt) an. Der User verlässt die Route, der Marker zeigt in Echtzeit die Position an, an der er sich befindet. Die App berechnet die neue Route mit der aktuellen Postion als Ausgangslage. Der User kann also zu jederzeit die optimale Route zwischen seiner aktuellen Position und dem Ziel nachschauen.
 
-## Erfolgszenario mit Fallback
+### Erfolgszenario mit Fallback
 Der Tourist befindet sich auf einer Tour durch eine Altstadt. Die App zeigt dem Benutzer seine aktuelle Position mit einem Marker (z.B. Punkt) an, der Marker bewegt sich mit dem User mit. Die aktuelle Route zum nächsten Zwischenziel führt durch ein dicht überdachtes Gebiet. Die App kann die Position des Users nicht per GPS abfragen, in der Nähe stehen einige Läden und Restaurants mit WLAN. Die App kann durch eine Kombination von Standorten von Mobilfunkmasten und WLAN Sendern die aktuelle Position berechnen. Der Benutzer hat kein GPS Signal, aber sieht sich trotzdem als Punkt auf der Karte in Echtzeit.
 
 ## UC 3: User macht Foto am Besichtigungspunkt (Priorität 2)
-## Erfolgszenario
+### Erfolgszenario
 An einem Zielpunkt / Besichtigungspunkt angelangt, wird der Benutzer aufgefordert, ein Foto
 von einem vorgegebenen Objekt zu erstellen. Die App entscheidet danach ob die Informationen
 des Fotos mit denjenigen im System gespeicherten übereinstimmen. Stimmt das Resultat, wird
 der nächste Besichtigungspunkt angezeigt.
 
-## Alternativszenario
+### Alternativszenario
 Befindet sich der Benutzer nicht am korrekten Ort, wird er erneut aufgefordert das
 vorgegebene Objekt zu fotografieren.
 
 ## UC 4: User bekommt Bestätigung für das Abarbeiten des Punktes, die Route zum nächsten Punkt wird angezeigt. (Priorität 2)
+### Erfolgszenario
 Nach dem korrekten validieren der Position des Touristen, zeigt die App dem Benutzer den
 nächsten Besichtigungspunkt mit einem Marker auf einer Karte an. Von seinem aktuellen Standort
 wird eine vordefinierte Route zum nächsten Besichtigungspunkt abgebildet. Der Tourist
 begiebt sich zum abgebildeten Punkt.
 
-## Alternativszenario
+### Alternativszenario
 Der Benutzer möchte die Tour unterbrechen und zu einem späteren Zeitpunkt fortsetzen. Er
 schliesst die App und kehrt nach unbestimmter Zeit zurück. Die App zeigt dann den letzten
 Stand und fragt nach der Weiterführung oder Abbruch der Tour.
