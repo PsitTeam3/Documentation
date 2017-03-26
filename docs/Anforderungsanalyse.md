@@ -22,13 +22,25 @@ numbersections: 1
 ---
 
 # Versionenlog
+\tabulinesep=1.2mm
+\begin{longtabu} to \textwidth { | l | l | l | X[l] | }
+  \hline
+  \textbf{Datum} & \textbf{Version} & \textbf{Änderung} & \textbf{Author} \\
+  \hline
+  \endhead
 
-| **Datum**         | **Version** | **Änderung**                                                      | **Author** |
-| ----------------  | ----------- | ----------------------------------------------------------------- | -----------|
-| 26.03.2017        | 0.0.3       | Anwendungsfalldiagramm hinzugefügt                             | Benjamin Schneidinger |
-| 26.03.2017        | 0.0.2       | Zusätzliche Spezifikationen definiert                             | Benjamin Schneidinger |
-| 24.03.2017        | 0.0.1       | Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden | Andreas Saurer|
-| 21.03.2017        | 0.0.0       | Dokument erstellt                                                 | Andreas Saurer |
+  0.0.3 & 21.03.2017 & Anwendungsfalldiagramm hinzugefügt & Benjamin Schneidinger\\
+  \hline
+
+  0.0.2 & 21.03.2017 & Zusätzliche Spezifikationen definiert & Benjamin Schneidinger\\
+  \hline
+
+  0.0.1 & 21.03.2017 & Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden & Andreas Saurer\\
+  \hline
+
+  0.0.0 & 21.03.2017 & Dokument erstellt & Andreas Saurer\\
+  \hline
+\end{longtabu}
 \newpage
 
 # Projektmanagement
@@ -36,7 +48,7 @@ numbersections: 1
 Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht und der zweite bevorstehende Meilenstein ist fast fertig gestellt.
 Die unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine detaillierte befindet sich im darauf folgenden Abschnitt.
 
-![Grobzeitplan Stand:26.03.2017](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/Grobzeitplan_26.03.2017.png) 
+![Grobzeitplan Stand:26.03.2017](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/Grobzeitplan_26.03.2017.png)
 
 ## Detaillierter Projektplan
 | **Phase**     | **NR**    | **Arbeitspaket**                              | **Soll**     |   **Ist**    |
@@ -247,7 +259,7 @@ Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interest
 
 **Tech Stack:**
 
-Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die Mobile App als native Android App umgesetzt. 
+Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die Mobile App als native Android App umgesetzt.
 
 | **Komponente** | **Stack** |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -260,7 +272,7 @@ REVIEW by Josef
 # Zusätzliche Spezifikationen
 
 ## Einführung
-Hier werden hauptsächlich alle nicht funktionalen Anforderungen definiert. Die funktionalen Anforderungen sind zum grössten Teil in den Anwendungsfällen erfasst. An diesem Dokument finden sich nur weitere funktionale Anforderungen, welche nicht in Zusammenhang mit einem Anwendungsfall stehen. 
+Hier werden hauptsächlich alle nicht funktionalen Anforderungen definiert. Die funktionalen Anforderungen sind zum grössten Teil in den Anwendungsfällen erfasst. An diesem Dokument finden sich nur weitere funktionale Anforderungen, welche nicht in Zusammenhang mit einem Anwendungsfall stehen.
 
 ## Funktionalität
 ### Logging / Fehlerbehandlung
@@ -268,7 +280,7 @@ Benutzer- und Systemaktivitäten sollen lokal auf dem Gerät gespeichert werden.
 Fehlerinformationen sollen automatisch an den Server geschickt werden.
 
 ### Kartenmaterial
-Für die Wegweisung soll die Kartenfunktionalität von Google verwendet werden. Google Maps unterstützt das offline Speichern von bestimmten Kartenabschnitten, was für Travelbuddy benötigt wird. 
+Für die Wegweisung soll die Kartenfunktionalität von Google verwendet werden. Google Maps unterstützt das offline Speichern von bestimmten Kartenabschnitten, was für Travelbuddy benötigt wird.
 
 ### Sicherheit
 Um Touren durchführen zu können, muss sich die Kundin authentifizieren. Dazu kann der Kunde ein Konto anlegen, oder sich mit seinem Facebook- oder Google-Konto anmelden.
@@ -322,36 +334,36 @@ Bei einem Absturtz der App, muss die Reisende nach einem Neustart die aktuelle T
 
 | **Begriff**            | **Erklärung**                                                                                 |
 | ---------------------: | :-------------------------------------------------------------------------------------------- |
-| Agency/Agencies        | engl. Agenturen                                                                               | 
-| API                    | Application Programming Interface, eine Schnittstelle zwischen zwei Programmen                | 
-| App                    | Abkz. Applikation, Synonym für Programm                                                       | 
-| Backend                | Serverseitiges Programm das vom Benutzer nur über ein Frontend angesteuert werden kann        | 
-| Business Logic         | engl. Geschäftslogik, logischer Ablauf des Programmes                                         | 
-| Construction-phase     | Phase in der das Projekt umgesetzt wird                                                       | 
-| Contributor            | engl. Beitragender, jemand der Inhalt für die Applikation erstellt                            | 
-| Elaboration-phase      | Phase in der das Projekt genauer ausgearbeitet wird                                           | 
-| External Services      | engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden                | 
-| Fallback               | Ausweichlösung/Alternativlösung                                                               | 
-| Frontend               | Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden kann                       | 
-| GPS                    | Globa Positioning System, globales Satelliten Navigationsnetz                                 | 
-| Inception-phase        | Gründungsphase, beginn des Projektes                                                          | 
-| Logging                | Aufzeichnen von Abläufen im Programm                                                          | 
-| Marker                 | Symbol das einen Punkt auf der Karte markiert                                                 | 
-| Means of Transport     | engl. Verkehrsmittel                                                                          | 
-| Meilenstein            | Bedeutender Schritt in der Entwicklung                                                        | 
-| Mobile App             | Programm dass nur auf einem Mobilgerät ausgeführt werden kann                                 | 
-| Native                 | Funktionen die von einem Gerät ohne weitere Software ausgeführt werden kann                   | 
-| ÖV                     | abkz. Öffentlicher Verkehr                                                                    | 
-| Point of Interest, PoI | engl. Ort von besonderem Interesse, bspw. Wahrzeichen                                         | 
-| Ressource              | Mittel das zur Entwicklung genutzt werden kann                                                | 
-| Smartphone             | Mobilgerät mit erweiterten Funktionen                                                         | 
-| Stakeholders           | engl. Interessenten                                                                           | 
-| Tech Stack             | Eingesetzte Technologien                                                                      | 
-| Trip                   | engl. Reise                                                                                   | 
-| Use-Case               | engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein bestimmtes Ziel zu erreichen | 
-| User                   | engl. Benutzer                                                                                | 
-| Web App                | Nur über den Webbrowser benutzbares Programm                                                  | 
-| WLAN                   | Wireless local area netweork, Kabellose netzwerkverbindung                                    | 
+| Agency/Agencies        | engl. Agenturen                                                                               |
+| API                    | Application Programming Interface, eine Schnittstelle zwischen zwei Programmen                |
+| App                    | Abkz. Applikation, Synonym für Programm                                                       |
+| Backend                | Serverseitiges Programm das vom Benutzer nur über ein Frontend angesteuert werden kann        |
+| Business Logic         | engl. Geschäftslogik, logischer Ablauf des Programmes                                         |
+| Construction-phase     | Phase in der das Projekt umgesetzt wird                                                       |
+| Contributor            | engl. Beitragender, jemand der Inhalt für die Applikation erstellt                            |
+| Elaboration-phase      | Phase in der das Projekt genauer ausgearbeitet wird                                           |
+| External Services      | engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden                |
+| Fallback               | Ausweichlösung/Alternativlösung                                                               |
+| Frontend               | Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden kann                       |
+| GPS                    | Globa Positioning System, globales Satelliten Navigationsnetz                                 |
+| Inception-phase        | Gründungsphase, beginn des Projektes                                                          |
+| Logging                | Aufzeichnen von Abläufen im Programm                                                          |
+| Marker                 | Symbol das einen Punkt auf der Karte markiert                                                 |
+| Means of Transport     | engl. Verkehrsmittel                                                                          |
+| Meilenstein            | Bedeutender Schritt in der Entwicklung                                                        |
+| Mobile App             | Programm dass nur auf einem Mobilgerät ausgeführt werden kann                                 |
+| Native                 | Funktionen die von einem Gerät ohne weitere Software ausgeführt werden kann                   |
+| ÖV                     | abkz. Öffentlicher Verkehr                                                                    |
+| Point of Interest, PoI | engl. Ort von besonderem Interesse, bspw. Wahrzeichen                                         |
+| Ressource              | Mittel das zur Entwicklung genutzt werden kann                                                |
+| Smartphone             | Mobilgerät mit erweiterten Funktionen                                                         |
+| Stakeholders           | engl. Interessenten                                                                           |
+| Tech Stack             | Eingesetzte Technologien                                                                      |
+| Trip                   | engl. Reise                                                                                   |
+| Use-Case               | engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein bestimmtes Ziel zu erreichen |
+| User                   | engl. Benutzer                                                                                |
+| Web App                | Nur über den Webbrowser benutzbares Programm                                                  |
+| WLAN                   | Wireless local area netweork, Kabellose netzwerkverbindung                                    |
 
 REVIEW by Beni
 
