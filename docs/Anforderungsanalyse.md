@@ -257,40 +257,40 @@ Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die einzelnen 
 
 REVIEW by Josef
 
-#Zusätzliche Spezifikationen
+# Zusätzliche Spezifikationen
 
-##Einführung
+## Einführung
 Hier werden hauptsächlich alle nicht funktionalen Anforderungen definiert. Die funktionalen Anforderungen sind zum grössten Teil in den Anwendungsfällen erfasst. An diesem Dokument finden sich nur weitere funktionale Anforderungen, welche nicht in Zusammenhang mit einem Anwendungsfall stehen. 
 
-##Funktionalität
-###Logging / Fehlerbehandlung
+## Funktionalität
+### Logging / Fehlerbehandlung
 Benutzer- und Systemaktivitäten sollen lokal auf dem Gerät gespeichert werden. Im Fehlerfall können diese Informationen an den Server geschickt und für die Fehleranalyse verwendet werden.
 Fehlerinformationen sollen automatisch an den Server geschickt werden.
 
-###Kartenmaterial
+### Kartenmaterial
 Für die Wegweisung soll die Kartenfunktionalität von Google verwendet werden. Google Maps unterstützt das offline Speichern von bestimmten Kartenabschnitten, was für Travelbuddy benötigt wird. 
 
-###Sicherheit
+### Sicherheit
 Um Touren durchführen zu können, muss sich die Kundin authentifizieren. Dazu kann der Kunde ein Konto anlegen, oder sich mit seinem Facebook- oder Google-Konto anmelden.
 
-##Verwendbarkeit
-###Hardware Limitierung
+## Verwendbarkeit
+### Hardware Limitierung
 Die Applikation soll als Touchscreen-App für Android Geräte entwickelt werden.
 
-###Lokalisierung
+### Lokalisierung
 Verschiedene Sprachen müssen unterstützt werden können. Reisende wählen ihre gewünschte Sprache in der App aus. Danach wird das GUI in der vorgegebenen Sprache angezeigt. Die Touren werden ebenfalls in der gewünschten Sprache angezeigt, sofern es eine Übersetzung gibt.
 
-###Offline Unterstützung
+### Offline Unterstützung
 Die Tourensuche funktioniert nur, wenn der Kunde Internetzugang hat. Einzelne Touren können danach lokal auf dem Gerät des Kunden gespeichert werden, so dass Reisende eine Tour auch ohne Internetzugang durchführen können.
 
-###Graphische Oberfläche
+### Graphische Oberfläche
 * Konzipiert für Smartphones und Tablets.
 * Bedienung durch Touchscreen.
 
-##Umsetzungsbedingungen
+## Umsetzungsbedingungen
 Als Entwicklungsprozess wird der Unified Process verwendet. Dies ist ein populärer, iterativer Software-Entwicklungsprozess um objektorientierte Systeme zu bauen.\cite{UP}
 
-###Backend
+### Backend
 Für die Umsetzung des Backends sollen folgende Microsoft Technologien verwendet werden:
 * Microsoft ASP.NET
 * Microsoft SQL Server
@@ -306,14 +306,15 @@ Das Backend stellt eine REST API bereit. Das Backend muss in der Lage sein, Anfr
 | Starten von Touren | 400  |
 | Offline Speichern von Touren  | Bandbreiten Abhängig. Daten < 10 MB   |
 | Hochladen von Photos und Routenanzeige zum nächsten Standort   | 5000 (Photo komprimieren)  |
+
 \caption{GUI Reaktionszeiten}
 
-###App
+### App
 Es wird eine native Android Applikation entwickelt. Für die Entwicklung wird verwendet:
 * Android Studio 2.3
 * JetBrains IntelliJ
 
-##Zuverlässigkeit
+## Zuverlässigkeit
 Bei einem Absturtz der App, muss die Reisende nach einem Neustart die aktuelle Tour weiterführen können. Die App kennt den aktuellen Standort und rekonstruiert gegebenenfalls die Route zum nächsten Ziel vollautomatisch.
 
 # Systemsequenzdiagram
