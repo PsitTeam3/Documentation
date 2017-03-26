@@ -245,6 +245,7 @@ Google Maps Services:
 Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interests und zur Berechnung der Route werden nicht selber implementiert. Hierfür binden wir als externen Service die Google Maps Services ein. Die Route und die Point of Interests, die vom eigenen Web-Service geladen werden, werden als Overlay über die Kartenfunktionalität von Google implementiert.
 
 **Tech Stack:**
+
 | **Komponente** | **Stack** |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------|
 | Native Android App | JAVA 8,Android SDK / Android Studio 2.3 |
