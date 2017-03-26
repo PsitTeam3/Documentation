@@ -208,10 +208,11 @@ REVIEW by Raffaele
 # Eine erste Architektur
 
 Die Applikation besitzt mehrere Hauptkomponenten:
-•	Mobile Application
-•	Web Service
-•	External Services
-•	Web Application
+<br>•	Mobile Application
+<br>•	Web Service
+<br>•	External Services
+<br>•	Web Application
+<br>
 Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht detaillierter beschrieben.
 
 ![First_Architecture](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/first_architecture1.jpg)
