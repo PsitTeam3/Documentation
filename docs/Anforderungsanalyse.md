@@ -185,7 +185,7 @@ REVIEW by Josef
 
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-![Domain_Model](docs/diagrams/domain_model1.jpg)
+![Domain_Model](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/domain_model1.jpg)
 
 | **Objekte** | **Beschreibung** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -214,7 +214,7 @@ Die Applikation besitzt mehrere Hauptkomponenten:
 •	Web Application
 Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht detaillierter beschrieben.
 
-![First_Architecture](docs/diagrams/first_architecture1.jpg)
+![First_Architecture](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/first_architecture1.jpg)
 
 **Mobile Application:**
 Die Mobile Application wird vom Touristen verwendet und bietet die Schnittstelle zu den eigentlichen Hauptfunktionalitäten.  Die App wird als 3-tier Applikation aufgebaut. Da die Daten, auch für eine allfällig zukünftige offline-fähigkeit, sowohl lokal in der App wie auch über die Data-Services persistiert werden bzw. zum Beispiel Fotos nur lokal gespeichert werden, teilt sich der Datenzugriffs-Layer, auf den Persistence Layer und den Data Service Layer auf. Als vertikaler Layer werden für alle anderen Layer Logging-, Monitoring- und weitere allgemein verwendete Funktionalitäten zur Verfügung gestellt.
