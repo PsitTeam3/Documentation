@@ -121,6 +121,7 @@ REVIEW by Josef
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der identifizierten Objekte und Tätigkeiten der Benutzer.
 
 ![Domain_Model](docs/diagrams/domain_model1.jpg)
+
 | **Objekte** | **Beschreibung** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | User | Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als Contributor oder Tourist auftreten. |
@@ -135,7 +136,8 @@ Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der id
 | Means of Transport | Verschiedene Verkehrsmittel z.B.: ÖV, Auto, Velo, zu Fuss usw… |
 | Photo | An jedem Point of Interest schiesst der Benutzer mit seiner Mobile App ein Foto des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der Point of Interest so als besucht abgehakt. |
 | Statistik | Am Ende einer Tour, nachdem alle Points of Interest, besucht wurden, wird dem Touristen eine Statistik über seine absolvierte Route, Anzahl Schritte, Distanz usw… angezeigt. Diese ist in der Mobile App verknüpft mit seinen geschossen Fotos. |
-|  |  |
+
+\newpage
 REVIEW by Raffaele
 
 # Eine erste Architektur
