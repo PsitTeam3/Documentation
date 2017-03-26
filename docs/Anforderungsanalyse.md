@@ -120,22 +120,22 @@ REVIEW by Josef
 
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-![Domain_Model](docs/diagrams/domain_model1.jpg)
+![Domain_Model](/diagrams/domain_model1.jpg)
 
 | **Objekte** | **Beschreibung** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User | Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als Contributor oder Tourist auftreten. |
-| Contributor / Agencies | Ein Contributor erstellt und erfasst Inhalt (d.h.: Touren, Routen und Point of Interests). Ein Subtyp davon sind Agencies, also Reisebüros und Tourismusorganisationen), die als zertifizierte Erfasser agieren. |
-| Tourist | Ein Tourist ist der eigentliche Benutzer der,App. Er ist auf Reisen (Trip) und möchte an einem Ort bzw. in einer,Stadt eine Tour unternehmen, um die wichtigsten oder spannendsten Point,of Interests kennen zu lernen. Er verwendet dafür die Mobile App. |
-| Mobile App | Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die Mobile App wird vom Touristen verwendet um sich damit unterstützt entlang einer Tour steuern zu lassen. |
-| Web App | Die Web App bietet die funktionale Schnittstelle für Contributors. |
-| Trip | Ein Tourist macht eine Reise und hat dort je nach Ort und Stadt mehrere verschiedene Touren zur Auswahl. |
-| Tour | Eine Tour ist eine Sammlung von Point of Interests in einer bestimmten Stadt, die über eine bestimmte Route miteinander verbunden sind. |
-| Route | Eine Route stellt eine Verbindung von mehreren Point of Interests dar. Eine Route kann mit verschiedenen Verkehrsmitteln absolviert werden. |
-| Point of Interest | Point of Interest sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer Route verbunden. Der Tourist muss beim Absolvieren einer Route an jedem Point of Interest vorbeikommen und ein Foto schiessen. |
-| Means of Transport | Verschiedene Verkehrsmittel z.B.: ÖV, Auto, Velo, zu Fuss usw… |
-| Photo | An jedem Point of Interest schiesst der Benutzer mit seiner Mobile App ein Foto des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der Point of Interest so als besucht abgehakt. |
-| Statistik | Am Ende einer Tour, nachdem alle Points of Interest, besucht wurden, wird dem Touristen eine Statistik über seine absolvierte Route, Anzahl Schritte, Distanz usw… angezeigt. Diese ist in der Mobile App verknüpft mit seinen geschossen Fotos. |
+| User | Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als **Contributor** oder **Tourist** auftreten. |
+| Contributor / Agencies | Ein **Contributor** erstellt und erfasst Inhalt (d.h.: **Touren**, **Routen** und **Point of Interests**). Ein Subtyp davon sind **Agencies**, also Reisebüros und Tourismusorganisationen), die als zertifizierte Erfasser agieren. |
+| Tourist | Ein **Tourist** ist der eigentliche Benutzer der,App. Er ist auf Reisen (**Trip**) und möchte an einem Ort bzw. in einer,Stadt eine **Tour** unternehmen, um die wichtigsten oder spannendsten **Point of Interest** kennen zu lernen. Er verwendet dafür die **Mobile App**. |
+| Mobile App | Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die **Mobile App** wird vom **Touristen** verwendet um sich damit unterstützt entlang einer **Tour** steuern zu lassen. |
+| Web App | Die **Web App** bietet die funktionale Schnittstelle für **Contributors**. |
+| Trip | Ein **Tourist** macht eine Reise und hat dort je nach Ort und Stadt mehrere verschiedene **Touren** zur Auswahl. |
+| Tour | Eine **Tour** ist eine Sammlung von **Point of Interest**s in einer bestimmten **Stadt**, die über eine bestimmte **Route** miteinander verbunden sind. |
+| Route | Eine **Route** stellt eine Verbindung von mehreren **Point of Interests** dar. Eine Route kann mit verschiedenen **Verkehrsmitteln** absolviert werden. |
+| Point of Interest | **Point of Interest** sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer **Route** verbunden. Der Tourist muss beim Absolvieren einer Route an jedem **Point of Interest** vorbeikommen und ein Foto schiessen. |
+| Means of Transport | Verschiedene **Verkehrsmittel** z.B.: ÖV, Auto, Velo, zu Fuss usw… |
+| Photo | An jedem **Point of Interest** schiesst der Benutzer mit seiner **Mobile App** ein **Foto** des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der **Point of Interest** so als besucht abgehakt. |
+| Statistik | Am Ende einer **Tour**, nachdem alle **Points of Interest**, besucht wurden, wird dem **Touristen** eine **Statistik** über seine absolvierte **Route**, Anzahl Schritte, Distanz usw… angezeigt. Diese ist in der **Mobile App** verknüpft mit seinen geschossen **Fotos**. |
 
 \newpage
 REVIEW by Raffaele
