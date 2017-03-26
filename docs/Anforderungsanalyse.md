@@ -22,16 +22,95 @@ numbersections: 1
 ---
 
 # Versionenlog
+\tabulinesep=1.2mm
+\begin{longtabu} to \textwidth { | l | l | l | X[l] | }
+  \hline
+  \textbf{Datum} & \textbf{Version} & \textbf{Änderung} & \textbf{Author} \\
+  \hline
+  \endhead
 
-| **Datum**         | **Version** | **Änderung**                                         |
-| ----------------  | ----------- | ---------------------------------------------------- |
-| 24.03.2017        | 0.0.1       | Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden |
-| 21.03.2017        | 0.0.0       | Dokument erstellt                                    |
+  0.0.3 & 21.03.2017 & Anwendungsfalldiagramm hinzugefügt & Benjamin Schneidinger\\
+  \hline
+
+  0.0.2 & 21.03.2017 & Zusätzliche Spezifikationen definiert & Benjamin Schneidinger\\
+  \hline
+
+  0.0.1 & 21.03.2017 & Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden & Andreas Saurer\\
+  \hline
+
+  0.0.0 & 21.03.2017 & Dokument erstellt & Andreas Saurer\\
+  \hline
+\end{longtabu}
 \newpage
 
 # Projektmanagement
-TODO by Raffaele
-REVIEW by Andi
+## Projektstatus
+Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht und der zweite bevorstehende Meilenstein ist fast fertig gestellt.
+Die unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine detaillierte befindet sich im darauf folgenden Abschnitt.
+
+![Grobzeitplan Stand:26.03.2017](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/Grobzeitplan_26.03.2017.png)
+
+## Detaillierter Projektplan
+| **Phase**     | **NR**    | **Arbeitspaket**                              | **Soll**     |   **Ist**    |
+| :------------ | :-------: | :-------------------------------------------: | -----------: | -----------: |
+| Inception     |           |                                               |              |              |
+|               | A-01      | Ausgangslage schildern                        | 5,0 h        |              |
+|               | A-02      | Projektidee beschreiben                       | 5,0 h        |              |
+|               | A-03      | Kundennutzen analysieren                      | 5,0 h        |              |      
+|               | A-04      | Projektidee beschreiben                       | 5,0 h        |              |      
+|               | A-05      | Konkurenzanalyse                              | 5,0 h        |              |      
+|               | A-06      | Haupablauf aufzeigen                          | 5,0 h        |              |      
+|               | A-07      | Weitere Anforderungen definieren              | 5,0 h        |              |      
+|               | A-08      | Ressource beschreiben                         | 5,0 h        |              |      
+|               | A-09      | Projektidee beschreiben                       | 5,0 h        |              |      
+|               | A-10      | Risiken beschreiben                           | 5,0 h        |              |      
+|               | A-11      | Grobplanung erstellen                         | 5,0 h        | 3,5 h        |      
+|               | A-12      | Wirtschaftlichkeitsanalyse                    | 5,0 h        | 6,0 h        |      
+|               | A-13      | Projektskizze erstellen (inkl. Präsi)         | 5,0 h        |              |
+| Total Phase:  | 13        |                                               | 65,0 h       |              |
+| Inception     |           |                                               |              |              |
+|               | B-01      | Projekmanagement organisieren                 | 5,0 h        | 6,0 h        |
+|               | B-02      | Anwendungsfall Diagramm zeichnen              | 5,0 h        |              |
+|               | B-03      | Domänenmodell erstellen                       | 5,0 h        |              |      
+|               | B-04      | Architektur beschreiben                       | 5,0 h        |              |      
+|               | B-05      | Zusätzliche Spezifikationen beschreiben       | 5,0 h        |              |      
+|               | B-06      | Syste-Sequenzdiagramm zeichnen                | 5,0 h        |              |      
+|               | B-07      | Glossar erstellen                             | 5,0 h        |              |      
+|               | B-08      | Use-Case 1 beschreiben                        | 1,0 h        |              |    
+|               | B-09      | Use-Case 2 beschreiben                        | 0,5 h        |              |       
+|               | B-10      | Use-Case 3 beschreiben                        | 0,5 h        |              |       
+|               | B-11      | Use-Case 4 beschreiben                        | 0,5 h        |              |       
+|               | B-12      | Use-Case 5 beschreiben                        | 0,5 h        |              |       
+|               | B-13      | Use-Case 6 beschreiben                        | 0,5 h        | 0,5 h        |      
+|               | B-14      | Analysedokument erstellen (inkl. Präsi)       | 6,5 h        |              |
+| Total Phase:  | 14        |                                               | 45,0 h       |              |
+| Construction  |           |                                               |              |              |
+|               | C-01      | Projekmanagement nachtragen                   | 1,0 h        |              |
+|               | C-02      | UC-1 Liste der verfügbaren Touren             | ? h          |              |
+|               | C-03      | UC-1 Starten einer Tour                       | ? h          |              |
+|               | C-04      | UC-2 Lokalisieren des Benutzers               | ? h          |              |
+|               | C-05      | UC-2 Anzeigen des Benutzers auf der Karte     | ? h          |              |
+|               | C-06      | UC-3 Foto machen                              | ? h          |              |
+|               | C-07      | UC-4 Prüfen der Geo koordinaten des Fotos     | ? h          |              |
+|               | C-08      | UC-5 Besuchen des nächsten Punktes            | ? h          |              |
+|               | C-09      | UC-6 Auslesen der Tourdaten                   | ? h          |              |
+|               | C-10      | UC-6 Anzeigen der Tourdaten                   | ? h          |              |
+|               | C-11      | UI gestalten                                  | ? h          |              |
+|               | C-12      | Systemtests durchführen                       | ? h          |              |
+|               | C-13      | Dokumentation erstellen                       | ? h          |              |
+|               | C-14      | Benutzeranleitung schreiben                   | ? h          |              |
+| Total Phase:  | 14        |                                               | ? h          |              |
+
+## Risiken
+
+| **NR**   | **Risiko**                                                              | **Auswirkung**     | **Wahrscheinlichkeit**    |
+| -------: | :-------------------------------------------------------------------:   | -----------------: | ------------------------: |
+| 1        | Schutz der gespeicherten Daten durch unauthorisierte Zugriffe           | Schwerwiegend      | Hoch                      |
+| 2        | Hohe kosten für Anwender Aufgrund der verwendung durch Kartenmaterial   | Mittel             | Hoch                      |
+| 3        | Fehlendes Wissen in der Entwicklung von Mobile Apps                     | Mittel             | Mittel                    |
+| 4        | Höhere komplexität durch einbinden von 3 Anbieter Software              | Gering             | Mittel                    |
+| 5        | Keine öffentlichen Karten-API verfügbar                                 | Schwerwiegend      | Sehr gering               |
+| 6        | Smartphone GPS koordination ungenau                                     | Gering             | Mittel                    |             
 
 # Anwendungsfälle
 ## UC 1: User wählt Tour aus und startet die Tour (Priorität 1)
@@ -113,24 +192,183 @@ Schritte angezeigt. Durch einen klick kann der Benutzer Fotos, die Statistik und
 Mitteilung auf den sozialen Medien teilen.
 
 # Anwendungsfalldiagramm
-TODO by Beni
-REVIEW by Josef
+![Anwendungsfalldiagramm](docs/diagrams/Anwendungsfalldiagramm.jpg)
 
 # Domänenmodell
-TODO by Nick
+
+Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der identifizierten Objekte und Tätigkeiten der Benutzer.
+
+![Domain_Model](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/domain_model1.jpg)
+
+| **Objekte** | **Beschreibung** |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User | Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als **Contributor** oder **Tourist** auftreten. |
+| Contributor / Agencies | Ein **Contributor** erstellt und erfasst Inhalt (d.h.: **Touren**, **Routen** und **Point of Interests**). Ein Subtyp davon sind **Agencies**, also Reisebüros und Tourismusorganisationen), die als zertifizierte Erfasser agieren. |
+| Tourist | Ein **Tourist** ist der eigentliche Benutzer der,App. Er ist auf Reisen (**Trip**) und möchte an einem Ort bzw. in einer,Stadt eine **Tour** unternehmen, um die wichtigsten oder spannendsten **Point of Interest** kennen zu lernen. Er verwendet dafür die **Mobile App**. |
+| Mobile App | Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die **Mobile App** wird vom **Touristen** verwendet um sich damit unterstützt entlang einer **Tour** steuern zu lassen. |
+| Web App | Die **Web App** bietet die funktionale Schnittstelle für **Contributors**. |
+| Trip | Ein **Tourist** macht eine Reise und hat dort je nach Ort und Stadt mehrere verschiedene **Touren** zur Auswahl. |
+| Tour | Eine **Tour** ist eine Sammlung von **Point of Interest**s in einer bestimmten **Stadt**, die über eine bestimmte **Route** miteinander verbunden sind. |
+| Route | Eine **Route** stellt eine Verbindung von mehreren **Point of Interests** dar. Eine Route kann mit verschiedenen **Verkehrsmitteln** absolviert werden. |
+| Point of Interest | **Point of Interest** sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer **Route** verbunden. Der Tourist muss beim Absolvieren einer Route an jedem **Point of Interest** vorbeikommen und ein Foto schiessen. |
+| Means of Transport | Verschiedene **Verkehrsmittel** z.B.: ÖV, Auto, Velo, zu Fuss usw… |
+| Photo | An jedem **Point of Interest** schiesst der Benutzer mit seiner **Mobile App** ein **Foto** des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der **Point of Interest** so als besucht abgehakt. |
+| Statistik | Am Ende einer **Tour**, nachdem alle **Points of Interest**, besucht wurden, wird dem **Touristen** eine **Statistik** über seine absolvierte **Route**, Anzahl Schritte, Distanz usw… angezeigt. Diese ist in der **Mobile App** verknüpft mit seinen geschossen **Fotos**. |
+
+\newpage
 REVIEW by Raffaele
 
 # Eine erste Architektur
-TODO by Nick
+
+Die Applikation besitzt mehrere Hauptkomponenten:
+<br>•	Mobile Application
+<br>•	Web Service
+<br>•	External Services
+<br>•	Web Application
+<br>
+Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht detaillierter beschrieben.
+
+![First_Architecture](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/first_architecture1.jpg)
+
+**Mobile Application:**
+Die Mobile Application wird vom Touristen verwendet und bietet die Schnittstelle zu den eigentlichen Hauptfunktionalitäten.  Die App wird als 3-tier Applikation aufgebaut. Da die Daten, auch für eine allfällig zukünftige offline-fähigkeit, sowohl lokal in der App wie auch über die Data-Services persistiert werden bzw. zum Beispiel Fotos nur lokal gespeichert werden, teilt sich der Datenzugriffs-Layer, auf den Persistence Layer und den Data Service Layer auf. Als vertikaler Layer werden für alle anderen Layer Logging-, Monitoring- und weitere allgemein verwendete Funktionalitäten zur Verfügung gestellt.
+
+| **Komponente** | **Beschreibung** |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Presentation Layer | Implementiert die grafische Schnittstelle zum Benutzer. Weist neben rudimentärer Eingabe- und Steuerungslogik, neben der Darstellung keine weiteren Funktionalitäten auf. |
+| Business Logic Layer | Hier werden alle App-spezifischen Funktionalitäten implementiert. Dies beinhaltet zum Beispiel das grafische Aufbereiten der erhaltenen Daten. Anderseits sind Grundfunktionalitäten wie das Abgleichen der aktuellen Position mit dem Point of Interest nicht Bestandteil dieses Layer, sondern serverseitig umgesetzt werden. |
+| Persistence Layer | Der Persistence Layer bietet den Datenzugriff auf den lokalen Storage der App. Damit werden zum Beispiel Fotos gespeichert. |
+| Data Service Layer | Dieser Layer bietet den Zugriff auf unseren eigenen Web-Daten-Service, wie auch auf die Google Maps Services zum Anzeigen der Karte und Berechnen der Route. |
+| Supporting Functionalities | Diese Komponente implementiert alle Funktionalitäten, die den anderen Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige Monitoring-Funktionalitäten. |
+
+**Web Service:**
+Der Webservice stellt als Backend-Komponente sowohl Daten- wie auch funktionale Schnittstelle zur App und zu allen weiteren Systemen oder externen Systemen dar. Er stellt jederzeit den aktuellen Referenzdatenstand und alle grundlegenden nicht zugriffs-system-spezifischen Funktionalitäten an. Dadurch kann eine hohe Datenqualität und Datenkonsistenz sichergestellt werden. Der Web Service muss hierfür eine Datenbank-Anbindung zur Persistierung der Daten aufweisen. Genauso wie die Mobile Application wird der Web Service einen vertikalen Layer für Logging-, Monitoring- und weitere allgemein verwendete Funktionalitäten implementieren.
+
+| **Komponente** | **Beschreibung** |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Service Layer | Der Data Service Layer stellt das nach aussen öffentlich verfügbare Interface zur Verfügung. Er loggt und behandelt ankommende Requests. |
+| Business Logic Layer | Dieser Layer besitzt alle Business-Funktionalitäten, die nicht reine daten-spezifische Aggregation sind, wie zum Beispiel den Check, ob eine Koordinate innerhalb eines Points of Interests ist. |
+| Persistence Layer | Implementiert sowohl den eigentlichen Datenzugriff, wie auch die OR-Mapping Logik. Der Layer ist für einen konsistenten, Schreib- und Lesezugriff auch bei mehreren gleichzeitigen abgearbeiteten Requests verantwortlich. |
+| Supporting Functionalities | Diese Komponente implementiert alle Funktionalitäten, die den anderen Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige Monitoring-Funktionalitäten. |
+
+**External Services:**
+Wo bereits Funktionen oder grafische Komponenten bestehen, werden diese über externe Services bezogen und eingebunden. Hierbei werden wir in einem ersten Schritt auf öffentlich zur Verfügung stehende Services zurückgreifen. Als grundlegenden Service werden die Google Maps  Funktionalitäten eingebunden.
+
+Google Maps Services:
+Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interests und zur Berechnung der Route werden nicht selber implementiert. Hierfür binden wir als externen Service die Google Maps Services ein. Die Route und die Point of Interests, die vom eigenen Web-Service geladen werden, werden als Overlay über die Kartenfunktionalität von Google implementiert.
+
+**Tech Stack:**
+
+Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die Mobile App als native Android App umgesetzt.
+
+| **Komponente** | **Stack** |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|
+| Native Android App | JAVA 8<br>Android SDK / Android Studio 2.3 |
+| Web Service | .NET Framework 4.5<br>C# 5.0<br>ASP.NET Web-API 2.2 (5.2.3)<br>Entity Framework 6.0<br>Ninject Dependency Injection Framework 3.2 |
+| Web Application | .NET Framework 4.5<br>C# 5.0<br>ASP.NET MVC 5.2.3 (Razor Engine)<br>HTML 5.0<br>Angular JS 2.2.4 or React JS 15.4.2<br>JQuery 3.2.1 |
+
 REVIEW by Josef
 
 # Zusätzliche Spezifikationen
-TODO by Beni
-REVIEW by Nick
+
+## Einführung
+Hier werden hauptsächlich alle nicht funktionalen Anforderungen definiert. Die funktionalen Anforderungen sind zum grössten Teil in den Anwendungsfällen erfasst. An diesem Dokument finden sich nur weitere funktionale Anforderungen, welche nicht in Zusammenhang mit einem Anwendungsfall stehen.
+
+## Funktionalität
+### Logging / Fehlerbehandlung
+Benutzer- und Systemaktivitäten sollen lokal auf dem Gerät gespeichert werden. Im Fehlerfall können diese Informationen an den Server geschickt und für die Fehleranalyse verwendet werden.
+Fehlerinformationen sollen automatisch an den Server geschickt werden.
+
+### Kartenmaterial
+Für die Wegweisung soll die Kartenfunktionalität von Google verwendet werden. Google Maps unterstützt das offline Speichern von bestimmten Kartenabschnitten, was für Travelbuddy benötigt wird.
+
+### Sicherheit
+Um Touren durchführen zu können, muss sich die Kundin authentifizieren. Dazu kann der Kunde ein Konto anlegen, oder sich mit seinem Facebook- oder Google-Konto anmelden.
+
+## Verwendbarkeit
+### Hardware Limitierung
+Die Applikation soll als Touchscreen-App für Android Geräte entwickelt werden.
+
+### Lokalisierung
+Verschiedene Sprachen müssen unterstützt werden können. Reisende wählen ihre gewünschte Sprache in der App aus. Danach wird das GUI in der vorgegebenen Sprache angezeigt. Die Touren werden ebenfalls in der gewünschten Sprache angezeigt, sofern es eine Übersetzung gibt.
+
+### Offline Unterstützung
+Die Tourensuche funktioniert nur, wenn der Kunde Internetzugang hat. Einzelne Touren können danach lokal auf dem Gerät des Kunden gespeichert werden, so dass Reisende eine Tour auch ohne Internetzugang durchführen können.
+
+### Graphische Oberfläche
+* Konzipiert für Smartphones und Tablets.
+* Bedienung durch Touchscreen.
+
+## Umsetzungsbedingungen
+Als Entwicklungsprozess wird der Unified Process verwendet. Dies ist ein populärer, iterativer Software-Entwicklungsprozess um objektorientierte Systeme zu bauen.\cite{UP}
+
+### Backend
+Für die Umsetzung des Backends sollen folgende Microsoft Technologien verwendet werden:
+* Microsoft ASP.NET
+* Microsoft SQL Server
+* Microsoft Visual Studio 2015 Enterprise
+* .NET Framework 4.6
+
+Das Backend stellt eine REST API bereit. Das Backend muss in der Lage sein, Anfragen so schnell beantworten zu können, dass die Anforderungen an das Reaktionsverhalten der App erfüllt werden können.
+
+| Benutzer Aktion | Max. Reaktionszeit [ms] |
+|--------------------|---------------------|
+| Anmelden           | 80                    |
+| Suchen nach Touren | 150  |
+| Starten von Touren | 400  |
+| Offline Speichern von Touren  | Bandbreiten Abhängig. Daten < 10 MB   |
+| Hochladen von Photos und Routenanzeige zum nächsten Standort   | 5000 (Photo komprimieren)  |
+
+### App
+Es wird eine native Android Applikation entwickelt. Für die Entwicklung wird verwendet:
+* Android Studio 2.3
+* JetBrains IntelliJ
+
+## Zuverlässigkeit
+Bei einem Absturtz der App, muss die Reisende nach einem Neustart die aktuelle Tour weiterführen können. Die App kennt den aktuellen Standort und rekonstruiert gegebenenfalls die Route zum nächsten Ziel vollautomatisch.
 
 # Systemsequenzdiagram
 ![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
 
 # Glossar
-TODO by Raffaele
+
+| **Begriff**            | **Erklärung**                                                                                 |
+| ---------------------: | :-------------------------------------------------------------------------------------------- |
+| Agency/Agencies        | engl. Agenturen                                                                               |
+| API                    | Application Programming Interface, eine Schnittstelle zwischen zwei Programmen                |
+| App                    | Abkz. Applikation, Synonym für Programm                                                       |
+| Backend                | Serverseitiges Programm das vom Benutzer nur über ein Frontend angesteuert werden kann        |
+| Business Logic         | engl. Geschäftslogik, logischer Ablauf des Programmes                                         |
+| Construction-phase     | Phase in der das Projekt umgesetzt wird                                                       |
+| Contributor            | engl. Beitragender, jemand der Inhalt für die Applikation erstellt                            |
+| Elaboration-phase      | Phase in der das Projekt genauer ausgearbeitet wird                                           |
+| External Services      | engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden                |
+| Fallback               | Ausweichlösung/Alternativlösung                                                               |
+| Frontend               | Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden kann                       |
+| GPS                    | Globa Positioning System, globales Satelliten Navigationsnetz                                 |
+| Inception-phase        | Gründungsphase, beginn des Projektes                                                          |
+| Logging                | Aufzeichnen von Abläufen im Programm                                                          |
+| Marker                 | Symbol das einen Punkt auf der Karte markiert                                                 |
+| Means of Transport     | engl. Verkehrsmittel                                                                          |
+| Meilenstein            | Bedeutender Schritt in der Entwicklung                                                        |
+| Mobile App             | Programm dass nur auf einem Mobilgerät ausgeführt werden kann                                 |
+| Native                 | Funktionen die von einem Gerät ohne weitere Software ausgeführt werden kann                   |
+| ÖV                     | abkz. Öffentlicher Verkehr                                                                    |
+| Point of Interest, PoI | engl. Ort von besonderem Interesse, bspw. Wahrzeichen                                         |
+| Ressource              | Mittel das zur Entwicklung genutzt werden kann                                                |
+| Smartphone             | Mobilgerät mit erweiterten Funktionen                                                         |
+| Stakeholders           | engl. Interessenten                                                                           |
+| Tech Stack             | Eingesetzte Technologien                                                                      |
+| Trip                   | engl. Reise                                                                                   |
+| Use-Case               | engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein bestimmtes Ziel zu erreichen |
+| User                   | engl. Benutzer                                                                                |
+| Web App                | Nur über den Webbrowser benutzbares Programm                                                  |
+| WLAN                   | Wireless local area netweork, Kabellose netzwerkverbindung                                    |
+
 REVIEW by Beni
+
+\addcontentsline{toc}{section}{Literatur}
+\begin{thebibliography}{9}
+\bibitem{UP}
+C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+\end{thebibliography}

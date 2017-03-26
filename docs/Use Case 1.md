@@ -74,4 +74,6 @@ aufgefordert das vorgegebene Objekt zu fotografieren.
 # System Sequenz Diagramm
 ![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
 
+\newpage
 # Domänenmodell
+![Domänenmodell](docs/diagrams/domain_model1.jpg)
