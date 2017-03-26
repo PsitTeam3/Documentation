@@ -30,12 +30,11 @@ numbersections: 1
 \newpage
 
 # Projektmanagement
-# Projektmanagement
 ## Projektstatus
 Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht und der zweite bevorstehende Meilenstein ist fast fertig gestellt.
 Die unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine detaillierte befindet sich im darauf folgenden Abschnitt.
 
-** TODO: Grafik einfügen **
+![Grobzeitplan Stand:26.03.2017](https://raw.githubusercontent.com/PsitTeam3/Documentation/master/docs/diagrams/Grobzeitplan_26.03.2017.png) 
 
 ## Detaillierter Projektplan
 | **Phase**     | **NR**    | **Arbeitspaket**                              | **Soll**     |   **Ist**    |
