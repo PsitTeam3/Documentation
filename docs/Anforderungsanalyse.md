@@ -32,8 +32,8 @@ numbersections: 1
 # Projektmanagement
 # Projektmanagement
 ## Projektstatus
-Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht der zweite bevorstehende Meilenstein ist fast Fertig gestellt.
-Die unten gezeigte Grafik zeigt eine Grobe übersicht des Projektes, eine Detailliertere befindet sich im folgenden Abschnitt.
+Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht und der zweite bevorstehende Meilenstein ist fast fertig gestellt.
+Die unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine detaillierte befindet sich im darauf folgenden Abschnitt.
 
 ** TODO: Grafik einfügen **
 
