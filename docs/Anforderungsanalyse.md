@@ -207,7 +207,49 @@ Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der id
 REVIEW by Raffaele
 
 # Eine erste Architektur
+
+Die Applikation besitzt mehrere Hauptkomponenten:
+•	Mobile Application
+•	Web Service
+•	External Services
+•	Web Application
+Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht detaillierter beschrieben.
+
 ![First_Architecture](docs/diagrams/first_architecture1.jpg)
+
+**Mobile Application:**
+Die Mobile Application wird vom Touristen verwendet und bietet die Schnittstelle zu den eigentlichen Hauptfunktionalitäten.  Die App wird als 3-tier Applikation aufgebaut. Da die Daten, auch für eine allfällig zukünftige offline-fähigkeit, sowohl lokal in der App wie auch über die Data-Services persistiert werden bzw. zum Beispiel Fotos nur lokal gespeichert werden, teilt sich der Datenzugriffs-Layer, auf den Persistence Layer und den Data Service Layer auf. Als vertikaler Layer werden für alle anderen Layer Logging-, Monitoring- und weitere allgemein verwendete Funktionalitäten zur Verfügung gestellt.
+
+| **Komponente** | **Beschreibung** |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Presentation Layer | Implementiert die grafische Schnittstelle zum Benutzer. Weist neben rudimentärer Eingabe- und Steuerungslogik, neben der Darstellung keine weiteren Funktionalitäten auf. |
+| Business Logic Layer | Hier werden alle App-spezifischen Funktionalitäten implementiert. Dies beinhaltet zum Beispiel das grafische Aufbereiten der erhaltenen Daten. Anderseits sind Grundfunktionalitäten wie das Abgleichen der aktuellen Position mit dem Point of Interest nicht Bestandteil dieses Layer, sondern serverseitig umgesetzt werden. |
+| Persistence Layer | Der Persistence Layer bietet den Datenzugriff auf den lokalen Storage der App. Damit werden zum Beispiel Fotos gespeichert. |
+| Data Service Layer | Dieser Layer bietet den Zugriff auf unseren eigenen Web-Daten-Service, wie auch auf die Google Maps Services zum Anzeigen der Karte und Berechnen der Route. |
+| Supporting Functionalities | Diese Komponente implementiert alle Funktionalitäten, die den anderen Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige Monitoring-Funktionalitäten. |
+
+**Web Service:**
+Der Webservice stellt als Backend-Komponente sowohl Daten- wie auch funktionale Schnittstelle zur App und zu allen weiteren Systemen oder externen Systemen dar. Er stellt jederzeit den aktuellen Referenzdatenstand und alle grundlegenden nicht zugriffs-system-spezifischen Funktionalitäten an. Dadurch kann eine hohe Datenqualität und Datenkonsistenz sichergestellt werden. Der Web Service muss hierfür eine Datenbank-Anbindung zur Persistierung der Daten aufweisen. Genauso wie die Mobile Application wird der Web Service einen vertikalen Layer für Logging-, Monitoring- und weitere allgemein verwendete Funktionalitäten implementieren.
+
+| **Komponente** | **Beschreibung** |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data Service Layer | Der Data Service Layer stellt das nach aussen öffentlich verfügbare Interface zur Verfügung. Er loggt und behandelt ankommende Requests. |
+| Business Logic Layer | Dieser Layer besitzt alle Business-Funktionalitäten, die nicht reine daten-spezifische Aggregation sind, wie zum Beispiel den Check, ob eine Koordinate innerhalb eines Points of Interests ist. |
+| Persistence Layer | Implementiert sowohl den eigentlichen Datenzugriff, wie auch die OR-Mapping Logik. Der Layer ist für einen konsistenten, Schreib- und Lesezugriff auch bei mehreren gleichzeitigen abgearbeiteten Requests verantwortlich. |
+| Supporting Functionalities | Diese Komponente implementiert alle Funktionalitäten, die den anderen Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige Monitoring-Funktionalitäten. |
+
+**External Services:**
+Wo bereits Funktionen oder grafische Komponenten bestehen, werden diese über externe Services bezogen und eingebunden. Hierbei werden wir in einem ersten Schritt auf öffentlich zur Verfügung stehende Services zurückgreifen. Als grundlegenden Service werden die Google Maps  Funktionalitäten eingebunden.
+
+Google Maps Services:
+Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interests und zur Berechnung der Route werden nicht selber implementiert. Hierfür binden wir als externen Service die Google Maps Services ein. Die Route und die Point of Interests, die vom eigenen Web-Service geladen werden, werden als Overlay über die Kartenfunktionalität von Google implementiert.
+
+**Tech Stack:**
+| Komponente | Stack |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|
+| Native Android App | JAVA 8 Android SDK / Android Studio 2.3 |
+| Web Service | .NET Framework 4.5 C# 5.0 ASP.NET Web-API 2.2 (5.2.3) Entity Framework 6.0 Ninject Dependency Injection Framework 3.2 |
+| Web Application | .NET Framework 4.5 C# 5.0 ASP.NET MVC 5.2.3 (Razor Engine) HTML 5.0 Angular JS 2.2.4 or React JS 15.4.2 JQuery 3.2.1 |
 REVIEW by Josef
 
 # Zusätzliche Spezifikationen
