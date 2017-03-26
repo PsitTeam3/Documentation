@@ -25,6 +25,7 @@ numbersections: 1
 
 | **Datum**         | **Version** | **Änderung**                                                      | **Author** |
 | ----------------  | ----------- | ----------------------------------------------------------------- | -----------|
+| 26.03.2017        | 0.0.3       | Anwendungsfalldiagramm hinzugefügt                             | Benjamin Schneidinger |
 | 26.03.2017        | 0.0.2       | Zusätzliche Spezifikationen definiert                             | Benjamin Schneidinger |
 | 24.03.2017        | 0.0.1       | Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden | Andreas Saurer|
 | 21.03.2017        | 0.0.0       | Dokument erstellt                                                 | Andreas Saurer |
@@ -179,8 +180,7 @@ Schritte angezeigt. Durch einen klick kann der Benutzer Fotos, die Statistik und
 Mitteilung auf den sozialen Medien teilen.
 
 # Anwendungsfalldiagramm
-TODO by Beni
-REVIEW by Josef
+![Anwendungsfalldiagramm](docs/diagrams/Anwendungsfalldiagramm.jpg)
 
 # Domänenmodell
 
@@ -307,8 +307,6 @@ Das Backend stellt eine REST API bereit. Das Backend muss in der Lage sein, Anfr
 | Offline Speichern von Touren  | Bandbreiten Abhängig. Daten < 10 MB   |
 | Hochladen von Photos und Routenanzeige zum nächsten Standort   | 5000 (Photo komprimieren)  |
 
-\caption{GUI Reaktionszeiten}
-
 ### App
 Es wird eine native Android Applikation entwickelt. Für die Entwicklung wird verwendet:
 * Android Studio 2.3
@@ -328,3 +326,4 @@ REVIEW by Beni
 \begin{thebibliography}{9}
 \bibitem{UP}
 C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+\end{thebibliography}
