@@ -319,7 +319,40 @@ Bei einem Absturtz der App, muss die Reisende nach einem Neustart die aktuelle T
 ![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
 
 # Glossar
-TODO by Raffaele
+
+| **Begriff**            | **Erklärung**                                                                                 |
+| ---------------------: | :-------------------------------------------------------------------------------------------- |
+| Agency/Agencies        | engl. Agenturen                                                                               | 
+| API                    | Application Programming Interface, eine Schnittstelle zwischen zwei Programmen                | 
+| App                    | Abkz. Applikation, Synonym für Programm                                                       | 
+| Backend                | Serverseitiges Programm das vom Benutzer nur über ein Frontend angesteuert werden kann        | 
+| Business Logic         | engl. Geschäftslogik, logischer Ablauf des Programmes                                         | 
+| Construction-phase     | Phase in der das Projekt umgesetzt wird                                                       | 
+| Contributor            | engl. Beitragender, jemand der Inhalt für die Applikation erstellt                            | 
+| Elaboration-phase      | Phase in der das Projekt genauer ausgearbeitet wird                                           | 
+| External Services      | engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden                | 
+| Fallback               | Ausweichlösung/Alternativlösung                                                               | 
+| Frontend               | Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden kann                       | 
+| GPS                    | Globa Positioning System, globales Satelliten Navigationsnetz                                 | 
+| Inception-phase        | Gründungsphase, beginn des Projektes                                                          | 
+| Logging                | Aufzeichnen von Abläufen im Programm                                                          | 
+| Marker                 | Symbol das einen Punkt auf der Karte markiert                                                 | 
+| Means of Transport     | engl. Verkehrsmittel                                                                          | 
+| Meilenstein            | Bedeutender Schritt in der Entwicklung                                                        | 
+| Mobile App             | Programm dass nur auf einem Mobilgerät ausgeführt werden kann                                 | 
+| Native                 | Funktionen die von einem Gerät ohne weitere Software ausgeführt werden kann                   | 
+| ÖV                     | abkz. Öffentlicher Verkehr                                                                    | 
+| Point of Interest, PoI | engl. Ort von besonderem Interesse, bspw. Wahrzeichen                                         | 
+| Ressource              | Mittel das zur Entwicklung genutzt werden kann                                                | 
+| Smartphone             | Mobilgerät mit erweiterten Funktionen                                                         | 
+| Stakeholders           | engl. Interessenten                                                                           | 
+| Tech Stack             | Eingesetzte Technologien                                                                      | 
+| Trip                   | engl. Reise                                                                                   | 
+| Use-Case               | engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein bestimmtes Ziel zu erreichen | 
+| User                   | engl. Benutzer                                                                                | 
+| Web App                | Nur über den Webbrowser benutzbares Programm                                                  | 
+| WLAN                   | Wireless local area netweork, Kabellose netzwerkverbindung                                    | 
+
 REVIEW by Beni
 
 \addcontentsline{toc}{section}{Literatur}
