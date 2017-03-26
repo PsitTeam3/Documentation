@@ -120,7 +120,7 @@ REVIEW by Josef
 
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage, der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-![Domain_Model](Documentation/docs/diagrams/domain_model1.jpg)
+![Domain_Model](docs/diagrams/domain_model1.jpg)
 
 | **Objekte** | **Beschreibung** |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
