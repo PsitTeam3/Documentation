@@ -245,11 +245,11 @@ Google Maps Services:
 Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interests und zur Berechnung der Route werden nicht selber implementiert. Hierfür binden wir als externen Service die Google Maps Services ein. Die Route und die Point of Interests, die vom eigenen Web-Service geladen werden, werden als Overlay über die Kartenfunktionalität von Google implementiert.
 
 **Tech Stack:**
-| Komponente | Stack |
+| Komponente         | Stack                                                                                                                 |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------|
-| Native Android App | JAVA 8 Android SDK / Android Studio 2.3 |
-| Web Service | .NET Framework 4.5 C# 5.0 ASP.NET Web-API 2.2 (5.2.3) Entity Framework 6.0 Ninject Dependency Injection Framework 3.2 |
-| Web Application | .NET Framework 4.5 C# 5.0 ASP.NET MVC 5.2.3 (Razor Engine) HTML 5.0 Angular JS 2.2.4 or React JS 15.4.2 JQuery 3.2.1 |
+| Native Android App | JAVA 8 Android SDK / Android Studio 2.3                                                                               |
+| Web Service        | .NET Framework 4.5 C# 5.0 ASP.NET Web-API 2.2 (5.2.3) Entity Framework 6.0 Ninject Dependency Injection Framework 3.2 |
+| Web Application    | .NET Framework 4.5 C# 5.0 ASP.NET MVC 5.2.3 (Razor Engine) HTML 5.0 Angular JS 2.2.4 or React JS 15.4.2 JQuery 3.2.1  |
 REVIEW by Josef
 
 # Zusätzliche Spezifikationen
