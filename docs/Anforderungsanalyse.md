@@ -245,6 +245,8 @@ Die Funktionalitäten zur Anzeige der Karte, den verschiedenen Point of Interest
 
 **Tech Stack:**
 
+Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die Mobile App als native Android App umgesetzt. 
+
 | **Komponente** | **Stack** |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------|
 | Native Android App | JAVA 8<br>Android SDK / Android Studio 2.3 |
