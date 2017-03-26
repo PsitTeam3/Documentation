@@ -40,13 +40,10 @@ Benutzer findete eine ansprechende Tour und kann diese starten
 8. Der Benutzer begibt sich zum Startpunkt der Tour
 
 ## Erweiterungen
-3.
-  a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren
-6.
-  a. App zeigt Detailvorschau an
-  b. Benutzer klickt auf Tour starten oder schliessen
-8.
-  a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
+3a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren\newline
+6a. App zeigt Detailvorschau an\newline
+6b. Benutzer klickt auf Tour starten oder schliessen\newline
+8a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
 
 ## Spezielle Anforderungen
 - Filtern der Touren muss flüssig reagieren, Resultate werden sofort angezeigt
@@ -74,7 +71,7 @@ aufgefordert das vorgegebene Objekt zu fotografieren.
 # Anwendungsfalldiagramm
 ![Anwendungsfalldiagramm](docs/diagrams/UC_Diagram_1-3.png)
 
-# Systemsequenz Diagramm
-![Systemsequenzdiagramm](docs/diagrams/System_Sequence_Diagram_1-3.png)
+# System Sequenz Diagramm
+![System Sequenz Diagramm](docs/diagrams/UC1_SystemSequenzDiagram.png)
 
 # Domänenmodell
