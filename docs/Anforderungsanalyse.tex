@@ -396,18 +396,23 @@ Vermittlung von Information & Map, Marker                                       
 \textbf{Objekte} & \textbf{Beschreibung} \\\hline
 \endhead
 
-User & Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als \textbf{Contributor} oder \textbf{Tourist} auftreten.\\\hline
-Contributor / Agencies & Ein \textbf{Contributor} erstellt und erfasst Inhalt (d.h.: \textbf{Touren}, \textbf{Routen} und \textbf{Point of Interests}). Ein Subtyp davon sind \textbf{Agencies}, also Reisebüros und Tourismusorganisationen), die als zertifizierte Erfasser agieren.\\\hline
-Tourist & Ein \textbf{Tourist} ist der eigentliche Benutzer der,App. Er ist auf Reisen (\textbf{Trip}) und möchte an einem Ort bzw. in einer,Stadt eine \textbf{Tour} unternehmen, um die wichtigsten oder spannendsten \textbf{Point of Interest} kennen zu lernen. Er verwendet dafür die \textbf{Mobile App}.\\\hline
-Mobile App & Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die \textbf{Mobile App} wird vom \textbf{Touristen} verwendet um sich damit unterstützt entlang einer \textbf{Tour} steuern zu lassen.\\\hline
-Web App & Die \textbf{Web App} bietet die funktionale Schnittstelle für \textbf{Contributors}.\\\hline
-Trip & Ein \textbf{Tourist} macht eine Reise und hat dort je nach Ort und Stadt mehrere verschiedene \textbf{Touren} zur Auswahl.\\\hline
-Tour & Eine \textbf{Tour} ist eine Sammlung von \textbf{Point of Interest}s in einer bestimmten \textbf{Stadt}, die über eine bestimmte \textbf{Route} miteinander verbunden sind.\\\hline
+Tourist & Dies ist der Hauptakteur und Benutzer der App. Er wählt eine \textbf{Tour} aus, läuft die \textbf{Route} ab, bringt seine Position durch eine \textbf{Map} in Erfahrung, checkt seinen Fortschritt (\textbf{TourProgress}) und die Zusammenfassung \textbf{TourSummary}. \\\hline
+TouristLocation & Repräsentiert die aktuelle Position des Touristen. \\\hline
+TouristAgency & Reisebüros und Tourismusorganisationen erfassen Inhalt (d.h.: \textbf{Touren}, \textbf{Routen} und \textbf{Point of Interests}).\\\hline
+Trip & Ein \textbf{Tourist} macht eine Reise (\textbf{Trip}) und hat dort je nach Ort und Stadt mehrere verschiedene \textbf{Touren} zur Auswahl.\\\hline
+Tour & Eine \textbf{Tour} ist eine Sammlung von \textbf{Point of Interest}s in einer bestimmten Stadt \textbf{City}, die über eine bestimmte \textbf{Route} miteinander verbunden sind.\\\hline
+TourRating & Der \textbf{Tourist} hat die Möglichkeit die \textbf{Tour} am Ende zu Bewertung und einen Kommentar zu hinterlassen. Die \textbf{TourstAgencies} haben Zugang zu diesen Bewertungen.\\\hline
+TourProgress & Der \textbf{Tourist} kann aktuelle Metriken während der Tour überprüfen. \\\hline
+TourSummary & Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest}  besucht wurden, wird dem \textbf{Touristen} eine Zusammenfassung/Statistik \textbf{TourSummary} über seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{} angezeigt.\\\hline
 Route & Eine \textbf{Route} stellt eine Verbindung von mehreren \textbf{Point of Interests} dar. Eine Route kann mit verschiedenen \textbf{Verkehrsmitteln} absolviert werden.\\\hline
-Point of Interest & \textbf{Point of Interest} sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer \textbf{Route} verbunden. Der Tourist muss beim Absolvieren einer Route an jedem \textbf{Point of Interest} vorbeikommen und ein Foto schiessen.\\\hline
-Means of Transport & Verschiedene \textbf{Verkehrsmittel} z.B.: ÖV, Auto, Velo, zu Fuss usw\ldots{}\\\hline
-Photo & An jedem \textbf{Point of Interest} schiesst der Benutzer mit seiner \textbf{Mobile App} ein \textbf{Foto} des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der \textbf{Point of Interest} so als besucht abgehakt.\\\hline
-Statistik & Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest}, besucht wurden, wird dem \textbf{Touristen} eine \textbf{Statistik} über seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{} angezeigt. Diese ist in der \textbf{Mobile App} verknüpft mit seinen geschossen \textbf{Fotos}.\\\hline
+Map & Die Karte zeigt dem \textbf{Tourist} mithilfe des \textbf{LocationMarkers} an. \\\hline
+LocationMarker & Visuallisiert eine Position. \\\hline
+City & Enthält mehere \textbf{Trips}. \\\hline
+Country & Enthählt mehere Städte (\textbf{City}).\\\hline
+Point of Interest & \textbf{Point of Interest} sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer \textbf{Route} verbunden. Der Tourist muss beim Absolvieren einer Tour an jedem \textbf{Point of Interest} vorbeikommen und ein Foto schiessen.\\\hline
+Means of Transportation & Verschiedene \textbf{Verkehrsmittel} z.B.: Uber, ÖV, Auto, Velo, zu Fuss usw\ldots{}\\\hline
+Photo & An jedem \textbf{Point of Interest} schiesst der Tourist mit seiner \textbf{Mobile App} ein \textbf{Foto} des Ortes oder der Sehenswürdigkeit. Wird das \textbf{Photo} akzeptiert, dann gilt der \textbf{Point of Interest} als besucht.\\\hline
+SocialMediaPost & Der Tourist hat am Ende einer Tour die Möglichkeit die Zusammenfassung (\textbf{TourSummary}) inklusive \textbf{Photos} auf Socia Media Kanälen zu teilen. \\\hline
 \end{longtabu}
 
 
