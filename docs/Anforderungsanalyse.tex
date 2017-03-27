@@ -11,6 +11,10 @@
 \providecommand{\documentauthors}{Andreas Saurer \\ Benjamin Schneidinger \\ Josef Erben \\ Raffaele Bof \\ Nicolas Loth}
 \providecommand{\documentdate}{28.03.2017}
 
+% special commands
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
 % font
 % \usepackage{titling}
 \usepackage[sfdefault]{roboto}
@@ -248,13 +252,26 @@ Reisende\_r findet eine ansprechende Tour und kann diese starten.
 
 
 \subsubsection{Erweiterungen}\label{erweiterungen}
-% TODO: specify desired number
-\begin{itemize}
-  \item 3a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren.
-  \item 6a. App zeigt Detailvorschau an.
-  \item 6b. Benutzer klickt auf Tour starten oder schliessen.
-  \item 8a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
-\end{itemize}
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item
+    \begin{enumerate}
+      \item Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren.
+    \end{enumerate}
+
+  \setcounter{enumi}{6}
+  \item
+    \begin{enumerate}
+      \item App zeigt Detailvorschau an.
+      \item Benutzer klickt auf Tour starten oder schliessen.
+    \end{enumerate}
+
+  \setcounter{enumi}{8}
+  \item
+    \begin{enumerate}
+      \item Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
+    \end{enumerate}
+\end{enumerate}
 
 
 \subsubsection{Spezielle Anforderungen}\label{spezielle-anforderungen}
@@ -485,15 +502,14 @@ Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die
 einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die
 Mobile App als native Android App umgesetzt.
 
-% TODO: style description (itemize?)
 \begin{longtabu} to \textwidth { | l | X[l] | }
 \hline
 \textbf{Komponente} & \textbf{Beschreibung} \\\hline
 \endhead
 
-Native Android App & JAVA 8, Android SDK / Android Studio 2.3\\\hline
-Web Service & .NET Framework 4.5, C\# 5.0, ASP.NET Web-API 2.2 (5.2.3), Entity Framework 6.0, Ninject Dependency Injection Framework 3.2\\\hline
-Web Application & .NET Framework 4.5, C\# 5.0, ASP.NET MVC 5.2.3 (Razor Engine), HTML 5.0, Angular JS 2.2.4 or React JS 15.4.2, JQuery 3.2.1\\\hline
+Native Android App & \specialcell{JAVA 8\\Android SDK / Android Studio 2.3}\\\hline
+Web Service & \specialcell{.NET Framework 4.5\\C\# 5.0\\ASP.NET Web-API 2.2 (5.2.3)\\Entity Framework 6.0\\Ninject Dependency Injection Framework 3.2}\\\hline
+Web Application & \specialcell{.NET Framework 4.5\\C\# 5.0\\ASP.NET MVC 5.2.3 (Razor Engine)\\HTML 5.0\\Angular JS 2.2.4 or React JS 15.4.2\\JQuery 3.2.1}\\\hline
 \end{longtabu}
 
 
