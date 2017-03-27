@@ -521,15 +521,20 @@ Wo bereits Funktionen oder grafische
 Komponenten bestehen, werden diese über externe Services bezogen und
 eingebunden. Hierbei werden wir in einem ersten Schritt auf öffentlich
 zur Verfügung stehende Services zurückgreifen. Als grundlegenden Service
-werden die Google Maps Funktionalitäten eingebunden.
+werden die Google Maps Funktionalitäten eingebunden. \\\hline
 
-Google Maps Services: Die Funktionalitäten zur Anzeige der Karte, den
+\textbf{Google Maps Services:} Die Funktionalitäten zur Anzeige der Karte, den
 verschiedenen Point of Interests und zur Berechnung der Route werden
 nicht selber implementiert. Hierfür binden wir als externen Service die
 Google Maps Services ein. Die Route und die Point of Interests, die vom
 eigenen Web-Service geladen werden, werden als Overlay über die
 Kartenfunktionalität von Google implementiert.
 
+\textbf{Google Location Services:} Die Ortskoordination werden von den Google
+Location Services bezogen. Hierbei wird bewusst auf die Verwendung der Android Location
+API verzichtet, da eine kommende Android Version diese komplett mit Google Location
+Services ersetzen wird. Zusätzlich bewegt man sich auf einer höheren Abstraktionsebene, so dass
+viele Details wie z.B. unterschiedliche Datenquellen aussen vor gelassen werden können.
 
 \subsection{Tech Stack}\label{tech-stack}
 Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die
@@ -541,7 +546,7 @@ Mobile App als native Android App umgesetzt.
 \textbf{Komponente} & \textbf{Beschreibung} \\\hline
 \endhead
 
-Native Android App & \specialcell{JAVA 8\\Android SDK / Android Studio 2.3}\\\hline
+Native Android App & \specialcell{JAVA 8\\Android SDK / Android Studio 2.3\\Mockito Mocking Framework 2.7.19}\\\hline
 Web Service & \specialcell{.NET Framework 4.5\\C\# 5.0\\ASP.NET Web-API 2.2 (5.2.3)\\Entity Framework 6.0\\Ninject Dependency Injection Framework 3.2}\\\hline
 Web Application & \specialcell{.NET Framework 4.5\\C\# 5.0\\ASP.NET MVC 5.2.3 (Razor Engine)\\HTML 5.0\\Angular JS 2.2.4 or React JS 15.4.2\\JQuery 3.2.1}\\\hline
 \end{longtabu}
@@ -670,7 +675,8 @@ vollautomatisch.
 \endhead
 
 Agency/Agencies & engl. Agenturen\\\hline
-App & Abkz. Applikation, Synonym für mobile Applikation auf Smartphone\\\hline
+Smartphone & Mobilgerät mit erweiterten Funktionen\\\hline
+Mobile Application & Mobile Applikation, Synonym für mobile Applikation auf Smartphone\\\hline
 Backend & Serverseitige Anwendung, stellt Rest API zur Verfügung\\\hline
 External Services & engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden wie z.B. Location Services\\\hline
 Fallback & Ausweichlösung/Alternativlösung\\\hline
@@ -680,7 +686,6 @@ Marker & Symbol, welches einen Punkt auf der Karte markiert\\\hline
 Natives Features & Funktionen, die ein Gerät ohne weitere Software besitzt\\\hline
 ÖV & abkz. Öffentlicher Verkehr\\\hline
 Point of Interest, PoI & engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
-Smartphone & Mobilgerät mit erweiterten Funktionen\\\hline
 Stakeholders & engl. Interessenten\\\hline
 Tech Stack & Eingesetzte Technologien\\\hline
 Trip & engl. Reise, enthält mehere Touren\\\hline
