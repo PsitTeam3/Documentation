@@ -33,20 +33,25 @@
 \urlstyle{same}  % don't use monospace font for urls
 
 % images
-\usepackage{graphicx,grffile}
+\usepackage{float,graphicx,grffile}
 \graphicspath{ {images/} }
+
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+
 % header and footer
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white.png}}
+\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white}}
 \fancyfoot[L]{\fontsize{8}{10}\selectfont\ \documenttitle}
 \fancyfoot[R]{\fontsize{8}{10}\selectfont\ Seite\ \thepage\ von\ \pageref*{LastPage}}
 
@@ -58,11 +63,6 @@
 % \titlespacing*{\section}{0pt}{1em}{0pt}
 % \titlespacing*{\subsection}{0pt}{1em}{0pt}
 % \titlespacing*{\subsubsection}{0pt}{1em}{0pt}
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
 
 % configure title page
 \title{
@@ -129,9 +129,9 @@ unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine
 detaillierte befindet sich im darauf folgenden Abschnitt.
 
 \begin{figure}
-\centering
-\includegraphics{Grobzeitplan_26.03.2017.png}
-\caption{Grobzeitplan Stand:26.03.2017}
+  \centering
+  \includegraphics{Grobzeitplan_26.03.2017}
+  \caption{Grobzeitplan Stand: 26.03.2017}
 \end{figure}
 
 
@@ -335,25 +335,23 @@ sozialen Medien teilen.
 
 
 \section{Anwendungsfalldiagramm}\label{anwendungsfalldiagramm}
-FIXME: image displayed on wrong place
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{Anwendungsfalldiagramm.jpg}
-%   \caption{Anwendungsfalldiagramm}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{Anwendungsfalldiagramm}
+  \caption{Anwendungsfalldiagramm}
+\end{figure}
+
 
 \section{Domänenmodell}\label{domaenenmodell}
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage,
 der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-FIXME: image displayed on wrong place
-
-% \begin{figure}
-%   \centering
-%   \includegraphics{domain_model1.jpg}
-%   \caption{Domänenmodell}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{domain_model1}
+  \caption{Domänenmodell}
+\end{figure}
 
 \begin{longtabu} to \textwidth { | l | X[l] | }
 \hline
@@ -387,7 +385,7 @@ Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integ
 
 \begin{figure}
 \centering
-\includegraphics{first_architecture1.jpg}
+\includegraphics{first_architecture1}
 \caption{Erste Architektur}
 \end{figure}
 
@@ -608,13 +606,12 @@ vollautomatisch.
 
 
 \section{Systemsequenzdiagram}\label{systemsequenzdiagram}
-FIXME: image displayed on wrong place
 
-% \begin{figure}
-% \centering
-% \includegraphics{UC1_SystemSequenzDiagram.png}
-% \caption{System Sequenz Diagramm}
-% \end{figure}
+\begin{figure}
+\centering
+\includegraphics{UC1_SystemSequenzDiagram}
+\caption{System Sequenz Diagramm}
+\end{figure}
 
 
 \section{Glossar}\label{glossar}
