@@ -33,20 +33,25 @@
 \urlstyle{same}  % don't use monospace font for urls
 
 % images
-\usepackage{graphicx,grffile}
+\usepackage{float,graphicx,grffile}
 \graphicspath{ {images/} }
+
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+
 % header and footer
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white.png}}
+\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white}}
 \fancyfoot[L]{\fontsize{8}{10}\selectfont\ \documenttitle}
 \fancyfoot[R]{\fontsize{8}{10}\selectfont\ Seite\ \thepage\ von\ \pageref*{LastPage}}
 
@@ -58,11 +63,6 @@
 % \titlespacing*{\section}{0pt}{1em}{0pt}
 % \titlespacing*{\subsection}{0pt}{1em}{0pt}
 % \titlespacing*{\subsubsection}{0pt}{1em}{0pt}
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
 
 % configure title page
 \title{
@@ -129,9 +129,9 @@ unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine
 detaillierte befindet sich im darauf folgenden Abschnitt.
 
 \begin{figure}
-\centering
-\includegraphics{Grobzeitplan_26.03.2017.png}
-\caption{Grobzeitplan Stand:26.03.2017}
+  \centering
+  \includegraphics{Grobzeitplan_26.03.2017}
+  \caption{Grobzeitplan Stand: 26.03.2017}
 \end{figure}
 
 
@@ -213,37 +213,37 @@ Total Phase: & 14 & & ? h & \\\hline
 \section{Anwendungsfälle}\label{anwendungsfuxe4lle}
 \subsection{UC 1: Tour auswählen und starten(Priorität 1)}\label{uc-1-user-wuxe4hlt-tour-aus-und-startet-die-tour-priorituxe4t-1}
 \subsubsection{Primärer Akteur}\label{primuxe4rer-akteur}
-Reisende_r
+Reisende\_r
 
 
 \subsubsection{Stakeholders und Interessen}\label{stakeholders-und-interessen}
 \begin{itemize}
-  \item Reisende_r: Will mit einfachen Schritten eine passende Tour finden und starten.
-  \item Premium Tour Anbieter_in: Will seine Tour prominent plaziert haben um öfters ausgewählt zu werden.
+  \item Reisende\_r: Will mit einfachen Schritten eine passende Tour finden und starten.
+  \item Premium Tour Anbieter\_in: Will seine Tour prominent plaziert haben um öfters ausgewählt zu werden.
 \end{itemize}
 
 
 \subsubsection{Vorbedingungen}\label{vorbedingungen}
 \begin{itemize}
-  \item Reisende_r ist angemeldet.
+  \item Reisende\_r ist angemeldet.
   \item Touren sind auf Server erfasst.
 \end{itemize}
 
 
 \subsubsection{Erfolgsgarantie}\label{erfolgsgarantie}
-Reisende_r findet eine ansprechende Tour und kann diese starten.
+Reisende\_r findet eine ansprechende Tour und kann diese starten.
 
 
 \subsubsection{Standardablauf}\label{standardablauf}
 \begin{enumerate}
-  \item Reisende_r öffnet app.
-  \item Reisende_r klickt auf neue Tour starten.
+  \item Reisende\_r öffnet app.
+  \item Reisende\_r klickt auf neue Tour starten.
   \item System zeigt Auswahl von Touren an.
-  \item Reisende_r öffnet Filter.
-  \item Reisende_r setzt Filter um gewünschte Tour zu finden.
-  \item Reisende_r klickt auf Tour.
+  \item Reisende\_r öffnet Filter.
+  \item Reisende\_r setzt Filter um gewünschte Tour zu finden.
+  \item Reisende\_r klickt auf Tour.
   \item System startet Tour.
-  \item Reisende_r begibt sich zum Startpunkt der Tour.
+  \item Reisende\_r begibt sich zum Startpunkt der Tour.
 \end{enumerate}
 
 
@@ -269,7 +269,7 @@ Einmal pro Tour.
 
 \subsection{UC 2: Route ablaufen und aktuellen Standort auf Karte betrachten (Priorität 2)}\label{uc-2-user-luxe4uft-route-ab-und-sieht-seine-aktuellen-standort-auf-einer-karte-priorituxe4t-2}
 \subsubsection{Erfolgszenario}\label{erfolgszenario}
-Tourist_in befindet sich im Freien zwischen zwei Punkten auf einer
+Tourist\_in befindet sich im Freien zwischen zwei Punkten auf einer
 Route, also einer Teilstrecke der Tour. Die App zeigt dem Benutzer seine
 aktuelle Position mit einem Marker (z.B. Punkt) an. Die Touristin verlässt
 die Route, der Marker zeigt in Echtzeit die Position an, an der sie sich
@@ -334,25 +334,23 @@ sozialen Medien teilen.
 
 
 \section{Anwendungsfalldiagramm}\label{anwendungsfalldiagramm}
-FIXME: image displayed on wrong place
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{Anwendungsfalldiagramm.jpg}
-%   \caption{Anwendungsfalldiagramm}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{Anwendungsfalldiagramm}
+  \caption{Anwendungsfalldiagramm}
+\end{figure}
+
 
 \section{Domänenmodell}\label{domaenenmodell}
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage,
 der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-FIXME: image displayed on wrong place
-
-% \begin{figure}
-%   \centering
-%   \includegraphics{domain_model1.jpg}
-%   \caption{Domänenmodell}
-% \end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{domain_model1}
+  \caption{Domänenmodell}
+\end{figure}
 
 \begin{longtabu} to \textwidth { | l | X[l] | }
 \hline
@@ -386,7 +384,7 @@ Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integ
 
 \begin{figure}
 \centering
-\includegraphics{first_architecture1.jpg}
+\includegraphics{first_architecture1}
 \caption{Erste Architektur}
 \end{figure}
 
@@ -607,13 +605,12 @@ vollautomatisch.
 
 
 \section{Systemsequenzdiagram}\label{systemsequenzdiagram}
-FIXME: image displayed on wrong place
 
-% \begin{figure}
-% \centering
-% \includegraphics{UC1_SystemSequenzDiagram.png}
-% \caption{System Sequenz Diagramm}
-% \end{figure}
+\begin{figure}
+\centering
+\includegraphics{UC1_SystemSequenzDiagram}
+\caption{System Sequenz Diagramm}
+\end{figure}
 
 
 \section{Glossar}\label{glossar}
@@ -656,9 +653,11 @@ WLAN & Wireless local area netweork, Kabellose netzwerkverbindung\\\hline
 
 
 \section{Literatur}\label{literatur}
-% TODO: remove title
-\begin{thebibliography}{9}
-  \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
-\end{thebibliography}
+\begingroup
+\renewcommand{\section}[2]{}%
+  \begin{thebibliography}{9}
+    \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+  \end{thebibliography}
+\endgroup
 
 \end{document}
