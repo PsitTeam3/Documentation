@@ -3,13 +3,8 @@
 \documentclass[a4paper,10pt,xetex]{article}
 \usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
 
-% \usepackage[T1]{fontenc}
-% \usepackage[utf8]{inputenc}
-
 % language
-% \setmainlanguage[]{german}
 \usepackage[german]{babel}
-% \usepackage{polyglossia}
 
 % variable definitions
 \providecommand{\documenttitle}{Anforderungsanalyse}
@@ -17,10 +12,8 @@
 \providecommand{\documentdate}{28.03.2017}
 
 % font
-\usepackage{titling}
+% \usepackage{titling}
 \usepackage[sfdefault]{roboto}
-% \usepackage{fontspec,xunicode}
-% \setmainfont{Brandon Text}
 
 % table
 \usepackage{array}
@@ -61,10 +54,10 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % style titles
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{1em}{0pt}
-\titlespacing*{\subsection}{0pt}{1em}{0pt}
-\titlespacing*{\subsubsection}{0pt}{1em}{0pt}
+% \usepackage{titlesec}
+% \titlespacing*{\section}{0pt}{1em}{0pt}
+% \titlespacing*{\subsection}{0pt}{1em}{0pt}
+% \titlespacing*{\subsubsection}{0pt}{1em}{0pt}
 
 % set default figure placement to htbp
 \makeatletter
@@ -73,7 +66,7 @@
 
 % configure title page
 \title{
-  \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]\\
+  \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]
   Anforderungsanalyse\\[\bigskipamount]
 }
 
@@ -87,8 +80,7 @@
 \begin{document}
 
 % title page
-\maketitle
-\newpage
+\maketitle\newpage
 
 % table of contents
 {
@@ -109,16 +101,19 @@
   \hline
   \endhead
 
-  0.0.3 & 21.03.2017 & Anwendungsfalldiagramm hinzugefügt & Benjamin Schneidinger\\
+  0.0.4 & 27.03.2017 & Dokument von Markdown zu Latex für bessere Formatierung konvertiert & A. Saurer\\
   \hline
 
-  0.0.2 & 21.03.2017 & Zusätzliche Spezifikationen definiert & Benjamin Schneidinger\\
+  0.0.3 & 26.03.2017 & Anwendungsfalldiagramm hinzugefügt & B. Schneidinger\\
   \hline
 
-  0.0.1 & 21.03.2017 & Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden & Andreas Saurer\\
+  0.0.2 & 26.03.2017 & Zusätzliche Spezifikationen definiert & B. Schneidinger\\
   \hline
 
-  0.0.0 & 21.03.2017 & Dokument erstellt & Andreas Saurer\\
+  0.0.1 & 24.03.2017 & Anwendungsfälle beschrieben und Systemsequenzdiagramm eingebunden & A. Saurer\\
+  \hline
+
+  0.0.0 & 21.03.2017 & Dokument erstellt & A. Saurer\\
   \hline
 \end{longtabu}
 \newpage
@@ -126,8 +121,8 @@
 % start content
 \section{Projektmanagement}\label{projektmanagement}
 
-\subsection{Projektstatus}\label{projektstatus}
 
+\subsection{Projektstatus}\label{projektstatus}
 Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht
 und der zweite bevorstehende Meilenstein ist fast fertig gestellt. Die
 unten gezeigte Grafik zeigt eine grobe Übersicht des Projektes, eine
@@ -139,228 +134,141 @@ detaillierte befindet sich im darauf folgenden Abschnitt.
 \caption{Grobzeitplan Stand:26.03.2017}
 \end{figure}
 
-\subsection{Detaillierter Projektplan}\label{detaillierter-projektplan}
 
-\begin{longtable}[]{@{}lccrr@{}}
-\toprule
-\textbf{Phase} & \textbf{NR} & \textbf{Arbeitspaket} & \textbf{Soll} &
-\textbf{Ist}\tabularnewline
-\midrule
+\subsection{Detaillierter Projektplan}\label{detaillierter-projektplan}
+\begin{longtabu} to \textwidth { | l | l | X[l] | l | l | }
+\hline
+\textbf{Phase} & \textbf{Nr.} & \textbf{Arbeitspaket} & \textbf{Soll} & \textbf{Ist} \\\hline
 \endhead
-Inception & & & &\tabularnewline
-& A-01 & Ausgangslage schildern & 5,0 h &\tabularnewline
-& A-02 & Projektidee beschreiben & 5,0 h &\tabularnewline
-& A-03 & Kundennutzen analysieren & 5,0 h &\tabularnewline
-& A-04 & Projektidee beschreiben & 5,0 h &\tabularnewline
-& A-05 & Konkurenzanalyse & 5,0 h &\tabularnewline
-& A-06 & Haupablauf aufzeigen & 5,0 h &\tabularnewline
-& A-07 & Weitere Anforderungen definieren & 5,0 h &\tabularnewline
-& A-08 & Ressource beschreiben & 5,0 h &\tabularnewline
-& A-09 & Projektidee beschreiben & 5,0 h &\tabularnewline
-& A-10 & Risiken beschreiben & 5,0 h &\tabularnewline
-& A-11 & Grobplanung erstellen & 5,0 h & 3,5 h\tabularnewline
-& A-12 & Wirtschaftlichkeitsanalyse & 5,0 h & 6,0 h\tabularnewline
-& A-13 & Projektskizze erstellen (inkl. Präsi) & 5,0 h &\tabularnewline
-Total Phase: & 13 & & 65,0 h &\tabularnewline
-Inception & & & &\tabularnewline
-& B-01 & Projekmanagement organisieren & 5,0 h & 6,0 h\tabularnewline
-& B-02 & Anwendungsfall Diagramm zeichnen & 5,0 h &\tabularnewline
-& B-03 & Domänenmodell erstellen & 5,0 h &\tabularnewline
-& B-04 & Architektur beschreiben & 5,0 h &\tabularnewline
-& B-05 & Zusätzliche Spezifikationen beschreiben & 5,0 h
-&\tabularnewline
-& B-06 & Syste-Sequenzdiagramm zeichnen & 5,0 h &\tabularnewline
-& B-07 & Glossar erstellen & 5,0 h &\tabularnewline
-& B-08 & Use-Case 1 beschreiben & 1,0 h &\tabularnewline
-& B-09 & Use-Case 2 beschreiben & 0,5 h &\tabularnewline
-& B-10 & Use-Case 3 beschreiben & 0,5 h &\tabularnewline
-& B-11 & Use-Case 4 beschreiben & 0,5 h &\tabularnewline
-& B-12 & Use-Case 5 beschreiben & 0,5 h &\tabularnewline
-& B-13 & Use-Case 6 beschreiben & 0,5 h & 0,5 h\tabularnewline
-& B-14 & Analysedokument erstellen (inkl. Präsi) & 6,5 h
-&\tabularnewline
-Total Phase: & 14 & & 45,0 h &\tabularnewline
-Construction & & & &\tabularnewline
-& C-01 & Projekmanagement nachtragen & 1,0 h &\tabularnewline
-& C-02 & UC-1 Liste der verfügbaren Touren & ? h &\tabularnewline
-& C-03 & UC-1 Starten einer Tour & ? h &\tabularnewline
-& C-04 & UC-2 Lokalisieren des Benutzers & ? h &\tabularnewline
-& C-05 & UC-2 Anzeigen des Benutzers auf der Karte & ? h
-&\tabularnewline
-& C-06 & UC-3 Foto machen & ? h &\tabularnewline
-& C-07 & UC-4 Prüfen der Geo koordinaten des Fotos & ? h
-&\tabularnewline
-& C-08 & UC-5 Besuchen des nächsten Punktes & ? h &\tabularnewline
-& C-09 & UC-6 Auslesen der Tourdaten & ? h &\tabularnewline
-& C-10 & UC-6 Anzeigen der Tourdaten & ? h &\tabularnewline
-& C-11 & UI gestalten & ? h &\tabularnewline
-& C-12 & Systemtests durchführen & ? h &\tabularnewline
-& C-13 & Dokumentation erstellen & ? h &\tabularnewline
-& C-14 & Benutzeranleitung schreiben & ? h &\tabularnewline
-Total Phase: & 14 & & ? h &\tabularnewline
-\bottomrule
-\end{longtable}
+
+\multicolumn{5}{| l |}{ \textbf{Inception} }\\\hline
+ & A-01 & Ausgangslage schildern & 5,0 h & \\\hline
+ & A-02 & Projektidee beschreiben & 5,0 h & \\\hline
+ & A-03 & Kundennutzen analysieren & 5,0 h & \\\hline
+ & A-04 & Projektidee beschreiben & 5,0 h & \\\hline
+ & A-05 & Konkurenzanalyse & 5,0 h & \\\hline
+ & A-06 & Haupablauf aufzeigen & 5,0 h & \\\hline
+ & A-07 & Weitere Anforderungen definieren & 5,0 h & \\\hline
+ & A-08 & Ressource beschreiben & 5,0 h & \\\hline
+ & A-09 & Projektidee beschreiben & 5,0 h & \\\hline
+ & A-10 & Risiken beschreiben & 5,0 h & \\\hline
+ & A-11 & Grobplanung erstellen & 5,0 h & 3,5 h\\\hline
+ & A-12 & Wirtschaftlichkeitsanalyse & 5,0 h & 6,0 h\\\hline
+ & A-13 & Projektskizze erstellen (inkl. Präsi) & 5,0 h & \\\hline
+Total Phase: & 13 & & 65,0 h & \\\hline
+\multicolumn{5}{| l |}{ }\\\hline
+
+\multicolumn{5}{| l |}{ \textbf{Inception} }\\\hline
+ & B-01 & Projekmanagement organisieren & 5,0 h & 6,0 h\\\hline
+ & B-02 & Anwendungsfall Diagramm zeichnen & 5,0 h & \\\hline
+ & B-03 & Domänenmodell erstellen & 5,0 h & \\\hline
+ & B-04 & Architektur beschreiben & 5,0 h & \\\hline
+ & B-05 & Zusätzliche Spezifikationen beschreiben & 5,0 h & \\\hline
+ & B-06 & Syste-Sequenzdiagramm zeichnen & 5,0 h & \\\hline
+ & B-07 & Glossar erstellen & 5,0 h & \\\hline
+ & B-08 & Use-Case 1 beschreiben & 1,0 h & \\\hline
+ & B-09 & Use-Case 2 beschreiben & 0,5 h & \\\hline
+ & B-10 & Use-Case 3 beschreiben & 0,5 h & \\\hline
+ & B-11 & Use-Case 4 beschreiben & 0,5 h & \\\hline
+ & B-12 & Use-Case 5 beschreiben & 0,5 h & \\\hline
+ & B-13 & Use-Case 6 beschreiben & 0,5 h & 0,5 h\\\hline
+ & B-14 & Analysedokument erstellen (inkl. Präsi) & 6,5 h & \\\hline
+Total Phase: & 14 & & 45,0 h & \\\hline
+\multicolumn{5}{| l |}{ }\\\hline
+
+\multicolumn{5}{| l |}{ \textbf{Construction} }\\\hline
+ & C-01 & Projekmanagement nachtragen & 1,0 h & \\\hline
+ & C-02 & UC-1 Liste der verfügbaren Touren & ? h & \\\hline
+ & C-03 & UC-1 Starten einer Tour & ? h & \\\hline
+ & C-04 & UC-2 Lokalisieren des Benutzers & ? h & \\\hline
+ & C-05 & UC-2 Anzeigen des Benutzers auf der Karte & ? h & \\\hline
+ & C-06 & UC-3 Foto machen & ? h & \\\hline
+ & C-07 & UC-4 Prüfen der Geo koordinaten des Fotos & ? h & \\\hline
+ & C-08 & UC-5 Besuchen des nächsten Punktes & ? h & \\\hline
+ & C-09 & UC-6 Auslesen der Tourdaten & ? h & \\\hline
+ & C-10 & UC-6 Anzeigen der Tourdaten & ? h & \\\hline
+ & C-11 & UI gestalten & ? h & \\\hline
+ & C-12 & Systemtests durchführen & ? h & \\\hline
+ & C-13 & Dokumentation erstellen & ? h & \\\hline
+ & C-14 & Benutzeranleitung schreiben & ? h & \\\hline
+Total Phase: & 14 & & ? h & \\\hline
+\end{longtabu}
+
 
 \subsection{Risiken}\label{risiken}
-
-\begin{longtable}[]{@{}rcrr@{}}
-\toprule
-\begin{minipage}[b]{0.06\columnwidth}\raggedleft\strut
-\textbf{NR}\strut
-\end{minipage} & \begin{minipage}[b]{0.50\columnwidth}\centering\strut
-\textbf{Risiko}\strut
-\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedleft\strut
-\textbf{Auswirkung}\strut
-\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedleft\strut
-\textbf{Wahrscheinlichkeit}\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtabu} to \textwidth { | l | X[l] | l | l | }
+\hline
+\textbf{Nr.} & \textbf{Risiko} & \textbf{Auswirkung} & \textbf{Wahrscheinlichkeit}\\\hline
 \endhead
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Schutz der gespeicherten Daten durch unauthorisierte Zugriffe\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Schwerwiegend\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Hoch\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Hohe kosten für Anwender Aufgrund der verwendung durch
-Kartenmaterial\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Mittel\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Hoch\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Fehlendes Wissen in der Entwicklung von Mobile Apps\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Mittel\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Mittel\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-4\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Höhere komplexität durch einbinden von 3 Anbieter Software\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Gering\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Mittel\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-5\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Keine öffentlichen Karten-API verfügbar\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Schwerwiegend\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Sehr gering\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.06\columnwidth}\raggedleft\strut
-6\strut
-\end{minipage} & \begin{minipage}[t]{0.50\columnwidth}\centering\strut
-Smartphone GPS koordination ungenau\strut
-\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedleft\strut
-Gering\strut
-\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedleft\strut
-Mittel\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+
+1 & Schutz der gespeicherten Daten durch unauthorisierte Zugriffe & Schwerwiegend & Hoch\\\hline
+2 & Hohe kosten für Anwender Aufgrund der verwendung durch Kartenmaterial & Mittel & Hoch\\\hline
+3 & Fehlendes Wissen in der Entwicklung von Mobile Apps & Mittel & Mittel\\\hline
+4 & Höhere komplexität durch einbinden von 3 Anbieter Software & Gering & Mittel\\\hline
+5 & Keine öffentlichen Karten-API verfügbar & Schwerwiegend & Sehr gering\\\hline
+6 & Smartphone GPS koordination ungenau & Gering & Mittel\\\hline
+\end{longtabu}
+
 
 \section{Anwendungsfälle}\label{anwendungsfuxe4lle}
-
-\subsection{UC 1: User wählt Tour aus und startet die Tour (Priorität
-1)}\label{uc-1-user-wuxe4hlt-tour-aus-und-startet-die-tour-priorituxe4t-1}
-
+\subsection{UC 1: User wählt Tour aus und startet die Tour (Priorität 1)}\label{uc-1-user-wuxe4hlt-tour-aus-und-startet-die-tour-priorituxe4t-1}
 \subsubsection{Primärer Akteur}\label{primuxe4rer-akteur}
-
 Benutzer
 
-\subsubsection{Stakeholders und
-Interessen}\label{stakeholders-und-interessen}
 
+\subsubsection{Stakeholders und Interessen}\label{stakeholders-und-interessen}
 \begin{itemize}
-\tightlist
-\item
-  Benutzer: Will mit einfachen Schritten eine passende Tour finden und
-  starten
-\item
-  Premium Tour Anbieter: Will seine Tour prominent plaziert haben um
-  öfters ausgewählt zu werden
+  \item Benutzer: Will mit einfachen Schritten eine passende Tour finden und starten
+  \item Premium Tour Anbieter: Will seine Tour prominent plaziert haben um öfters ausgewählt zu werden
 \end{itemize}
+
 
 \subsubsection{Vorbedingungen}\label{vorbedingungen}
-
 \begin{itemize}
-\tightlist
-\item
-  Benutzer ist angemeldet
-\item
-  Touren sind auf Server erfasst
+  \item Benutzer ist angemeldet
+  \item Touren sind auf Server erfasst
 \end{itemize}
+
 
 \subsubsection{Erfolgsgarantie}\label{erfolgsgarantie}
-
 Benutzer findete eine ansprechende Tour und kann diese starten
 
-\subsubsection{Standardablauf}\label{standardablauf}
 
+\subsubsection{Standardablauf}\label{standardablauf}
 \begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Benutzer öffnet app
-\item
-  Benutzer klickt auf neue Tour starten
-\item
-  App zeigt Auswahl von Touren
-\item
-  Benutzer öffnet Filter
-\item
-  Benutzer setzt Filter um gewünschte Tour zu finden
-\item
-  Benutzer klickt auf Tour
-\item
-  Tour wird gestartet
-\item
-  Der Benutzer begibt sich zum Startpunkt der Tour
+  \item Benutzer öffnet app
+  \item Benutzer klickt auf neue Tour starten
+  \item App zeigt Auswahl von Touren
+  \item Benutzer öffnet Filter
+  \item Benutzer setzt Filter um gewünschte Tour zu finden
+  \item Benutzer klickt auf Tour
+  \item Tour wird gestartet
+  \item Der Benutzer begibt sich zum Startpunkt der Tour
 \end{enumerate}
 
+
 \subsubsection{Erweiterungen}\label{erweiterungen}
-
-3a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern
-beworbenen Touren\newline
-6a. App zeigt Detailvorschau an\newline
-6b. Benutzer klickt auf Tour starten oder schliessen\newline
-8a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum
-Startpunkt kommt.
-
-\subsubsection{Spezielle Anforderungen}\label{spezielle-anforderungen}
-
+% TODO: specify desired number
 \begin{itemize}
-\tightlist
-\item
-  Filtern der Touren muss flüssig reagieren, Resultate werden sofort
-  angezeigt
+  \item 3a. Auswahl ist abhängig von gerade populären oder von Premium Anbietern beworbenen Touren
+  \item 6a. App zeigt Detailvorschau an
+  \item 6b. Benutzer klickt auf Tour starten oder schliessen
+  \item 8a. Die App zeigt dem Benutzer verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
 \end{itemize}
 
-\subsubsection{Auftrittshäufigkeit}\label{auftrittshuxe4ufigkeit}
 
+\subsubsection{Spezielle Anforderungen}\label{spezielle-anforderungen}
+\begin{itemize}
+  \item Filtern der Touren muss flüssig reagieren, Resultate werden sofort angezeigt
+\end{itemize}
+
+
+\subsubsection{Auftrittshäufigkeit}\label{auftrittshuxe4ufigkeit}
 Einmal pro Tour
 
-\subsection{UC 2: User läuft Route ab und sieht seine aktuellen Standort
-auf einer Karte (Priorität
-2)}\label{uc-2-user-luxe4uft-route-ab-und-sieht-seine-aktuellen-standort-auf-einer-karte-priorituxe4t-2}
 
+\subsection{UC 2: User läuft Route ab und sieht seine aktuellen Standort auf einer Karte (Priorität 2)}\label{uc-2-user-luxe4uft-route-ab-und-sieht-seine-aktuellen-standort-auf-einer-karte-priorituxe4t-2}
 \subsubsection{Erfolgszenario}\label{erfolgszenario}
-
 Der Tourist befindet sich im Freien zwischen zwei Punkten auf einer
 Route, also einer Teilstrecke der Tour. Die App zeigt dem Benutzer seine
 aktuelle Position mit einem Marker (z.B. Punkt) an. Der User verlässt
@@ -369,9 +277,8 @@ befindet. Die App berechnet die neue Route mit der aktuellen Postion als
 Ausgangslage. Der User kann also zu jederzeit die optimale Route
 zwischen seiner aktuellen Position und dem Ziel nachschauen.
 
-\subsubsection{Erfolgszenario mit
-Fallback}\label{erfolgszenario-mit-fallback}
 
+\subsubsection{Erfolgszenario mit Fallback}\label{erfolgszenario-mit-fallback}
 Der Tourist befindet sich auf einer Tour durch eine Altstadt. Die App
 zeigt dem Benutzer seine aktuelle Position mit einem Marker (z.B. Punkt)
 an, der Marker bewegt sich mit dem User mit. Die aktuelle Route zum
@@ -382,196 +289,111 @@ Kombination von Standorten von Mobilfunkmasten und WLAN Sendern die
 aktuelle Position berechnen. Der Benutzer hat kein GPS Signal, aber
 sieht sich trotzdem als Punkt auf der Karte in Echtzeit.
 
-\subsection{UC 3: User macht Foto am Besichtigungspunkt (Priorität
-2)}\label{uc-3-user-macht-foto-am-besichtigungspunkt-priorituxe4t-2}
 
+\subsection{UC 3: User macht Foto am Besichtigungspunkt (Priorität2)}\label{uc-3-user-macht-foto-am-besichtigungspunkt-priorituxe4t-2}
 \subsubsection{Erfolgszenario}\label{erfolgszenario-1}
-
 An einem Zielpunkt / Besichtigungspunkt angelangt, wird der Benutzer
 aufgefordert, ein Foto von einem vorgegebenen Objekt zu erstellen. Die
 App entscheidet danach ob die Informationen des Fotos mit denjenigen im
 System gespeicherten übereinstimmen. Stimmt das Resultat, wird der
 nächste Besichtigungspunkt angezeigt.
 
-\subsubsection{Alternativszenario}\label{alternativszenario}
 
+\subsubsection{Alternativszenario}\label{alternativszenario}
 Befindet sich der Benutzer nicht am korrekten Ort, wird er erneut
 aufgefordert das vorgegebene Objekt zu fotografieren.
 
-\subsection{UC 4: User bekommt Bestätigung für das Abarbeiten des
-Punktes, die Route zum nächsten Punkt wird angezeigt. (Priorität
-2)}\label{uc-4-user-bekommt-bestuxe4tigung-fuxfcr-das-abarbeiten-des-punktes-die-route-zum-nuxe4chsten-punkt-wird-angezeigt.-priorituxe4t-2}
 
+\subsection{UC 4: User bekommt Bestätigung für das Abarbeiten des Punktes, die Route zum nächsten Punkt wird angezeigt. (Priorität 2)}\label{uc-4-user-bekommt-bestuxe4tigung-fuxfcr-das-abarbeiten-des-punktes-die-route-zum-nuxe4chsten-punkt-wird-angezeigt.-priorituxe4t-2}
 \subsubsection{Erfolgszenario}\label{erfolgszenario-2}
-
 Nach dem korrekten validieren der Position des Touristen, zeigt die App
 dem Benutzer den nächsten Besichtigungspunkt mit einem Marker auf einer
 Karte an. Von seinem aktuellen Standort wird eine vordefinierte Route
 zum nächsten Besichtigungspunkt abgebildet. Der Tourist begiebt sich zum
 abgebildeten Punkt.
 
-\subsubsection{Alternativszenario}\label{alternativszenario-1}
 
+\subsubsection{Alternativszenario}\label{alternativszenario-1}
 Der Benutzer möchte die Tour unterbrechen und zu einem späteren
 Zeitpunkt fortsetzen. Er schliesst die App und kehrt nach unbestimmter
 Zeit zurück. Die App zeigt dann den letzten Stand und fragt nach der
 Weiterführung oder Abbruch der Tour.
 
-\subsection{UC 5: User besucht nächste Punkte bis Tour zu Ende.
-(Priorität
-2)}\label{uc-5-user-besucht-nuxe4chste-punkte-bis-tour-zu-ende.-priorituxe4t-2}
 
+\subsection{UC 5: User besucht nächste Punkte bis Tour zu Ende. (Priorität 2)}\label{uc-5-user-besucht-nuxe4chste-punkte-bis-tour-zu-ende.-priorituxe4t-2}
 UC1 und UC2 werden solange wiederholt, bis der Tourist am Ende der Tour
 ist. Hat er den letzten Punkt erreicht, wird dem Benutzer der Abschluss
 mit einer Nachricht bestätigt und mit UC 6 fortgefahren.
 
-\subsection{UC 6: User sieht Statistik der Tour. (Priorität
-3)}\label{uc-6-user-sieht-statistik-der-tour.-priorituxe4t-3}
 
+\subsection{UC 6: User sieht Statistik der Tour. (Priorität 3)}\label{uc-6-user-sieht-statistik-der-tour.-priorituxe4t-3}
 Nach erfolgreichem erreichen des Zielpunktes und dem Abschluss der Tour,
 wird dem Benutzer eine übersicht mit Statistiken wie z.B. der total
 zurück gelegten Distanz und totale Schritte angezeigt. Durch einen klick
 kann der Benutzer Fotos, die Statistik und eine Mitteilung auf den
 sozialen Medien teilen.
 
+
 \section{Anwendungsfalldiagramm}\label{anwendungsfalldiagramm}
+FIXME: image displayed on wrong place
 
-\begin{figure}
-\centering
-\includegraphics{Anwendungsfalldiagramm.jpg}
-\caption{Anwendungsfalldiagramm}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics{Anwendungsfalldiagramm.jpg}
+%   \caption{Anwendungsfalldiagramm}
+% \end{figure}
 
-\section{Domänenmodell}\label{domuxe4nenmodell}
-
+\section{Domänenmodell}\label{domaenenmodell}
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage,
 der identifizierten Objekte und Tätigkeiten der Benutzer.
 
-\begin{figure}
-\centering
-\includegraphics{domain_model1.jpg}
-\caption{Domain\_Model}
-\end{figure}
+FIXME: image displayed on wrong place
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
-\textbf{Objekte}\strut
-\end{minipage} & \begin{minipage}[b]{0.86\columnwidth}\raggedright\strut
-\textbf{Beschreibung}\strut
-\end{minipage}\tabularnewline
-\midrule
+% \begin{figure}
+%   \centering
+%   \includegraphics{domain_model1.jpg}
+%   \caption{Domänenmodell}
+% \end{figure}
+
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Objekte} & \textbf{Beschreibung} \\\hline
 \endhead
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-User\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als
-\textbf{Contributor} oder \textbf{Tourist} auftreten.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Contributor / Agencies\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Ein \textbf{Contributor} erstellt und erfasst Inhalt (d.h.:
-\textbf{Touren}, \textbf{Routen} und \textbf{Point of Interests}). Ein
-Subtyp davon sind \textbf{Agencies}, also Reisebüros und
-Tourismusorganisationen), die als zertifizierte Erfasser agieren.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Tourist\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Ein \textbf{Tourist} ist der eigentliche Benutzer der,App. Er ist auf
-Reisen (\textbf{Trip}) und möchte an einem Ort bzw. in einer,Stadt eine
-\textbf{Tour} unternehmen, um die wichtigsten oder spannendsten
-\textbf{Point of Interest} kennen zu lernen. Er verwendet dafür die
-\textbf{Mobile App}.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Mobile App\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die
-\textbf{Mobile App} wird vom \textbf{Touristen} verwendet um sich damit
-unterstützt entlang einer \textbf{Tour} steuern zu lassen.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Web App\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Die \textbf{Web App} bietet die funktionale Schnittstelle für
-\textbf{Contributors}.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Trip\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Ein \textbf{Tourist} macht eine Reise und hat dort je nach Ort und Stadt
-mehrere verschiedene \textbf{Touren} zur Auswahl.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Tour\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Eine \textbf{Tour} ist eine Sammlung von \textbf{Point of Interest}s in
-einer bestimmten \textbf{Stadt}, die über eine bestimmte \textbf{Route}
-miteinander verbunden sind.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Route\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Eine \textbf{Route} stellt eine Verbindung von mehreren \textbf{Point of
-Interests} dar. Eine Route kann mit verschiedenen
-\textbf{Verkehrsmitteln} absolviert werden.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Point of Interest\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-\textbf{Point of Interest} sind geographische Punkte, die eine
-Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie
-werden von einer \textbf{Route} verbunden. Der Tourist muss beim
-Absolvieren einer Route an jedem \textbf{Point of Interest} vorbeikommen
-und ein Foto schiessen.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Means of Transport\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Verschiedene \textbf{Verkehrsmittel} z.B.: ÖV, Auto, Velo, zu Fuss
-usw\ldots{}\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Photo\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-An jedem \textbf{Point of Interest} schiesst der Benutzer mit seiner
-\textbf{Mobile App} ein \textbf{Foto} des Ortes oder der
-Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der
-\textbf{Point of Interest} so als besucht abgehakt.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Statistik\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest},
-besucht wurden, wird dem \textbf{Touristen} eine \textbf{Statistik} über
-seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{}
-angezeigt. Diese ist in der \textbf{Mobile App} verknüpft mit seinen
-geschossen \textbf{Fotos}.\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
 
-\newpage
+User & Ein Benutzer kann in zwei verschiedenen Rollen auftreten. Als \textbf{Contributor} oder \textbf{Tourist} auftreten.\\\hline
+Contributor / Agencies & Ein \textbf{Contributor} erstellt und erfasst Inhalt (d.h.: \textbf{Touren}, \textbf{Routen} und \textbf{Point of Interests}). Ein Subtyp davon sind \textbf{Agencies}, also Reisebüros und Tourismusorganisationen), die als zertifizierte Erfasser agieren.\\\hline
+Tourist & Ein \textbf{Tourist} ist der eigentliche Benutzer der,App. Er ist auf Reisen (\textbf{Trip}) und möchte an einem Ort bzw. in einer,Stadt eine \textbf{Tour} unternehmen, um die wichtigsten oder spannendsten \textbf{Point of Interest} kennen zu lernen. Er verwendet dafür die \textbf{Mobile App}.\\\hline
+Mobile App & Das ganze Applikations-System ist in zwei Komponenten aufgeteilt. Die \textbf{Mobile App} wird vom \textbf{Touristen} verwendet um sich damit unterstützt entlang einer \textbf{Tour} steuern zu lassen.\\\hline
+Web App & Die \textbf{Web App} bietet die funktionale Schnittstelle für \textbf{Contributors}.\\\hline
+Trip & Ein \textbf{Tourist} macht eine Reise und hat dort je nach Ort und Stadt mehrere verschiedene \textbf{Touren} zur Auswahl.\\\hline
+Tour & Eine \textbf{Tour} ist eine Sammlung von \textbf{Point of Interest}s in einer bestimmten \textbf{Stadt}, die über eine bestimmte \textbf{Route} miteinander verbunden sind.\\\hline
+Route & Eine \textbf{Route} stellt eine Verbindung von mehreren \textbf{Point of Interests} dar. Eine Route kann mit verschiedenen \textbf{Verkehrsmitteln} absolviert werden.\\\hline
+Point of Interest & \textbf{Point of Interest} sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer \textbf{Route} verbunden. Der Tourist muss beim Absolvieren einer Route an jedem \textbf{Point of Interest} vorbeikommen und ein Foto schiessen.\\\hline
+Means of Transport & Verschiedene \textbf{Verkehrsmittel} z.B.: ÖV, Auto, Velo, zu Fuss usw\ldots{}\\\hline
+Photo & An jedem \textbf{Point of Interest} schiesst der Benutzer mit seiner \textbf{Mobile App} ein \textbf{Foto} des Ortes oder der Sehenswürdigkeit. Die Koordinaten werden abgeglichen und der \textbf{Point of Interest} so als besucht abgehakt.\\\hline
+Statistik & Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest}, besucht wurden, wird dem \textbf{Touristen} eine \textbf{Statistik} über seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{} angezeigt. Diese ist in der \textbf{Mobile App} verknüpft mit seinen geschossen \textbf{Fotos}.\\\hline
+\end{longtabu}
 
-REVIEW by Raffaele
 
 \section{Eine erste Architektur}\label{eine-erste-architektur}
-
-Die Applikation besitzt mehrere Hauptkomponenten: • Mobile Application •
-Web Service • External Services • Web Application Die Web Application
-wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist
-aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht
-detaillierter beschrieben.
+Die Applikation besitzt mehrere Hauptkomponenten:
+\begin{itemize}
+  \item Mobile Application
+  \item Web Service
+  \item External Services
+  \item Web Application
+\end{itemize}
+Die Web Application wurde zur besseren Gesamtübersicht in die Darstellung integriert, ist aber nicht Bestandteil der Projekt-Umsetzung und wird daher auch nicht detaillierter beschrieben.
 
 \begin{figure}
 \centering
 \includegraphics{first_architecture1.jpg}
-\caption{First\_Architecture}
+\caption{Erste Architektur}
 \end{figure}
 
-\textbf{Mobile Application:} Die Mobile Application wird vom Touristen
+
+\subsection{Mobile Application}\label{mobile-application}
+Die Mobile Application wird vom Touristen
 verwendet und bietet die Schnittstelle zu den eigentlichen
 Hauptfunktionalitäten. Die App wird als 3-tier Applikation aufgebaut. Da
 die Daten, auch für eine allfällig zukünftige offline-fähigkeit, sowohl
@@ -582,55 +404,36 @@ Layer auf. Als vertikaler Layer werden für alle anderen Layer Logging-,
 Monitoring- und weitere allgemein verwendete Funktionalitäten zur
 Verfügung gestellt.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.08\columnwidth}\raggedright\strut
-\textbf{Komponente}\strut
-\end{minipage} & \begin{minipage}[b]{0.86\columnwidth}\raggedright\strut
-\textbf{Beschreibung}\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Komponente} & \textbf{Beschreibung} \\\hline
 \endhead
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Presentation Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Implementiert die grafische Schnittstelle zum Benutzer. Weist neben
+
+Presentation Layer & Implementiert die grafische Schnittstelle zum Benutzer. Weist neben
 rudimentärer Eingabe- und Steuerungslogik, neben der Darstellung keine
-weiteren Funktionalitäten auf.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Business Logic Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Hier werden alle App-spezifischen Funktionalitäten implementiert. Dies
+weiteren Funktionalitäten auf.\\\hline
+
+Business Logic Layer & Hier werden alle App-spezifischen Funktionalitäten implementiert. Dies
 beinhaltet zum Beispiel das grafische Aufbereiten der erhaltenen Daten.
 Anderseits sind Grundfunktionalitäten wie das Abgleichen der aktuellen
 Position mit dem Point of Interest nicht Bestandteil dieses Layer,
-sondern serverseitig umgesetzt werden.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Persistence Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Der Persistence Layer bietet den Datenzugriff auf den lokalen Storage
-der App. Damit werden zum Beispiel Fotos gespeichert.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Data Service Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Dieser Layer bietet den Zugriff auf unseren eigenen Web-Daten-Service,
-wie auch auf die Google Maps Services zum Anzeigen der Karte und
-Berechnen der Route.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
-Supporting Functionalities\strut
-\end{minipage} & \begin{minipage}[t]{0.86\columnwidth}\raggedright\strut
-Diese Komponente implementiert alle Funktionalitäten, die den anderen
-Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige
-Monitoring-Funktionalitäten.\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+sondern serverseitig umgesetzt werden.\\\hline
 
-\textbf{Web Service:} Der Webservice stellt als Backend-Komponente
+Persistence Layer & Der Persistence Layer bietet den Datenzugriff auf den lokalen Storage
+der App. Damit werden zum Beispiel Fotos gespeichert.\\\hline
+
+Data Service Layer & Dieser Layer bietet den Zugriff auf unseren eigenen Web-Daten-Service,
+wie auch auf die Google Maps Services zum Anzeigen der Karte und
+Berechnen der Route.\\\hline
+
+Supporting Functionalities & Diese Komponente implementiert alle Funktionalitäten, die den anderen
+Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige
+Monitoring-Funktionalitäten.\\\hline
+\end{longtabu}
+
+
+\subsection{Web Service}\label{web-service}
+Der Webservice stellt als Backend-Komponente
 sowohl Daten- wie auch funktionale Schnittstelle zur App und zu allen
 weiteren Systemen oder externen Systemen dar. Er stellt jederzeit den
 aktuellen Referenzdatenstand und alle grundlegenden nicht
@@ -641,48 +444,32 @@ aufweisen. Genauso wie die Mobile Application wird der Web Service einen
 vertikalen Layer für Logging-, Monitoring- und weitere allgemein
 verwendete Funktionalitäten implementieren.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
-\textbf{Komponente}\strut
-\end{minipage} & \begin{minipage}[b]{0.83\columnwidth}\raggedright\strut
-\textbf{Beschreibung}\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Komponente} & \textbf{Beschreibung} \\\hline
 \endhead
-\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Data Service Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright\strut
-Der Data Service Layer stellt das nach aussen öffentlich verfügbare
+
+Data Service Layer & Der Data Service Layer stellt das nach aussen öffentlich verfügbare
 Interface zur Verfügung. Er loggt und behandelt ankommende
-Requests.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Business Logic Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright\strut
-Dieser Layer besitzt alle Business-Funktionalitäten, die nicht reine
+Requests.\\\hline
+
+Business Logic Layer & Dieser Layer besitzt alle Business-Funktionalitäten, die nicht reine
 daten-spezifische Aggregation sind, wie zum Beispiel den Check, ob eine
-Koordinate innerhalb eines Points of Interests ist.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Persistence Layer\strut
-\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright\strut
-Implementiert sowohl den eigentlichen Datenzugriff, wie auch die
+Koordinate innerhalb eines Points of Interests ist.\\\hline
+
+Persistence Layer & Implementiert sowohl den eigentlichen Datenzugriff, wie auch die
 OR-Mapping Logik. Der Layer ist für einen konsistenten, Schreib- und
 Lesezugriff auch bei mehreren gleichzeitigen abgearbeiteten Requests
-verantwortlich.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
-Supporting Functionalities\strut
-\end{minipage} & \begin{minipage}[t]{0.83\columnwidth}\raggedright\strut
-Diese Komponente implementiert alle Funktionalitäten, die den anderen
-Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige
-Monitoring-Funktionalitäten.\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+verantwortlich.\\\hline
 
-\textbf{External Services:} Wo bereits Funktionen oder grafische
+Supporting Functionalities & Diese Komponente implementiert alle Funktionalitäten, die den anderen
+Komponenten zur Verfügung stehen wie zum Beispiel Logging und sonstige
+Monitoring-Funktionalitäten.\\\hline
+\end{longtabu}
+
+
+\subsection{External Services}\label{external-services}
+Wo bereits Funktionen oder grafische
 Komponenten bestehen, werden diese über externe Services bezogen und
 eingebunden. Hierbei werden wir in einem ersten Schritt auf öffentlich
 zur Verfügung stehende Services zurückgreifen. Als grundlegenden Service
@@ -695,355 +482,184 @@ Google Maps Services ein. Die Route und die Point of Interests, die vom
 eigenen Web-Service geladen werden, werden als Overlay über die
 Kartenfunktionalität von Google implementiert.
 
-\textbf{Tech Stack:}
 
+\subsection{Tech Stack}\label{tech-stack}
 Die nachfolgende Tabelle zeigt die eingesetzten Technologien für die
 einzelnen System-Komponenten. Innerhalb dieses Projekt-Scopes wird die
 Mobile App als native Android App umgesetzt.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.14\columnwidth}\raggedright\strut
-\textbf{Komponente}\strut
-\end{minipage} & \begin{minipage}[b]{0.80\columnwidth}\raggedright\strut
-\textbf{Stack}\strut
-\end{minipage}\tabularnewline
-\midrule
+% TODO: style description (itemize?)
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Komponente} & \textbf{Beschreibung} \\\hline
 \endhead
-\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-Native Android App\strut
-\end{minipage} & \begin{minipage}[t]{0.80\columnwidth}\raggedright\strut
-JAVA 8Android SDK / Android Studio 2.3\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-Web Service\strut
-\end{minipage} & \begin{minipage}[t]{0.80\columnwidth}\raggedright\strut
-.NET Framework 4.5C\# 5.0ASP.NET Web-API 2.2 (5.2.3)Entity Framework
-6.0Ninject Dependency Injection Framework 3.2\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-Web Application\strut
-\end{minipage} & \begin{minipage}[t]{0.80\columnwidth}\raggedright\strut
-.NET Framework 4.5C\# 5.0ASP.NET MVC 5.2.3 (Razor Engine)HTML 5.0Angular
-JS 2.2.4 or React JS 15.4.2JQuery 3.2.1\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
 
-REVIEW by Josef
+Native Android App & JAVA 8, Android SDK / Android Studio 2.3\\\hline
+Web Service & .NET Framework 4.5, C\# 5.0, ASP.NET Web-API 2.2 (5.2.3), Entity Framework 6.0, Ninject Dependency Injection Framework 3.2\\\hline
+Web Application & .NET Framework 4.5, C\# 5.0, ASP.NET MVC 5.2.3 (Razor Engine), HTML 5.0, Angular JS 2.2.4 or React JS 15.4.2, JQuery 3.2.1\\\hline
+\end{longtabu}
 
-\section{Zusätzliche
-Spezifikationen}\label{zusuxe4tzliche-spezifikationen}
 
+\section{ZusätzlicheSpezifikationen}\label{zusuxe4tzliche-spezifikationen}
 \subsection{Einführung}\label{einfuxfchrung}
-
 Hier werden hauptsächlich alle nicht funktionalen Anforderungen
 definiert. Die funktionalen Anforderungen sind zum grössten Teil in den
 Anwendungsfällen erfasst. An diesem Dokument finden sich nur weitere
 funktionale Anforderungen, welche nicht in Zusammenhang mit einem
 Anwendungsfall stehen.
 
+
 \subsection{Funktionalität}\label{funktionalituxe4t}
-
-\subsubsection{Logging /
-Fehlerbehandlung}\label{logging-fehlerbehandlung}
-
+\subsubsection{Logging / Fehlerbehandlung}\label{logging-fehlerbehandlung}
 Benutzer- und Systemaktivitäten sollen lokal auf dem Gerät gespeichert
 werden. Im Fehlerfall können diese Informationen an den Server geschickt
 und für die Fehleranalyse verwendet werden. Fehlerinformationen sollen
 automatisch an den Server geschickt werden.
 
-\subsubsection{Kartenmaterial}\label{kartenmaterial}
 
+\subsubsection{Kartenmaterial}\label{kartenmaterial}
 Für die Wegweisung soll die Kartenfunktionalität von Google verwendet
 werden. Google Maps unterstützt das offline Speichern von bestimmten
 Kartenabschnitten, was für Travelbuddy benötigt wird.
 
-\subsubsection{Sicherheit}\label{sicherheit}
 
+\subsubsection{Sicherheit}\label{sicherheit}
 Um Touren durchführen zu können, muss sich die Kundin authentifizieren.
 Dazu kann der Kunde ein Konto anlegen, oder sich mit seinem Facebook-
 oder Google-Konto anmelden.
 
+
 \subsection{Verwendbarkeit}\label{verwendbarkeit}
-
 \subsubsection{Hardware Limitierung}\label{hardware-limitierung}
-
 Die Applikation soll als Touchscreen-App für Android Geräte entwickelt
 werden.
 
-\subsubsection{Lokalisierung}\label{lokalisierung}
 
+\subsubsection{Lokalisierung}\label{lokalisierung}
 Verschiedene Sprachen müssen unterstützt werden können. Reisende wählen
 ihre gewünschte Sprache in der App aus. Danach wird das GUI in der
 vorgegebenen Sprache angezeigt. Die Touren werden ebenfalls in der
 gewünschten Sprache angezeigt, sofern es eine Übersetzung gibt.
 
-\subsubsection{Offline Unterstützung}\label{offline-unterstuxfctzung}
 
+\subsubsection{Offline Unterstützung}\label{offline-unterstuxfctzung}
 Die Tourensuche funktioniert nur, wenn der Kunde Internetzugang hat.
 Einzelne Touren können danach lokal auf dem Gerät des Kunden gespeichert
 werden, so dass Reisende eine Tour auch ohne Internetzugang durchführen
 können.
 
-\subsubsection{Graphische Oberfläche}\label{graphische-oberfluxe4che}
 
+\subsubsection{Graphische Oberfläche}\label{graphische-oberfluxe4che}
 \begin{itemize}
-\tightlist
-\item
-  Konzipiert für Smartphones und Tablets.
-\item
-  Bedienung durch Touchscreen.
+  \item Konzipiert für Smartphones und Tablets.
+  \item Bedienung durch Touchscreen.
 \end{itemize}
 
-\subsection{Umsetzungsbedingungen}\label{umsetzungsbedingungen}
 
+\subsection{Umsetzungsbedingungen}\label{umsetzungsbedingungen}
 Als Entwicklungsprozess wird der Unified Process verwendet. Dies ist ein
 populärer, iterativer Software-Entwicklungsprozess um objektorientierte
 Systeme zu bauen.\cite{UP}
 
-\subsubsection{Backend}\label{backend}
 
+\subsubsection{Backend}\label{backend}
 Für die Umsetzung des Backends sollen folgende Microsoft Technologien
-verwendet werden: * Microsoft ASP.NET * Microsoft SQL Server * Microsoft
-Visual Studio 2015 Enterprise * .NET Framework 4.6
+verwendet werden:
+
+\begin{itemize}
+  \item Microsoft ASP.NET
+  \item Microsoft SQL Server
+  \item Microsoft Visual Studio 2015 Enterprise
+  \item .NET Framework 4.6
+\end{itemize}
 
 Das Backend stellt eine REST API bereit. Das Backend muss in der Lage
 sein, Anfragen so schnell beantworten zu können, dass die Anforderungen
 an das Reaktionsverhalten der App erfüllt werden können.
 
-\begin{longtable}[]{@{}ll@{}}
-\toprule
-\begin{minipage}[b]{0.27\columnwidth}\raggedright\strut
-Benutzer Aktion\strut
-\end{minipage} & \begin{minipage}[b]{0.29\columnwidth}\raggedright\strut
-Max. Reaktionszeit {[}ms{]}\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtabu} to \textwidth { | X[l] | l | }
+\hline
+\textbf{Benutzer Aktion} & \textbf{Max. Reaktionszeit {[}ms{]}}\\\hline
 \endhead
-\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Anmelden\strut
-\end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\raggedright\strut
-80\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Suchen nach Touren\strut
-\end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\raggedright\strut
-150\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Starten von Touren\strut
-\end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\raggedright\strut
-400\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Offline Speichern von Touren\strut
-\end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\raggedright\strut
-Bandbreiten Abhängig. Daten \textless{} 10 MB\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Hochladen von Photos und Routenanzeige zum nächsten Standort\strut
-\end{minipage} & \begin{minipage}[t]{0.29\columnwidth}\raggedright\strut
-5000 (Photo komprimieren)\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+
+Anmelden & 80\\\hline
+Suchen nach Touren & 150\\\hline
+Starten von Touren & 400\\\hline
+Offline Speichern von Touren & Bandbreiten Abhängig. Daten \textless{} 10 MB\\\hline
+Hochladen von Photos und Routenanzeige zum nächsten Standort & 5000 (Photo komprimieren)\\\hline
+\end{longtabu}
+
 
 \subsubsection{App}\label{app}
-
 Es wird eine native Android Applikation entwickelt. Für die Entwicklung
-wird verwendet: * Android Studio 2.3 * JetBrains IntelliJ
+wird verwendet:
+
+\begin{itemize}
+  \item Android Studio 2.3
+  \item JetBrains IntelliJ
+\end{itemize}
+
 
 \subsection{Zuverlässigkeit}\label{zuverluxe4ssigkeit}
-
 Bei einem Absturtz der App, muss die Reisende nach einem Neustart die
 aktuelle Tour weiterführen können. Die App kennt den aktuellen Standort
 und rekonstruiert gegebenenfalls die Route zum nächsten Ziel
 vollautomatisch.
 
-\section{Systemsequenzdiagram}\label{systemsequenzdiagram}
 
-\begin{figure}
-\centering
-\includegraphics{UC1_SystemSequenzDiagram.png}
-\caption{System Sequenz Diagramm}
-\end{figure}
+\section{Systemsequenzdiagram}\label{systemsequenzdiagram}
+FIXME: image displayed on wrong place
+
+% \begin{figure}
+% \centering
+% \includegraphics{UC1_SystemSequenzDiagram.png}
+% \caption{System Sequenz Diagramm}
+% \end{figure}
+
 
 \section{Glossar}\label{glossar}
-
-\begin{longtable}[]{@{}rl@{}}
-\toprule
-\begin{minipage}[b]{0.18\columnwidth}\raggedleft\strut
-\textbf{Begriff}\strut
-\end{minipage} & \begin{minipage}[b]{0.76\columnwidth}\raggedright\strut
-\textbf{Erklärung}\strut
-\end{minipage}\tabularnewline
-\midrule
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Begriff} & \textbf{Erklärung}\\\hline
 \endhead
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Agency/Agencies\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Agenturen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-API\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Application Programming Interface, eine Schnittstelle zwischen zwei
-Programmen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-App\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Abkz. Applikation, Synonym für Programm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Backend\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Serverseitiges Programm das vom Benutzer nur über ein Frontend
-angesteuert werden kann\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Business Logic\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Geschäftslogik, logischer Ablauf des Programmes\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Construction-phase\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Phase in der das Projekt umgesetzt wird\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Contributor\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Beitragender, jemand der Inhalt für die Applikation erstellt\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Elaboration-phase\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Phase in der das Projekt genauer ausgearbeitet wird\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-External Services\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt
-werden\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Fallback\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Ausweichlösung/Alternativlösung\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Frontend\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden
-kann\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-GPS\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Globa Positioning System, globales Satelliten Navigationsnetz\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Inception-phase\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Gründungsphase, beginn des Projektes\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Logging\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Aufzeichnen von Abläufen im Programm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Marker\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Symbol das einen Punkt auf der Karte markiert\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Means of Transport\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Verkehrsmittel\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Meilenstein\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Bedeutender Schritt in der Entwicklung\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Mobile App\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Programm dass nur auf einem Mobilgerät ausgeführt werden kann\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Native\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Funktionen die von einem Gerät ohne weitere Software ausgeführt werden
-kann\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-ÖV\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-abkz. Öffentlicher Verkehr\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Point of Interest, PoI\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Ort von besonderem Interesse, bspw. Wahrzeichen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Ressource\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Mittel das zur Entwicklung genutzt werden kann\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Smartphone\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Mobilgerät mit erweiterten Funktionen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Stakeholders\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Interessenten\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Tech Stack\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Eingesetzte Technologien\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Trip\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Reise\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Use-Case\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein
-bestimmtes Ziel zu erreichen\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-User\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-engl. Benutzer\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-Web App\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Nur über den Webbrowser benutzbares Programm\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.18\columnwidth}\raggedleft\strut
-WLAN\strut
-\end{minipage} & \begin{minipage}[t]{0.76\columnwidth}\raggedright\strut
-Wireless local area netweork, Kabellose netzwerkverbindung\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
 
-REVIEW by Beni
+Agency/Agencies & engl. Agenturen\\\hline
+API & Application Programming Interface, eine Schnittstelle zwischen zwei Programmen\\\hline
+App & Abkz. Applikation, Synonym für Programm\\\hline
+Backend & Serverseitiges Programm das vom Benutzer nur über ein Frontend angesteuert werden kann\\\hline
+Business Logic & engl. Geschäftslogik, logischer Ablauf des Programmes\\\hline
+Construction-phase & Phase in der das Projekt umgesetzt wird\\\hline
+Contributor & engl. Beitragender, jemand der Inhalt für die Applikation erstellt\\\hline
+Elaboration-phase & Phase in der das Projekt genauer ausgearbeitet wird\\\hline
+External Services & engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden\\\hline
+Fallback & Ausweichlösung/Alternativlösung\\\hline
+Frontend & Benutzerseitiges Programm das vom Benutzer direkt gesteuert werden kann\\\hline
+GPS & Globa Positioning System, globales Satelliten Navigationsnetz\\\hline
+Inception-phase & Gründungsphase, beginn des Projektes\\\hline
+Logging & Aufzeichnen von Abläufen im Programm\\\hline
+Marker & Symbol das einen Punkt auf der Karte markiert\\\hline
+Means of Transport & engl. Verkehrsmittel\\\hline
+Meilenstein & Bedeutender Schritt in der Entwicklung\\\hline
+Mobile App & Programm dass nur auf einem Mobilgerät ausgeführt werden kann\\\hline
+Native & Funktionen die von einem Gerät ohne weitere Software ausgeführt werden kann\\\hline
+ÖV & abkz. Öffentlicher Verkehr\\\hline
+Point of Interest, PoI & engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
+Ressource & Mittel das zur Entwicklung genutzt werden kann\\\hline
+Smartphone & Mobilgerät mit erweiterten Funktionen\\\hline
+Stakeholders & engl. Interessenten\\\hline
+Tech Stack & Eingesetzte Technologien\\\hline
+Trip & engl. Reise\\\hline
+Use-Case & engl. Anwendungsfall, Szenarien in der ein Benutzer versucht ein bestimmtes Ziel zu erreichen\\\hline
+User & engl. Benutzer\\\hline
+Web App & Nur über den Webbrowser benutzbares Programm\\\hline
+WLAN & Wireless local area netweork, Kabellose netzwerkverbindung\\\hline
+\end{longtabu}
 
-\addcontentsline{toc}{section}{Literatur}\begin{thebibliography}{9}
-\bibitem{UP}
-C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+
+\section{Literatur}\label{literatur}
+% TODO: remove title
+\begin{thebibliography}{9}
+  \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
 \end{thebibliography}
 
 \end{document}
