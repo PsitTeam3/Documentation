@@ -1,0 +1,68 @@
+# Projektmanagement #
+## Projektstatus ##
+Das Projekt befindet sich auf Kurs, der erste Meilenstein wurde erreicht der zweite bevorstehende Meilenstein ist fast Fertig gestellt.
+Die unten gezeigte Grafik zeigt eine Grobe übersicht des Projektes, eine Detailliertere befindet sich im folgenden Abschnitt.
+
+** TODO: Grafik einfügen **
+
+## Detaillierter Projektplan ##
+| **Phase**     | **NR**    | **Arbeitspaket**                              | **Soll**     |   **Ist**    |
+| :------------ | :-------: | :-------------------------------------------: | -----------: | -----------: |
+| Inception     |           |                                               |              |              |
+|               | A-01      | Ausgangslage schildern                        | 5,0 h        |              |
+|               | A-02      | Projektidee beschreiben                       | 5,0 h        |              |
+|               | A-03      | Kundennutzen analysieren                      | 5,0 h        |              |      
+|               | A-04      | Projektidee beschreiben                       | 5,0 h        |              |      
+|               | A-05      | Konkurenzanalyse                              | 5,0 h        |              |      
+|               | A-06      | Haupablauf aufzeigen                          | 5,0 h        |              |      
+|               | A-07      | Weitere Anforderungen definieren              | 5,0 h        |              |      
+|               | A-08      | Ressource beschreiben                         | 5,0 h        |              |      
+|               | A-09      | Projektidee beschreiben                       | 5,0 h        |              |      
+|               | A-10      | Risiken beschreiben                           | 5,0 h        |              |      
+|               | A-11      | Grobplanung erstellen                         | 5,0 h        | 3,5 h        |      
+|               | A-12      | Wirtschaftlichkeitsanalyse                    | 5,0 h        | 6,0 h        |      
+|               | A-13      | Projektskizze erstellen (inkl. Präsi)         | 5,0 h        |              |
+| Total Phase:  | 13        |                                               | 65,0 h       |              |
+| Inception     |           |                                               |              |              |
+|               | B-01      | Projekmanagement organisieren                 | 5,0 h        | 6,0 h        |
+|               | B-02      | Anwendungsfall Diagramm zeichnen              | 5,0 h        |              |
+|               | B-03      | Domänenmodell erstellen                       | 5,0 h        |              |      
+|               | B-04      | Architektur beschreiben                       | 5,0 h        |              |      
+|               | B-05      | Zusätzliche Spezifikationen beschreiben       | 5,0 h        |              |      
+|               | B-06      | Syste-Sequenzdiagramm zeichnen                | 5,0 h        |              |      
+|               | B-07      | Glossar erstellen                             | 5,0 h        |              |      
+|               | B-08      | Use-Case 1 beschreiben                        | 1,0 h        |              |    
+|               | B-09      | Use-Case 2 beschreiben                        | 0,5 h        |              |       
+|               | B-10      | Use-Case 3 beschreiben                        | 0,5 h        |              |       
+|               | B-11      | Use-Case 4 beschreiben                        | 0,5 h        |              |       
+|               | B-12      | Use-Case 5 beschreiben                        | 0,5 h        |              |       
+|               | B-13      | Use-Case 6 beschreiben                        | 0,5 h        | 0,5 h        |      
+|               | B-14      | Analysedokument erstellen (inkl. Präsi)       | 6,5 h        |              |
+| Total Phase:  | 14        |                                               | 45,0 h       |              |
+| Construction  |           |                                               |              |              |
+|               | C-01      | Projekmanagement nachtragen                   | 1,0 h        |              |
+|               | C-02      | UC-1 Liste der verfügbaren Touren             | ? h          |              |
+|               | C-03      | UC-1 Starten einer Tour                       | ? h          |              |
+|               | C-04      | UC-2 Lokalisieren des Benutzers               | ? h          |              |
+|               | C-05      | UC-2 Anzeigen des Benutzers auf der Karte     | ? h          |              |
+|               | C-06      | UC-3 Foto machen                              | ? h          |              |
+|               | C-07      | UC-4 Prüfen der Geo koordinaten des Fotos     | ? h          |              |
+|               | C-08      | UC-5 Besuchen des nächsten Punktes            | ? h          |              |
+|               | C-09      | UC-6 Auslesen der Tourdaten                   | ? h          |              |
+|               | C-10      | UC-6 Anzeigen der Tourdaten                   | ? h          |              |
+|               | C-11      | UI gestalten                                  | ? h          |              |
+|               | C-12      | Systemtests durchführen                       | ? h          |              |
+|               | C-13      | Dokumentation erstellen                       | ? h          |              |
+|               | C-14      | Benutzeranleitung schreiben                   | ? h          |              |
+| Total Phase:  | 14        |                                               | ? h          |              |
+
+## Risiken ##
+** Stand 26.03.2017 **
+| **NR**   | **Risiko**                                                            | **Auswirkung**     | **Wahrscheinlichkeit**    |
+| -------: | :-------------------------------------------------------------------: | -----------------: | ------------------------: |
+| 1        | Schutz der gespeicherten Daten durch unauthorisierte Zugriffe         | Schwerwiegend      | Hoch                      |
+| 2        | Hohe kosten für Anwender Aufgrund der verwendung durch Kartenmaterial | Mittel             | Hoch                      |
+| 3        | Fehlendes Wissen in der Entwicklung von Mobile Apps                   | Mittel             | Mittel                    |
+| 4        | Höhere komplexität durch einbinden von 3 Anbieter Software            | Gering             | Mittel                    |
+| 5        | Keine öffentlichen Karten-API verfügbar                               | Schwerwiegend      | Sehr gering               |
+| 6        | Smartphone GPS koordination ungenau                                   | Gering             | Mittel                    |             
