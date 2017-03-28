@@ -217,6 +217,7 @@ Total Phase: & 16 & & 70,0 h & 82,25 h\\\hline
 Total Phase: & 14 & & & \\\hline
 \end{longtabu}
 
+
 \subsection{Enteilung Arbeitspakete}\label{enteilung-arbeitspakete}
 \begin{longtabu} to \textwidth { | l | l | l | X[l] | }
 \hline
@@ -239,6 +240,7 @@ Noch nicht festgelegt        & 4       & C-13 & Dokumentation erstellen \\\hline
 Noch nicht festgelegt        & 4       & C-14 & Benutzeranleitung schreiben \\\hline
 \end{longtabu}
 
+
 \subsection{Nächste Iteration}\label{naechste-iteration}
 In der kommenden Iteration geht es um die Arbeitspakete \textbf{C-02}, \textbf{C-03} und \textbf{C-11}, also um die Funktionalität Touren aufzulisten und zu starten.
 Ziel ist es, die Technologie kennen zu lernen und so schon früh Unsicherheiten zu beseitigen. Wir unterscheiden hier zwischen Backend und Client, vorerst werden beide separiert betrachtet.
@@ -253,6 +255,8 @@ Die Schäztungen der Arbeitspakete sind unter \fullref{detaillierter-projektplan
 sich nur um die Schätzung für die erste Iteration auf diesen Arbeitspaketen. \textbf{C-11} zum Beispiel wird in jeder Iteration der Construction Phase bearbeitet, da das UI
 sich stets mitentwickelt.
 
+
+\newpage
 \subsection{Risiken}\label{risiken}
 \begin{longtabu} to \textwidth { | l | X[l] | l | l | }
 \hline
@@ -268,6 +272,7 @@ sich stets mitentwickelt.
 \end{longtabu}
 
 
+\newpage
 \section{Anwendungsfälle}\label{anwendungsfuxe4lle}
 \subsection{UC 1: Tour auswählen und starten (Priorität 1)}\label{uc-1-user-wuxe4hlt-tour-aus-und-startet-die-tour-priorituxe4t-1}
 \subsubsection{Primärer Akteur}\label{primuxe4rer-akteur}
@@ -404,6 +409,7 @@ kann der Tourist Fotos, die Statistik und eine Mitteilung auf den
 sozialen Medien teilen.
 
 
+\newpage
 \section{Anwendungsfalldiagramm}\label{anwendungsfalldiagramm}
 Das folgende Anwendungsfalldiagramm zeigt eine Übersicht von allen Anwendungsfällen, in Relation mit den Aktoren welche identifiziert wurden.
 
@@ -414,6 +420,7 @@ Das folgende Anwendungsfalldiagramm zeigt eine Übersicht von allen Anwendungsf�
 \end{figure}
 
 
+\newpage
 \section{Domänenmodell}\label{domaenenmodell}
 Das folgende Domänenmodell zeigt eine grobe Übersicht der Ausgangslage,
 der identifizierten Objekte und Tätigkeiten der Benutzer.
@@ -464,6 +471,7 @@ SocialMediaPost & Der Tourist hat am Ende einer Tour die Möglichkeit die Zusamm
 \end{longtabu}
 
 
+\newpage
 \section{Eine erste Architektur}\label{eine-erste-architektur}
 Die Applikation besitzt mehrere Hauptkomponenten:
 \begin{itemize}
@@ -562,14 +570,14 @@ Wo bereits Funktionen oder grafische
 Komponenten bestehen, werden diese über externe Services bezogen und
 eingebunden. Hierbei werden wir in einem ersten Schritt auf öffentlich
 zur Verfügung stehende Services zurückgreifen. Als grundlegenden Service
-werden die Google Maps Funktionalitäten eingebunden. \newline
+werden die Google Maps Funktionalitäten eingebunden.
 
 \textbf{Google Maps Services:} Die Funktionalitäten zur Anzeige der Karte, den
 verschiedenen Point of Interests und zur Berechnung der Route werden
 nicht selber implementiert. Hierfür binden wir als externen Service die
 Google Maps Services ein. Die Route und die Point of Interests, die vom
 eigenen Web-Service geladen werden, werden als Overlay über die
-Kartenfunktionalität von Google implementiert. \newline
+Kartenfunktionalität von Google implementiert.
 
 \textbf{Google Location Services:} Die Ortskoordination werden von den Google
 Location Services bezogen. Hierbei wird bewusst auf die Verwendung der Android Location
@@ -593,6 +601,7 @@ Web Application & \specialcell{.NET Framework 4.5\\C\# 5.0\\ASP.NET MVC 5.2.3 (R
 \end{longtabu}
 
 
+\newpage
 \section{Zusätzliche Spezifikationen}\label{zusuxe4tzliche-spezifikationen}
 \subsection{Einführung}\label{einfuxfchrung}
 Hier werden hauptsächlich alle nicht funktionalen Anforderungen
@@ -709,6 +718,7 @@ vollautomatisch.
 \end{figure}
 
 
+\newpage
 \section{Glossar}\label{glossar}
 \begin{longtabu} to \textwidth { | l | X[l] | }
 \hline
