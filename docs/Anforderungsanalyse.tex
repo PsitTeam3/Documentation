@@ -195,8 +195,8 @@ Total Phase: & 14 & & 45,0 h & 38,25 h\\\hline
 
 \multicolumn{5}{| l |}{ \textbf{Construction} }\\\hline
  & C-01 & Projekmanagement nachtragen & 1,0 h & \\\hline
- & C-02 & UC 1 Liste der verfügbaren Touren & ? h & \\\hline
- & C-03 & UC 1 Starten einer Tour & ? h & \\\hline
+ & C-02 & UC 1 Liste der verfügbaren Touren & ? h & 15 h \\\hline
+ & C-03 & UC 1 Starten einer Tour & ? h & 20h \\\hline
  & C-04 & UC 2 Lokalisieren des Benutzers & ? h & \\\hline
  & C-05 & UC 2 Anzeigen des Benutzers auf der Karte & ? h & \\\hline
  & C-06 & UC 3 Foto machen & ? h & \\\hline
@@ -204,13 +204,24 @@ Total Phase: & 14 & & 45,0 h & 38,25 h\\\hline
  & C-08 & UC 5 Besuchen des nächsten Punktes & ? h & \\\hline
  & C-09 & UC 6 Auslesen der Tourdaten & ? h & \\\hline
  & C-10 & UC 6 Anzeigen der Tourdaten & ? h & \\\hline
- & C-11 & UI gestalten & ? h & \\\hline
+ & C-11 & UI gestalten & ? h & 8 h\\\hline
  & C-12 & Systemtests durchführen & ? h & \\\hline
  & C-13 & Dokumentation erstellen & ? h & \\\hline
  & C-14 & Benutzeranleitung schreiben & ? h & \\\hline
 Total Phase: & 14 & & ? h & \\\hline
 \end{longtabu}
 
+
+\subsection{Nächste Iteration}
+In der kommenden Iteration geht es um die Arbeitspakete \textbf{C-02}, \textbf{C-03} und \textbf{C-11}, also um die Funktionalität Touren aufzulisten und zu starten.
+Ziel ist es, die Technologie kennen zu lernen und so schon früh Unsicherheiten zu beseitigen. Wir unterscheiden hier zwischen Backend und Client, vorerst werden beide separiert betrachtet.
+(D.h. es wird auf beiden Seiten mit Mockdaten gearbeitet) \newline
+\textbf{Backend:} Ein Client kann eine Liste von Touren anfordern, eine auswählen und starten. Dieser Teil wird von Benjamin und Nicolas übernommen. \newline
+\textbf{Client (App):} Es wird eine Liste von Touren angezeigt. Wenn eine Tour ausgewählt wird, dann sieht der User seine Position auf der Karte. Es wird die Route zu einem Punkt angezeigt. 
+Da die mobile App-Entwicklung die grösste Ungewissheit birgt, arbeiten darauf drei Leute: Andi, Raffaele und Josef.
+Die Schäztungen der Arbeitspakete sind in der \textbf{Tabelle unter 2.2} ersichtlich. Diese basieren auf Experimenten oder Erfahrung mit der Technologie. Hierbei handelt es
+sich nur um die Schätzung für die erste Iteration auf diesen Arbeitspaketen. \textbf{C-11} zum Beispiel wird in jeder Iteration der Construction Phase bearbeitet, da das UI
+sich stets mitentwickelt.
 
 \subsection{Risiken}\label{risiken}
 \begin{longtabu} to \textwidth { | l | X[l] | l | l | }
@@ -689,6 +700,7 @@ Natives Features & Funktionen, die ein Gerät ohne weitere Software besitzt\\\hl
 Point of Interest, PoI & engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
 Stakeholders & engl. Interessenten\\\hline
 Tech Stack & Eingesetzte Technologien\\\hline
+Mockdaten & Daten mit gleicher Struktur wie echte Daten, dient der lokalen Entwicklung, Testdaten \\\hline
 Trip & engl. Reise, enthält mehere Touren\\\hline
 Tourist & Der eigentliche Benutzer der App\\\hline
 \end{longtabu}
