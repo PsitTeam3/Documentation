@@ -1,0 +1,167 @@
+% !TEX program = xelatex
+% basic document config
+\documentclass[a4paper,10pt,xetex]{article}
+\usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
+
+% language
+\usepackage[german]{babel}
+
+% variable definitions
+\providecommand{\documenttitle}{Design}
+\providecommand{\documentauthors}{Andreas Saurer \\ Benjamin Schneidinger \\ Josef Erben \\ Raffaele Bof \\ Nicolas Loth}
+\providecommand{\documentdate}{25.04.2017}
+
+% special commands
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\nameref*{#1} (\ref*{#1})}}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+% font
+% \usepackage{titling}
+\usepackage[sfdefault]{roboto}
+\usepackage[parfill]{parskip}
+
+% table
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable,tabu,booktabs}
+
+% links
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={\documenttitle},
+            pdfauthor={\documentauthors},
+            colorlinks=true,
+            linkcolor=[RGB]{74,144,226},
+            citecolor=[RGB]{74,144,226},
+            urlcolor=[RGB]{74,144,226},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+% images
+\usepackage{float,graphicx,grffile}
+\graphicspath{ {images/} }
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+
+% header and footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white}}
+\fancyfoot[L]{\fontsize{8}{10}\selectfont\ \documenttitle}
+\fancyfoot[R]{\fontsize{8}{10}\selectfont\ Seite\ \thepage\ von\ \pageref*{LastPage}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% style titles
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1em}{0pt}
+\titlespacing*{\subsection}{0pt}{1em}{0pt}
+\titlespacing*{\subsubsection}{0pt}{1em}{0pt}
+
+% configure title page
+\title{
+  \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]
+  Anforderungsanalyse\\[\bigskipamount]
+}
+
+\author{\documentauthors}
+\date{\parbox{\linewidth}{\centering%
+  IT15TA ZH \hspace*{3cm} Gruppe 3\endgraf\bigskip
+  \documentdate\endgraf
+}}
+
+
+\begin{document}
+
+% title page
+\maketitle\newpage
+
+% table of contents
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+
+\newpage
+
+% version log
+\section{Versionenlog}\label{versionenlog}
+
+\tabulinesep=1.2mm
+
+\begin{longtabu} to \textwidth { | l | l | X[l] | l | }
+  \hline
+  \textbf{Datum} & \textbf{Version} & \textbf{Änderung} & \textbf{Author} \\
+  \hline
+  \endhead
+
+  0.0.0 & 21.04.2017 & Dokument erstellt & Andi\\
+  \hline
+\end{longtabu}
+\newpage
+
+% start content
+\section{Projektmanagement}\label{projektmanagement}
+\section{Architektur}\label{architektur}
+\section{Design-Klassendiagramm}\label{design-klassendiagram}
+\section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
+\section{Interaktionsdiagramme}\label{interaktionsdiagramme}
+\section{GUI-Design}\label{gui-design}
+
+\newpage
+\section{Glossar}\label{glossar}
+\begin{longtabu} to \textwidth { | l | X[l] | }
+\hline
+\textbf{Begriff} & \textbf{Bemerkung}\\\hline
+\endhead
+
+Agency/Agencies & engl. Agenturen\\\hline
+Smartphone & Mobilgerät mit erweiterten Funktionen\\\hline
+Android & Betriebssystem für Mobilgeräte\\\hline
+Mobile Application & Mobile Applikation, Synonym für mobile Applikation auf Smartphone\\\hline
+Backend & Serverseitige Anwendung, stellt Rest API zur Verfügung\\\hline
+External Services & engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden wie z.B. Location Services\\\hline
+Fallback & Ausweichlösung/Alternativlösung\\\hline
+Frontend & Benutzerseitige Anwendung, hier App welche Rest API konsumiert\\\hline
+GPS & Global Positioning System, globales Satelliten Navigationsnetz\\\hline
+Marker & Symbol, welches einen Punkt auf der Karte markiert\\\hline
+Natives Features & Funktionen, die ein Gerät ohne weitere Software besitzt\\\hline
+ÖV & abkz. Öffentlicher Verkehr\\\hline
+Point of Interest, PoI & engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
+Stakeholders & engl. Interessenten\\\hline
+Tech Stack & Eingesetzte Technologien\\\hline
+Mockdaten & Daten mit gleicher Struktur wie echte Daten, dient der lokalen Entwicklung, Testdaten \\\hline
+Trip & engl. Reise, enthält mehrere Touren\\\hline
+Tourist & Der eigentliche Benutzer der App\\\hline
+\end{longtabu}
+
+
+\section{Literatur}\label{literatur}
+\begingroup
+\renewcommand{\section}[2]{}%
+  \begin{thebibliography}{9}
+    \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+  \end{thebibliography}
+\endgroup
+
+\section{Abbildungsverzeichnis}\label{abbildungsverzeichnis}
+\begingroup
+\renewcommand{\section}[2]{}%
+\hypersetup{linkcolor=black}
+\listoffigures
+\endgroup
+
+\end{document}

@@ -1,7 +1,9 @@
 # Documentation
 ## build latex
-1. `cd docs/`
-2. `xelatex Anforderungsanalyse.tex`
+1. Change directory to `cd docs/`
+2. use `xelatex` to compile latex
+  - `xelatex Anforderungsanalyse.tex`
+  - `xelatex Design.tex`
 
 Alternatively you can install [Atom](http://www.atom.io), the package `latex` and hit `ctrl-alt-b` to build.
 
