@@ -1,4 +1,7 @@
 # Documentation
+# Trello Board
+[Trello Board](https://trello.com/b/24tNcmal)
+
 ## build latex
 1. Change directory to `cd docs/`
 2. use `xelatex` to compile latex
