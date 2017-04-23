@@ -108,6 +108,9 @@
   \hline
   \endhead
 
+  0.0.7 & 23.04.2017 & GOI Design Mockup hinzugefügt & ANdi \\
+  \hline
+
   0.0.6 & 23.04.2017 & Klassenverantwortlichkeiten Frontend ausführen & Josef \\
   \hline
 
@@ -371,12 +374,42 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
   \caption{Kommunikationsdiagramm Tour Details anzeigen}
 \end{figure}
 
+\newpage
 \section{GUI-Design}\label{gui-design}
 Die App startet auf der Anzeige ``ListActivity'' auf welchem alle verfügbaren Touren angezeigt
 werden. Mit einem Klick auf eine Tour wird die Anzeige ``DetailActivity'' geöffnet und eine
-Übersicht über die gewählte Tour wird sichtbar. Über den Button ``Tour starten'' gelangt
+Übersicht über die gewählte Tour wird sichtbar.
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{ListActivity}
+    \caption{Anzeige ListActivity}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{DetailActivity}
+    \caption{Anzeige DetailActivity}
+  \end{minipage}
+\end{figure}
+
+\newpage
+Über den Button ``Tour starten'' gelangt
 man weiter zur Ansicht ``TourActivity'' worauf jeweils der Weg zum nächsten POI ersichtlich ist.
 Abgeschossen wird eine Tour mit der Anzeige ``SummaryActivity''.
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{TourActivity}
+    \caption{Anzeige TourActivity}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.48\textwidth}
+    \includegraphics[width=\textwidth]{SummaryActivity}
+    \caption{Anzeige SummaryActivity}
+  \end{minipage}
+\end{figure}
 
 \newpage
 \section{Glossar}\label{glossar}
