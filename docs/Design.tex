@@ -185,16 +185,46 @@ enthält sehr wenig Businesslogik. Die Use Cases sind im Backend implementiert.\
 Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\hline
 \end{longtabu}
 
-\subsubsection{Implikationen}\label{implications}
-Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als auch Nachteile. 
-Die nachfolgende Liste zeigt Implikationen und Auswirkungen der gewählten Architektur 
-auf das Design und die Umsetzung der App. 
+ubsubsection{Implikationen}\label{implications}
+Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als 
+auch Nachteile. Die nachfolgende Liste zeigt Implikationen und Auswirkungen der 
+gewählten Architektur auf das Design und die Umsetzung der App. 
 \begin{enumerate}
-\item \textbf{Klare Abhängigkeiten:} Durch die klar definierten Abhängikeiten 
-    lassen sich Kosten und Aufwände von Änderungen/Erweiterungen besser abschätzen: 
-    Wollten wir beispielsweise die Technologie zur Kommunikation mit dem Server 
-    von REST/HTTP auf Websockets/PubSub
-\end{enumerate}
+    \item \textbf{Klare Abhängigkeiten:} Durch die klar definierten Abhängikeiten 
+	lassen sich Kosten und Aufwände von Änderungen/Erweiterungen besser abschätzen: 
+	Wollen wir beispielsweise die Technologie zur Kommunikation mit dem 
+	Backend von REST/HTTP auf WebSockets/PubSub ändern, wissen wir, dass sich 
+	die inneren beiden Schichten nicht ändern. Wir müssen lediglich die äussere 
+	Schicht anpassen, damit sie WebSockets handhabt. Der Parser, in der direkt 
+	darunterliegenden Schicht, erhält idealerweise den gleichen Response Body 
+	und muss nicht angepasst werden. 
+    \item \textbf{Gute Testbarkeit:} Die Businesslogik ist vollkommen unabhängig 
+	von verwendeteten Frameworks und der UI. Diese kann ohne eine laufende 
+	Android Instanz getestet werden. Das führt zu kürzeren Feedback Loops 
+	bei der Ausführung von Unit Tests und dadurch zur effizienteren Entwicklung. 
+	(Ein komplettes Re-deployment entfällt) 
+	Da in den beiden inneren Schichten keine Abhängigkeit zu externen Systemen 
+	besteht, lassen sich diese ohne grossen Aufwand (z.B. Testing-Setup) testen.
+    \item \textbf{Keine Abhängikeit zum Betriebssytem:} Aus Punkt 1 und 2 
+	leitet sich dieser Punkt ab: Alle Abhängigkeiten befinden sich um 
+	äussersten Layer. Falls die App auch auf anderen Systemen lauffähig sein soll, 
+	dann muss im Idealfall nur eine Schicht angepasst werden. Durch Projekte 
+	wie RoboVM und Intel Multi OS Engine können wir den bestehenden Java Code 
+	sogar auf iOS Geräten laufen lassen. Unsere App ist damit sogar nur lose 
+	zum Betriebssystem gekoppelt.  
+    \item \textbf{Overhead:} Da die App in der ersten Version praktisch keine 
+	Businesslogik enthalten wird, entfällt die \textbf{Use Case} Schicht. 
+	Dadurch bleiben eigentlich die anderen drei Layer, die mit der ersten 
+	Version ebenfalls noch Überschaubar ausfallen. Man könnte argumentieren, 
+	dass diese Architektur etwas zu hoch gegriffen ist für die Anforderungen 
+	des Prototypen. Im Gegensatz zu Design lässt sich Architektur nicht oder 
+	sehr schwer iterativ entwickeln. Wir denken, dass der Aufwand für Änderungen 
+	der Architektur im späteren Verlauf (etwa durch neue Anforderungen) den 
+	initialen Mehraufwand rechtfertigt.   
+    \end{enumerate}
+    Durch die gewählte Architektur erreichen wir gute Testbarkeit mit klaren 
+    Abhängigkeiten. Der Mehraufwand wird dadurch gerechtfertigt, dass Änderungen 
+    von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 
 \section{Design-Klassendiagramm}\label{design-klassendiagram}
 \section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
