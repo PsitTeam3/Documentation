@@ -108,6 +108,12 @@
   \hline
   \endhead
 
+   0.0.3 & 22.04.2017 & Implikationen der Frontend Architektur, Nachtrag Glossar & Josef \\
+  \hline
+
+   0.0.2 & 21.04.2017 & Initiale Version der Frontend Architektur & Josef \\
+   \hline
+
   0.0.1 & 21.04.2017 & GUI-Design Text hinzugefügt & Andi\\
   \hline
 
@@ -121,10 +127,10 @@
 \section{Architektur}\label{architektur}
 \subsection{Android App Architektur}\label{androidapparchitektur}
 
-Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture}. 
+Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} [2]. 
 Im nachfolgenden Abschnitt werden einige wichtige Punkte von \textbf{The Clean Architecture} 
 erläutert, um die Implementation in TravelBuddy aufzuzeigen. Eine umfassende 
-Einleitung findet man bei Robert Martin (Uncle Bob).
+Einleitung findet man bei Robert Martin (Uncle Bob) [3].
 {\includegraphics{cleanarchitecture}}
 \subsubsection{Abhängigkeiten - Dependency Rule}\label{dependencyrule}
 Diese einfache Regel stellt lose Kopplung und gute Testbarkeit sicher. 
@@ -170,7 +176,7 @@ Dies hat natürlich einen Einfluss auf die Architektur, wie im folgenden Abschni
 \subsubsection{Schichten}\label{layerstravelbuddy}
 \begin{longtabu} to \textwidth { | l | X[l] |  }
 \hline
-\textbf{Schicht} & \textbf{Zuständigkeiten} & \textbf{Beispiel} \\\hline
+\textbf{Schicht} &  \textbf{Zuständigkeiten und Beispiele} \\\hline
 \endhead
 \textbf{Frameworks and Drivers} & Kümmert sich um Lifecycle der App, die Berechtigungen 
 und um die Einbettung ins Android Betriebssystem, setzt HTTP Requests ab und reicht 
@@ -227,6 +233,8 @@ gewählten Architektur auf das Design und die Umsetzung der App.
     von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 
 \section{Design-Klassendiagramm}\label{design-klassendiagram}
+\subsection{Design-Klassendiagramm Frontend}\label{design-klassendiagram-frontend}
+
 \section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
 \section{Interaktionsdiagramme}\label{interaktionsdiagramme}
 
@@ -272,6 +280,8 @@ PubSub & Publisher subscriber Pattern\\\hline
 \renewcommand{\section}[2]{}%
   \begin{thebibliography}{9}
     \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
+    \bibitem{TCA} https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
+    \bibitem{CC} http://blog.cleancoder.com/ 
   \end{thebibliography}
 \endgroup
 
