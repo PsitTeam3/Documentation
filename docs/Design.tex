@@ -1,4 +1,4 @@
- !TEX program = xelatex
+% !TEX program = xelatex
 % basic document config
 \documentclass[a4paper,10pt,xetex]{article}
 \usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
@@ -283,14 +283,14 @@ Android SDK.\\\hline
 \textbf{PhotoStatus} & PhotoStatus ist ein Datenobjekt und repräsentiert das 
 Ergebnis einer Validation eines Fotos durch das Backend.\\\hline
 \textbf{Progress} & Progress dient als Behälter der während einer Tour geschossenen
-Fotos.
+Fotos.\\\hline
 \textbf{Summary} & Summary wird am Ende einer Tour aus Progress generiert und
 bietet dem Nutzer eine Zusammenfassung der Tour.\\\hline
 \end{longtabu}
 
 \subsubsection{Klassenverantwortlichkeiten - Knowing and Doing}\label{knowinganddoing-frontend}
 Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen. 
-\begin{longtabu} to \textwidth { | l | X[l] |  }
+\begin{longtabu} to \textwidth { | l | l | X[l] |  }
 \hline
 \textbf{Klasse} & \textbf{Knowing} & \textbf{Doing} \\\hline
 \endhead
