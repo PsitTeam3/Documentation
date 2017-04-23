@@ -119,6 +119,42 @@
 % start content
 \section{Projektmanagement}\label{projektmanagement}
 \section{Architektur}\label{architektur}
+\subsection{Android App Architektur}\label{androidapparchitektur}
+
+Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture}. Im nachfolgenden Abschnitt werden einige wichtige Punkte von \textbf{The Clean Architecture} erläutert, um die Implementation in TravelBuddy aufzuzeigen. Eine umfassende Einleitung findet man bei Robert Martin (Uncle Bob).
+{\includegraphics{cleanarchitecture}}
+\subsubsection{Abhängigkeiten - Dependency Rule}\label{dependencyrule}
+Diese einfache Regel stellt lose Kopplung und gute Testbarkeit sicher. Die \textbf{Dependency Rule} besagt, dass die Source Code Abhängigkeit nach innen zeigt. Das heisst, dass eine bestimmte Schicht niemals die äussere Schicht kennt. Man hat beispielsweise einen HTTP Client (Web) in der äussersten Schicht und einen Parser (Gateway) in der direkt darunterliegenden Schicht. Nach der \textbf{Dependency Rule} darf es keine Referenzen im Parser zum HTTP-Client geben.
+
+\subsubsection{Bedeutung der Schichten}\label{layers}
+\begin{longtabu} to \textwidth { | l | X[l] |  }
+\hline
+\textbf{Bezeichnung der Schicht} & \textbf{Bedeutung und Beispiele}\\\hline
+\endhead
+\textbf{Frameworks and Drivers} & Die äusserste Schicht \textbf{Frameworks and Drivers} ist für die Kommunikation mit der äusseren Welt zuständig. Dazu zählen zum Beispiel Kommunikation mit dem User per UI, Persistierung von Daten in Datenbanken oder Kommunikation mit externen Services per HTTP. Die äusserste Schicht beinhaltet aber auch Frameworks.\\\hline
+\textbf{Interface Adapters} & Die nachfolgende Schicht heisst \textbf{Interface Adapters}. Diese Schicht hat zur Aufgabe, die Daten in eine für die Use Cases und Entities möglichst angenehme Form zu bringen.\\\hline
+\textbf{Use Case} & Der zweitinnerste Schicht nennt man \textbf{Use Case} Layer. Hier werden die applikationsspezifischen Businessregeln, also die Use Cases abgebildet. Die eigentliche Businesslogik existiert also in dieser Schicht. Zu beachten ist aber, dass es hier nur um Verhalten und nicht um Daten geht.\\\hline
+\textbf{Entities} & Die eigentlichen Businessobjekte gehören in die innerste Schicht genannt \textbf{Entities}. Diese Schicht hat keine Abhängigkeiten zu anderen Schichten und beinhaltet die generellen Regeln der Domäne. Bei Änderungen in äusseren Schichten sind mit hoher Wahrscheinlichkeit keine Änderungen in dieser Schicht notwendig. Zur Abgrenzung zur oberen Schicht \textbf{Use Case}: Die Schicht \textbf{Entities} muss nicht angepasst werden, falls sich Use Cases ändern. Dies is der Fall, da sich die allgemeinen Domänenregeln in der Regel nicht ändern.\\\hline
+\end{longtabu}
+
+\subsubsection{The Clean Architecture bei TravelBuddy}
+Die TravelBuddy App ist ein Spezialfall einer Android App. Da das Team das grösste Risiko bei der Android-Entwicklung sah, wurde entschlossen in der App selber so wenig Businesslogik wie möglich auszuführen. 
+Dies hat natürlich einen Einfluss auf die Architektur, wie im folgenden Abschnitt aufgezeigt wird.
+
+
+\subsubsection{Schichten}\label{layers}
+\begin{longtabu} to \textwidth { | l | X[l] |  }
+\hline
+\textbf{Schicht} & \textbf{Zuständigkeiten} & \textbf{Beispiel} \\\hline
+\endhead
+\textbf{Frameworks and Drivers} & Kümmert sich um Lifecycle der App, die Berechtigungen und um die Einbettung ins Android Betriebssystem, setzt HTTP Requests ab und reicht HTTP Responses weiter, aktualisiert Standortdaten, bekommt Bilder von der Smartphone-Kamera, erhält Karte von der Google Maps App\\\hline
+\textbf{Interface Adapters} & Parst Antwort des Servers in String-Form und wandelt diese Datenobjekte um, transformiert Kartendaten und Standortdaten in für die App einfach zu handhabbare Form\\\hline
+\textbf{Use Case} & Hier kommt der einfache Fall der Android App zugute: Die App enthält sehr wenig Businesslogik. Die Use Cases sind im Backend implementiert.\\\hline
+\textbf{Entities} & Enthählt die Datenobjekte, welche die Domänenregeln abbilden: Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\hline
+\end{longtabu}
+
+\subsubsection{Implikationen}\{implications}
+
 \section{Design-Klassendiagramm}\label{design-klassendiagram}
 \section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
 \section{Interaktionsdiagramme}\label{interaktionsdiagramme}
@@ -140,7 +176,7 @@ Abgeschossen wird eine Tour mit der Anzeige ``TourSummary''.
 Agency/Agencies & engl. Agenturen\\\hline
 Smartphone & Mobilgerät mit erweiterten Funktionen\\\hline
 Android & Betriebssystem für Mobilgeräte\\\hline
-Mobile Application & Mobile Applikation, Synonym für mobile Applikation auf Smartphone\\\hline
+Mobile Application/Mobile App & Mobile Applikation, Synonym für mobile Applikation auf Smartphone\\\hline
 Backend & Serverseitige Anwendung, stellt Rest API zur Verfügung\\\hline
 External Services & engl. Externe Dienste, Dienste die nicht vom Programm selber ausgeführt werden wie z.B. Location Services\\\hline
 Fallback & Ausweichlösung/Alternativlösung\\\hline
@@ -155,6 +191,7 @@ Tech Stack & Eingesetzte Technologien\\\hline
 Mockdaten & Daten mit gleicher Struktur wie echte Daten, dient der lokalen Entwicklung, Testdaten \\\hline
 Trip & engl. Reise, enthält mehrere Touren\\\hline
 Tourist & Der eigentliche Benutzer der App\\\hline
+POJO & Plain old Java object (Datenobjekt)\\\hline
 \end{longtabu}
 
 
