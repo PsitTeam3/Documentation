@@ -108,6 +108,12 @@
   \hline
   \endhead
 
+  0.0.3 & 22.04.2017 & Implikationen der Frontend Architektur, Nachtrag Glossar & Josef \\
+  \hline
+  
+  0.0.2 & 21.04.2017 & Initiale Version der Frontend Architektur & Josef \\
+  \hline
+
   0.0.1 & 21.04.2017 & GUI-Design Text hinzugefügt & Andi\\
   \hline
 
@@ -154,6 +160,12 @@ Dies hat natürlich einen Einfluss auf die Architektur, wie im folgenden Abschni
 \end{longtabu}
 
 \subsubsection{Implikationen}\label{implications}
+Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als auch Nachteile. Die nachfolgende Liste zeigt Implikationen und Auswirkungen der gewählten Architektur auf das Design und die Umsetzung der App. 
+\begin{enumerate}
+\item \textbf{Klare Abhängigkeiten:} Durch die klar definierten Abhängikeiten lassen sich Kosten und Aufwände von Änderungen/Erweiterungen besser abschätzen: Wollen wir beispielsweise die Technologie zur Kommunikation mit dem Backend von REST/HTTP auf WebSockets/PubSub ändern, wissen wir, dass sich die inneren beiden Schichten nicht ändern. Wir müssen lediglich die äussere Schicht anpassen, damit sie WebSockets handhabt. Der Parser, in der direkt darunterliegenden Schicht, erhält idealerweise den gleichen Response Body und muss nicht angepasst werden. 
+\item \textbf{Gute Testbarkeit:} Die Businesslogik ist vollkommen unabhängig von verwendeteten Frameworks und der UI. Diese kann ohne eine laufende Android Instanz getestet werden. Das führt zu kürzeren Feedback Loops bei der Ausführung von Unit Tests und dadurch zur effizienteren Entwicklung. (Ein komplettes Re-deployment entfällt) 
+Da in den beiden inneren Schichten keine Abhängigkeit zu externen Systemen besteht, lassen sich diese ohne grossen Aufwand (z.B. Testing-Setup) testen.
+\end{enumerate}
 
 \section{Design-Klassendiagramm}\label{design-klassendiagram}
 \section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
@@ -192,6 +204,12 @@ Mockdaten & Daten mit gleicher Struktur wie echte Daten, dient der lokalen Entwi
 Trip & engl. Reise, enthält mehrere Touren\\\hline
 Tourist & Der eigentliche Benutzer der App\\\hline
 POJO & Plain old Java object (Datenobjekt)\\\hline
+PubSub & Publisher subscriber Pattern\\\hline
+UI & User Interface, grafische Benuteroberfläche \\\hline
+Feedback Loops & Zeit von Codeänderung bis zur Evaluation dieser Änderung \\\hline
+Re-deployment & Schritte, die notwendig sind um vom Quellcode zur auf Android laufender App \\\hline
+Testing-Setup & Initialer Overhead, bauen von Buildern oder eines kompletten Testing-Kits \\\hline
+Testing-Kit & Library, um das Testen bestimmter Codebasen leichter zu machen \\\hline
 \end{longtabu}
 
 
