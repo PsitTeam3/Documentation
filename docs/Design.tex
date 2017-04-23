@@ -1,4 +1,4 @@
-% !TEX program = xelatex
+ !TEX program = xelatex
 % basic document config
 \documentclass[a4paper,10pt,xetex]{article}
 \usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
@@ -251,6 +251,94 @@ von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 \end{figure}
 
 \section{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
+\subsection{Klassenverantwortlichkeiten - App}\label{klassenverantwortlichkeiten-frontend}
+In der folgenden Tabelle werden die Klassen mit ihren Hauptverantworlichkeiten
+gelistet.
+
+\begin{longtabu} to \textwidth { | l | X[l] |  }
+\hline
+\textbf{Klasse} & \textbf{Verwantwortlichkeit}\\\hline
+\endhead
+\textbf{AppController} & Der AppController liefert Instanzen von Singletons.\\\hline
+\textbf{RequestQueuer} & Der RequestQueuer wird benutzt, um per HTTP mit dem 
+Server zu kommunizieren.\\\hline
+\textbf{ListActivity} & Die ListActivity zeigt eine Liste von Touren an und 
+reagiert auf Klick-Events.\\\hline
+\textbf{DetailActivity} & Die DetailActivity zeigt eine detaillierte Beschreibung 
+und ein Thumbnail einer Tour.\\\hline
+\textbf{TourActivity} & Die TourActivity speichert die aktuelle Route, aktualisiert
+die Position des Nutzers, aktualisiert die Karte und löst HTTP Requests aus.\\\hline
+\textbf{SummeryActivity} & Die SummaryActivity erstellt eine \textbf{Summary} 
+und zeigt diese an.\\\hline
+\textbf{Tour} & Die Tour kennt all ihre Routen und dient als Datenklasse. \\\hline
+\textbf{Route} & Die Route kennt all ihre Koordinaten und dient als 
+Datenklasse. \\\hline
+\textbf{POI} & Die POI ist eine reine Datenklasse und bildet ein POI ab.\\\hline
+\textbf{LatLng} & LatLng ist ein Datentyp, welche eine Position auf dem
+Erdball abbildet.\\\hline
+\textbf{Map} & Die Map dient als Behählter der Google Map und wird benutzt, um
+die Karte zu aktualisieren.\\\hline
+\textbf{Location} & Location ist eine Repräsentation einser Ortes und kommt aus 
+Android SDK.\\\hline
+\textbf{PhotoStatus} & PhotoStatus ist ein Datenobjekt und repräsentiert das 
+Ergebnis einer Validation eines Fotos durch das Backend.\\\hline
+\textbf{Progress} & Progress dient als Behälter der während einer Tour geschossenen
+Fotos.
+\textbf{Summary} & Summary wird am Ende einer Tour aus Progress generiert und
+bietet dem Nutzer eine Zusammenfassung der Tour.\\\hline
+\end{longtabu}
+
+\subsubsection{Klassenverantwortlichkeiten - Knowing and Doing}\label{knowinganddoing-frontend}
+Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen. 
+\begin{longtabu} to \textwidth { | l | X[l] |  }
+\hline
+\textbf{Klasse} & \textbf{Knowing} & \textbf{Doing} \\\hline
+\endhead
+\textbf{AppController} & RequestQueuer & Stellt anderen Objekten den RequestQueuer 
+als Singleton zur Verfügung\\\hline
+\textbf{RequestQueuer} & keine Abhängigkeitein & Wird in den Activities für asynchrone
+HTTP Kommunikation benutzt. Der RequestQueuer baut auch die URLs zusammen und bietet
+eine API an, um mit Lambdas Callbacks zu setzen. Dieser ruft die mitgereichten 
+Consumer mit dem Server Response auf, ohne den Aufrufer zu kennen. Dadurch erreichen
+wir lose Kopplung und hohe Wiederverwandbarkeit. \\\hline
+\textbf{ListActivity} & AppController, Tour & Die ListActivity gibt über den AppController
+einen Callback an den RequestQueuer. Dieser Callback füllt eine Liste von Touren,
+welche dem User angezeigt wird. Ein Kick auf eine Tour ruft die DetailActivity auf.
+\\\hline
+\textbf{DetailActivity} & Tour & Die DetailActivity ist eine einfache Ansicht auf 
+ein Tour-Objekt und zeigt Details einer Tour an.\\\hline
+\textbf{TourActivity} & Map, Route, Progress, Location, AppController & Die TourActivity bildet
+unseren Hauptusecase ab: Navigation per Karte durch eine Tour. Die TourActivity
+registriert sich selber als Callback beim Google Maps Service und beim Google
+Play Location Service. Weiterhin wird das Backend regelmässig nach der aktuellen
+Route gefragt. Falls sich der User in der Nähe eines Pois befindet, wird die 
+Kamera App des Smartphones aktiviert.\\\hline
+\textbf{SummeryActivity} & Summary, Progress, RequestQueuer & Die SummaryActivity 
+bekommt von der TourActivity ein Progress-Objekt. Nach einer Anfrage an das 
+Backend wird eine \textbf{Summary} Activity erstellt und angezeigt.\\\hline
+\textbf{Tour} & Route & Die Tour kennt nur ihre Routen und dient als Datenklasse. 
+Sie kann sich selber aus JSON instanziieren.\\\hline
+\textbf{Route} & LatLng & Die Route kennt all ihre Koordinaten und dient als 
+Datenklasse. Sie kann sich selber aus JSON instanziieren.\\\hline
+\textbf{POI} & keine Abhängigkeiten & Die POI ist eine reine Datenklasse und bildet ein POI ab. Sie 
+kann sich selber aus JSON instanziieren.\\\hline
+\textbf{LatLng} & keine Abhängigkeiten & LatLng ist ein Datentyp, welche eine Position auf dem
+Erdball abbildet.\\\hline
+\textbf{Map} & GoogleMap & Die Map dient als Behählter der Google Map und wird benutzt, um
+die Karte zu aktualisieren. Sie kann den Positionsmarker und die Route zum nächsten
+POI zeichnen.\\\hline
+\textbf{Location} & keine Abhängigkeiten & kein Verhalten \\\hline
+\textbf{PhotoStatus} & keine Abhängigkeiten & kein Verhalten \\\hline
+\textbf{Progress} & keine Abhängigkeiten & kein Verhalten \\\hline
+\textbf{Summary} & Progress & Summary kann sich selber aus \textbf{Progress} 
+generieren.\\\hline
+\end{longtabu}
+
+Obwohl \textbf{Activities} andere \textbf{Activites} starten können, müssen sie
+lediglich deren Klasse kennen. Durch das Messaging System von Android müssen die
+Activities keine Instanzen von anderen Activities halten oder diese selber 
+erzeugen. Im Klassendiagramm (Abbildung 2) sind die Activities zwar miteinander
+verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 
 \section{Interaktionsdiagramme}\label{interaktionsdiagramme}
 \subsection{Backend}\label{backend}
@@ -308,6 +396,9 @@ Trip & engl. Reise, enthält mehrere Touren\\\hline
 Tourist & Der eigentliche Benutzer der App\\\hline
 POJO & Plain old Java object (Datenobjekt)\\\hline
 PubSub & Publisher subscriber Pattern\\\hline
+Singleton & Eine Klasse, von der nur eine Instanz erstellt werden kann.\\\hline
+Intent & Intent bezeichnet hier eine Message in Android. Der Name impliziert, dass
+Komponenten selber entscheiden, ob sie auf diese Messages reagieren oder nicht.\\\hline
 \end{longtabu}
 
 
