@@ -20,6 +20,7 @@
 % \usepackage{titling}
 \usepackage[sfdefault]{roboto}
 \usepackage[parfill]{parskip}
+\usepackage{soul}
 
 % table
 \usepackage{array}
@@ -73,7 +74,7 @@
 % configure title page
 \title{
   \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]
-  Anforderungsanalyse\\[\bigskipamount]
+  Design\\[\bigskipamount]
 }
 
 \author{\documentauthors}
@@ -108,7 +109,13 @@
   \hline
   \endhead
 
-  0.0.7 & 23.04.2017 & GOI Design Mockup hinzugefügt & ANdi \\
+  0.0.9 & 23.04.2017 & Projektmanagement nachgetragen & Raffaele \\
+  \hline
+
+  0.0.8 & 23.04.2017 & Interaktionsdiagramm takePhoto() und isNearPoi() erstellen & Josef \\
+  \hline
+
+  0.0.7 & 23.04.2017 & GOI Design Mockup hinzugefügt & Andi \\
   \hline
 
   0.0.6 & 23.04.2017 & Klassenverantwortlichkeiten Frontend ausführen & Josef \\
@@ -136,6 +143,134 @@
 
 % start content
 \section{Projektmanagement}\label{projektmanagement}
+\subsection{Projektstatus}\label{projektstatus}
+Das Projekt befindet sich weiterhin auf Kurs. Der nächste Meilenstein wurde
+grössere Probleme erreicht. Die folgende Grafik zeigt eine grobe Übersicht
+des Projektes, eine detaillierte ist unter \fullref{detaillierter-projektplan}
+ersichtlich.
+
+\begin{figure}
+  \centering
+  \includegraphics{Grobzeitplan_23.04.2017}
+  \caption{Grobzeitplan Stand: 23.04.2017}
+\end{figure}
+
+
+\subsection{Detaillierter Projektplan}\label{detaillierter-projektplan}
+\begin{longtabu} to \textwidth { | l | l | X[l] | l | l | }
+\hline
+\textbf{Phase} & \textbf{Nr.} & \textbf{Arbeitspaket} & \textbf{Soll} & \textbf{Ist} \\\hline
+\endhead
+
+\multicolumn{5}{| l |}{ \textbf{Inception} }\\\hline
+ & A-01 & Ausgangslage schildern & 5,0 h & 1,0 h \\\hline
+ & A-02 & Projektidee beschreiben & 5,0 h & 2,0 h \\\hline
+ & A-03 & Kundennutzen analysieren & 5,0 h & 3,0 h \\\hline
+ & A-04 & Stand der Technik & 5,0 h & 1,5 h \\\hline
+ & A-05 & Konkurenzanalyse & 5,0 h & 3,0 h \\\hline
+ & A-06 & Hauptablauf aufzeigen & 5,0 h & 4,0 h \\\hline
+ & A-07 & Weitere Anforderungen definieren & 5,0 h & 2,0 h \\\hline
+ & A-08 & Ressource beschreiben & 5,0 h & 1,0 h\\\hline
+ & A-09 & Projektidee beschreiben & 5,0 h & 6,0 h\\\hline
+ & A-10 & Risiken beschreiben & 5,0 h & 0,5h \\\hline
+ & A-11 & Grobplanung erstellen & 5,0 h & 3,5 h\\\hline
+ & A-12 & Wirtschaftlichkeitsanalyse & 5,0 h & 6,0 h\\\hline
+ & A-13 & Projektskizze erstellen (inkl. Präsentation) & 5,0 h & 10,0 h\\\hline
+ & A-14 & Entwicklungsumgebung (inkl. Azure, DB) und Projekt aufsetzen für Backend & 10,0 h & 10,0 h\\\hline
+ & A-15 & Entwicklungsumgebung und Projekt aufsetzen für Android App & 10,0 h & 11,0 h\\\hline
+Total Phase: & 15 & & 85,0 h & 61,0 h\\\hline
+\multicolumn{5}{| l |}{ }\\\hline
+
+\multicolumn{5}{| l |}{ \textbf{Elaboration} }\\\hline
+ & B-01 & Projekmanagement organisieren & 5,0 h & 6,0 h\\\hline
+ & B-02 & Anwendungsfalldiagramm zeichnen & 5,0 h & 0,5 h \\\hline
+ & B-03 & Domänenmodell erstellen & 5,0 h & 6,0 h\\\hline
+ & B-04 & Architektur beschreiben & 5,0 h & 4,0 h \\\hline
+ & B-05 & Zusätzliche Spezifikationen beschreiben & 5,0 h & 7,0 h \\\hline
+ & B-06 & System Sequenzdiagramm zeichnen & 5,0 h & 2,5 h \\\hline
+ & B-07 & Glossar erstellen & 5,0 h & 0,25 h \\\hline
+ & B-08 & Anwendungsfall 1 beschreiben & 1,0 h & 1,0 h \\\hline
+ & B-09 & Anwendungsfall 2 beschreiben & 0,5 h & 0,5 h \\\hline
+ & B-10 & Anwendungsfall 3 beschreiben & 0,5 h & 0,5 h \\\hline
+ & B-11 & Anwendungsfall 4 beschreiben & 0,5 h & 0,5 h \\\hline
+ & B-12 & Anwendungsfall 5 beschreiben & 0,5 h & 0,5 h \\\hline
+ & B-13 & Anwendungsfall 6 beschreiben & 0,5 h & 0,5 h\\\hline
+ & B-14 & Analysedokument erstellen (inkl. Präsentation) & 6,5 h & 15,0 h\\\hline
+ & B-15 & Erste Implementierungen an der Web API & 10 h & 20,0 h\\\hline
+ & B-16 & Einarbeiten in Android SDK. Erste Implementierung an der Android App & 15 h & 24,0 h\\\hline
+Total Phase: & 16 & & 70,0 h & 82,25 h\\\hline
+\multicolumn{5}{| l |}{ }\\\hline
+
+\multicolumn{5}{| l |}{ \textbf{Construction} }\\\hline
+ & C-01 & Projekmanagement nachtragen & 1,0 h & \\\hline
+ & C-02 & UC 1 Liste der verfügbaren Touren & 15,0 h & \\\hline
+ & C-03 & UC 1 Starten einer Tour & 20,0 h & \\\hline
+ & C-04 & UC 2 Lokalisieren des Benutzers & 20,0 h & \\\hline
+ & C-05 & UC 2 Anzeigen des Benutzers auf der Karte & 15,0 h & \\\hline
+ & C-06 & UC 3 Foto machen & 15,0 h & \\\hline
+ & C-07 & UC 4 Prüfen der Geo koordinaten des Fotos & 30,0 h & \\\hline
+ & C-08 & UC 5 Besuchen des nächsten Punktes & 25,0 h & \\\hline
+ & C-09 & UC 6 Auslesen der Tourdaten & 10,0 h & \\\hline
+ & C-10 & UC 6 Anzeigen der Tourdaten & 10,0 h & \\\hline
+ & C-11 & UI gestalten & 8,0 h & \\\hline
+ & C-12 & Systemtests durchführen & & \\\hline
+ & C-13 & Dokumentation erstellen & & \\\hline
+ & C-14 & Benutzeranleitung schreiben & & \\\hline
+Total Phase: & 14 & & & \\\hline
+\end{longtabu}
+
+
+\newpage
+\subsection{Enteilung Arbeitspakete}\label{enteilung-arbeitspakete}
+\begin{longtabu} to \textwidth { | l | l | l | X[l] | }
+\hline
+\textbf{Wer} & \textbf{Iteration} & \textbf{Paket} & \textbf{Beschreibung} \\\hline
+\endhead
+
+Alle                         & 1,2,3,4 & C-01 & Projekmanagement nachtragen \\\hline
+Alle                         & 1,2,3,4 & C-11 & UI gestalten \\\hline
+Andi, Benjamin, Josef        & 1       & C-02 & UC 1 Liste der verfügbaren Touren \\\hline
+Nicolas, Raffaele            & 1       & C-03 & UC 1 Starten einer Tour \\\hline
+Andi, Benjamin               & 2       & C-04 & UC 2 Lokalisieren des Benutzers \\\hline
+Benjamin, Josef              & 2       & C-05 & UC 2 Anzeigen des Benutzers auf der Karte \\\hline
+Raffaele, Andi               & 2       & C-08 & UC 5 Besuchen des nächsten Punktes \\\hline
+Benjamin, Josef              & 3       & C-06 & UC 3 Foto machen \\\hline
+Josef, Nicolas               & 3       & C-07 & UC 4 Prüfen der Geo koordinaten des Fotos \\\hline
+Nicolas, Raffaele            & 3       & C-09 & UC 6 Auslesen der Tourdaten \\\hline
+Raffaele, Andi               & 3       & C-10 & UC 6 Anzeigen der Tourdaten \\\hline
+Noch nicht festgelegt        & 4       & C-12 & Systemtests durchführen \\\hline
+Noch nicht festgelegt        & 4       & C-13 & Dokumentation erstellen \\\hline
+Noch nicht festgelegt        & 4       & C-14 & Benutzeranleitung schreiben \\\hline
+\end{longtabu}
+
+
+\subsection{Nächste Iteration}\label{naechste-iteration}
+Für die nächste Iteration ist die implementierung der Kartenfunktionen, also die Pakete: \textbf{C-04}, \textbf{C-05}, \textbf{C-08} geplant
+Ziel ist es bereits einen Teil der Businesslogic umzusetzen und eine minimale Funktionalität für eine erste Demonstration zu erstellen.
+
+\textbf{Backend:} Die App kann Geo-Koordinaten von PoI einer Tour vom Server anfragen, die Aufteilung von Front- und Backend bleibt gleich.
+
+\textbf{Client (App):} Dem Benutzer werden Punkte sowie seine Route angezeigt.
+
+Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-projektplan} ersichtlich.
+
+
+\newpage
+\subsection{Risiken}\label{risiken}
+\begin{longtabu} to \textwidth { | l | X[l] | l | l | X[l] | }
+\hline
+\textbf{Nr.} & \textbf{Risiko} & \textbf{Auswirkung} & \textbf{Wahrscheinlichkeit} & \textbf{Massnahmen} \\\hline
+\endhead
+
+1 & Schutz der gespeicherten Daten durch unautorisierte Zugriffe & Schwerwiegend & Hoch & Verwendung von Sicherheitsmassnahmen auf dem heutigen Stand der Technik\\\hline
+2 & Hohe Kosten für Anwender aufgrund der Verwendung durch Kartenmaterial & Mittel & Hoch & Offlinespeicherung des Kartenmaterials\\\hline
+3 & Fehlendes Wissen in der Entwicklung von Mobile Apps & Mittel & Mittel & Anneignen des Wissens mittels Online tutorials und Wissensaustausch zwischen Gruppenmitgliedern\\\hline
+4 & Höhere Komplexität durch Einbinden von Drittanbieter Software & Gering & Mittel & Auf die Einbindung von Software von Drittanbietern möglichst verzichten\\\hline
+5 & Smartphone GPS-Koordinaten ungenau & Gering & Mittel & Die App für Geräte mit zu geringer GPS-Genauigkeit nicht freigeben\\\hline
+\st{6} & \st{Keine öffentlichen Karten-API verfügbar} & \st{Schwerwiegend} & \st{Sehr gering} & Entsprechendes Kartenmaterial ist von Google verfügbar\\\hline
+\end{longtabu}
+
+\newpage
 \section{Architektur}\label{architektur}
 \subsection{Android App Architektur}\label{androidapparchitektur}
 
@@ -295,7 +430,7 @@ bietet dem Nutzer eine Zusammenfassung der Tour.\\\hline
 \end{longtabu}
 
 \subsubsection{Klassenverantwortlichkeiten - Knowing and Doing}\label{knowinganddoing-frontend}
-Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen. 
+Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen.
 \begin{longtabu} to \textwidth { | l | X[2, l] | X[8, l] |  }
 \hline
 \textbf{Klasse} & \textbf{Knowing} & \textbf{Doing} \\\hline
@@ -372,6 +507,18 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 \begin{figure}
   \includegraphics{Kommunikationsdiagramm_DetailActivity}
   \caption{Kommunikationsdiagramm Tour Details anzeigen}
+\end{figure}
+
+\subsubsection{Checke, ob bei PoI angekommen}
+\begin{figure}
+  \includegraphics{Sequenzdiagramm_IsNearPoi}
+  \caption{Sequenzdiagramm Check ob bei PoI angekommen}
+\end{figure}
+
+\subsubsection{Foto aufnehmen}
+\begin{figure}
+  \includegraphics{Interaktionsdiagramm_TakePhoto}
+  \caption{Interaktionsdiagramm Foto aufnehmen}
 \end{figure}
 
 \newpage
