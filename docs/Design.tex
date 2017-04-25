@@ -245,15 +245,15 @@ Noch nicht festgelegt        & 4       & C-14 & Benutzeranleitung schreiben \\\h
 
 
 \subsection{Nächste Iteration}\label{naechste-iteration}
-Für die nächste Iteration ist die implementierung der Kartenfunktionen, also die Pakete: \textbf{C-04}, \textbf{C-05}, \textbf{C-08} geplant
-Ziel ist es bereits einen Teil der Businesslogic umzusetzen und eine minimale Funktionalität für eine erste Demonstration zu erstellen.
+Für die nächste Iteration ist die implementierung der Kartenfunktionen, also die Pakete: \textbf{C-04}, \textbf{C-05}, \textbf{C-08} geplant.
+Ziel ist es, bereits einen Teil der Businesslogik umzusetzen und eine minimale Funktionalität für eine erste Demonstration zu erstellen.
 
 \textbf{Backend:} Die App kann Geo-Koordinaten von PoI einer Tour vom Server anfragen, die Aufteilung von Front- und Backend bleibt gleich.
 
-\textbf{Client (App):} Dem Benutzer werden Punkte sowie seine Route angezeigt.
+\textbf{Frontend (App):} Der Benutzer kann Touren auswählen, sie in einer Vorschau
+betrachten und starten.
 
 Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-projektplan} ersichtlich.
-
 
 \newpage
 \subsection{Risiken}\label{risiken}
@@ -274,7 +274,10 @@ Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-pro
 \section{Frontend Design}\label{design-frontend}
 Bei der Architektur und dem Design unterscheiden wir zwischen Backend 
 (Web Services) und dem Frontend (Android App). Beide Systeme werden parallel
-unabhängig mittels Swagger API Spezifikation entwickelt (mehr unter Abschnitt 4.1).
+unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{swagger-api}).
+Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
+Architektur und Design separat treffen.
+Zuerst behandeln wir das Frontend, danach das Backend.
 \subsection{Design-Klassendiagramm}\label{design-klassendiagram}
 \begin{figure}
   \includegraphics{classdiagram_frontend}
