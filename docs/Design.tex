@@ -487,7 +487,7 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 Nachfolgend sind alle geplanten Service Methoden nach Controller gruppiert aufgelistet. Im Anhang befindet sich die
 detaillierte Interface-Beschreibung im JSON Format mit allen Parametern und R\"uckgabewerten.
 
-Die API ist als Webservice aufgebaut welcher funktionale Request beantworten kann. Es wird kein direkter Datenzugriff
+Die API ist als Webservice aufgebaut welcher funktionale Requests beantworten kann. Es wird kein direkter Datenzugriff
 \"uber CRUD Methoden zur Verf\"ugung gestellt. Die Business-Logik wird wenn m\"oglich vollst\"andig im Service
 abgehandelt. So ist die Funktionalit\"at des ganzen Systems gekapselt und unabh\"angig von allenfalls in der Zukunft
 weiteren entwickelten Clients.
@@ -515,7 +515,7 @@ Interests, welche durch eine Tour verkn\"upft sind.\\\hline
 Tours & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von Touren.\\\hline
 UserPOI & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von UserPOIs.
   Ein User POI ist ein Point of Interest welcher von einem Benutzer besucht wurde oder
-  welcher ein Benutzer im Rahmen seiner gestarteten Tour als n\"achstes Besuchen muss.\\\hline
+  welcher ein Benutzer im Rahmen seiner gestarteten Tour als n\"achstes besuchen muss.\\\hline
 UserTour & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von UserTouren.
   Eine UserTour ist eine Tour die von einem Benutzer gestartet wurde.\\\hline
 \end{longtabu}
@@ -529,17 +529,17 @@ Methoden:
 \endhead
 
 api/Cities/GetCities &
-Liefert eine Liste aller vorhandenen St\"adte\\\hline
+Liefert eine Liste aller vorhandenen St\"adte.\\\hline
 api/Cities/GetCitiesByCountry &
-Liefert eine Liste aller vorhandenen St\"adte in einem bestimmten Land\\\hline
+Liefert eine Liste aller vorhandenen St\"adte in einem bestimmten Land.\\\hline
   api/Countries/GetCountries &
-Liefert eine Liste aller vorhandenen L\"ander\\\hline
+Liefert eine Liste aller vorhandenen L\"ander.\\\hline
 api/POI/GetPOIs &
-Liefert eine Liste aller vorhandenen POIs\\\hline
+Liefert eine Liste aller vorhandenen POIs.\\\hline
 api/POI/GetPOIsByTour &
-Liefert eine Liste aller POIs zu einer bestimmten Tour\\\hline
+Liefert eine Liste aller POIs zu einer bestimmten Tour.\\\hline
 api/POI/GetDistanceToPOI &
-Gibt aufgrund von Geokoordinaten die Distanz bis zu einem bestimmten POI zur\"uck\\\hline
+Gibt aufgrund von Geokoordinaten die Distanz bis zu einem bestimmten POI zur\"uck.\\\hline
 api/POI/GetDistanceToNextPOI &
 Gibt aufgrund von Geokoordinaten und einer Benutzer-ID die Distanz bis zu einem n\"achsten POI
   den der Benutzer mit seiner gestarteten Tour besuchen muss.\\\hline
@@ -606,12 +606,12 @@ Ninject ist ein Dependency Injection Framework, welches eine Integration f\"ur A
   anbietet. Mit Dependency Injection sollen die einzelnen Repositories den Controllern zur Verf\"ugung gestellt werden.
   Dadurch soll ebenfalls gew\"ahrleistet werden, dass pro Request und Repository nur genau eine Datenbankverbindung
   aufgebaut und dann auch wieder sauber geschlossen wird. So werden Performance- und Datenkonsistenzprobleme, sowie
-  Probleme mit nicht geschlossenen Datenbankverbindungen vermieden werden.\\\hline
+  Probleme mit nicht geschlossenen Datenbankverbindungen vermieden.\\\hline
 Swashbuckle &
 5.2.1 &
 Architektur &
 Swashbuckle erm\"oglicht das automatische Generieren und Anzeigen von Swagger Interface
-  Descriptions zur Laufzeit. Mit Hilfe dieser Descriptions k\"onnen die Services einfacher integriert werden, indem zu
+  Descriptions zur Laufzeit. Mit Hilfe dieser Descriptions k\"onnen die Services einfacher integriert werden, indem zum
   Beispiel die Datenobjekte oder Proxy-Klassen auf Konsumentenseite automatisch generiert werden k\"onnen.\\\hline
 Log4Net &
 2.0.8 &
@@ -700,11 +700,11 @@ Database &
 Database &
 Das Datenbankprojekt wird vollst\"andig als MSSQL Datenbank Projekt umgesetzt. Damit werden
   automatisch \"Anderungen an den SQL Dateien im Projekt getrackt und es k\"onnen unter Beachtung dieser \"Anderungen
-  automatisch Datenbank Installations-Packages (DACPAC) generiert werden welche den initialen Stand oder ein Delta
+  automatisch Datenbank Installations-Packages (DACPAC) generiert werden, welche den initialen Stand oder ein Delta
   beinhalten.\\\hline
 Database &
 SQL Scripts &
-Die eigentlichen SQL Skripts f\"ur Tables, Views oder weitere Datenbank-Elemente\\\hline
+Die eigentlichen SQL Skripts f\"ur Tables, Views oder weitere Datenbank-Elemente.\\\hline
 Tests &
 Controllers &
 Dieses Testprojekt implementiert alle Unit-Tests zum automatischen Testen der WebAPI
@@ -717,12 +717,12 @@ von der Datenbank bis zum Inhalt in der HTTP-Response, auf:
 
 \begin{enumerate}
   \item
-    Der Controller erh\"alt einen Request. Bei der Instanzierung des Controller werden automatisch \"uber Dependy Injection
+    Der Controller erh\"alt einen Request. Bei der Instanzierung des Controller werden automatisch \"uber Dependency Injection
     die ben\"otigten Repositories instanziert und mitgegeben. Ein Repository erstellt bei der Instanzierung automatisch
     eine Datenbankverbindung. F\"ur einen Request wird so pro Repository nur eine einzige Datenbankverbindung aufgebaut, da
     auch nur eine Repository-Instanz erstellt wird.
   \item
-    Die Repository Klasse extrahiert die ben\"otigten Daten mit LINQ-Queries und gibt diese immer als IQueryable
+    Die Repository-Klasse extrahiert die ben\"otigten Daten mit LINQ-Queries und gibt diese immer als IQueryable
     R\"uckgabewert zur\"uck. Damit lassen sich einzelne Repository-Abfragen theoretisch auch hintereinanderschalten oder es
     sind weitere Operationen auf dem Datensatz m\"oglich.
   \item
@@ -749,8 +749,8 @@ als One-Per-Request Modul definiert sein.
 Da ein Controller von der erfolgreichen Instanzierung seines ben\"otigten Repositories abh\"angig ist (strong-coupled),
 w\"are in einer n\"achsten Version eine Implementierung der Repositories als Lazy-Object sinnvoll. Dadurch w\"urde die
 Instanzierung erst beim ersten Zugriff innerhalb des Controllers geschehen und es k\"onnte bei einem Problem spezifisch
-darauf reagiert werden. Bei der direkten Injection ist dies nur begrenzt m\"oglich, da dann entweder vorher eine Fehler
-geworfen wird oder aber die injecteden Parameter als Null daherkommen.
+darauf reagiert werden. Bei der direkten Injection ist dies nur begrenzt m\"oglich, da dann entweder vorher einen Fehler
+geworfen wird oder aber die injezierten Parameter als Null daherkommen.
 
 \subsubsection{Logging}\label{logging}
 Das Logging wird mit Hilfe der Log4Net Library implementiert. Geloggt werden soll in t\"agliche Rolling-Logfiles, was
@@ -776,7 +776,7 @@ Repositories manuell instanziert werden.
 
 \url{http://travelbuddy5.azurewebsites.net/swagger/ui/index} &
 Url zum Aufruf der generierten Seite inklusive Methoden zum direkten, parametrisierten
-  Aufruf\\\hline
+  Aufruf.\\\hline
 \url{http://travelbuddy5.azurewebsites.net/swagger/docs/v1} &
 Url zum Aufruf der generierten JSON Interface Definition. Die Versionsnummer kann je nach
   Version der API angegeben werden.\\\hline
@@ -792,12 +792,12 @@ Dieses Diagramm zeigt das Zusammenspiel der Controller mit den jeweiligen Reposi
 \end{figure}
 
 Die Controller weisen die in der Service API beschriebenen Funktionalit\"aten und Verantwortlichkeiten auf. Sie
-behandeln alle ankommenden Requests und verwenden daf\"ur 1-n Repositories (Da es sich nicht um reine CRUD Controller
-handelt k\"onnen auch mehrere Repositories verwendet werden) um die Daten aus der Datenbank zu holen und beliebige
-Services wie zum Beispiel den GeoLocationService, welcher einen Wrapper f\"ur die Google Maps Geo Location Services
+behandeln alle ankommenden Requests und verwenden daf\"ur 1-n Repositories (da es sich nicht um reine CRUD Controller
+handelt, k\"onnen auch mehrere Repositories verwendet werden) um die Daten aus der Datenbank zu holen und beliebige
+Services, wie zum Beispiel den GeoLocationService, welcher einen Wrapper f\"ur die Google Maps Geo Location Services
 implementiert. Services und Repositories werden wie bereits beschrieben \"uber Dependency Injection den Controllern zur
 Verf\"ugung gestellt. Der HomeController dient als Einstiegspunkt der WebApplikation und ist daher kein API Controller.
-Er liefert eine HTML View zur\"uck
+Er liefert eine HTML View zur\"uck.
 
 Die DTO Klassen sind erweiterte Datenklassen basierend (aber nicht vererbt) auf den vom Entity-Framework automatisch
 generierten Datenklassen. Dies erm\"oglicht eine Erg\"anzung der Attribute um aggregierte oder separierte Werte.
@@ -824,21 +824,21 @@ Die Repository Klassen implementieren das jeweilige von den Controllern von auss
 \end{figure}
 
 Die einzelnen Repositories implementieren den Zugriff \"uber LINQ-Queries auf die vom Vorbild der Datenbank generierten
-Datenklassen\--Objekte. Sie sind alle von der Klasse RepoBase abgeleitet. Diese \"offnet bei der Instanzierung
-automatisch eine Datenbankverbindung und stellt diesen den abgeleiteten Klassen zur Verf\"ugung. Die fachlichen und
+Datenklassen\--Objekte. Sie sind alle von der Klasse RepoBase abgeleitet. RepoBase \"offnet bei der Instanzierung
+automatisch eine Datenbankverbindung und stellt diese Verbindung den abgeleiteten Klassen zur Verf\"ugung. Die fachlichen und
 funktionalen Verantwortlichkeiten werden analog zu den Zust\"andigkeiten der Controller implementiert. Im Kapitel
-Service API werden daf\"ur die notwendigen Begriffe und Unterteilung detailliert erl\"autert.
+Service API werden daf\"ur die notwendigen Begriffe und Unterteilungen detailliert erl\"autert.
 
 Speziell sind hier die Klassen RepoObject und CoordinatesHelper. Das RepoObject soll als R\"uckgabewert aller
 Repo-Methoden dienen. Es beinhaltet ein Feld f\"ur den Wert als generisches IQueryable, ein Feld f\"ur eine Fehler-
-oder Info-Message und ein Flag ob ein Fehler aufgetreten ist. Mit dieser Struktur kann eine nicht sehr effiziente
+oder Info-Message und ein Flag, ob ein Fehler aufgetreten ist. Mit dieser Struktur kann eine nicht sehr effiziente
 Try-Catch-Throw Methodik vermieden und eine R\"uckgabe als weiterverwendbares IQueryable erzwungen werden.
 
 Der CoordinatesHelper \"ubersetzt das MSSQL Datenbankformat der Geo-Koordinaten in einzelne ben\"otigte Werte wie
 L\"angen- und Breitengrad und umgekehrt.
 
 \subsection{Entity Relationship Diagram}\label{erm}
-Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend das Diagramm des Datenbankmodels
+Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend das Diagramm des Datenbankmodels.
 
 \begin{figure}
   \centering
