@@ -484,27 +484,21 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 \section[Backend Design]{Backend Design}
 \subsection[Service API]{Service API}
 
-  Nachfolgend sind alle geplanten Service Methoden nach Controller gruppiert aufgelistet. Im Anhang befindet sich die
-  detaillierte Interface-Beschreibung im JSON Format mit allen Parametern und R\"uckgabewerten.
+Nachfolgend sind alle geplanten Service Methoden nach Controller gruppiert aufgelistet. Im Anhang befindet sich die
+detaillierte Interface-Beschreibung im JSON Format mit allen Parametern und R\"uckgabewerten.
 
+Die API ist als Webservice aufgebaut welcher funktionale Request beantworten kann. Es wird kein direkter Datenzugriff
+\"uber CRUD Methoden zur Verf\"ugung gestellt. Die Business-Logik wird wenn m\"oglich vollst\"andig im Service
+abgehandelt. So ist die Funktionalit\"at des ganzen Systems gekapselt und unabh\"angig von allenfalls in der Zukunft
+weiteren entwickelten Clients.
 
-  Die API ist als Webservice aufgebaut welcher funktionale Request beantworten kann. Es wird kein direkter Datenzugriff
-  \"uber CRUD Methoden zur Verf\"ugung gestellt. Die Business-Logik wird wenn m\"oglich vollst\"andig im Service
-  abgehandelt. So ist die Funktionalit\"at des ganzen Systems gekapselt und unabh\"angig von allenfalls in der Zukunft
-  weiteren entwickelten Clients.
+\begin{figure}
+  \centering
+  \includegraphics{swagger}
+  \caption{Übersicht API}
+\end{figure}
 
-\bigskip
-
-\includegraphics[width=6.5in,height=3.4165in]{swagger1.jpg}
-
-\includegraphics[width=6.4862in,height=3.139in]{swagger2.jpg}
-
-
-\bigskip
-
-  Controller:
-
-\tabulinesep=1.2mm
+Controller:
 
 \begin{longtabu} to \textwidth { | l | X[l] | }
   \hline
@@ -640,16 +634,18 @@ Methoden:
     Framework zum Loggen von Fehlern, Warnungen und Debug-Informationen an verschiedene
       Appenders wie Datenbank oder Logfile.\\\hline
 \end{longtabu}
+
+
 \subsection[Architektur]{Architektur}
 Das nachfolgende Diagramm zeigt die
     Detail-Architektur des Backends. Weitere grundlegende Informationen zum eingesetzten
     Technologie-Stack befinden sich im Dokument Anforderungsanalyse.
 
-
-
-\begin{center}
-  \includegraphics[width=7.3264in,height=4.7646in]{backend_architektur1.jpg}
-\end{center}
+\begin{figure}
+  \centering
+  \includegraphics{backend_architektur}
+  \caption{Backend Architektur}
+\end{figure}
 
 \bigskip
 
@@ -833,9 +829,13 @@ Das nachfolgende Diagramm zeigt die
 
 \bigskip
 
-\begin{center}
-  \includegraphics[width=6.5in,height=6.6925in]{klassendiagramm_backend1.jpg}
-\end{center}
+\begin{figure}
+  \centering
+  \includegraphics{klassendiagramm_backend1}
+  \caption{Klassendiagramm mit Zusammenspiel der Controller und den jeweiligen Repositories}
+\end{figure}
+
+
 
 
   Die Controller weisen die in der Service API beschriebenen Funktionalit\"aten und Verantwortlichkeiten auf. Sie
@@ -850,7 +850,11 @@ Das nachfolgende Diagramm zeigt die
   Die DTO Klassen sind erweiterte Datenklassen basierend (aber nicht vererbt) auf den vom Entity-Framework automatisch
   generierten Datenklassen. Dies erm\"oglicht eine Erg\"anzung der Attribute um aggregierte oder separierte Werte.
 
-\includegraphics[width=4.4134in,height=2.8154in]{klassendiagramm_backend2.jpg}
+\begin{figure}
+  \centering
+  \includegraphics{klassendiagramm_backend2}
+  \caption{Klassendiagramm DTO Klassen}
+\end{figure}
 
   Hier speziell zu erw\"ahnen sind die statische Mapper Klasse und der wiederverwendbare POIMapper. Die generische Mapper
   Klasse mappt mit Hilfe von Reflection eine Datenklasse des Entity-Frameworks direkt auf gleichnamige Felder der
@@ -863,9 +867,10 @@ Das nachfolgende Diagramm zeigt die
 
   Die Repository Klassen implementieren das jeweilige von den Controllern von aussen her verwendete Interface.
 
-\begin{center}
-  \includegraphics[width=6.5in,height=1.9925in]{klassendiagramm_backend3.jpg}
-\end{center}
+\begin{figure}
+  \includegraphics{klassendiagramm_backend3}
+  \caption{Klassendiagramm der Repository Klassen}
+\end{figure}
 
 
   Die einzelnen Repositories implementieren den Zugriff \"uber LINQ-Queries auf die vom Vorbild der Datenbank generierten
@@ -883,11 +888,15 @@ Das nachfolgende Diagramm zeigt die
   Der CoordinatesHelper \"ubersetzt das MSSQL Datenbankformat der Geo-Koordinaten in einzelne ben\"otigte Werte wie
   L\"angen- und Breitengrad und umgekehrt.
 
-\subsection[Anhang 1: ERM]{Anhang 1: ERM}
+\subsection{Entity Relationship Diagram}\label{erm}
 
   Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend das Diagramm des Datenbankmodels
 
-\includegraphics[width=6.5in,height=3.6091in]{erm.jpg}
+\begin{figure}
+  \centering
+  \includegraphics{erm}
+  \caption{Entity Relationship Diagram}
+\end{figure}
 
 \clearpage
 \bigskip
