@@ -147,9 +147,9 @@
 % start content
 \section{Projektmanagement}\label{projektmanagement}
 \subsection{Projektstatus}\label{projektstatus}
-Das Projekt befindet sich weiterhin auf Kurs. Der nächste Meilenstein wurde
+Das Projekt befindet sich weiterhin auf Kurs. Der nächste Meilenstein wurde ohne
 grössere Probleme erreicht. Die folgende Grafik zeigt eine grobe Übersicht
-des Projektes, eine detaillierte ist unter \fullref{detaillierter-projektplan}
+des Projektes, eine detaillierte Übersicht ist unter \fullref{detaillierter-projektplan}
 ersichtlich.
 
 \begin{figure}
@@ -238,7 +238,7 @@ Andi, Benjamin               & 2       & C-04 & UC 2 Lokalisieren des Benutzers 
 Benjamin, Josef              & 2       & C-05 & UC 2 Anzeigen des Benutzers auf der Karte \\\hline
 Raffaele, Andi               & 2       & C-08 & UC 5 Besuchen des nächsten Punktes \\\hline
 Benjamin, Josef              & 3       & C-06 & UC 3 Foto machen \\\hline
-Josef, Nicolas               & 3       & C-07 & UC 4 Prüfen der Geo koordinaten des Fotos \\\hline
+Josef, Nicolas               & 3       & C-07 & UC 4 Prüfen der Geo-Koordinaten des Fotos \\\hline
 Nicolas, Raffaele            & 3       & C-09 & UC 6 Auslesen der Tourdaten \\\hline
 Raffaele, Andi               & 3       & C-10 & UC 6 Anzeigen der Tourdaten \\\hline
 Noch nicht festgelegt        & 4       & C-12 & Systemtests durchführen \\\hline
@@ -251,7 +251,7 @@ Noch nicht festgelegt        & 4       & C-14 & Benutzeranleitung schreiben \\\h
 Für die nächste Iteration ist die implementierung der Kartenfunktionen, also die Pakete: \textbf{C-04}, \textbf{C-05}, \textbf{C-08} geplant.
 Ziel ist es, bereits einen Teil der Businesslogik umzusetzen und eine minimale Funktionalität für eine erste Demonstration zu erstellen.
 
-\textbf{Backend:} Die App kann Geo-Koordinaten von PoI einer Tour vom Server anfragen, die Aufteilung von Front- und Backend bleibt gleich.
+\textbf{Backend:} Die App kann die Geo-Koordinaten eines POI einer Tour vom Server anfragen. Die Aufteilung von Front- und Backend bleibt gleich.
 
 \textbf{Frontend (App):} Der Benutzer kann Touren auswählen, sie in einer Vorschau
 betrachten und starten.
@@ -267,7 +267,7 @@ Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-pro
 
 1 & Schutz der gespeicherten Daten durch unautorisierte Zugriffe & Schwerwiegend & Hoch & Verwendung von Sicherheitsmassnahmen auf dem heutigen Stand der Technik\\\hline
 2 & Hohe Kosten für Anwender aufgrund der Verwendung durch Kartenmaterial & Mittel & Hoch & Offlinespeicherung des Kartenmaterials\\\hline
-3 & Fehlendes Wissen in der Entwicklung von Mobile Apps & Mittel & Mittel & Anneignen des Wissens mittels Online tutorials und Wissensaustausch zwischen Gruppenmitgliedern\\\hline
+3 & Fehlendes Wissen in der Entwicklung von Mobile Apps & Mittel & Mittel & Aneignen des Wissens mittels Online-Tutorials und Wissensaustausch zwischen Gruppenmitgliedern\\\hline
 4 & Höhere Komplexität durch Einbinden von Drittanbieter Software & Gering & Mittel & Auf die Einbindung von Software von Drittanbietern möglichst verzichten\\\hline
 5 & Smartphone GPS-Koordinaten ungenau & Gering & Mittel & Die App für Geräte mit zu geringer GPS-Genauigkeit nicht freigeben\\\hline
 \st{6} & \st{Keine öffentlichen Karten-API verfügbar} & \st{Schwerwiegend} & \st{Sehr gering} & Entsprechendes Kartenmaterial ist von Google verfügbar\\\hline
@@ -276,7 +276,7 @@ Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-pro
 \newpage
 \section{Frontend Design}\label{design-frontend}
 Bei der Architektur und dem Design unterscheiden wir zwischen Backend 
-(Web Services) und dem Frontend (Android App). Beide Systeme werden parallel
+(Web Services) und dem Frontend (Android App). Beide Systeme werden parallel und
 unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{service-api}).
 Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
 Architektur und Design separat treffen.
@@ -314,10 +314,10 @@ Datenklasse. \\\hline
 Erdball abbildet.\\\hline
 \textbf{Map} & Die Map dient als Behählter der Google Map und wird benutzt, um
 die Karte zu aktualisieren.\\\hline
-\textbf{Location} & Location ist eine Repräsentation einser Ortes und kommt aus
+\textbf{Location} & Location ist eine Repräsentation eines Ortes und kommt aus
 Android SDK.\\\hline
 \textbf{PhotoStatus} & PhotoStatus ist eine Datenklasse und repräsentiert das
-Ergebnis einer Validation eines Fotos durch das Backend.\\\hline
+Ergebnis einer Validierung eines Fotos durch das Backend.\\\hline
 \textbf{Progress} & Progress dient als Behälter der während einer Tour geschossenen
 Fotos.\\\hline
 \textbf{Summary} & Summary wird am Ende einer Tour aus Progress generiert und
@@ -339,7 +339,7 @@ Consumer mit dem Server Response auf, ohne den Aufrufer zu kennen. Dadurch errei
 wir lose Kopplung und hohe Wiederverwendbarkeit. \\\hline
 \textbf{ListActivity} & AppController, Tour & Die ListActivity gibt über den AppController
 einen Callback an den RequestQueuer. Dieser Callback füllt eine Liste von Touren,
-welche dem User angezeigt wird. Ein Kick auf eine Tour ruft die DetailActivity auf.
+welche dem User angezeigt wird. Ein Klick auf eine Tour ruft die DetailActivity auf.
 \\\hline
 \textbf{DetailActivity} & Tour & Die DetailActivity ist eine einfache Ansicht auf
 ein Tour-Objekt und zeigt Details einer Tour an.\\\hline
@@ -360,7 +360,7 @@ Datenklasse. Sie kann sich selber aus JSON instanziieren.\\\hline
 kann sich selber aus JSON instanziieren.\\\hline
 \textbf{LatLng} & keine Abhängigkeiten & LatLng ist ein Datentyp, welche eine Position auf dem
 Erdball abbildet.\\\hline
-\textbf{Map} & GoogleMap & Die Map dient als Behählter der Google Map und wird benutzt, um
+\textbf{Map} & GoogleMap & Die Map dient als Behälter der Google Map und wird benutzt, um
 die Karte zu aktualisieren. Sie kann den Positionsmarker und die Route zum nächsten
 POI zeichnen.\\\hline
 \textbf{Location} & keine Abhängigkeiten & kein Verhalten \\\hline
@@ -409,16 +409,16 @@ aber auch Frameworks.\\\hline
 \textbf{Interface Adapters} & Die nachfolgende Schicht heisst \textbf{Interface Adapters}.
 Diese Schicht hat zur Aufgabe, die Daten in eine für die Use-Cases- und Entities-Schicht
 möglichst angenehme Form zu bringen.\\\hline
-\textbf{Use Case} & Der zweitinnerste Schicht nennt man \textbf{Use Case} Layer.
+\textbf{Use Case} & Die zweitinnerste Schicht nennt man \textbf{Use Case} Layer.
 Hier werden die applikationsspezifischen Businessregeln, also die Use Cases abgebildet.
 Die eigentliche Businesslogik existiert also in dieser Schicht. Zu beachten ist aber,
 dass es hier nur um Verhalten und nicht um Daten geht.\\\hline
 \textbf{Entities} & Die eigentlichen Businessobjekte gehören in die innerste
-Schicht genannt \textbf{Entities}. Diese Schicht hat keine Abhängigkeiten zu
+Schicht, genannt \textbf{Entities}. Diese Schicht hat keine Abhängigkeiten zu
 anderen Schichten und beinhaltet die generellen Regeln der Domäne. Bei Änderungen
 in äusseren Schichten sind mit hoher Wahrscheinlichkeit keine Änderungen in dieser
 Schicht notwendig. Zur Abgrenzung zur oberen Schicht \textbf{Use Case}: Die Schicht \textbf{Entities}
-muss nicht angepasst werden, falls sich Use Cases ändern. Dies is der Fall, da
+muss nicht angepasst werden, falls sich Use Cases ändern. Dies ist der Fall, da
 sich die allgemeinen Domänenregeln in der Regel nicht ändern.\\\hline
 \end{longtabu}
 
@@ -436,12 +436,12 @@ Dies hat natürlich einen Einfluss auf die Architektur, wie im folgenden Abschni
 und um die Einbettung ins Android Betriebssystem, setzt HTTP Requests ab und reicht
 HTTP Responses weiter, aktualisiert Standortdaten, bekommt Bilder von der
 Smartphone-Kamera, erhält Karte von der Google Maps App\\\hline
-\textbf{Interface Adapters} & Parst Antwort des Servers in String-Form und wandelt
+\textbf{Interface Adapters} & Parst Antworten des Servers in String-Form und wandelt
 diese Datenobjekte um, transformiert Kartendaten und Standortdaten in für die App
 einfach zu handhabbare Form\\\hline
 \textbf{Use Case} & Hier kommt der einfache Fall der Android App zugute: Die App
 enthält sehr wenig Businesslogik. Die Use Cases sind im Backend implementiert.\\\hline
-\textbf{Entities} & Enthählt die Datenobjekte, welche die Domänenregeln abbilden:
+\textbf{Entities} & Enthält die Datenobjekte, welche die Domänenregeln abbilden:
 Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\hline
 \end{longtabu}
 
@@ -462,7 +462,7 @@ gewählten Architektur auf das Design und die Umsetzung der App.
     von verwendeteten Frameworks und der UI. Diese kann ohne eine laufende
     Android Instanz getestet werden. Das führt zu kürzeren Feedback Loops
     bei der Ausführung von Unit Tests und dadurch zur effizienteren Entwicklung
-    (Ein komplettes Re-deployment entfällt).
+    (ein komplettes Re-deployment entfällt).
     Da in den beiden inneren Schichten keine Abhängigkeit zu externen Systemen
     besteht, lassen sich diese ohne grossen Aufwand (z.B. Testing-Setup) testen.
   \item \textbf{Keine Abhängikeit zum Betriebssytem:} Aus Punkt 1 und 2
@@ -475,7 +475,7 @@ gewählten Architektur auf das Design und die Umsetzung der App.
   \item \textbf{Overhead:} Da die App in der ersten Version praktisch keine
     Businesslogik enthalten wird, entfällt die \textbf{Use Case} Schicht.
     Dadurch bleiben eigentlich die anderen drei Layer, die mit der ersten
-    Version ebenfalls noch Überschaubar ausfallen. Man könnte argumentieren,
+    Version ebenfalls noch überschaubar ausfallen. Man könnte argumentieren,
     dass diese Architektur etwas zu hoch gegriffen ist für die Anforderungen
     des Prototypen. Im Gegensatz zu Design lässt sich Architektur nicht oder
     sehr schwer inkrementell entwickeln. Wir denken, dass der Aufwand für Änderungen
