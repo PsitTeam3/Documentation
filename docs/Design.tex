@@ -382,10 +382,10 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 
 \subsection{Android App Architektur}\label{androidapparchitektur}
 
-Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} [2].
+Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} \cite{TCA}.
 Im nachfolgenden Abschnitt werden einige wichtige Punkte von \textbf{The Clean Architecture}
 erläutert, um die Implementation in TravelBuddy aufzuzeigen. Eine umfassende
-Einleitung findet man bei Robert Martin (Uncle Bob) [3].
+Einleitung findet man bei Robert Martin (Uncle Bob) \cite{CC}.
 \begin{figure}
   \includegraphics{cleanarchitecture}
   \caption{Schema von The Clean Architecture}
@@ -470,9 +470,7 @@ gewählten Architektur auf das Design und die Umsetzung der App.
     besteht, lassen sich diese ohne grossen Aufwand (z.B. Testing-Setup) testen.
   \item \textbf{Keine Abhängikeit zum Betriebssytem:} Aus Punkt 1 und 2
     leitet sich dieser Punkt ab: Alle Abhängigkeiten befinden sich um
-    äussersten Layer. Falls die App auch auf anderen Systemen lauffähig sein soll,
-    dann muss im Idealfall nur eine Schicht angepasst werden. Durch Projekte
-    wie RoboVM[4] und Intel Multi OS Engine[5] können wir den bestehenden Java Code
+    äussersten Layer. Falls die App auch auf anderen Systemen lauffähig sein soll, dann muss im Idealfall nur eine Schicht angepasst werden. Durch Projekte wie RoboVM \cite{RV} und Intel Multi OS Engine \cite{MOE} können wir den bestehenden Java Code
     sogar auf iOS Geräten laufen lassen. Unsere App ist damit sogar nur lose
     zum Betriebssystem gekoppelt.
   \item \textbf{Overhead:} Da die App in der ersten Version praktisch keine
@@ -985,7 +983,6 @@ Intent & Intent bezeichnet hier eine Nachricht in Android. Der Name impliziert, 
 \begingroup
 \renewcommand{\section}[2]{}%
   \begin{thebibliography}{9}
-    \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
     \bibitem{TCA} URL: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html [Stand: 20.4.2017]
     \bibitem{CC} URL: http://blog.cleancoder.com/ [Stand: 20.4.2017]
     \bibitem{RV} URL: http://robovm.mobidevelop.com/ [Stand: 20.4.2017]
