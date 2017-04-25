@@ -275,7 +275,7 @@ Die Aufwandsschäztungen der Arbeitspakete sind unter \fullref{detaillierter-pro
 
 \newpage
 \section{Frontend Design}\label{design-frontend}
-Bei der Architektur und dem Design unterscheiden wir zwischen Backend 
+Bei der Architektur und dem Design unterscheiden wir zwischen Backend
 (Web Services) und dem Frontend (Android App). Beide Systeme werden parallel und
 unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{service-api}).
 Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
@@ -488,7 +488,7 @@ Abhängigkeiten. Der Mehraufwand wird dadurch gerechtfertigt, dass Änderungen
 von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 
 \subsubsection{Activities}\label{activities}
-Die App selber besteht aus drei Haupt-Activities. \textbf{Activities} ist ein 
+Die App selber besteht aus drei Haupt-Activities. \textbf{Activities} ist ein
 Konzept von Android, sie bilden eine User-Ansicht ab und bilden des Skelett
 der App. Abbildung 4 veranschaulicht alle möglichen Zustände und deren
 Änderungen.
@@ -501,14 +501,13 @@ der App. Abbildung 4 veranschaulicht alle möglichen Zustände und deren
 
 \section{Backend Design}\label{backend-design}
 \subsection{Service API}\label{service-api}
-
-Nachfolgend sind alle geplanten Service Methoden nach Controller gruppiert aufgelistet. Im Anhang befindet sich die
-detaillierte Interface-Beschreibung im JSON Format mit allen Parametern und R\"uckgabewerten.
-
 Die API ist als Webservice aufgebaut welcher funktionale Requests beantworten kann. Es wird kein direkter Datenzugriff
 \"uber CRUD Methoden zur Verf\"ugung gestellt. Die Business-Logik wird wenn m\"oglich vollst\"andig im Service
 abgehandelt. So ist die Funktionalit\"at des ganzen Systems gekapselt und unabh\"angig von allenfalls in der Zukunft
 weiteren entwickelten Clients.
+
+Nachfolgend sind alle geplanten Service Methoden nach Controller gruppiert aufgelistet. Eine
+interaktive Version ist unter \fullref{swagger} verlinkt.
 
 \begin{figure}
   \centering
@@ -788,7 +787,7 @@ Repositories manuell instanziert werden.
 
 \begin{longtabu} to \textwidth { | l | X[l] | }
 \hline
-\textbf{Url}  & \textbf{Content} \\
+\textbf{Url} & \textbf{Content} \\
 \hline
 \endhead
 
@@ -987,7 +986,7 @@ Intent & Intent bezeichnet hier eine Nachricht in Android. Der Name impliziert, 
     \bibitem{TCA} URL: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html [Stand: 20.4.2017]
     \bibitem{CC} URL: http://blog.cleancoder.com/ [Stand: 20.4.2017]
     \bibitem{RV} URL: http://robovm.mobidevelop.com/ [Stand: 20.4.2017]
-    \bibitem{MOE} URL: https://software.intel.com/en-us/multi-os-engine [Stand: 17.4.2017] 
+    \bibitem{MOE} URL: https://software.intel.com/en-us/multi-os-engine [Stand: 17.4.2017]
   \end{thebibliography}
 \endgroup
 
