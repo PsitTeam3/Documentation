@@ -41,6 +41,7 @@
 \urlstyle{same}  % don't use monospace font for urls
 
 % images
+\usepackage[font=small,skip=6pt]{caption}
 \usepackage{float,graphicx,grffile}
 \graphicspath{ {images/} }
 
@@ -296,6 +297,7 @@ Zuerst behandeln wir das Frontend, danach das Backend.
   \caption{Klassendiagramm der App}
 \end{figure}
 
+\newpage
 \subsection{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
 In der folgenden Tabelle werden die Klassen mit ihren Hauptverantworlichkeiten
 gelistet.
@@ -333,7 +335,8 @@ Fotos.\\\hline
 bietet dem Nutzer eine Zusammenfassung der Tour.\\\hline
 \end{longtabu}
 
-\subsubsection{Klassenverantwortlichkeiten - Knowing and Doing}\label{knowinganddoing-frontend}
+\newpage
+\subsubsection{Knowing and Doing}\label{knowinganddoing-frontend}
 Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen.
 \begin{longtabu} to \textwidth { | l | X[2, l] | X[8, l] |  }
 \hline
@@ -405,6 +408,7 @@ Man hat beispielsweise einen HTTP Client (Web) in der äussersten Schicht und
 einen Parser (Gateway) in der direkt darunterliegenden Schicht. Nach der
 \textbf{Dependency Rule} darf es keine Referenzen im Parser zum HTTP-Client geben.
 
+\newpage
 \subsubsection{Bedeutung der Schichten}\label{layers}
 \begin{longtabu} to \textwidth { | l | X[l] |  }
 \hline
@@ -454,6 +458,7 @@ enthält sehr wenig Businesslogik. Die Use Cases sind im Backend implementiert.\
 Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\hline
 \end{longtabu}
 
+\newpage
 \subsubsection{Implikationen}\label{implications}
 Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als
 auch Nachteile. Die nachfolgende Liste zeigt Implikationen und Auswirkungen der
@@ -494,6 +499,7 @@ Durch die gewählte Architektur erreichen wir gute Testbarkeit mit klaren
 Abhängigkeiten. Der Mehraufwand wird dadurch gerechtfertigt, dass Änderungen
 von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 
+\newpage
 \subsubsection{Activities}\label{activities}
 Die App selber besteht aus drei Haupt-Activities. \textbf{Activities} ist ein
 Konzept von Android, sie bilden eine User-Ansicht ab und bilden des Skelett
@@ -501,7 +507,7 @@ der App. Abbildung 4 veranschaulicht alle möglichen Zustände und deren
 Änderungen.
 \begin{figure}
   \centering
-  \includegraphics{state-diagram}
+  \includegraphics[height=19cm]{state-diagram}
   \caption{Zustandsänderungsdiagramm}
 \end{figure}
 
@@ -655,6 +661,7 @@ Informationen zum eingesetzten Technologie-Stack befinden sich im Dokument Anfor
   \caption{Backend Architektur}
 \end{figure}
 
+\newpage
 \begin{longtabu} to \textwidth { | l | l | X[l] | }
 \hline
 \textbf{Layer} & \textbf{Package}  & \textbf{Beschreibung} \\
@@ -762,6 +769,7 @@ von der Datenbank bis zum Inhalt in der HTTP-Response, auf:
     Die Repository Instanz wird nicht mehr ben\"otigt. Die Datenbankverbindung wird geschlossen und die Instanz disposed.
 \end{enumerate}
 
+\newpage
 \subsubsection{Dependency Injection}\label{dependency-injection}
 Als Dependency Injection Framework f\"ur die Umsetzung des Inversion of Control Patterns wird Ninject eingesetzt.
 Ninject bietet eine statische Konfiguration zum Binden von Interfaces an bestimmte Klassen welche bei einer solchen
@@ -792,20 +800,18 @@ Repositories manuell instanziert werden.
 \subsubsection{Swagger}\label{swagger}
 \"Uber Swashbuckle wird die automatische Generierung von Swagger Interface Definitions implementiert.
 
-\begin{longtabu} to \textwidth { | l | X[l] | }
+\begin{longtabu} to \textwidth { | X[l] | X[l] | }
 \hline
-\textbf{Url} & \textbf{Content} \\
-\hline
+\textbf{Url} & \textbf{Content} \\\hline
 \endhead
 
-\url{http://travelbuddy5.azurewebsites.net/swagger/ui/index} &
-Url zum Aufruf der generierten Seite inklusive Methoden zum direkten, parametrisierten
-  Aufruf.\\\hline
-\url{http://travelbuddy5.azurewebsites.net/swagger/docs/v1} &
-Url zum Aufruf der generierten JSON Interface Definition. Die Versionsnummer kann je nach
-  Version der API angegeben werden.\\\hline
+\url{http://travelbuddy5.azurewebsites.net/swagger/ui/index} & Url zum Aufruf der
+  generierten Seite inklusive Methoden zum direkten, parametrisierten Aufruf.\\\hline
+\url{http://travelbuddy5.azurewebsites.net/swagger/docs/v1} & Url zum Aufruf der generierten
+  JSON Interface Definition. Die Versionsnummer kann je nach Version der API angegeben werden.\\\hline
 \end{longtabu}
 
+\newpage
 \subsection{Klassendiagramme und Klassenverantwortlichkeiten}\label{klassendiagramme}
 Dieses Diagramm zeigt das Zusammenspiel der Controller mit den jeweiligen Repositories.
 
@@ -840,6 +846,7 @@ mehr notwendig. Der POIMapper stellt die manuelle Mapping-Logik z.B. f\"ur das A
 Latitude und Longitude in wiederverwendbarer Form bereit. Er liefert eine LINQ Function-Expression zur\"uck, welche die
 Mapping-Logik definiert.
 
+\newpage
 Die Repository Klassen implementieren das jeweilige von den Controllern von aussen her verwendete Interface.
 
 \begin{figure}
@@ -861,6 +868,7 @@ Try-Catch-Throw Methodik vermieden und eine R\"uckgabe als weiterverwendbares IQ
 Der CoordinatesHelper \"ubersetzt das MSSQL Datenbankformat der Geo-Koordinaten in einzelne ben\"otigte Werte wie
 L\"angen- und Breitengrad und umgekehrt.
 
+\newpage
 \subsection{Entity Relationship Diagram}\label{erm}
 Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend das Diagramm des Datenbankmodels.
 
@@ -870,6 +878,7 @@ Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend d
   \caption{Entity Relationship Diagram}
 \end{figure}
 
+\newpage
 \section{Interaktionsdiagramme}\label{interaktionsdiagramme}
 Im folgenden Kapitel zeigen wir die wichtigsten Interaktionsdiagramme unseres Backend und der Frontend-Applikation auf.
 
@@ -881,7 +890,8 @@ Bei dem Prozess ``Tour starten'' im Backend werden zuerst der mitgegebenen Benut
 Tour aus der Datenbank geladen und die Tour ``gestartet'' falls diese nicht schon gestartet ist.
 
 \begin{figure}
-  \includegraphics{Kommunikationsdiagramm_StartTour}
+  \centering
+  \includegraphics[height=5cm]{Kommunikationsdiagramm_StartTour}
   \caption{Kommunikationsdiagramm Tour starten}
 \end{figure}
 
@@ -892,7 +902,8 @@ POI aus der Datenbank geladen und aufgrund der aktuellen Position die Route zum 
 POI mittels Google Maps API berechnet und zurück gegeben.
 
 \begin{figure}
-  \includegraphics{Sequenzdiagramm_GetRouteToPoi}
+  \centering
+  \includegraphics[height=7cm]{Sequenzdiagramm_GetRouteToPoi}
   \caption{Sequenzdiagramm Route zu POI}
 \end{figure}
 
@@ -919,6 +930,7 @@ wurde - geladen, ebenfalls mittels Callback. Anschliessend werden die Daten der 
   \caption{Kommunikationsdiagramm Tour Details anzeigen}
 \end{figure}
 
+\newpage
 \subsubsection{Checke, ob bei POI angekommen}
 Das Diagram zeigt den wiederkehrenden Prozess wobei überprüft wird, ob der Benutzer beim
 ausgewählten POI angekommen ist. Der Google Maps Service ruft herzu bei der Veränderung
@@ -930,6 +942,7 @@ auf dem Backend zu überprüfen.
   \caption{Sequenzdiagramm Check ob bei POI angekommen}
 \end{figure}
 
+\newpage
 \subsubsection{Foto aufnehmen}
 Mit dem Ablauf ``Foto aufnehmen'' wird aufgezeigt wie ein Foto mit der Gerätekamera
 aufgenommen wird und diese Anschliessend zur Tour abgelegt wird.
@@ -1015,7 +1028,7 @@ Singleton & Eine Klasse, von der nur eine Instanz erstellt werden kann.\\\hline
 Intent & Intent bezeichnet hier eine Nachricht in Android. Der Name impliziert, dass Komponenten selber entscheiden ob sie auf diese Nachrichten reagieren oder nicht.\\\hline
 \end{longtabu}
 
-
+\newpage
 \section{Literatur}\label{literatur}
 \begingroup
 \renewcommand{\section}[2]{}%
