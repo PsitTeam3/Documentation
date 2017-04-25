@@ -867,46 +867,77 @@ Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend d
 \end{figure}
 
 \section{Interaktionsdiagramme}\label{interaktionsdiagramme}
+Im folgenden Kapitel zeigen wir die wichtigsten Interaktionsdiagramme unseres Backend und der Frontend-Applikation auf.
+
 \subsection{Backend}\label{backend}
 
 \subsubsection{Tour starten}
+Bei dem Prozess ``Tour starten'' im Backend werden zuerst der mitgegebenen Benutzerdaten
+überprüft und der Benutzer aus der Datenbank geladen. Anschliessend wird die angeforderte
+Tour aus der Datenbank geladen und die Tour ``gestartet'' falls diese nicht schon gestartet ist.
+
 \begin{figure}
   \includegraphics{Kommunikationsdiagramm_StartTour}
   \caption{Kommunikationsdiagramm Tour starten}
 \end{figure}
 
-\subsubsection{Route zu PoI}
+\subsubsection{Route zu POI}
+Im Ablauf ``Route zu POI'' werden zuerst die Benutzerdaten überprüft und der Benutzer aus
+der Datenbank geladen. Anschliessend wird der vom Benutzer der Frontend-Applikation angestrebte
+POI aus der Datenbank geladen und aufgrund der aktuellen Position die Route zum angestrebten
+POI mittels Google Maps API berechnet und zurück gegeben.
+
 \begin{figure}
   \includegraphics{Sequenzdiagramm_GetRouteToPoi}
-  \caption{Sequenzdiagramm Route zu PoI}
+  \caption{Sequenzdiagramm Route zu POI}
 \end{figure}
 
 \subsection{Frontend}\label{frontend}
-\subsubsection{Tour Liste anzeigen}
+\subsubsection{Tour Liste anzeigen}\label{frontend-listactivity}
+Dieser Ablauf zeigt den Prozess wie die Liste der verfügbaren Touren in der Applikation
+angezeigt wird. Über den \textbf{RequestQueuer} werden asynchron die Touren vom Backend geladen.
+Der \textbf{RequestQueuer} führt bei erfolgreicher Serverantwort das Callback aus, welches
+wiederum die Touren in der View setzt und diese aktualisiert.
+
 \begin{figure}
   \includegraphics{Sequenzdiagramm_ListActivity}
   \caption{Sequenzdiagramm Tour Liste anzeigen}
 \end{figure}
 
 \subsubsection{Tour Details anzeigen}
+Dieser Vorgang funktioniert ähnlich wie \fullref{frontend-listactivity}. Mittels
+\textbf{RequestQueuer} werden alle POIs der ausgewählten Tour - welche der Activity übergeben
+wurde - geladen, ebenfalls mittels Callback. Anschliessend werden die Daten der View
+übergeben und die Karte gezeichnet.
+
 \begin{figure}
   \includegraphics{Kommunikationsdiagramm_DetailActivity}
   \caption{Kommunikationsdiagramm Tour Details anzeigen}
 \end{figure}
 
-\subsubsection{Checke, ob bei PoI angekommen}
+\subsubsection{Checke, ob bei POI angekommen}
+Das Diagram zeigt den wiederkehrenden Prozess wobei überprüft wird, ob der Benutzer beim
+ausgewählten POI angekommen ist. Der Google Maps Service ruft herzu bei der Veränderung
+der Position eine Funktion auf. Diese benutzt den \textbf{RequestQueuer} um die Position
+auf dem Backend zu überprüfen.
+
 \begin{figure}
   \includegraphics{Sequenzdiagramm_IsNearPoi}
-  \caption{Sequenzdiagramm Check ob bei PoI angekommen}
+  \caption{Sequenzdiagramm Check ob bei POI angekommen}
 \end{figure}
 
 \subsubsection{Foto aufnehmen}
+Mit dem Ablauf ``Foto aufnehmen'' wird aufgezeigt wie ein Foto mit der Gerätekamera
+aufgenommen wird und diese Anschliessend zur Tour abgelegt wird.
+
 \begin{figure}
   \includegraphics{Kommunikationsdiagramm_TakePhoto}
   \caption{Kommunikationsdiagramm Foto aufnehmen}
 \end{figure}
 
 \subsubsection{Summary anzeigen}
+Dieser Vorgang zeigt den Abschluss einer Tour auf, wobei eine Übersicht der Tourdaten 
+generiert und angezeigt wird.
 \begin{figure}
   \includegraphics{Kommunikationsdiagramm_SummaryActivity}
   \caption{Kommunikationsdiagram Summary anzeigen}
@@ -968,7 +999,7 @@ GPS & Global Positioning System, globales Satelliten Navigationsnetz\\\hline
 Marker & Symbol, welches einen Punkt auf der Karte markiert\\\hline
 Natives Features & Funktionen, die ein Gerät ohne weitere Software besitzt\\\hline
 ÖV & Abkz. Öffentlicher Verkehr\\\hline
-Point of Interest, PoI & Engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
+Point of Interest, POI & Engl. Ort von besonderem Interesse, bspw. Wahrzeichen\\\hline
 Stakeholders & Engl. Interessenten\\\hline
 Tech Stack & Eingesetzte Technologien\\\hline
 Mockdaten & Daten mit gleicher Struktur wie echte Daten. Dient der lokalen Entwicklung, Testdaten \\\hline
