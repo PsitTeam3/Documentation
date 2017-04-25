@@ -208,21 +208,21 @@ Total Phase: & 16 & & 70,0 h & 82,25 h\\\hline
 \multicolumn{5}{| l |}{ }\\\hline
 
 \multicolumn{5}{| l |}{ \textbf{Construction} }\\\hline
- & C-01 & Projekmanagement nachtragen & 1,0 h & \\\hline
- & C-02 & UC 1 Liste der verfügbaren Touren & 15,0 h & \\\hline
- & C-03 & UC 1 Starten einer Tour & 20,0 h & \\\hline
- & C-04 & UC 2 Lokalisieren des Benutzers & 20,0 h & \\\hline
- & C-05 & UC 2 Anzeigen des Benutzers auf der Karte & 15,0 h & \\\hline
- & C-06 & UC 3 Foto machen & 15,0 h & \\\hline
- & C-07 & UC 4 Prüfen der Geo koordinaten des Fotos & 30,0 h & \\\hline
- & C-08 & UC 5 Besuchen des nächsten Punktes & 25,0 h & \\\hline
- & C-09 & UC 6 Auslesen der Tourdaten & 10,0 h & \\\hline
- & C-10 & UC 6 Anzeigen der Tourdaten & 10,0 h & \\\hline
+ & C-01 & Projekmanagement nachtragen & 1,0 h & 1,5 h \\\hline
+ & C-02 & UC 1 Liste der verfügbaren Touren & 5,0 h & 6,0 h \\\hline
+ & C-03 & UC 1 Starten einer Tour & 6,0 h & 5,5 h \\\hline
+ & C-04 & UC 2 Lokalisieren des Benutzers & 6,0 h & 6,0 h \\\hline
+ & C-05 & UC 2 Anzeigen des Benutzers auf der Karte & 4,0 h & 4,5 h \\\hline
+ & C-06 & UC 3 Foto machen & 4,0 h & \\\hline
+ & C-07 & UC 4 Prüfen der Geo koordinaten des Fotos & 6,0 h & \\\hline
+ & C-08 & UC 5 Besuchen des nächsten Punktes & 6,0 h & 5,5 h \\\hline
+ & C-09 & UC 6 Auslesen der Tourdaten & 5,0 h & \\\hline
+ & C-10 & UC 6 Anzeigen der Tourdaten & 4,0 h & \\\hline
  & C-11 & UI gestalten & 8,0 h & \\\hline
- & C-12 & Systemtests durchführen & & \\\hline
- & C-13 & Dokumentation erstellen & & \\\hline
- & C-14 & Benutzeranleitung schreiben & & \\\hline
-Total Phase: & 14 & & & \\\hline
+ & C-12 & Systemtests durchführen & 12,0 h & \\\hline
+ & C-13 & Dokumentation erstellen & 10,0 h & \\\hline
+ & C-14 & Benutzeranleitung schreiben & 8,0 h & \\\hline
+Total Phase: & 14 & & 85,0 h & \\\hline
 \end{longtabu}
 
 
@@ -244,9 +244,9 @@ Benjamin, Josef              & 3       & C-06 & UC 3 Foto machen \\\hline
 Josef, Nicolas               & 3       & C-07 & UC 4 Prüfen der Geo-Koordinaten des Fotos \\\hline
 Nicolas, Raffaele            & 3       & C-09 & UC 6 Auslesen der Tourdaten \\\hline
 Raffaele, Andi               & 3       & C-10 & UC 6 Anzeigen der Tourdaten \\\hline
-Noch nicht festgelegt        & 4       & C-12 & Systemtests durchführen \\\hline
-Noch nicht festgelegt        & 4       & C-13 & Dokumentation erstellen \\\hline
-Noch nicht festgelegt        & 4       & C-14 & Benutzeranleitung schreiben \\\hline
+Josef, Benjamin              & 4       & C-12 & Systemtests durchführen \\\hline
+Alle                         & 4       & C-13 & Dokumentation erstellen \\\hline
+Andi, Nicolas, Raffaele      & 4       & C-14 & Benutzeranleitung schreiben \\\hline
 \end{longtabu}
 
 
@@ -382,10 +382,10 @@ verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 
 \subsection{Android App Architektur}\label{androidapparchitektur}
 
-Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} [2].
+Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} \cite{TCA}.
 Im nachfolgenden Abschnitt werden einige wichtige Punkte von \textbf{The Clean Architecture}
 erläutert, um die Implementation in TravelBuddy aufzuzeigen. Eine umfassende
-Einleitung findet man bei Robert Martin (Uncle Bob) [3].
+Einleitung findet man bei Robert Martin (Uncle Bob) \cite{CC}.
 \begin{figure}
   \includegraphics{cleanarchitecture}
   \caption{Schema von The Clean Architecture}
@@ -470,9 +470,7 @@ gewählten Architektur auf das Design und die Umsetzung der App.
     besteht, lassen sich diese ohne grossen Aufwand (z.B. Testing-Setup) testen.
   \item \textbf{Keine Abhängikeit zum Betriebssytem:} Aus Punkt 1 und 2
     leitet sich dieser Punkt ab: Alle Abhängigkeiten befinden sich um
-    äussersten Layer. Falls die App auch auf anderen Systemen lauffähig sein soll,
-    dann muss im Idealfall nur eine Schicht angepasst werden. Durch Projekte
-    wie RoboVM[4] und Intel Multi OS Engine[5] können wir den bestehenden Java Code
+    äussersten Layer. Falls die App auch auf anderen Systemen lauffähig sein soll, dann muss im Idealfall nur eine Schicht angepasst werden. Durch Projekte wie RoboVM \cite{RV} und Intel Multi OS Engine \cite{MOE} können wir den bestehenden Java Code
     sogar auf iOS Geräten laufen lassen. Unsere App ist damit sogar nur lose
     zum Betriebssystem gekoppelt.
   \item \textbf{Overhead:} Da die App in der ersten Version praktisch keine
@@ -1016,7 +1014,6 @@ Intent & Intent bezeichnet hier eine Nachricht in Android. Der Name impliziert, 
 \begingroup
 \renewcommand{\section}[2]{}%
   \begin{thebibliography}{9}
-    \bibitem{UP} C. Larman, Applying UML and patterns. 4. Auflage, Upper Saddle River: Pearson Education, Inc., 2005, S. 18.
     \bibitem{TCA} URL: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html [Stand: 20.4.2017]
     \bibitem{CC} URL: http://blog.cleancoder.com/ [Stand: 20.4.2017]
     \bibitem{RV} URL: http://robovm.mobidevelop.com/ [Stand: 20.4.2017]
