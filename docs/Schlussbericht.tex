@@ -113,6 +113,9 @@
   \hline
   \endhead
 
+  1.0.0 & 16.05.2017 & Dokument release & Josef\\
+  \hline
+
   0.0.6 & 13.05.2017 & Inhalte aus Design übernommen und verbessert & Andi\\
   \hline
 
@@ -151,7 +154,12 @@
 
 \include{schlussbericht/resultat}
 
-\addcontentsline{toc}{section}{Literatur}
+
+\appendix
+
+\section{Literatur}
+\begingroup
+\renewcommand{\section}[2]{}%
 \begin{thebibliography}{9}
   \bibitem{TCA} URL: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html [Stand: 20.4.2017]
   \bibitem{CC} URL: http://blog.cleancoder.com/ [Stand: 20.4.2017]
@@ -166,13 +174,15 @@
     Uber Integration für Apps [Online].
     URL: https://developer.uber.com/products/ride-requests [Stand: 4.3.2017].
 \end{thebibliography}
+\endgroup
 
-\section*{Abbildungsverzeichnis}\label{abbildungsverzeichnis}
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\section{Abbildungsverzeichnis}\label{abbildungsverzeichnis}
 \begingroup
 \renewcommand{\section}[2]{}%
 \hypersetup{linkcolor=black}
 \listoffigures
 \endgroup
+
+\section{Bedienungsanleitung}
 
 \end{document}
