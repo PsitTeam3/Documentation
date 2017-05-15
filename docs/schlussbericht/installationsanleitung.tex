@@ -1,115 +1,7 @@
-% !TEX program = xelatex
-% basic document config
-\documentclass[a4paper,10pt,xetex]{article}
-\usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
+\subsection{Installationsanleitung}
+Die folgenden Schritte führen Sie durch die Installation der - auf Android Studio basierenden - Entwicklungsumgebung. Diese ist für den Unterhalt und die Weiterentwicklung der TravelBuddy Mobile App erforderlich.
 
-% language
-\usepackage[german]{babel}
-
-% variable definitions
-\providecommand{\documenttitle}{Installationsanleitung}
-\providecommand{\documentauthors}{Andreas Saurer \\ Benjamin Schneidinger \\ Josef Erben \\ Raffaele Bof \\ Nicolas Loth}
-\providecommand{\documentdate}{16.05.2017}
-\providecommand{\documentversion}{1.0.0}
-
-% special commands
-\newcommand*{\fullref}[1]{\hyperref[{#1}]{\nameref*{#1} (\ref*{#1})}}
-\newcommand{\specialcell}[2][c]{%
-  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
-
-% font
-% \usepackage{titling}
-\usepackage[sfdefault]{roboto}
-\usepackage[parfill]{parskip}
-\usepackage{soul}
-
-% table
-\usepackage{array}
-\usepackage{multicol}
-\usepackage{longtable,tabu,booktabs}
-
-% links
-\usepackage{hyperref}
-\hypersetup{
-            pdftitle={\documenttitle},
-            pdfauthor={\documentauthors},
-            colorlinks=true,
-            linkcolor=[RGB]{74,144,226},
-            citecolor=[RGB]{74,144,226},
-            urlcolor=[RGB]{74,144,226},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-
-% images
-\usepackage[font=small,skip=6pt]{caption}
-\usepackage{float,graphicx,grffile,wrapfig}
-\graphicspath{ {images/} }
-
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-
-\makeatletter
-\def\fps@figure{H}
-\makeatother
-
-% header and footer
-\usepackage{lastpage}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white}}
-\fancyfoot[L]{\fontsize{8}{10}\selectfont\ \documenttitle}
-\fancyfoot[R]{\fontsize{8}{10}\selectfont\ Seite\ \thepage\ von\ \pageref*{LastPage}}
-
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% style titles
-\usepackage{titlesec}
-\titlespacing*{\section}{0pt}{1em}{0pt}
-\titlespacing*{\subsection}{0pt}{1em}{0pt}
-\titlespacing*{\subsubsection}{0pt}{1em}{0pt}
-
-% configure title page
-\title{
-  \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]
-  \documenttitle\\[\bigskipamount]
-}
-
-\author{\documentauthors}
-\date{\parbox{\linewidth}{\centering%
-  IT15TA ZH \hspace*{3cm} Gruppe 3\endgraf\bigskip
-  Dokumentversion \documentversion, \documentdate\endgraf
-}}
-
-
-\begin{document}
-\shorthandoff{"}
-
-% title page
-\maketitle\newpage
-
-% start content
-\section{Einleitung}
-Dieses Dokument führt Sie durch die Installation der, auf Android Studio basierenden, Entwicklungsumgebung erforderlich für den Unterhalt und die Weiterentwicklung der TravelBuddy Mobile App.
-
-% TODO Insert Table of COntents Here
-\section{Inhaltsverzeichnis}
-% table of contents
-{
-\hypersetup{linkcolor=black}
-\setcounter{tocdepth}{3}
-\renewcommand{\baselinestretch}{0.99}\normalsize
-\tableofcontents
-\renewcommand{\baselinestretch}{1.0}\normalsize
-}
-
-\newpage
-
-\subsection{Vorraussetzungen}
+\subsubsection{Vorraussetzungen}
 Für die erfolgreiche Installation ihrer Entwicklungsumgebung müssen folgende Gegebenheiten erfüllt sein:
 \begin{enumerate}
   \item Die Virtualisierung muss im BIOS aktiviert sein, wie Sie diese aktivieren finden Sie im Handbuch der Hauptplatine ihres Rechners.
@@ -119,7 +11,7 @@ Für die erfolgreiche Installation ihrer Entwicklungsumgebung müssen folgende G
   \item Sie verfügen über Administratoren Privilegien auf dem Zielrechner
 \end{enumerate}
 
-\section{Das Github projekt}
+\subsubsection{Das Github projekt}
 Um eine möglichst gute Kollaboration zu ermöglichen wird beim Projekt TravelBuddy auf Git gesetzt.
 Sie finden das Projekt unter: https://github.com/PsitTeam3/TravelBuddyAndroidApp
 \begin{figure}
@@ -128,12 +20,11 @@ Sie finden das Projekt unter: https://github.com/PsitTeam3/TravelBuddyAndroidApp
   \caption{Übersicht über das Git Projekt}
 \end{figure}
 
-\section{Installation}
+\subsubsection{Installation}
 
-\subsection{Grundinstallation}
-\subsubsection{Herunterladen der Installationsdatei}
+\subsubsubsection{Grundinstallation}
+
 Als erstes laden Sie die Installationsdatei von https://developer.android.com/studio/index.html herunter, und starten Sie diese.
-\subsubsection{Starten der Installation}
 
 \begin{figure}
   \centering
@@ -215,7 +106,7 @@ Als erstes laden Sie die Installationsdatei von https://developer.android.com/st
 
 Herzlichen Glückwunsch, Sie haben nun erfolgreich Android Studio installiert, im nächsten Abschnitt erfahren Sie, wie Sie Android Studio konfigurieren.
 
-\subsection{Konfiguration}
+\subsubsubsection{Konfiguration}
 
 Da Sie die Installation abgeschlossen haben, müssen Sie noch einige Einstellungen an Android Studio vornehmen, damit Sie an der TravelBuddy Mobile App weiterarbeiten können.
 
@@ -269,7 +160,7 @@ Da Sie die Installation abgeschlossen haben, müssen Sie noch einige Einstellung
 
 Sie sollten nun in der Lage sein, TravelBuddy zu kompilieren, um ihn ebenfalls zu testen benötigen Sie noch den Android Emulator. Wie Sie diesen Einrichten können, erfahren Sie im nächsten Abschnitt.
 
-\subsection{Emulator einrichten}
+\subsubsubsection{Emulator einrichten}
 
 Kompilieren Sie nun TravelBuddy, klicken Sie hierzu auf das grüne Dreieck in der oberen Leiste, oder verwenden Sie die Tastenkombination Umschalt + F10.
 
@@ -328,7 +219,7 @@ Kompilieren Sie nun TravelBuddy, klicken Sie hierzu auf das grüne Dreieck in de
 \end{figure}
 
 Der Emulator startet nun, wenn er gestartet ist, sollte die kompilierte Version von TravelBuddy automatisch gestartet werden.
-\subsection{Ausführbare Date erstellen}
+\subsubsubsection{Ausführbare Date erstellen}
 Nachdem Sie Ihre Weiterentwicklung von TravelBuddy erfolgreich erstellt haben, möchten Sie dieses nun als, auf Android ausführbare Datei (.apk), veröffentlichen.
 Der folgende Abschnitt zeigt ihnen wie Sie mit Gradle eine solche Datei generieren können.
 
@@ -344,10 +235,9 @@ Der folgende Abschnitt zeigt ihnen wie Sie mit Gradle eine solche Datei generier
   \caption{Wenn die Ausführung des Befehles erfolgreich war, finden Sie ihre .apk Datei innerhalb ihrer Kopie des TravelBuddy Projektes im Verzeichnis: TravelBuddyAndroidApp$\backslash$app$\backslash$build$\backslash$outputs$\backslash$apk}
 \end{figure}
 
-\section{Nützliche Links}
+\subsubsection{Nützliche Links}
   \begin{enumerate}
     \item Git Projekt auf github: https://github.com/PsitTeam3/TravelBuddyAndroidApp
     \item Android Studio Homepage: https://developer.android.com/studio/index.html
     \item API Dokumentation: http://travelbuddy5.azurewebsites.net/swagger/ui/index
   \end{enumerate}
-\end{document}
