@@ -1,9 +1,9 @@
-\section{Testbericht Frontend}\label{testbericht_frontend}
+\subsection{Testbericht Frontend}\label{testbericht_frontend}
 Nachfolgend wird auf das Testing der Android App eingegangen.
 
-\subsection{Automatisiertes Testen}\label{automatisiertes_test_frontend}
+\subsubsection{Automatisiertes Testen}\label{automatisiertes_test_frontend}
 Es war bereits zu Beginn des Projekts klar, dass es eine Aufteilung in Frontend und Backend
-gibt. Da in unserem Team das Android Know-How begrenzt ist, haben wir uns dazu entschieden, 
+gibt. Da in unserem Team das Android Know-How begrenzt ist, haben wir uns dazu entschieden,
 möglichst viel Logik auf dem Backend auszuführen und die Android App so klein wie möglich zu halten.
 
 Da die App ohne Server nicht funktional ist, mussten wir Teile der App schon zu Beginn an
@@ -19,11 +19,11 @@ und den \textbf{Unit-Tests} konnten wir schon frühr Probleme erkennen und beheb
 
 Auf Integrations-Tests wurde hier verzichtet, da die Integration von Umsystemen von Android erledigt
 wird. Sowohl der HTTP-Client als auch Google Maps Services funktionieren ohne Konfiguration. Auch hätte
-dies einen nicht gerechtfertigten Mehraufwand bei der Infrastruktur (CI) bedeutet, da die Ausfühung 
+dies einen nicht gerechtfertigten Mehraufwand bei der Infrastruktur (CI) bedeutet, da die Ausfühung
 solcher Tests eine laufene Android-Instanz benötigt. Wäre die Integration der Umsysteme kein solches
 "Out-of-the-box"-Erlebnis, dann hätten wir Aufwand in Integrations-Tests gesteckt.
 
-\subsection{Manuelles Testen}\label{manuelles_testen_frontend}
+\subsubsection{Manuelles Testen}\label{manuelles_testen_frontend}
 Natürlich ist bei einer mobilen Applikation des manuelle Testen sehr wichtig, denn nur damit lassen
 sich Probleme beim User-Erlebnis (User Experience/UX) finden. Gegen Ende der Construction Phase
 hatten sowohl Backend als auch Frontend beide genug Funktionalität, um die ersten Use Cases zu testen.
@@ -34,9 +34,9 @@ unerwartete Rückwärts-Navigation. Beim manuellen Testen wurden solche Szenario
 durch:
 
 \begin{enumerate}
-    \item Langes Verweilen in Screens (Timeout)
-    \item Sehr schnelles/ungeduldiges Bedienen der App 
-    \item Minimieren/Schliessen der App
+  \item Langes Verweilen in Screens (Timeout)
+  \item Sehr schnelles/ungeduldiges Bedienen der App
+  \item Minimieren/Schliessen der App
 \end{enumerate}
 
 Es wurde eine Test-Tour angelegt, mit zwei POIs, die etwa 400m voneinander entfernt sind. Dann wurde
@@ -56,8 +56,8 @@ Dies käme nur in einem Test auf einem echten Gerät z.B. in der Stadt zum Zug. 
 Tests mit dem Emulator ausreichen und etwaige Anpassungen nach einem Test unter echten Bedingungen
 miniaml sind.
 
-\subsection{Resultate\label{test_resulate}
-Alle geplanten \textbf{Uses-Cases} sind implementiert und sind in der ersten Version komplett. Sogar 
+\subsubsection{Resultate}\label{test_resulate}
+Alle geplanten \textbf{Uses-Cases} sind implementiert und sind in der ersten Version komplett. Sogar
 ungeplante alternative Szenarien innerhalb der Use-Cases funktionieren. Durch die korrekte Implementation
 der Lifecycle-Hooks der Activities kümmert sich Android um das Minimieren und das "Zurücknavigieren".
 
@@ -68,17 +68,3 @@ Die \textbf{Stabilität} stufen wir als genügen ein. Da die App selber wenig Lo
 stark vom Server abhängig. Bei serverseitigen Ausfällen bleibt die App zwar meist stabil, der User
 bekommt aber keine Meldung. Dieser Punkt hat starken Einfluss auf das User-Erlebnis (UX) und müsste
 vor einem öffentlichen Release unbedingt nachgebessert werden.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

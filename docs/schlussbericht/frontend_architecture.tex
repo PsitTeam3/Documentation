@@ -1,18 +1,18 @@
-\section{Frontend Design}\label{design-frontend}
+\subsection{Frontend Design}\label{design-frontend}
 Bei der Architektur und dem Design unterscheiden wir zwischen Backend
 (Web Services) und dem Frontend (Android App). Beide Systeme werden parallel und
 unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{service-api}).
 Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
 Architektur und Design separat treffen.
 Zuerst behandeln wir das Frontend, danach das Backend.
-\subsection{Design-Klassendiagramm}\label{design-klassendiagram}
+\subsubsection{Design-Klassendiagramm}\label{design-klassendiagram}
 \begin{figure}
   \includegraphics{classdiagram_frontend}
   \caption{Klassendiagramm der App}
 \end{figure}
 
 \newpage
-\subsection{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
+\subsubsection{Klassenverantwortlichkeiten}\label{klassenverantwortlichkeiten}
 In der folgenden Tabelle werden die Klassen mit ihren Hauptverantworlichkeiten
 gelistet.
 
@@ -54,7 +54,7 @@ Dadurch lassen sich Fotos zwischen Activities herumreichen.\\\hline
 \end{longtabu}
 
 \newpage
-\subsubsection{Knowing and Doing}\label{knowinganddoing-frontend}
+\subsubsubsection{Knowing and Doing}\label{knowinganddoing-frontend}
 Im Folgenden betrachten wie die Knowing- und Doing-Verantwortlichkeiten der Klassen.
 \begin{longtabu} to \textwidth { | l | X[2, l] | X[8, l] |  }
 \hline
@@ -109,7 +109,7 @@ erzeugen. Im Klassendiagramm (Abbildung 2) sind die Activities zwar miteinander
 verbunden, aber durch das Message System (Intents) sind diese lose gekoppelt.
 
 
-\subsection{Android App Architektur}\label{androidapparchitektur}
+\subsubsection{Android App Architektur}\label{androidapparchitektur}
 
 Die Architekur der App implementiert eine einfache Version von \textbf{The Clean Architecture} \cite{TCA}.
 Im nachfolgenden Abschnitt werden einige wichtige Punkte von \textbf{The Clean Architecture}
@@ -120,7 +120,7 @@ Einleitung findet man bei Robert Martin (Uncle Bob) \cite{CC}.
   \caption{Schema von The Clean Architecture}
 \end{figure}
 
-\subsubsection{Abhängigkeiten - Dependency Rule}\label{dependencyrule}
+\subsubsubsection{Abhängigkeiten - Dependency Rule}\label{dependencyrule}
 Diese einfache Regel stellt lose Kopplung und gute Testbarkeit sicher.
 Die \textbf{Dependency Rule} besagt, dass die Source Code Abhängigkeit nach innen zeigt.
 Das heisst, dass eine bestimmte Schicht niemals die äussere Schicht kennt.
@@ -129,7 +129,7 @@ einen Parser (Gateway) in der direkt darunterliegenden Schicht. Nach der
 \textbf{Dependency Rule} darf es keine Referenzen im Parser zum HTTP-Client geben.
 
 \newpage
-\subsubsection{Bedeutung der Schichten}\label{layers}
+\subsubsubsection{Bedeutung der Schichten}\label{layers}
 \begin{longtabu} to \textwidth { | l | X[l] |  }
 \hline
 \textbf{Bezeichnung der Schicht} & \textbf{Bedeutung und Beispiele}\\\hline
@@ -155,7 +155,7 @@ muss nicht angepasst werden, falls sich Use Cases ändern. Dies ist der Fall, da
 sich die allgemeinen Domänenregeln in der Regel nicht ändern.\\\hline
 \end{longtabu}
 
-\subsubsection{The Clean Architecture bei TravelBuddy}
+\subsubsubsection{The Clean Architecture bei TravelBuddy}
 Die TravelBuddy App ist ein Spezialfall einer Android App. Da das Team das grösste
 Risiko bei der Android-Entwicklung sah, wurde entschlossen, in der App selber so
 wenig Businesslogik wie möglich auszuführen.
@@ -179,7 +179,7 @@ Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\
 \end{longtabu}
 
 \newpage
-\subsubsection{Implikationen}\label{implications}
+\subsubsubsection{Implikationen}\label{implications}
 Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als
 auch Nachteile. Die nachfolgende Liste zeigt Implikationen und Auswirkungen der
 gewählten Architektur auf das Design und die Umsetzung der App.
@@ -219,9 +219,9 @@ Durch die gewählte Architektur erreichen wir gute Testbarkeit mit klaren
 Abhängigkeiten. Der Mehraufwand wird dadurch gerechtfertigt, dass Änderungen
 von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
 
-\subsubsection{Tatsächliche Umsetzung}\label{implementation_frontend}
-Die tatsächliche Implementation weicht leicht von der geplanten Architektur ab. Das Team hat den 
-Aufwand zur vollständigen Entkopplung der äussersten Schicht \textbg{Frameworks and Drivers} abgeschätzt
+\subsubsubsection{Tatsächliche Umsetzung}\label{implementation_frontend}
+Die tatsächliche Implementation weicht leicht von der geplanten Architektur ab. Das Team hat den
+Aufwand zur vollständigen Entkopplung der äussersten Schicht \textbf{Frameworks and Drivers} abgeschätzt
 und schliesst, dass der Mehrwert in diesem Fall den Schritt nicht rechtfertigt.
 
 Im die \textbf{Frameworks and Drivers} vom Rest der App zu entkoppelt, müssten viele Helper-, Wrapper- und
@@ -241,7 +241,7 @@ Ausserdem bestehen die Activities fast ausschliesslich aus einer Auflistung von 
 was der Lesbarkeit des Codes nicht schadet.
 
 \newpage
-\subsubsection{Activities}\label{activities}
+\subsubsubsection{Activities}\label{activities}
 Die App selber besteht aus drei Haupt-Activities. \textbf{Activities} ist ein
 Konzept von Android, sie bilden eine User-Ansicht ab und bilden des Skelett
 der App. Abbildung 4 veranschaulicht alle möglichen Zustände und deren
@@ -251,5 +251,3 @@ der App. Abbildung 4 veranschaulicht alle möglichen Zustände und deren
   \includegraphics[height=19cm]{state-diagram}
   \caption{Zustandsänderungsdiagramm}
 \end{figure}
-
-
