@@ -1,0 +1,72 @@
+\section{Projektidee}\label{Projektidee}
+\subsection{Ausgangslage}\label{Ausgangslage}
+Reisen ist ein weltweit verbreiteter Zeitvertrieb und bringt viel Freude und Einblicke in andere Kulturen mit sich. In vielen Ländern ist es aber auch heute noch schwierig, sich als Gast mit einer anderen Muttersprache mit den Einheimischen verständigen zu können. Dies merkt man auch bei geführten Reisetouren. Häufig sprechen Reiseführer\_innen die Sprache der Reisegruppe schlecht oder haben einen starken Akzent, so dass man seine Erläuterungen schlecht versteht.
+
+Viele Reisende sind zudem lieber autonom als mit einem Reiseführer auf einer Besichtigungstour unterwegs. Dadurch fühlt man sich freier und kann selbst entscheiden, wie lange man an einem Ort verweilen möchte. Mit Uber bietet sich auch eine flexible und kostengünstige Möglichkeit an, von einem Besichtigungspunkt zum nächsten Punkt zu gelangen.
+
+\subsection{Idee}\label{idee}
+Wir entwickeln eine Software, mit welcher Touristen auf einfache Weise verschiedene Besichtigungstouren durchführen können.
+Als Reisende kann man mit der Software für seine Reisedestinationen eine Liste von Touren zusammenstellen, welche man gerne durchführen möchte. Am jeweiligen Zielort gibt einem die Software Informationen, wie man von seinem Standort an die Besichtigungspunkte gelangt und anschliessend folgen Instruktionen, um an die nächsten Punkte zu gelangen. Während der Tour stellt die App auch Informationen über die Sehenswürdigkeiten bereit.
+
+Für die Wegbeschreibung wird eine Karte eingeblendet, mit welcher sich der Kunde orientieren und den Weg von Sehenswürdigkeit zu Sehenswürdigkeit ablaufen kann. An jedem Aufenthaltspunkt der Tour soll die Kundin ein Foto von einem bestimmten Objekt schiessen. Dieses Foto dient der App zur Verifikation, ob die Kundin sich auch tatsächlich an dem vorgegebenen Besichtigungspunkt befindet. Wenn der Tourist die Tour vollständig abgelaufen hat und die App dies durch die gemachten Fotos erkennt, wird ihm eine Zusammenfassung der Tour angezeigt. Diese kann er nach Bedarf auf seinem Facebook-Profil teilen.
+
+Die Touren werden von anderen Firmen, wie z.B. Reisebüros oder Privatbenutzern, erfasst. Dafür soll eine Web-Applikation entwickelt werden. Das Erfassen von Touren ist dabei für zertifizierte Anbieter kostenpflichtig. Dem Endanwender wird aber die Benutzung der Software kostenlos zur Verfügung gestellt.
+
+\subsection{Kundennutzen}\label{Kundennutzen}
+Die Software bringt folgende Nutzen für Reisende:
+
+\begin{itemize}
+\item Die Reisende kann aus einem grossen Angebot von Touren diejenigen auswählen, welche am besten ihre Bedürfnisse decken.
+\item Filterkriterien helfen dem Benutzer beim Finden von Touren.
+\item Der Reisende muss sich keiner Reisegruppe anschliessen und kann mit Hilfe der Software auf einfache Weise eigenständig unterwegs sein.
+\item Die Tour wird der Reisenden in ihrer gewünschten Sprache angezeigt.
+\item Dank Social-Media-Integration kann der Benutzer eine gemachte Tour inkl. seiner Fotos mit seinen Freunden teilen.
+\item Die Integration von Uber bietet der Kundin Komfort und Sicherheit. Per Knopfdruck wird innerhalb der TravelBuddy-App ein Uber-Taxi angefordert und diesem auch automatisch das Ziel bekanntgegeben. In einem Land mit hoher Kriminalitätsrate ist der Transport mit einem Uber-Taxi sicherer als mit einem zufällig auf der Strasse angehaltenen Taxi.
+\end{itemize}
+
+Als Kunden für unsere Software zählen aber nicht nur Reisende. Auch die Anwender, welche Touren für die Software verfassen, sind als Kunden zu betrachten. Dies können Reisebüros, staatliche Tourismusbüros und viele andere sein. Das Verfassen und Bereitstellen von Touren hat für Unternehmen wie Reisebüros folgende Nutzen:
+
+\begin{itemize}
+\item Sie sparen Kosten, da die aufwändige Organisation von Reisetouren im Ausland entfällt.
+\item Der Einsatz und die Unterstützung von neuen Reisemöglichkeiten wird junge, technologieversierte Leute anziehen.
+\end{itemize}
+
+\subsection{Stand der Technik / Konkurrenzanalyse}\label{StandTechnik}
+Es gibt bereits andere Travelguide-Apps, wie z.B. die vom Reiseveranstalter Thomas Cook Touristik GmbH, welchem auch Neckermann Reisen gehört. Jedoch haben andere Apps nicht den gleichen Fokus auf digital geführte Reisetouren wie unsere Lösung. Die Thomas-Cook-Travelguide-App bietet einem das Buchen von geführten Touren an und enthält auch Reiseführerinhalte \cite{TomasCookApp}.
+
+Mit der App ist man jedoch an die Angebote des Reiseveranstalters gebunden. Wir wollen eine App, bei denen die Anwenderin komplett losgelöst vom Reiseveranstalter eine Tour wählen kann. Zudem ist Uber nicht in bestehenden Apps integriert, was eine Kernfunktionalität unserer App ist, mit welcher Besichtigungstouren viel komfortabler werden.
+
+Uber stellt dazu eine Programmier-Schnittstelle zur Verfügung, mit welchem Uber-Fahrten über fremde Apps abgewickelt werden können (auch ohne, dass die Uber-App selbst auf dem Gerät installiert ist) \cite{UberApi}. Auch die Social-Media-Integration ist in anderen Apps nicht gegeben. Wir wollen es den Kunden auf einfachste Weise ermöglichen, eine gemachte Tour auf Facebook zu teilen. Dabei werden Informationen über die Tour übermittelt sowie die persönlichen Fotos gespeichert.
+
+\subsection{Hauptablauf}\label{Hauptablauf}
+Der ausführliche Hauptanwendungsfall der Grundidee ist der Kunde, welcher im Urlaub ist und eine Besichtigungstour machen möchte:
+\begin{enumerate}
+\item Die Kundin startet die TravelBuddy-App, welche sie vorgängig bereits heruntergeladen und installiert hat.
+\item Sie sucht nach digital geführten Reisetouren an ihren Standort.
+\item Der Kunde wählt die Reisetour aus, welche ihm am besten gefällt und speichert diese.
+\item Er betrachtet die Möglichkeiten, um an den Startpunkt der Route zu gelangen.
+\item Die App teilt ihm mit, wie er mit öffentlichen Verkehrsmitteln, zu Fuss oder mit Uber-Taxi an das Ziel gelangen kann.
+\item Die Kundin wählt die Option Uber-Taxi aus und gibt den genauen Abholort sowie das Datum und die Uhrzeit an, an der sie abgeholt werden möchte.
+\item Der Kunde wird zum gewählten Zeitpunkt vom Uber-Taxi abgeholt und an den Startpunkt gefahren. Die Bezahlung des Taxis wird automatisch abgewickelt.
+\item Die App erkennt, dass sich die Kundin am Startpunkt der Tour befindet. Die App stellt eine Wegbeschreibung, um ans Zielobjekt zu gelangen sowie detaillierte Informationen über die erste Sehenswürdigkeit bereit.
+\item Die App fordert den Kunden auf, eine bestimmtes Objekt an dem Standort zu fotografieren.
+\item Sobald die Kundin den Standort fertig besichtigt hat, signalisiert sie dies der App.
+\item Die App zeigt nun wieder die Optionen an, wie der Kunde an den nächsten Besichtigungspunkt gelangen kann (Uber-Taxi, öffentliche Verkehrsmittel, Fussmarsch).
+\item Der Kunde wählt bspw. "den Weg zu Fuss zurückzulegen".
+\item Die App zeigt dem Kunden eine Karte an, welche ihn an das nächste Ziel führt.
+\item Hat die Kundin den letzten Punkt der Tour besichtigt, wählt sie "Tour beenden" in der App.
+\item Die App erstellt eine persönliche Zusammenfassung ihrer Tour, welche auch die von der Touristin gemachten Bilder enthält.
+\item Die Kundin wählt, dass sie die zusammengefasste Tour auf ihren Facebook-Account teilen möchte.
+\item Die App fügt die Tour-Zusammenfassung auf seinem Account hinzu.
+\item Die App zeigt dem Kunden an, wie er wieder in sein Hotel zurückkommt.
+\item Der Kunde wählt wieder die Uber-Taxi-Möglichkeit und wird kurz darauf abholt und in sein Hotel gebracht.
+\end{enumerate}
+
+Aus diesem Hauptanwendungsfall leiten sich alle Teilanwendungsfälle ab.
+
+\subsection{Wirtschaftlichkeit}\label{Wirtschaftlichkeit}
+Der geschätzte Aufwand beträgt 600 Mannstunden, was etwa 3 ½ Mannmonaten entspricht. Die Entwicklungskosten belaufen sich somit auf 100'000 CHF. Hinzu kommen ca. 16'000 CHF monatlich für Weiterentwicklungen und Unterhalt. Bei einem Kundenbeitrag von 2'000 CHF pro Monat für die individuelle Erstellung von Guided Tours mit Travel Buddy beläuft sich der Gewinn bei 10 Kunden auf geschätzte 4'200 CHF monatlich, zuzüglich Werbeeinahmen durch Google Ads. Somit ergibt ein _return on investment_ nach 24 Monaten.
+
+Durch die flexible Erstellung von Guided Tours lässt sich eine breite Klientel wie beispielsweise Reiseagenturen, Tourismusbüros und Gewerbeverbände  anziehen, wodurch das Ziel von 10 Kunden realistisch ist. Ideen für weitere Einnahmequellen wurden evaluiert und können zu einem späteren Zeitpunkt ausgearbeitet und implementiert werden.
+
+
