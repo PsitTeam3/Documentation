@@ -1,0 +1,178 @@
+% !TEX program = xelatex
+% basic document config
+\documentclass[a4paper,10pt,xetex]{article}
+\usepackage[a4paper,top=45mm,right=20mm,bottom=30mm,left=25mm,head=35mm,foot=20mm]{geometry}
+
+% language
+\usepackage[german]{babel}
+
+% variable definitions
+\providecommand{\documenttitle}{Schlussbericht}
+\providecommand{\documentauthors}{Andreas Saurer \\ Benjamin Schneidinger \\ Josef Erben \\ Raffaele Bof \\ Nicolas Loth}
+\providecommand{\documentdate}{16.05.2017}
+\providecommand{\documentversion}{1.0.0}
+
+% special commands
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\nameref*{#1} (\ref*{#1})}}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+\input{utilities/subsubsubsection.tex}
+
+% font
+% \usepackage{titling}
+\usepackage[sfdefault]{roboto}
+\usepackage[parfill]{parskip}
+\usepackage{soul}
+
+% table
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{longtable,tabu,booktabs}
+
+% links
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={\documenttitle},
+            pdfauthor={\documentauthors},
+            colorlinks=true,
+            linkcolor=[RGB]{74,144,226},
+            citecolor=[RGB]{74,144,226},
+            urlcolor=[RGB]{74,144,226},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+% images
+\usepackage[font=small,skip=6pt]{caption}
+\usepackage{float,graphicx,grffile,wrapfig}
+\graphicspath{ {images/} }
+
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+\makeatletter
+\def\fps@figure{H}
+\makeatother
+
+% header and footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=2cm]{travel-buddy_white}}
+\fancyfoot[L]{\fontsize{8}{10}\selectfont\ \documenttitle}
+\fancyfoot[R]{\fontsize{8}{10}\selectfont\ Seite\ \thepage\ von\ \pageref*{LastPage}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% style titles
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{1em}{0pt}
+\titlespacing*{\subsection}{0pt}{1em}{0pt}
+\titlespacing*{\subsubsection}{0pt}{1em}{0pt}
+
+% configure title page
+\title{
+  \includegraphics[width=7cm]{travel-buddy_white}\\[\bigskipamount]
+  \documenttitle\\[\bigskipamount]
+}
+
+\author{\documentauthors}
+\date{\parbox{\linewidth}{\centering%
+  IT15TA ZH \hspace*{3cm} Gruppe 3\endgraf\bigskip
+  Dokumentversion \documentversion, \documentdate\endgraf
+}}
+
+
+\begin{document}
+\shorthandoff{"}
+
+% title page
+\maketitle\newpage
+
+% table of contents
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{4}
+\tableofcontents
+}
+
+\newpage
+
+% version log
+\section{Versionenlog}\label{versionenlog}
+
+\tabulinesep=1.2mm
+
+\begin{longtabu} to \textwidth { | l | l | X[l] | l | }
+  \hline
+  \textbf{Datum} & \textbf{Version} & \textbf{Änderung} & \textbf{Author} \\
+  \hline
+  \endhead
+
+  0.0.6 & 13.05.2017 & Inhalte aus Design übernommen und verbessert & Andi\\
+  \hline
+
+  0.0.5 & 13.05.2017 & Inhalte aus Analyse übernommen und verbessert & Andi\\
+  \hline
+
+  0.0.4 & 14.05.2017 & Inhalte Resultat hinzugefügt & Raffaele\\
+  \hline
+
+  0.0.3 & 13.05.2017 & Inhalte Testbericht Backend hinzugefügt & Beni\\
+  \hline
+
+  0.0.2 & 12.05.2017 & Inhalte Testbericht Frontend hinzugefügt & Josef\\
+  \hline
+
+  0.0.1 & 12.05.2017 & Inhalte aus Projektskizze übernommen und verbessert & Beni\\
+  \hline
+
+  0.0.0 & 12.05.2017 & Dokument erstellt & Andi\\
+  \hline
+\end{longtabu}
+\newpage
+
+% start content
+\include{schlussbericht/projektidee}
+
+% \include{schlussbericht/analyse}
+
+\section{Design}
+\include{schlussbericht/backend_architecture}
+\include{schlussbericht/frontend_architecture}
+
+\section{Implementation}
+\include{schlussbericht/testbericht_backend}
+\include{schlussbericht/testbericht_frontend}
+
+\include{schlussbericht/resultat}
+
+\addcontentsline{toc}{section}{Literatur}
+\begin{thebibliography}{9}
+  \bibitem{TCA} URL: https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html [Stand: 20.4.2017]
+  \bibitem{CC} URL: http://blog.cleancoder.com/ [Stand: 20.4.2017]
+  \bibitem{RV} URL: http://robovm.mobidevelop.com/ [Stand: 20.4.2017]
+  \bibitem{MOE} URL: https://software.intel.com/en-us/multi-os-engine [Stand: 17.4.2017]
+
+  \bibitem{TomasCookApp}
+    Thomas Cook Travelguide in Goggle Play [Online].
+    URL: https://play.google.com/store/apps/details?id=com.tc.android.travelguide\&hl=de [Stand: 4.3.2017].
+
+  \bibitem{UberApi}
+    Uber Integration für Apps [Online].
+    URL: https://developer.uber.com/products/ride-requests [Stand: 4.3.2017].
+\end{thebibliography}
+
+\section*{Abbildungsverzeichnis}\label{abbildungsverzeichnis}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\begingroup
+\renewcommand{\section}[2]{}%
+\hypersetup{linkcolor=black}
+\listoffigures
+\endgroup
+
+\end{document}

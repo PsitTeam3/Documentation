@@ -1,5 +1,5 @@
-\section{Backend Design}\label{backend-design}
-\subsection{Service API}\label{service-api}
+\subsection{Backend Design}\label{backend-design}
+\subsubsection{Service API}\label{service-api}
 Die API ist als Webservice aufgebaut welcher funktionale Requests beantworten kann. Es wird kein direkter Datenzugriff
 \"uber CRUD Methoden zur Verf\"ugung gestellt. Die Business-Logik wird wenn m\"oglich vollst\"andig im Service
 abgehandelt. So ist die Funktionalit\"at des ganzen Systems gekapselt und unabh\"angig von allenfalls in der Zukunft
@@ -35,7 +35,7 @@ Tours & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von Tour
 \end{longtabu}
 
 Die API wurde gegenüber dem Design-Entwurf vereinfacht, vereinheitlicht und die Unterscheidungslogik zwischen z.B. POI und UserPOI wurde nach aussen weggekapselt.
-Nicht mehr vorhandene Methoden in der aktuellen Version sind mit removed gekennzeichnet. 
+Nicht mehr vorhandene Methoden in der aktuellen Version sind mit removed gekennzeichnet.
 
 Methoden:
 
@@ -95,12 +95,12 @@ api/UserTour/GetActiveTour &
 Gibt die aktive Tour des Benutzers zur\"uck.\\\hline
 \end{longtabu}
 
-\subsubsection{Versionierung der API}\label{versionierung-api}
+\subsubsubsection{Versionierung der API}\label{versionierung-api}
 F\"ur gr\"ossere \"Anderungen an der API soll aus Kompatibilit\"atsgr\"unden eine neue Version erstellt und parallel zu
 \"alteren Versionen deployt werden. Swashbuckle bietet auch hierf\"ur die notwendige Funktionalit\"at zur Versionierung
 an.
 
-\subsection{Externe Frameworks}\label{externe-frameworks}
+\subsubsection{Externe Frameworks}\label{externe-frameworks}
 Zur Implementierung von architektonischen und business-funktionalen Anforderungen, die nicht bereits mit ASP.NET MVC und
 Web API abgedeckt sind, sollen bereits bestehende Libraries und Frameworks verwendet werden. Die nachfolgende Tabelle
 listet die zu verwenden Frameworks auf:
@@ -138,7 +138,7 @@ Framework zum Loggen von Fehlern, Warnungen und Debug-Informationen an verschied
 \end{longtabu}
 
 
-\subsection{Architektur}\label{backendarchitektur}
+\subsubsection{Architektur}\label{backendarchitektur}
 Das nachfolgende Diagramm zeigt die Detail-Architektur des Backends. Weitere grundlegende
 Informationen zum eingesetzten Technologie-Stack befinden sich im Dokument Anforderungsanalyse.
 
@@ -229,7 +229,7 @@ Dieses Testprojekt implementiert alle Unit-Tests zum automatischen Testen der We
   Controller-Funktionalit\"aten. \\\hline
 \end{longtabu}
 
-\subsubsection{Ablauf eines Request und Datenfluss aus technischer Sicht}\label{ablauf-request}
+\subsubsubsection{Ablauf eines Request und Datenfluss aus technischer Sicht}\label{ablauf-request}
 Der nachfolgende Prozess zeigt den programmatischen Standardablauf eines Request im Backend, inklusive dem Datenfluss
 von der Datenbank bis zum Inhalt in der HTTP-Response, auf:
 
@@ -257,7 +257,7 @@ von der Datenbank bis zum Inhalt in der HTTP-Response, auf:
 \end{enumerate}
 
 \newpage
-\subsubsection{Dependency Injection}\label{dependency-injection}
+\subsubsubsection{Dependency Injection}\label{dependency-injection}
 Als Dependency Injection Framework f\"ur die Umsetzung des Inversion of Control Patterns wird Ninject eingesetzt.
 Ninject bietet eine statische Konfiguration zum Binden von Interfaces an bestimmte Klassen welche bei einer solchen
 Anfrage instanziert werden m\"ussen. Eine solche Implementierung bietet eine bessere Performance als wenn die zu
@@ -271,20 +271,20 @@ Instanzierung erst beim ersten Zugriff innerhalb des Controllers geschehen und e
 darauf reagiert werden. Bei der direkten Injection ist dies nur begrenzt m\"oglich, da dann entweder vorher einen Fehler
 geworfen wird oder aber die injezierten Parameter als Null daherkommen.
 
-\subsubsection{Logging}\label{logging}
+\subsubsubsection{Logging}\label{logging}
 Das Logging wird mit Hilfe der Log4Net Library implementiert. Geloggt werden soll in t\"agliche Rolling-Logfiles, was
 als Appender in Log4Net konfiguriert werden kann.
 
-\subsubsection{Security}\label{security}
+\subsubsubsection{Security}\label{security}
 Das Thema Security inklusive Authentifizierung und Authentisierung von Benutzern, die Implementierung von verschiedenen
 Rollen, das Verschl\"usseln der Kommunikation usw. soll f\"ur die erste Version des Backends nicht beachtet werden.
 
-\subsubsection{Testing}\label{testing}
+\subsubsubsection{Testing}\label{testing}
 F\"ur die Implementierung von Unit-Tests der Controller, muss ein Controller manuell instanziert werden k\"onnen. Dies
 bedeutet, dass jede Controller-Klasse einen leeren Konstruktor implementieren muss, in welchem die ben\"otigten
 Repositories manuell instanziert werden.
 
-\subsubsection{Swagger}\label{swagger}
+\subsubsubsection{Swagger}\label{swagger}
 \"Uber Swashbuckle wird die automatische Generierung von Swagger Interface Definitions implementiert.
 
 \begin{longtabu} to \textwidth { | X[l] | X[l] | }
@@ -299,7 +299,7 @@ Repositories manuell instanziert werden.
 \end{longtabu}
 
 \newpage
-\subsection{Klassendiagramme und Klassenverantwortlichkeiten}\label{klassendiagramme}
+\subsubsection{Klassendiagramme und Klassenverantwortlichkeiten}\label{klassendiagramme}
 Dieses Diagramm zeigt das Zusammenspiel der Controller mit den jeweiligen Repositories.
 
 \begin{figure}
@@ -347,12 +347,12 @@ automatisch eine Datenbankverbindung und stellt diese Verbindung den abgeleitete
 funktionalen Verantwortlichkeiten werden analog zu den Zust\"andigkeiten der Controller implementiert. Im Kapitel
 Service API werden daf\"ur die notwendigen Begriffe und Unterteilungen detailliert erl\"autert.
 
-Speziell ist hier die Klasse CoordinatesHelper. 
+Speziell ist hier die Klasse CoordinatesHelper.
 Der CoordinatesHelper \"ubersetzt das MSSQL Datenbankformat der Geo-Koordinaten in einzelne ben\"otigte Werte wie
 L\"angen- und Breitengrad und umgekehrt.
 
 \newpage
-\subsection{Entity Relationship Diagram}\label{erm}
+\subsubsection{Entity Relationship Diagram}\label{erm}
 Als Erg\"anzung und zum besseren Verst\"andnis der Zusammenh\"ange nachfolgend das Diagramm des Datenbankmodels.
 
 \begin{figure}
