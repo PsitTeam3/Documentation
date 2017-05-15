@@ -91,34 +91,44 @@
 % title page
 \maketitle\newpage
 
-% table of contents
-% {
-% \hypersetup{linkcolor=black}
-% \setcounter{tocdepth}{3}
-% \renewcommand{\baselinestretch}{0.99}\normalsize
-% \tableofcontents
-% \renewcommand{\baselinestretch}{1.0}\normalsize
-% }
-%
-% \newpage
-
 % start content
-\section{TravelBuddy - Your travel compagnion}
-
-\subsection{Abstract}
+\section{Einleitung}
 Dieses Dokument führt Sie durch die Installation der, auf Android Studio basierenden, Entwicklungsumgebung erforderlich für den Unterhalt und die Weiterentwicklung der TravelBuddy Mobile App.
 
 % TODO Insert Table of COntents Here
-\subsection{Inhaltsverzeichnis}
+\section{Inhaltsverzeichnis}
+% table of contents
+{
+\hypersetup{linkcolor=black}
+\setcounter{tocdepth}{3}
+\renewcommand{\baselinestretch}{0.99}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+}
+
+\newpage
+
 \subsection{Vorraussetzungen}
 Für die erfolgreiche Installation ihrer Entwicklungsumgebung müssen folgende Gegebenheiten erfüllt sein:
 \begin{enumerate}
   \item Die Virtualisierung muss im BIOS aktiviert sein, wie Sie diese aktivieren finden Sie im Handbuch der Hauptplatine ihres Rechners.
   \item Eine funktionierende Installation von git.exe
+  \item Ihnen ist die grundlegende Arbeitsweise von Git bekannt und Sie wissen wie Sie ein Projekt von github.com klonen, synchronisieren und ihre Ergebnisse veröffentlichen.
+  \item Sie wissen wie Sie die ``Git Bash'' Konsole starten und wie Sie sie verwenden.
   \item Sie verfügen über Administratoren Privilegien auf dem Zielrechner
 \end{enumerate}
 
+\section{Das Github projekt}
+Um eine möglichst gute Kollaboration zu ermöglichen wird beim Projekt TravelBuddy auf Git gesetzt.
+Sie finden das Projekt unter: https://github.com/PsitTeam3/TravelBuddyAndroidApp
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Installation/0-0}
+  \caption{Übersicht über das Git Projekt}
+\end{figure}
+
 \section{Installation}
+
 \subsection{Grundinstallation}
 \subsubsection{Herunterladen der Installationsdatei}
 Als erstes laden Sie die Installationsdatei von https://developer.android.com/studio/index.html herunter, und starten Sie diese.
@@ -127,79 +137,79 @@ Als erstes laden Sie die Installationsdatei von https://developer.android.com/st
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-1}
-  \caption{Drücken Sie auf der Willkommensseite auf "Next"}
+  \caption{Drücken Sie auf der Willkommensseite auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-2}
-  \caption{Prüfen Sie ob alle Häckchen gesetzt sind und klicken Sie dann auf "Next"}
+  \caption{Prüfen Sie ob alle Häckchen gesetzt sind und klicken Sie dann auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-3}
-  \caption{Stimmen Sie der Lizenzvereinbahrung zu in dem Sie auf "I Agree" }
+  \caption{Stimmen Sie der Lizenzvereinbahrung zu in dem Sie auf ``I Agree'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-4}
-  \caption{Gegen Sie die gewünschten Installationsverzeichnisse an (Im Normalfall sollte nichts angepasst werden müssen) und klicken Sie dann auf "Next" }
+  \caption{Gegen Sie die gewünschten Installationsverzeichnisse an (Im Normalfall sollte nichts angepasst werden müssen) und klicken Sie dann auf ``Next'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-5}
-  \caption{Klicken Sie nun auf "Install" }
+  \caption{Klicken Sie nun auf ``Install'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-7}
-  \caption{Warten Sie auf das Ende des Installationsvorganges und klicken Sie dann auf "Install" }
+  \caption{Warten Sie auf das Ende des Installationsvorganges und klicken Sie dann auf ``Install'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-8}
-  \caption{Herzlichen Glückwunsch, Sie haben Android Studio erfolgreich installiert, klicken Sie nun "Finish" }
+  \caption{Herzlichen Glückwunsch, Sie haben Android Studio erfolgreich installiert, klicken Sie nun ``Finish'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-9}
-  \caption{Belassen Sie das Fenster auf "I do not have a previous\ldots" und klicken Sie auf "OK"}
+  \caption{Belassen Sie das Fenster auf ``I do not have a previous\ldots'' und klicken Sie auf ``OK''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-10}
-  \caption{Klicken Sie auf "Next"}
+  \caption{Klicken Sie auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-11}
-  \caption{Wählen Sie "Standard" und klicken Sie auf "Next"}
+  \caption{Wählen Sie ``Standard'' und klicken Sie auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-12}
-  \caption{Belassen Sie die Einstellungen und klicken Sie auf "Next"}
+  \caption{Belassen Sie die Einstellungen und klicken Sie auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-13}
-  \caption{Klicken Sie auf "Finish"}
+  \caption{Klicken Sie auf ``Finish''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/1-15}
-  \caption{Warten Sie bis der Installationsprozess fertiggestellt ist und klicken Sie auf "Finish"}
+  \caption{Warten Sie bis der Installationsprozess fertiggestellt ist und klicken Sie auf ``Finish''}
 \end{figure}
 
 Herzlichen Glückwunsch, Sie haben nun erfolgreich Android Studio installiert, im nächsten Abschnitt erfahren Sie, wie Sie Android Studio konfigurieren.
@@ -211,49 +221,49 @@ Da Sie die Installation abgeschlossen haben, müssen Sie noch einige Einstellung
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-1}
-  \caption{Öffnen Sie nun die lokale Kopie von TravelBuddy indem Sie auf "Open an existing Android Studio project" klicken}
+  \caption{Öffnen Sie nun die lokale Kopie von TravelBuddy indem Sie auf ``Open an existing Android Studio project'' klicken}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-2}
-  \caption{Navigieren Sie zum Pfad ihrer lokalen Kopie von TravelBuddy und klicken Sie auf "OK"}
+  \caption{Navigieren Sie zum Pfad ihrer lokalen Kopie von TravelBuddy und klicken Sie auf ``OK''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-3}
-  \caption{Am unteren Rand sehen Sie nun mehrere Fehlermeldungen, wir starten mit der Meldung "Can't start Git:git.exe" klicken Sie hierzu auf "Fix it" oder Navigieren Sie zu File-->Settings-->Version Control-->Git}
+  \caption{Am unteren Rand sehen Sie nun mehrere Fehlermeldungen, wir starten mit der Meldung ``Can't start Git:git.exe'' klicken Sie hierzu auf ``Fix it'' oder Navigieren Sie zu File-->Settings-->Version Control-->Git}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-4}
-  \caption{Geben Sie im nun geöffneten Fenster unter "Path to Git executable"(1) den Pfad zur ausführbaren Datei git.exe Ihrer Git Installation und Bestätigen Sie mit "OK"}
+  \caption{Geben Sie im nun geöffneten Fenster unter ``Path to Git executable''(1) den Pfad zur ausführbaren Datei git.exe Ihrer Git Installation und Bestätigen Sie mit ``OK''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-5}
-  \caption{Als nächstes widmen wir uns der oben abgebildeten Fehlermeldung, klicken Sie auf "Upgrade Plugin \ldots" und warten Sie bis das Projekt wieder synchronisiert hat.}
+  \caption{Als nächstes widmen wir uns der oben abgebildeten Fehlermeldung, klicken Sie auf ``Upgrade Plugin \ldots'' und warten Sie bis das Projekt wieder synchronisiert hat.}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-6}
-  \caption{Zu guter letzt widmen wir uns dieser Fehlermeldung, klicken Sie auf "Install artifact \ldots"}
+  \caption{Zu guter letzt widmen wir uns dieser Fehlermeldung, klicken Sie auf ``Install artifact \ldots''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-7}
-  \caption{Im neu geöffneten Fenster klicken Sie auf "Accept" und anschliessend auf "Next"}
+  \caption{Im neu geöffneten Fenster klicken Sie auf ``Accept'' und anschliessend auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/2-8}
-  \caption{Warten Sie bis der Installationsablauf Fertig ist und klicken Sie dann auf "Finish"}
+  \caption{Warten Sie bis der Installationsablauf Fertig ist und klicken Sie dann auf ``Finish''}
 \end{figure}
 
 Sie sollten nun in der Lage sein, TravelBuddy zu kompilieren, um ihn ebenfalls zu testen benötigen Sie noch den Android Emulator. Wie Sie diesen Einrichten können, erfahren Sie im nächsten Abschnitt.
@@ -265,57 +275,78 @@ Kompilieren Sie nun TravelBuddy, klicken Sie hierzu auf das grüne Dreieck in de
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-0}
-  \caption{Im nun geöffneten Dialog, klicken Sie auf "Create New Virtual Device"}
+  \caption{Im nun geöffneten Dialog, klicken Sie auf ``Create New Virtual Device''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-1}
-  \caption{TravelBuddy ist für das Nexus 5X ausgelegt, wählen Sie also dieses und klicken Sie auf "Next"}
+  \caption{TravelBuddy ist für das Nexus 5X ausgelegt, wählen Sie also dieses und klicken Sie auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-2}
-  \caption{Sie sehen nun eine Liste aller installierbaren Android Betriebssysteme, wählen Sie "Nougat" und klicken Sie auf "Download"}
+  \caption{Sie sehen nun eine Liste aller installierbaren Android Betriebssysteme, wählen Sie ``Nougat'' und klicken Sie auf ``Download''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-3}
-  \caption{Es fehlt immernoch HAXM, um dies zu installieren klicken Sie auf "Install HAXM" }
+  \caption{Es fehlt immernoch HAXM, um dies zu installieren klicken Sie auf ``Install HAXM'' }
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-4}
-  \caption{Weisen Sie dem Emulator 2 GiB Arbeitspeicher zu und klicken Sie auf "Next"}
+  \caption{Weisen Sie dem Emulator 2 GiB Arbeitspeicher zu und klicken Sie auf ``Next''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-5}
-  \caption{Warten Sie bis der Installationsablauf Fertig ist und klicken Sie dann auf "Finish"}
+  \caption{Warten Sie bis der Installationsablauf Fertig ist und klicken Sie dann auf ``Finish''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-6}
-  \caption{Klicken Sie nun auf "Finish"}
+  \caption{Klicken Sie nun auf ``Finish''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-7}
-  \caption{Sie kommen nun zurück in den Dialog aus dem ersten Schritt, mit dem unterschied, dass unter "Available Virtual Devices" ein Gerät gelistet sein sollte, wählen Sie dieses aus und klicken Sie auf "OK"}
+  \caption{Sie kommen nun zurück in den Dialog aus dem ersten Schritt, mit dem unterschied, dass unter ``Available Virtual Devices'' ein Gerät gelistet sein sollte, wählen Sie dieses aus und klicken Sie auf ``OK''}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Installation/3-8}
-  \caption{Im nächsten Dialog klicken Sie auf "Install and Continue"}
+  \caption{Im nächsten Dialog klicken Sie auf ``Install and Continue''}
 \end{figure}
 
 Der Emulator startet nun, wenn er gestartet ist, sollte die kompilierte Version von TravelBuddy automatisch gestartet werden.
+\subsection{Ausführbare Date erstellen}
+Nachdem Sie Ihre Weiterentwicklung von TravelBuddy erfolgreich erstellt haben, möchten Sie dieses nun als, auf Android ausführbare Datei (.apk), veröffentlichen.
+Der folgende Abschnitt zeigt ihnen wie Sie mit Gradle eine solche Datei generieren können.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Installation/4-1}
+  \caption{Öffnen Sie die Git Bash Konsole und navigieren Sie in das Hauptverzeichnis des TravelBuddy Projektes. Führen Sie nun den Befehl ``gradlew assemble'' aus und warten Sie.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Installation/4-2}
+  \caption{Wenn die Ausführung des Befehles erfolgreich war, finden Sie ihre .apk Datei innerhalb ihrer Kopie des TravelBuddy Projektes im Verzeichnis: TravelBuddyAndroidApp$\backslash$app$\backslash$build$\backslash$outputs$\backslash$apk}
+\end{figure}
+
+\section{Nützliche Links}
+  \begin{enumerate}
+    \item Git Projekt auf github: https://github.com/PsitTeam3/TravelBuddyAndroidApp
+    \item Android Studio Homepage: https://developer.android.com/studio/index.html
+    \item API Dokumentation: http://travelbuddy5.azurewebsites.net/swagger/ui/index
+  \end{enumerate}
 \end{document}
