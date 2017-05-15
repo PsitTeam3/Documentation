@@ -117,83 +117,112 @@ einem Foto festhalten. TravelBuddy überprüft deinen Standort und zeigt dir dan
 zum nächsten Standort auf. Am Schluss siehst du eine Übersicht über die ganze Tour und
 deine erstellten Fotos.
 
+\subparagraph{Hinweis Demoversion:}
+Bitte den jeweiligen Abschnitt vor einer Aktion komplett lesen! Teilweise müssen
+Anweisungen für die Demoversion vor den im Abschnitt erwähnten Aktionen ausgeführt werden.
+
 \subsection{Tour wählen}
 Wenn du TravelBuddy startest, erhälst du einen Überblick über die gängigsten Touren in
-deiner Nähe. Tippe auf eine Tour deiner Wahl um weitere Informationen und eine
-Routenübersicht zu erhalten.
+deiner Nähe (\hyperref[fig:list-activity]{Abbildung~\ref*{fig:list-activity}}).
+Tippe auf eine Tour deiner Wahl um weitere Informationen und eine
+Routenübersicht zu erhalten (\hyperref[fig:detail-activity]{Abbildung~\ref*{fig:detail-activity}}).
 
 \begin{figure}
   \centering
   \begin{minipage}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{ListActivity}
+    \includegraphics[width=\textwidth]{screenshots/ListActivity}
     \caption{Startbildschirm von TravelBuddy}
+    \label{fig:list-activity}
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{DetailActivity}
+    \includegraphics[width=\textwidth]{screenshots/DetailActivity}
     \caption{Detailansicht einer Tour}
+    \label{fig:detail-activity}
   \end{minipage}
 \end{figure}
 
-% TODO screenshot List & Detail activity
+\subparagraph{Hinweis Demoversion:}
+Bitte die Tour ``Zürich Church Tour'' wählen, da wir hierfür Demo GPS Daten mitgeliefert haben.
 
 \subsection{Tour starten}
 
 Sobald du eine Tour angetippt hast, erscheint zuunterst ein Knopf ``Tour starten''
-mitwelchem du die Tour startest. Dir wird nun die Route zum ersten Wegpunkt angezeigt.
+mitwelchem du die Tour startest (\hyperref[fig:detail-activity]{Abbildung~\ref*{fig:detail-activity}}).
+Dir wird nun die Route zum ersten Wegpunkt angezeigt (\hyperref[fig:tour-activity]{Abbildung~\ref*{fig:tour-activity}}).
 Begib dich nun auf den Weg zum ersten Punkt.
 
 \begin{figure}
   \centering
-  \begin{minipage}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{DetailActivity}
-    \caption{Detailansicht einer Tour}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[b]{0.48\textwidth}
-    \includegraphics[width=\textwidth]{TourActivity}
-    \caption{Route zum ersten Wegpunkt deiner Tour}
-  \end{minipage}
+  \includegraphics[width=0.48\textwidth]{screenshots/TourActivityStart}
+  \caption{Route zum ersten Wegpunkt deiner Tour}
+  \label{fig:tour-activity}
 \end{figure}
 
-% TODO screenshot route activity > route
-% TODO mention how to cancel a tour
+\subparagraph{Hinweis Demoversion:}
+Bevor die Tour gestartet werden kann, müssen die GPS Daten eingelesen werden. Hierzu
+die drei Punkte anklicken (\hyperref[fig:android-emulator-sidebar]{Abbildung~\ref*{fig:android-emulator-sidebar}})
+und im darauf erscheinenden Dialog-Fenster unten rechts auf ``Load GPX/KML'' klicken
+(\hyperref[fig:android-emulator-extended-controls]{Abbildung~\ref*{fig:android-emulator-extended-controls}}, Nr. 1).
+Anschliessend im Datei-Dialog die Datei ``demo\_route.gpx'' aus dem in der
+Installationsanleitung angegebenen Ordner laden. Nun sollten im zuvor leeren
+weissen Feld (\hyperref[fig:android-emulator-extended-controls]{Abbildung~\ref*{fig:android-emulator-extended-controls}}, Nr. 2)
+diverse GPS Datenpunkte (Längen- und Breitengrade) erscheinen. Nach diesen
+Schritten kann die Tour wie oben beschrieben gestartet werden.
+
+\begin{figure}
+  \centering
+  \begin{minipage}[b]{0.28\textwidth}
+    \includegraphics[height=8cm]{screenshots/EmulatorSidebar}
+    \caption{Sidebar des Android Emulators}
+    \label{fig:android-emulator-sidebar}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.68\textwidth}
+    \includegraphics[width=\textwidth]{screenshots/EmulatorExtendedControls}
+    \caption{Android Emulator Extended Controls}
+    \label{fig:android-emulator-extended-controls}
+  \end{minipage}
+\end{figure}
 
 \newpage
 \subsection{Wegpunkt erreichen}
 
-\begin{wrapfigure}{l}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{TourActivity}
-    \caption{Anzeige beim erreichen eines Wegpunktes}
-  \end{center}
-\end{wrapfigure}
+Sobald du den Wegpunkt erreicht hast, startet TravelBuddy deine Kamera.
+Schiesse nun ein Foto der Sehenswürdigkeit. TravelBuddy überprüft anschliessend dein Foto,
+stimmt dieses mit TravelBuddy überein, wird dir eine neue Route zum nächsten Punkt
+angezeigt. Falls dein Foto nicht akzeptiert wird, nähere dich der Sehenswürdigtkeit und versuche es erneut.
 
-Sobald du den Wegpunkt erreicht hast, zeigt dir TravelBuddy ein Foto von einer
-Sehenswürdigkeit an. Schiesse nun ein Foto und tippe auf ``Foto überprüfen''.
-Stimmt dein Foto mit dem Angezeigten überein, wird dir eine neue Route zum nächsten Punkt
-angezeigt. Falls dein Foto nicht akzeptiert wird, nähere dich der Sehenswürdigtkeit auf dem
-gezeigten Foto etwas und versuche es erneut.
+\subparagraph{Hinweis Demoversion:}
+Damit sich die Position auf der Karte verändert, können die zuvor geladenen GPS Punkte
+abgespielt werden. Hierzu den ``Play'' Knopf im Dialog-Fenster
+(\hyperref[fig:android-emulator-extended-controls]{Abbildung~\ref*{fig:android-emulator-extended-controls}}, Nr. 3) drücken.
 
-% TODO screenshot route activity > picture
-% TODO verify erbenjos
+Sobald ein Kamerabildschirm erscheint (\hyperref[fig:android-emulator-camera]{Abbildung~\ref*{fig:android-emulator-camera}}) den ``Stop'' Knopf im Dialog-Fenster
+(\hyperref[fig:android-emulator-extended-controls]{Abbildung~\ref*{fig:android-emulator-extended-controls}}, Nr. 3) drücken.
+Nachdem ein Foto erstellt und akzeptiert wurde, können die GPS Punkte wieder weiter abgespielt werden.
+
+Die GPS Punkte sind so ausgelegt, dass zwischendurch ein falscher Weg eingeschlagen wird und
+TravelBuddy einen neuen Weg errechnen muss.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.48\textwidth]{screenshots/EmulatorCamera}
+  \caption{Kamera Ansicht im Android Emulator}
+  \label{fig:android-emulator-camera}
+\end{figure}
 
 \newpage
 \subsection{Tour abschliessen}
 Sobald du den letzten Wegpunkt deiner Tour erreicht hast, zeigt dir TravelBuddy eine
-Übersicht über deine gesamte Tour an. Du hast nun die Möglichkeit deine Fotos und einen
-Überblick über deine Tour auf den sozialen Medien zu teilen. Tippe dafür einfach den
-Knopf deines Netzwerkes an.
+Übersicht über deine gesamte Tour an (\hyperref[fig:summary-activity]{Abbildung~\ref*{fig:summary-activity}}).
 
-Sobald du auf ``Tour beenden'' tippst, gelangst du wieder auf den Startbildschirm von TravelBuddy.
+Sobald du auf ``Choose new tour'' tippst, gelangst du wieder auf den Startbildschirm von TravelBuddy.
 
-\begin{wrapfigure}{l}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.48\textwidth]{SummaryActivity}
-    \caption{Übersicht über deine Tour}
-  \end{center}
-\end{wrapfigure}
-
-% TODO screenshot summary activity
-% TODO verify bofraf
+\begin{figure}
+  \centering
+  \includegraphics[width=0.48\textwidth]{screenshots/SummaryActivity}
+  \caption{Übersicht über deine Tour}
+  \label{fig:summary-activity}
+\end{figure}
 \end{document}
