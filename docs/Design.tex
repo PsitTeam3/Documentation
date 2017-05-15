@@ -335,6 +335,10 @@ Ergebnis einer Validierung eines Fotos durch das Backend.\\\hline
 Fotos.\\\hline
 \textbf{Summary} & Summary wird am Ende einer Tour aus Progress generiert und
 bietet dem Nutzer eine Zusammenfassung der Tour.\\\hline
+\textbf{SerializableBitmap} & SerializableBitmap ist eine Wrapper-Klasse um ein Bitmap. Activities
+kommunizieren untereinander mit Intents, welche einen serialisierbaren Anhang haben können.
+Dadurch lassen sich Fotos zwischen Activities herumreichen.\\\hline
+
 \end{longtabu}
 
 \newpage
@@ -382,6 +386,8 @@ POI zeichnen.\\\hline
 \textbf{Progress} & keine Abhängigkeiten & kein Verhalten \\\hline
 \textbf{Summary} & Progress & Summary kann sich selber aus \textbf{Progress}
 generieren.\\\hline
+\textbf{SerializableBitmap} & keine Abhängigkeitren & kann ein Bitmap serialisieren \\\hline
+
 \end{longtabu}
 
 Obwohl \textbf{Activities} andere \textbf{Activites} starten können, müssen sie
@@ -500,6 +506,27 @@ gewählten Architektur auf das Design und die Umsetzung der App.
 Durch die gewählte Architektur erreichen wir gute Testbarkeit mit klaren
 Abhängigkeiten. Der Mehraufwand wird dadurch gerechtfertigt, dass Änderungen
 von Technologien nur kleine, kalkulierbare Anpassungen zur Folge haben.
+
+\subsubsection{Tatsächliche Umsetzung}\label{implementation_frontend}
+Die tatsächliche Implementation weicht leicht von der geplanten Architektur ab. Das Team hat den 
+Aufwand zur vollständigen Entkopplung der äussersten Schicht \textbg{Frameworks and Drivers} abgeschätzt
+und schliesst, dass der Mehrwert in diesem Fall den Schritt nicht rechtfertigt.
+
+Im die \textbf{Frameworks and Drivers} vom Rest der App zu entkoppelt, müssten viele Helper-, Wrapper- und
+Facaden-Klassen eingeführt werden. Da die Aufrufe von externen Libraries wie dem HTTP Client Volley
+oder der JSON-Parsing Library GSON nur punktuell stattfinden, nehmen wir die Verletzung der \textbf{Dependency Rule}
+bewusst in Kauf.
+Die vollständige Entkopplung der \textbf{Frameworks and Drivers} kann, wenn auch mit mehr Aufwand,
+zu einem späteren Zeitpunkt durchgeführt werden. Dieser Punkt gehört definitiv zu den Erweiterungsmöglichkeiten
+und ist ab einer gewissen Grösse des Projekts obligatorisch
+
+Die Wahl von guten Abstraktionen und Einhaltung der \textbf{Dependency Rule} ist uns hingegen bei den beiden
+inneren Schichten gelungen. Nur durch Betrachten der \textbf{Entitites} werden die Domänenregeln sofort klar,
+die Klassen selber haben alle geringe bis keine äusseren Abhängikeiten.
+Die \textbf{Use Case} Schicht ist teils in den Activities verwoben. Dies akzeptieren wir bewusst,
+da die Businesslogik grösstenteils auf dem Server stattfindet und die Activities auf Input reagieren.
+Ausserdem bestehen die Activities fast ausschliesslich aus einer Auflistung von registrierten Callbacks,
+was der Lesbarkeit des Codes nicht schadet.
 
 \newpage
 \subsubsection{Activities}\label{activities}
