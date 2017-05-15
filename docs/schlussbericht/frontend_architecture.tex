@@ -128,7 +128,6 @@ Man hat beispielsweise einen HTTP Client (Web) in der äussersten Schicht und
 einen Parser (Gateway) in der direkt darunterliegenden Schicht. Nach der
 \textbf{Dependency Rule} darf es keine Referenzen im Parser zum HTTP-Client geben.
 
-\newpage
 \subsubsubsection{Bedeutung der Schichten}\label{layers}
 \begin{longtabu} to \textwidth { | l | X[l] |  }
 \hline
@@ -155,6 +154,7 @@ muss nicht angepasst werden, falls sich Use Cases ändern. Dies ist der Fall, da
 sich die allgemeinen Domänenregeln in der Regel nicht ändern.\\\hline
 \end{longtabu}
 
+\newpage
 \subsubsubsection{The Clean Architecture bei TravelBuddy}
 Die TravelBuddy App ist ein Spezialfall einer Android App. Da das Team das grösste
 Risiko bei der Android-Entwicklung sah, wurde entschlossen, in der App selber so
@@ -178,7 +178,6 @@ enthält sehr wenig Businesslogik. Die Use Cases sind im Backend implementiert.\
 Eine Tour besteht aus einer Liste von Routen, jede Route hat ein POI zum Ziel\\\hline
 \end{longtabu}
 
-\newpage
 \subsubsubsection{Implikationen}\label{implications}
 Die Anwendung der \textbf{Clean Architecture} bringt natürlich sowohl Vor- als
 auch Nachteile. Die nachfolgende Liste zeigt Implikationen und Auswirkungen der
