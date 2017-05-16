@@ -1,4 +1,10 @@
 \section{Design}\label{design}
+Bei der Architektur und dem Design unterscheiden wir zwischen Backend
+(Web Services) und dem Frontend (Android App). Beide Systeme werden parallel und
+unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{service-api}).
+Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
+Architektur und Design separat treffen.
+
 \subsection{Backend Design}\label{backend-design}
 \subsubsection{Service API}\label{service-api}
 Die API ist als Webservice aufgebaut welcher funktionale Requests beantworten kann. Es wird kein direkter Datenzugriff
@@ -30,10 +36,10 @@ Countries & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von
   L\"ander-Daten\\ \hline
 POI & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von Point of
 Interests, welche durch eine Tour verkn\"upft sind. Zudem alle Funktionalit\"aten zum Abfragen und \"Andern von UserPOIs.
-  Ein User POI ist ein Point of Interest welcher von einem Benutzer besucht wurde oder
-  welcher ein Benutzer im Rahmen seiner gestarteten Tour als n\"achstes besuchen muss.\\\hline
-Tours & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von Touren. Zudem alle Funktionalit\"aten zum Abfragen und \"Andern von UserTouren.
-  Eine UserTour ist eine Tour die von einem Benutzer gestartet wurde.\\\hline
+  Ein User POI ist ein Point of Interest welcher von einem Tourist besucht wurde oder
+  welcher ein Tourist im Rahmen seiner gestarteten Tour als n\"achstes besuchen muss.\\\hline
+Tours & Implementiert alle Funktionalit\"aten zum Abfragen und \"Andern von Touren.\\\hline
+UserTours & Implementiert alle Funktionalitäten zum Abfragen und Ändern von UserTouren. Eine UserTour ist eine Tour die von einem Touristen gestartet wurde.\\\hline
 \end{longtabu}
 
 Die API wurde gegenüber dem Design-Entwurf vereinfacht, vereinheitlicht und die Unterscheidungslogik zwischen z.B. POI und UserPOI wurde nach aussen weggekapselt.
@@ -58,22 +64,22 @@ Liefert eine Liste aller vorhandenen POIs.\\\hline
 api/POI/GetPOIsByTour &
 Liefert eine Liste aller POIs zu einer bestimmten Tour.\\\hline
 api/POI/SetNextPOIAsVisited &
-Markiert den n\"achsten POI, den ein bestimmter Benutzer aufgrund seiner aktiv gestarteten
+Markiert den n\"achsten POI, den ein bestimmter Tourist aufgrund seiner aktiv gestarteten
   Tour besuchen muss, als besucht.\\\hline
   api/POI/GetNextPOI &
-Liefert f\"ur eine Benutzer-ID den n\"achsten POI zur\"uck, den der Benutzer besuchen
+Liefert f\"ur eine Benutzer-ID den n\"achsten POI zur\"uck, den der Tourist besuchen
   muss.\\\hline
   api/POI/GetDistanceToNextPOI &
 Gibt aufgrund von Geokoordinaten und einer Benutzer-ID die Distanz bis zu einem n\"achsten POI
-  den der Benutzer mit seiner gestarteten Tour besuchen muss.\\\hline
+  den der Tourist mit seiner gestarteten Tour besuchen muss.\\\hline
 api/POI/IsNextPOIInRange &
 Gibt aufgrund von Geokoordinaten und einer Benutzer-ID zur\"uck, ob die Koordinaten gen\"ugend
-  nahe am n\"achsten POI, den der Benutzer mit seiner gestarteten Tour besuchen muss, ist.
+  nahe am n\"achsten POI, den der Tourisst mit seiner gestarteten Tour besuchen muss, ist.
 
 Die erlaubte Distanz kann als optionaler Parameter mitgegeben werden.\\\hline
   api/POI/GetRouteToNextPOI &
 Liefert aufgrund einer Benutzer-ID die Route als einzelne Navigationspunkte zum n\"achsten
-  POI, den der Benutzer mit seiner gestarteten Tour besuchen muss.\\\hline
+  POI, den der Tourist mit seiner gestarteten Tour besuchen muss.\\\hline
 api/POI/GetDistanceToPOI (removed) &
 Gibt aufgrund von Geokoordinaten die Distanz bis zu einem bestimmten POI zur\"uck.\\\hline
 api/POI/IsPOIInRange (removed)&
@@ -89,12 +95,12 @@ Gibt alle vorhandenen Touren zur\"uck.\\\hline
 api/Tours/GetToursByCity &
 Gibt alle vorhanden Touren in einer bestimmten Stadt zur\"uck.\\\hline
 api/UserTour/StartUserTour &
-Startet eine definierte Tour f\"ur einen bestimmten Benutzer. Liefert direkt eine Auflistung
+Startet eine definierte Tour f\"ur einen bestimmten Touristen. Liefert direkt eine Auflistung
   aller POIs und Routenpunkte dieser Tour zur\"uck.\\\hline
 api/UserTour/EndUserTour &
-Beendet die aktive UserTour f\"ur einen bestimmten Benutzer. \\\hline
+Beendet die aktive UserTour f\"ur einen bestimmten Touristen. \\\hline
 api/UserTour/GetActiveTour &
-Gibt die aktive Tour des Benutzers zur\"uck.\\\hline
+Gibt die aktive Tour des Touristen zur\"uck.\\\hline
 \end{longtabu}
 
 \subsubsubsection{Versionierung der API}\label{versionierung-api}
