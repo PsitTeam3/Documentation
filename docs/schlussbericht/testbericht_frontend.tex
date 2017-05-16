@@ -13,7 +13,8 @@ als Mock in Unit-Tests einbauen und so schon früh Funktionalitäten wie Parsing
 testen. Die App selber enthält keine Business-Logik, die getestet werden kann. Dadurch beschränkt sich
 auch das automatische Testen auf das Parsen von Server-Antworten und das Aufrufen von URLs.
 
-Für CI (\textbf{Continous Integration}) verwendet das Frontend-Teams travis-ci.org. Dieser führt alle Tests
+Für CI (\textbf{Continous Integration}) verwendet das Frontend-Teams travis-ci.org 
+(\url{https://travis-ci.org/PsitTeam3/TravelBuddyAndroidApp}). Dieser führt alle Tests
 aus und baut das komplette Projekt, wenn ein Entwickler committed. Durch die Kombination von \textbf{Linting}
 und den \textbf{Unit-Tests} konnten wir schon frühr Probleme erkennen und beheben.
 
@@ -22,6 +23,12 @@ wird. Sowohl der HTTP-Client als auch Google Maps Services funktionieren ohne Ko
 dies einen nicht gerechtfertigten Mehraufwand bei der Infrastruktur (CI) bedeutet, da die Ausfühung
 solcher Tests eine laufene Android-Instanz benötigt. Wäre die Integration der Umsysteme kein solches
 "Out-of-the-box"-Erlebnis, dann hätten wir Aufwand in Integrations-Tests gesteckt.
+
+\begin{figure}
+  \centering
+  \includegraphics{tests_frontend}
+  \caption{Unit Tests Frontend}
+\end{figure}
 
 \subsubsection{Manuelles Testen}\label{manuelles_testen_frontend}
 Natürlich ist bei einer mobilen Applikation des manuelle Testen sehr wichtig, denn nur damit lassen

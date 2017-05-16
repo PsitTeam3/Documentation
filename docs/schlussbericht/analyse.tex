@@ -29,23 +29,23 @@ Vermittlung von Information & Map, Marker                                       
 \textbf{Objekte} & \textbf{Beschreibung} \\\hline
 \endhead
 
-Tourist & Dies ist der Hauptakteur und Benutzer der App. Er wählt eine \textbf{Tour} aus, läuft die \textbf{Route} ab, bringt seine Position durch eine \textbf{Map} in Erfahrung, checkt seinen Fortschritt (\textbf{TourProgress}) und die Zusammenfassung \textbf{TourSummary}. \\\hline
-TouristLocation & Repräsentiert die aktuelle Position des \textbf{Touristen}. \\\hline
+Tourist & Dies ist die Hauptakteurin, der Hauptakteur und Benutzer\_in der App. Er wählt eine \textbf{Tour} aus, läuft die \textbf{Route} ab, bringt seine Position durch eine \textbf{Map} in Erfahrung, überprüft seinen Fortschritt (\textbf{TourProgress}) und die Zusammenfassung \textbf{TourSummary}. \\\hline
+TouristLocation & Repräsentiert die aktuelle Position der \textbf{Touristin}. \\\hline
 TouristAgency & Reisebüros und Tourismusorganisationen erfassen Inhalt (d.h.: \textbf{Touren}, \textbf{Routen} und \textbf{Point of Interests}).\\\hline
-Trip & Ein \textbf{Tourist} macht eine Reise (\textbf{Trip}) und hat dort je nach Ort und Stadt mehrere verschiedene \textbf{Touren} zur Auswahl.\\\hline
+Trip & Eine \textbf{Touristin} macht eine Reise (\textbf{Trip}) und hat dort je nach Ort und Stadt mehrere verschiedene \textbf{Touren} zur Auswahl.\\\hline
 Tour & Eine \textbf{Tour} ist eine Sammlung von \textbf{Point of Interest}s in einer bestimmten Stadt \textbf{City}, die über eine bestimmte \textbf{Route} miteinander verbunden sind.\\\hline
 TourRating & Der \textbf{Tourist} hat die Möglichkeit die \textbf{Tour} am Ende zu Bewertung und einen Kommentar zu hinterlassen. Die \textbf{TouristAgencies} haben Zugang zu diesen Bewertungen.\\\hline
-TourProgress & Der \textbf{Tourist} kann aktuelle Metriken während der \textbf{Tour} überprüfen. \\\hline
-TourSummary & Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest}  besucht wurden, wird dem \textbf{Touristen} eine Zusammenfassung/Statistik \textbf{TourSummary} über seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{} angezeigt.\\\hline
+TourProgress & Die \textbf{Touristin} kann aktuelle Metriken während der \textbf{Tour} überprüfen. \\\hline
+TourSummary & Am Ende einer \textbf{Tour}, nachdem alle \textbf{Points of Interest} besucht wurden, wird dem \textbf{Touristen} eine Zusammenfassung/Statistik \textbf{TourSummary} über seine absolvierte \textbf{Route}, Anzahl Schritte, Distanz usw\ldots{} angezeigt.\\\hline
 Route & Eine \textbf{Route} stellt eine Verbindung von mehreren \textbf{Point of Interests} dar. Eine \textbf{Route} kann mit verschiedenen \textbf{Verkehrsmitteln} absolviert werden.\\\hline
-Map & Die Karte zeigt dem \textbf{Tourist} mithilfe des \textbf{LocationMarkers} an. \\\hline
+Map & Die Karte zeigt der \textbf{Touristin} mithilfe des \textbf{LocationMarkers} an. \\\hline
 LocationMarker & Visuallisiert eine Position auf der Karte \textbf{Map}. \\\hline
 City & Enthält mehere \textbf{Trips}. \\\hline
 Country & Enthählt mehere Städte (\textbf{City}).\\\hline
 Point of Interest & \textbf{Point of Interest} sind geographische Punkte, die eine Sehenswürdigkeit oder sonstige spezielle Eigenschaften bieten. Sie werden von einer \textbf{Route} verbunden. Der \textbf{Tourist} muss beim Absolvieren einer \textbf{Tour} an jedem \textbf{Point of Interest} vorbeikommen und ein \textbf{Foto} schiessen.\\\hline
 Means of Transportation & Verschiedene \textbf{Verkehrsmittel} z.B.: Uber, ÖV, Auto, Velo, zu Fuss usw\ldots{}\\\hline
 Foto & An jedem \textbf{Point of Interest} schiesst der Tourist mit seiner \textbf{Mobile App} ein \textbf{Foto} des Ortes oder der Sehenswürdigkeit. Wird das \textbf{Foto} akzeptiert, dann gilt der \textbf{Point of Interest} als besucht.\\\hline
-SocialMediaPost & Der \textbf{Tourist} hat am Ende einer \textbf{Tour} die Möglichkeit die Zusammenfassung (\textbf{TourSummary}) inklusive \textbf{Fotos} auf Social Media Kanälen zu teilen. \\\hline
+SocialMediaPost & Die \textbf{Touristin} hat am Ende einer \textbf{Tour} die Möglichkeit, die Zusammenfassung (\textbf{TourSummary}) inklusive \textbf{Fotos} auf Social-Media-Kanälen zu teilen. \\\hline
 \end{longtabu}
 
 \newpage
@@ -104,7 +104,7 @@ Tourist\_in findet eine ansprechende Tour und kann diese starten.
   \setcounter{enumi}{8}
   \item
     \begin{enumerate}
-      \item Die App zeigt dem Tourist verschiedene Möglichkeiten an, wie er zum Startpunkt kommt.
+      \item Die App zeigt der Touristin verschiedene Möglichkeiten an, wie sie zum Startpunkt kommt.
     \end{enumerate}
 \end{enumerate}
 
@@ -126,16 +126,16 @@ Route, also einer Teilstrecke der Tour. Die App zeigt dem Benutzer seine
 aktuelle Position mit einem Marker (z.B. Punkt) an. Die Touristin verlässt
 die Route, der Marker zeigt in Echtzeit die Position an, an der sie sich
 befindet. Die App berechnet die neue Route mit der aktuellen Postion als
-Ausgangslage. Die Reisende kann also zu jederzeit die optimale Route
+Ausgangslage. Die Reisende kann also jederzeit die optimale Route
 zwischen ihrer aktuellen Position und dem Ziel nachschauen.
 
 
 \subsubsubsection{Erfolgszenario mit Fallback}\label{erfolgszenario-mit-fallback}
 Der Tourist befindet sich auf einer Tour durch eine Altstadt. Die App
 zeigt dem Benutzer seine aktuelle Position mit einem Marker (z.B. Punkt)
-an, der Marker bewegt sich mit dem User mit. Die aktuelle Route zum
+an, der Marker bewegt sich mit der Touristin mit. Die aktuelle Route zum
 nächsten Zwischenziel führt durch ein dicht überdachtes Gebiet. Die App
-kann die Position des Users nicht per GPS abfragen, in der Nähe stehen
+kann die Position des Benutzers nicht per GPS abfragen, in der Nähe stehen
 einige Läden und Restaurants mit WLAN. Die App kann durch eine
 Kombination von Standorten von Mobilfunkmasten und WLAN Sendern die
 aktuelle Position berechnen. Der Reisende hat kein GPS Signal, aber
@@ -165,8 +165,8 @@ abgebildeten Punkt.
 
 
 \subsubsubsection{Alternativszenario}\label{alternativszenario-1}
-Der Tourist möchte die Tour unterbrechen und zu einem späteren
-Zeitpunkt fortsetzen. Er schliesst die App und kehrt nach unbestimmter
+Die Touristin möchte die Tour unterbrechen und zu einem späteren
+Zeitpunkt fortsetzen. Sie schliesst die App und kehrt nach unbestimmter
 Zeit zurück. Die App zeigt dann den letzten Stand und fragt nach der
 Weiterführung oder Abbruch der Tour.
 
@@ -179,17 +179,17 @@ mit einer Nachricht bestätigt und mit UC 6 fortgefahren.
 
 \subsubsection{UC 6: Statistik der Tour anschauen (Priorität 3)}\label{uc-6-user-sieht-statistik-der-tour.-priorituxe4t-3}
 Nach erfolgreichem erreichen des Zielpunktes und dem Abschluss der Tour,
-wird dem Tourist eine Übersicht mit Statistiken wie z.B. der total
-zurück gelegten Distanz und totale Schritte angezeigt. Durch einen klick
+wird dem Tourist eine Übersicht mit Statistiken, wie z.B. der total
+zurück gelegten Distanz und totale Schritte, angezeigt. Durch einen klick
 kann der Tourist Fotos, die Statistik und eine Mitteilung auf den
 sozialen Medien teilen.
 
 
 \subsection{Anwendungsfalldiagramm}\label{anwendungsfalldiagramm}
-Das folgende Anwendungsfalldiagramm zeigt eine Übersicht von allen Anwendungsfällen, in Relation mit den Aktoren welche identifiziert wurden.
+Das folgende Anwendungsfalldiagramm zeigt eine Übersicht von allen Anwendungsfällen in Relation mit den Aktoren, welche identifiziert wurden.
 
 \begin{figure}
   \centering
-  \includegraphics{Anwendungsfalldiagramm}
+  \includegraphics[height=12cm]{Anwendungsfalldiagramm2}
   \caption{Anwendungsfalldiagramm}
 \end{figure}

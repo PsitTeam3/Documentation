@@ -4,9 +4,7 @@ Im folgenden Kapitel zeigen wir die wichtigsten Interaktionsdiagramme unseres Ba
 \subsubsection{Backend}\label{backend}
 
 \subsubsubsection{Tour starten}
-Bei dem Prozess ``Tour starten'' im Backend werden zuerst der mitgegebenen Benutzerdaten
-überprüft und der Benutzer aus der Datenbank geladen. Anschliessend wird die angeforderte
-Tour aus der Datenbank geladen und die Tour ``gestartet'' falls diese nicht schon gestartet ist.
+Bei dem Prozess ``Tour starten'' im Backend wird zuerst überprüft, dass der angegebene Benutzer nicht bereits eine gestartet Tour hat. Anschliessend wird die angegebene Tour als gestartet markiert. Von dieser gestarteten Tour werden Informationen aus der Datenbank ausgelesen und auch die Route zum ersten POI berechnet. Die Informationen zum POI sowie auch die Route, werden an den Aufrufer zurückgegeben.
 
 \begin{figure}
   \centering
@@ -15,14 +13,12 @@ Tour aus der Datenbank geladen und die Tour ``gestartet'' falls diese nicht scho
 \end{figure}
 
 \subsubsubsection{Route zu POI}
-Im Ablauf ``Route zu POI'' werden zuerst die Benutzerdaten überprüft und der Benutzer aus
-der Datenbank geladen. Anschliessend wird der vom Benutzer der Frontend-Applikation angestrebte
-POI aus der Datenbank geladen und aufgrund der aktuellen Position die Route zum angestrebten
-POI mittels Google Maps API berechnet und zurück gegeben.
+Im Ablauf ``Route zu POI'' wird zuerst die aktuelle Tour des angegebenen Benutzer aus der Datenbank ausgelesen. Anhand dieser Tour wird anschliessend herausgefunden, welches der nächste Besichtigungspunkt (POI) ist und aufgrund der aktuellen Position die Route zum nächsten
+POI mittels Google-Maps API berechnet und zurück gegeben.
 
 \begin{figure}
   \centering
-  \includegraphics[height=7cm]{Sequenzdiagramm_GetRouteToPoi}
+  \includegraphics[height=6cm]{Sequenzdiagramm_GetRouteToPoi}
   \caption{Sequenzdiagramm Route zu POI}
 \end{figure}
 
