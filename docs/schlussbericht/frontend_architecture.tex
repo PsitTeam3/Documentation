@@ -1,10 +1,4 @@
 \subsection{Frontend Design}\label{design-frontend}
-Bei der Architektur und dem Design unterscheiden wir zwischen Backend
-(Web Services) und dem Frontend (Android App). Beide Systeme werden parallel und
-unabhängig mittels Swagger API Spezifikation entwickelt (siehe \fullref{service-api}).
-Durch diesen Swagger Contract als klare Barriere lassen sich Entscheide betreffend
-Architektur und Design separat treffen.
-Zuerst behandeln wir das Frontend, danach das Backend.
 \subsubsection{Design-Klassendiagramm}\label{design-klassendiagram}
 \begin{figure}
   \includegraphics{classdiagram_frontend}
@@ -69,7 +63,7 @@ Consumer mit dem Server Response auf, ohne den Aufrufer zu kennen. Dadurch errei
 wir lose Kopplung und hohe Wiederverwendbarkeit. \\\hline
 \textbf{ListActivity} & AppController, Tour & Die ListActivity gibt über den AppController
 einen Callback an den RequestQueuer. Dieser Callback füllt eine Liste von Touren,
-welche dem User angezeigt wird. Ein Klick auf eine Tour ruft die DetailActivity auf.
+welche dem Touristen angezeigt wird. Ein Klick auf eine Tour ruft die DetailActivity auf.
 \\\hline
 \textbf{DetailActivity} & Tour & Die DetailActivity ist eine einfache Ansicht auf
 ein Tour-Objekt und zeigt Details einer Tour an.\\\hline
@@ -77,7 +71,7 @@ ein Tour-Objekt und zeigt Details einer Tour an.\\\hline
 unseren Haupt-Use-Case ab: Navigation per Karte durch eine Tour. Die TourActivity
 registriert sich selber als Callback beim Google Maps Service und beim Google
 Play Location Service. Weiterhin wird das Backend regelmässig nach der aktuellen
-Route gefragt. Falls sich der User in der Nähe eines POIs befindet, wird die
+Route gefragt. Falls sich der Tourist in der Nähe eines POIs befindet, wird die
 Kamera App des Smartphones aktiviert.\\\hline
 \textbf{SummeryActivity} & Summary, Progress, RequestQueuer & Die SummaryActivity
 bekommt von der TourActivity ein Progress-Objekt. Nach einer Anfrage an das
@@ -135,7 +129,7 @@ einen Parser (Gateway) in der direkt darunterliegenden Schicht. Nach der
 \endhead
 \textbf{Frameworks and Drivers} & Die äusserste Schicht \textbf{Frameworks and Drivers}
 ist für die Kommunikation mit der äusseren Welt zuständig. Dazu zählen zum
-Beispiel Kommunikation mit dem User per UI, Persistierung von Daten in Datenbanken
+Beispiel Kommunikation mit der Touristin per UI, Persistierung von Daten in Datenbanken
 oder Kommunikation mit externen Services per HTTP. Die äusserste Schicht beinhaltet
 aber auch Frameworks.\\\hline
 \textbf{Interface Adapters} & Die nachfolgende Schicht heisst \textbf{Interface Adapters}.
@@ -242,10 +236,10 @@ was der Lesbarkeit des Codes nicht schadet.
 \subsubsubsection{Erwähnenswerte Designentscheide}\label{mentionabble}
 Im Folgenden werden noch interessante Designentscheide betrachtet.
 
-Da die Qualität einer mobile App stark von der Benutzerfreundlichkeit abhängt, gibt es einige 
-Prinzipien bei der Entwicklung zu beachten. Ein wichtiger Punkt ist der, dass die App 
+Da die Qualität einer mobile App stark von der Benutzerfreundlichkeit abhängt, gibt es einige
+Prinzipien bei der Entwicklung zu beachten. Ein wichtiger Punkt ist der, dass die App
 \textbf{zu jeder Zeit} auf Benutzereingaben reagieren muss. Bei Android wird das mit \textbf{asynchronen}
-Operationen realisiert. HTTP Requests beispielsweise werden im Hintergrund ausgeführt, während der User
+Operationen realisiert. HTTP Requests beispielsweise werden im Hintergrund ausgeführt, während der Tourist
 die teilweise aufgebaute Tourliste betrachtet kann. Die restlichen Tours werden dann einfach nachgeladen.
 Diese Asynchronität bringt einige Herausforderungen mit sich:
 
@@ -255,15 +249,15 @@ Diese Asynchronität bringt einige Herausforderungen mit sich:
 \end{itemize}
 
 \newpage
-Diese Probleme haben wir im Frontend mit dem \textbf{RequestQueuer} gelöst. Die Idee ist, dass der 
-RequestQueuer eine simple API zur Erstellung von HTTP Requests anbietet. Dabei kann der Client 
+Diese Probleme haben wir im Frontend mit dem \textbf{RequestQueuer} gelöst. Die Idee ist, dass der
+RequestQueuer eine simple API zur Erstellung von HTTP Requests anbietet. Dabei kann der Client
 (Benutzer des RequestQueuers) zwei Callbacks übergeben. Die beiden Callbacks werden dabei als
-Lambda Expressions übergeben und können mit einem erfolgreichen oder einem erfolglosen Ausgang des HTTP 
+Lambda Expressions übergeben und können mit einem erfolgreichen oder einem erfolglosen Ausgang des HTTP
 Requests umgehen. Ähnliches bieten bereits diverse JavaScript Libraries.
 
 Betrachten wir das Beispiel \textbf{"Frage aktuell kürzeste Route zum nächsten POI ab"}:
 \begin{verbatim}
-public void queueCurrentRoute(String TAG, 
+public void queueCurrentRoute(String TAG,
     Location location, Consumer<RouteResponse> routeSetter) {
 
     String url = UrlBuilder.anUrl().currentRoute(
@@ -300,7 +294,7 @@ Dadurch verschwindet die Logik der HTTP Requests aus den Activities, generelles 
 Code-Reuse werden möglich und der Code wird lesbarer.
 
 Eine Erweiterungsmöglichkeit davon wäre, ein Äquivalent zu Promises zu verwenden. Dabei wird
-kein Callback registriert, sondern ein Container zurückgeben. Dieser Container stellt des Resultat 
+kein Callback registriert, sondern ein Container zurückgeben. Dieser Container stellt des Resultat
 einer asynchronen Operation dar und kann drei Zustände haben: \textbf{Pending|}, \textbf{Fulfilled} oder
 \textbf{Rejected}. Dabei steht die Logik einer asynchronen Operation an der gleichen Stelle im Code,
 was die Kohäsion erhöht.

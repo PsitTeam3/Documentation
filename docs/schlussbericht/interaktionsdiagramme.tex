@@ -13,7 +13,9 @@ Bei dem Prozess ``Tour starten'' im Backend wird zuerst überprüft, dass der an
 \end{figure}
 
 \subsubsubsection{Route zu POI}
-Im Ablauf ``Route zu POI'' wird zuerst die aktuelle Tour des angegebenen Benutzer aus der Datenbank ausgelesen. Anhand dieser Tour wird anschliessend herausgefunden, welches der nächste Besichtigungspunkt (POI) ist und aufgrund der aktuellen Position die Route zum nächsten
+Im Ablauf ``Route zu POI'' wird zuerst die aktuelle Tour des angegebenen Touristen aus der
+Datenbank ausgelesen. Anhand dieser Tour wird anschliessend herausgefunden, welches der nächste
+Besichtigungspunkt (POI) ist und aufgrund der aktuellen Position die Route zum nächsten
 POI mittels Google-Maps API berechnet und zurück gegeben.
 
 \begin{figure}
@@ -47,7 +49,7 @@ wurde - geladen, ebenfalls mittels Callback. Anschliessend werden die Daten der 
 
 \newpage
 \subsubsubsection{Checke, ob bei POI angekommen}
-Das Diagram zeigt den wiederkehrenden Prozess wobei überprüft wird, ob der Benutzer beim
+Das Diagram zeigt den wiederkehrenden Prozess wobei überprüft wird, ob der Tourist beim
 ausgewählten POI angekommen ist. Der Google Maps Service ruft herzu bei der Veränderung
 der Position eine Funktion auf. Diese benutzt den \textbf{RequestQueuer} um die Position
 auf dem Backend zu überprüfen.
