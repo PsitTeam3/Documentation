@@ -223,13 +223,13 @@ Die tatsächliche Implementation weicht leicht von der geplanten Architektur ab.
 Aufwand zur vollständigen Entkopplung der äussersten Schicht \textbf{Frameworks and Drivers} abgeschätzt
 und schliesst, dass der Mehrwert in diesem Fall den Schritt nicht rechtfertigt.
 
-Im die \textbf{Frameworks and Drivers} vom Rest der App zu entkoppelt, müssten viele Helper-, Wrapper- und
+Um die \textbf{Frameworks and Drivers} Schicht vom Rest der App zu entkoppelt, müssten viele Helper-, Wrapper- und
 Facaden-Klassen eingeführt werden. Da die Aufrufe von externen Libraries wie dem HTTP Client Volley
 oder der JSON-Parsing Library GSON nur punktuell stattfinden, nehmen wir die Verletzung der \textbf{Dependency Rule}
 bewusst in Kauf.
-Die vollständige Entkopplung der \textbf{Frameworks and Drivers} kann, wenn auch mit mehr Aufwand,
+Die vollständige Entkopplung der \textbf{Frameworks and Drivers} Schicht kann, wenn auch mit mehr Aufwand,
 zu einem späteren Zeitpunkt durchgeführt werden. Dieser Punkt gehört definitiv zu den Erweiterungsmöglichkeiten
-und ist ab einer gewissen Grösse des Projekts obligatorisch
+und ist ab einer gewissen Grösse des Projekts obligatorisch.
 
 Die Wahl von guten Abstraktionen und Einhaltung der \textbf{Dependency Rule} ist uns hingegen bei den beiden
 inneren Schichten gelungen. Nur durch Betrachten der \textbf{Entitites} werden die Domänenregeln sofort klar,
