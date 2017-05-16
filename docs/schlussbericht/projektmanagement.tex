@@ -173,3 +173,10 @@ etwas näher gekommen und konnten Erfahrungen aus dem Leben und der Arbeit austa
 5 & Smartphone GPS-Koordinaten ungenau & Gering & Mittel & Die App für Geräte mit zu geringer GPS-Genauigkeit nicht freigeben\\\hline
 \st{6} & \st{Keine öffentlichen Karten-API verfügbar} & \st{Schwerwiegend} & \st{Sehr gering} & Entsprechendes Kartenmaterial ist von Google verfügbar\\\hline
 \end{longtabu}
+
+\subsection{Risiken Fazit}\label{risiken_fazit}
+Das Risiko 1 wurde explizit ausgelassen, da der Aufwand für eine sichere Implementierung zu hoch gewesen wäre. Für die erste Version ist dies jedoch vertretbar. 
+Die aktuelle Implementierung benötigt eine gewisse Menge Daten für das Laden der Kartendaten und der Routinginformationen, wie mit Risiko 2 vorhergesehen. Wie beim Benutzen der Grund-Kartenfunktionalität auf einem Smartphone sollten die Benutzerin dies jedoch wissen. Allenfalls würde es Sinn ergeben, die Benutzerin darüber zu informieren, dass die App ein gewisses Mass an Datenvolumen benötigt. 
+Risiko 3 ist teilweise eingetreten, konnte jedoch durch einen leicht erhöhten Aufwand des Frontend-Teams kompensiert werden.
+Der Mehraufwand wie unter Risiko 4, zur Einbindung der Google Maps API, beschrieben, hielt sich in Grenzen. Die API ist gut dokumentiert und konnte so effizient eingesetzt werden.
+Risiko 5 ist bei den bisherigen Tests nicht eingetreten, die GPS Lokalisierung funktioniert sehr genau.
