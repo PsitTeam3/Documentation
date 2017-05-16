@@ -239,6 +239,72 @@ da die Businesslogik grösstenteils auf dem Server stattfindet und die Activitie
 Ausserdem bestehen die Activities fast ausschliesslich aus einer Auflistung von registrierten Callbacks,
 was der Lesbarkeit des Codes nicht schadet.
 
+\subsubsubsection{Erwähnenswerte Designentscheide}\label{mentionabble}
+Im Folgenden werden noch interessante Designentscheide betrachtet.
+
+Da die Qualität einer mobile App stark von der Benutzerfreundlichkeit abhängt, gibt es einige 
+Prinzipien bei der Entwicklung zu beachten. Ein wichtiger Punkt ist der, dass die App 
+\textbf{zu jeder Zeit} auf Benutzereingaben reagieren muss. Bei Android wird das mit \textbf{asynchronen}
+Operationen realisiert. HTTP Requests beispielsweise werden im Hintergrund ausgeführt, während der User
+die teilweise aufgebaute Tourliste betrachtet kann. Die restlichen Tours werden dann einfach nachgeladen.
+Diese Asynchronität bringt einige Herausforderungen mit sich:
+
+\begin{itemize}
+    \item Die Synchronisation von asynchron ausgeführten Operationen ist aufwendig.
+    \item Der Code ist nicht mehr synchron und wird schwieriger zu lesen.
+\end{itemize}
+
+\newpage
+Diese Probleme haben wir im Frontend mit dem \textbf{RequestQueuer} gelöst. Die Idee ist, dass der 
+RequestQueuer eine simple API zur Erstellung von HTTP Requests anbietet. Dabei kann der Client 
+(Benutzer des RequestQueuers) zwei Callbacks übergeben. Die beiden Callbacks werden dabei als
+Lambda Expressions übergeben und können mit einem erfolgreichen oder einem erfolglosen Ausgang des HTTP 
+Requests umgehen. Ähnliches bieten bereits diverse JavaScript Libraries.
+
+Betrachten wir das Beispiel \textbf{"Frage aktuell kürzeste Route zum nächsten POI ab"}:
+\begin{verbatim}
+public void queueCurrentRoute(String TAG, 
+    Location location, Consumer<RouteResponse> routeSetter) {
+
+    String url = UrlBuilder.anUrl().currentRoute(
+        new LatLng(location.getLatitude(),  location.getLongitude())).build();
+
+    StringRequest req = new StringRequest(url,
+        response -> routeSetter.accept(RouteResponse.fromJson(response)),
+        error -> onError(TAG, error, url));
+
+    AppController.getInstance().addToRequestQueue(req, TAG);
+}
+\end{verbatim}
+
+Hier wird die aktuelle Route als HTTP Request mit dem \textbf{RequestQueuer} auf die Queue des HTTP Client
+Volley gelegt. Android selber entscheidet, wann der HTTP Request ausgeführt wird. Bei einer erfolgreichen
+Antwort des Servers wird der Callback \textbf{routeSetter} mit der geparsten Antwort aufgerufen.
+Bei einem Fehlschlag wird ein Fehler-Callback \textbf{onError} aufgerufen.
+
+Ein Aufruf dieser Methode sieht dann wie folgt aus:
+
+\begin{verbatim}
+RequestQueuer.aRequest().queueCurrentRoute(TAG, location, this::onReceiveCurrentRoute);
+\end{verbatim}
+
+Mit einem Callback \textbf{onReceiveCurrentRoute}:
+
+\begin{verbatim}
+private void onReceiveCurrentRoute(RouteResponse routeResponse) {
+    mMap.drawRoute(routeResponse.getRoute());
+}
+\end{verbatim}
+
+Dadurch verschwindet die Logik der HTTP Requests aus den Activities, generelles Error-Handling sowie
+Code-Reuse werden möglich und der Code wird lesbarer.
+
+Eine Erweiterungsmöglichkeit davon wäre, ein Äquivalent zu Promises zu verwenden. Dabei wird
+kein Callback registriert, sondern ein Container zurückgeben. Dieser Container stellt des Resultat 
+einer asynchronen Operation dar und kann drei Zustände haben: \textbf{Pending|}, \textbf{Fulfilled} oder
+\textbf{Rejected}. Dabei steht die Logik einer asynchronen Operation an der gleichen Stelle im Code,
+was die Kohäsion erhöht.
+
 \newpage
 \subsubsubsection{Activities}\label{activities}
 Die App selber besteht aus drei Haupt-Activities. \textbf{Activities} ist ein
